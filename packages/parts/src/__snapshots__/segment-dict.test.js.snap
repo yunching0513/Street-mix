@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`getSegmentSprites() > works 1`] = `
+{
+  "ground": "ground--concrete",
+  "scatter": {
+    "maxSpacing": 1.5,
+    "minSpacing": 0,
+    "padding": 0.5,
+    "pool": "people",
+  },
+}
+`;

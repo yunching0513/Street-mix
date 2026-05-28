@@ -1,0 +1,107 @@
+#street-section-outer {
+  --building-space: 360px;
+
+  position: absolute;
+  display: block;
+  inset: calc(-1 * var(--gallery-height)) 0 0;
+  overflow: scroll hidden;
+  scrollbar-width: none; /* Prevents scrollbar space from shifting section up */
+  touch-action: pan-x;
+
+  /* Prevent overscroll from doing forward/back navigation on some browsers
+     Also disable the bounce effect exposing empty space beyond section boundary */
+  overscroll-behavior: none;
+
+  /* Floating UI's safe polygon negates pointer-events on the entire body,
+     which prevents this container from being scrolled, so we need to force
+     pointer-events back on when the safe polygon is active. */
+  [data-floating-ui-safe-polygon] & {
+    pointer-events: auto;
+  }
+
+  [dir="rtl"] & {
+    direction: ltr;
+  }
+}
+
+#street-section-inner {
+  position: absolute;
+  display: block;
+  inset: auto 0 var(--street-section-baseline);
+  height: var(--canvas-height);
+  user-select: none;
+
+  body.read-only & {
+    /* TODO document magic number 80 */
+    bottom: calc(var(--street-section-baseline) - 80px);
+  }
+
+  /* The outer container forces pointer-events to be on so it can be scrolled
+     when Floating UI's safe polygon is active. But we still need to prevent
+     pointer events on the children of the scroll container, so it is
+     re-enabled here. */
+  [data-floating-ui-safe-polygon] & {
+    pointer-events: none;
+  }
+}
+
+#street-section-editable {
+  position: absolute;
+  height: var(--canvas-height);
+  text-align: left;
+  touch-action: pan-x;
+  border-bottom: 5px solid var(--background-earth-color);
+
+  /* make sure these elements are z-indexed above bounbaries */
+  z-index: 10;
+}
+
+#street-section-canvas {
+  z-index: var(--z-01-street-section);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  margin-left: var(--building-space);
+  margin-right: var(--building-space);
+  height: var(--canvas-height);
+}
+
+.street-section-ground {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--street-section-baseline);
+  background: var(--bottom-background);
+  z-index: -2;
+  pointer-events: none;
+
+  body.read-only & {
+    /* TODO document magic number 80 */
+    height: calc(var(--street-section-baseline) - 80px);
+  }
+}
+
+#street-section-popup-boundary {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: var(--street-section-baseline);
+
+  /* The height of the boundary area is set to prevent the tops of
+     popups from intersecting with the street nameplate on short viewports
+     but also don't have it too tall on tall viewports in order to prevent
+     the popups from shifting vertical position if its content changes */
+  height: min(
+    calc(100vh - var(--street-section-baseline) - 130px),
+    calc(var(--canvas-height) + 100px)
+  );
+
+  /* For debugging the floating popup boundary area */
+  &.debugger {
+    background-color: #f005;
+    z-index: 20;
+  }
+}

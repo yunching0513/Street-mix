@@ -1,0 +1,204 @@
+import { debug } from '../preinit/debug_settings.js'
+import { normalizeSlug } from '../util/helpers.js'
+import store from '../store'
+import { setGalleryUserId } from '../store/slices/gallery.js'
+import { saveCreatorId, saveStreetId } from '../store/slices/street.js'
+import {
+  URL_NEW_STREET,
+  JUST_SIGNED_IN_PATH,
+  URL_ERROR,
+  URL_GLOBAL_GALLERY,
+  URL_RESERVED_PREFIX,
+  URL_SURVEY_FINISHED,
+  RESERVED_URLS,
+  STREET_TEMPLATES,
+} from './constants.js'
+import { setMode, MODES } from './mode.js'
+
+// Used as a placeholder in URLs when the street is by an anonymous user
+export const ANONYMOUS_USER_ID_FRAGMENT = '-'
+
+let errorUrl = ''
+
+export function getErrorUrl(): string {
+  return errorUrl
+}
+
+export function processUrl(): void {
+  // Get current pathname. The pathname will contain an initial `/` followed
+  // by the path of the URL. The root pathname should always be `/`. It may
+  // be possible for the URL to contain a trailing slash, but we don't want
+  // that, so remove it, if present. This will cause the root pathname to be
+  // an empty string.
+  const url = new URL(window.location.href)
+  const pathname = url.pathname.replace(/\/+$/, '')
+
+  // parts being split, although we really don't need to
+  // filter out empty string parts
+  const urlParts = pathname.split(/\//).filter((x) => x !== '')
+
+  // Continue where we left off… or start with a default (demo) street
+  if (pathname === '/' || pathname === '') {
+    setMode(MODES.CONTINUE)
+
+    // New street
+  } else if (pathname === URL_NEW_STREET) {
+    // TODO: consolidate the NEW_STREET_* modes
+    // The only time _COPY_LAST comes into play is when loading
+    // the previous street, and the only time _EMPTY comes into
+    // play is when calling createNewStreetOnServer()
+    const params = new URLSearchParams(url.search)
+    const type = params.get('type')
+    switch (type) {
+      case STREET_TEMPLATES.COPY:
+        setMode(MODES.NEW_STREET_COPY_LAST, { type })
+        break
+      default:
+        setMode(MODES.NEW_STREET, { type: type ?? STREET_TEMPLATES.DEFAULT })
+        break
+    }
+
+    // clear this param after processing.
+    params.delete('type')
+    let newUrl = `${url.origin}${url.pathname}`
+    if (params.size > 0) {
+      newUrl += `?${params.toString()}`
+    }
+    window.history.replaceState(null, '', newUrl)
+
+    // Coming back from a successful sign in
+  } else if (pathname === JUST_SIGNED_IN_PATH) {
+    setMode(MODES.JUST_SIGNED_IN)
+
+    // Error
+  } else if (pathname.startsWith(URL_ERROR)) {
+    setMode(MODES.ERROR)
+    errorUrl = urlParts[1]
+
+    // Global gallery
+  } else if (pathname === URL_GLOBAL_GALLERY) {
+    setMode(MODES.GLOBAL_GALLERY)
+
+    // Survey finished
+  } else if (pathname === URL_SURVEY_FINISHED) {
+    setMode(MODES.SURVEY_FINISHED)
+
+    // User gallery
+  } else if (urlParts.length === 1 && urlParts[0]) {
+    store.dispatch(setGalleryUserId(urlParts[0]))
+    setMode(MODES.USER_GALLERY)
+
+    // Existing street by an anonymous person
+  } else if (
+    urlParts.length === 2 &&
+    urlParts[0] === ANONYMOUS_USER_ID_FRAGMENT &&
+    urlParts[1]
+  ) {
+    const namespacedId = Number.parseInt(urlParts[1], 10)
+
+    if (Number.isInteger(namespacedId)) {
+      store.dispatch(saveCreatorId(null))
+      store.dispatch(saveStreetId(null, namespacedId))
+      setMode(MODES.EXISTING_STREET)
+    } else {
+      // If `urlParts[1]` is not an integer, redirect to 404
+      setMode(MODES.NOT_FOUND)
+    }
+
+    // Existing street by a user person
+  } else if (urlParts.length >= 2 && urlParts[0] && urlParts[1]) {
+    let creatorId = urlParts[0]
+    const namespacedId = Number.parseInt(urlParts[1], 10)
+
+    if (creatorId.charAt(0) === URL_RESERVED_PREFIX) {
+      creatorId = creatorId.slice(1)
+    }
+
+    store.dispatch(saveCreatorId(creatorId))
+
+    // if `urlParts[1]` is not an integer, redirect to user's gallery
+    if (!Number.isInteger(namespacedId)) {
+      store.dispatch(setGalleryUserId(urlParts[0]))
+      setMode(MODES.USER_GALLERY)
+    } else {
+      store.dispatch(saveStreetId(null, namespacedId))
+      setMode(MODES.EXISTING_STREET)
+    }
+
+    // 404: Catch-all
+  } else {
+    setMode(MODES.NOT_FOUND)
+  }
+}
+
+// getStreetUrl() accepts StreetState or StreetAPIResponse data types
+// (or any object as long as it has the following properties).
+interface StreetUrlProps {
+  creatorId: string | null
+  namespacedId: number
+  name?: string | null
+}
+
+export function getStreetUrl<T extends StreetUrlProps>(street: T): string {
+  let url = '/'
+  if (street.creatorId) {
+    // Add a initial slash to the creator check to match reserved paths
+    if (RESERVED_URLS.indexOf('/' + street.creatorId) !== -1) {
+      url += URL_RESERVED_PREFIX
+    }
+
+    url += street.creatorId
+  } else {
+    url += ANONYMOUS_USER_ID_FRAGMENT
+  }
+
+  url += '/'
+  url += street.namespacedId
+
+  if (street.creatorId) {
+    const slug = normalizeSlug(street.name)
+    if (slug) {
+      url += '/' + window.encodeURIComponent(slug)
+    }
+  }
+
+  return url
+}
+
+export function updatePageUrl(
+  forceGalleryUrl: boolean = false,
+  userId: string | null = null
+): void {
+  let url: string
+  if (forceGalleryUrl) {
+    const slug = userId || 'gallery/'
+    url = '/' + slug
+  } else {
+    url = getStreetUrl(store.getState().street)
+  }
+
+  const params = new URLSearchParams(window.location.search)
+
+  // Historically, params were valueless and they we had our own string
+  // parsing code, but now we use the `URLSearchParams` global interface.
+  // For clarity, truthy values are set to the value of 1.
+  if (debug.forceLeftHandTraffic) {
+    params.set('debug-force-left-hand-traffic', '1')
+  }
+  if (debug.forceNonRetina) {
+    params.set('debug-force-non-retina', '1')
+  }
+  if (debug.forceReadOnly) {
+    params.set('debug-force-read-only', '1')
+  }
+  if (debug.forceOfflineMode) {
+    params.set('debug-force-offline', '1')
+  }
+
+  // If we have params, append to the URL
+  if (params.size > 0) {
+    url += `?${params.toString()}`
+  }
+
+  window.history.replaceState(null, '', url)
+}

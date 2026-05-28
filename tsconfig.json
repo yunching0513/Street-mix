@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+
+    /* Modules */
+    "module": "nodenext",
+    "resolveJsonModule": true,
+    "rewriteRelativeImportExtensions": true,
+    "types": ["node", "vitest/globals"],
+
+    /* Emit */
+    "noEmit": true, // Processed by Node
+
+    /* JavaScript Support */
+    "allowJs": true,
+
+    /* Interop Constraints */
+    "erasableSyntaxOnly": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+
+    /* Completeness */
+    "skipLibCheck": true
+  },
+  "references": [
+    {
+      "path": "./packages/types/tsconfig.json"
+    },
+    {
+      "path": "./packages/utils/tsconfig.json"
+    },
+    {
+      "path": "./packages/parts/tsconfig.json"
+    },
+    {
+      "path": "./packages/export-image/tsconfig.json"
+    },
+    {
+      "path": "./packages/i18n/tsconfig.json"
+    }
+  ],
+  "files": ["index.ts", "app.ts", "eslint.config.ts", "vitest.config.ts"],
+  "include": ["app/**/*.ts"]
+}

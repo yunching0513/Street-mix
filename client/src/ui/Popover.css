@@ -1,0 +1,47 @@
+.popover-trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: bottom;
+  width: 23px;
+  height: 23px;
+  border: 0;
+  border-radius: var(--border-radius-medium);
+  margin: 0 0.25em;
+  padding: 0;
+  color: var(--color-midnight-700);
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-midnight-100);
+  }
+}
+
+.popover-content {
+  max-width: 200px;
+  padding: 0.8em 1.2em;
+  color: rgb(65 65 65);
+  background-color: white;
+  border-radius: var(--border-radius-large);
+  box-shadow:
+    rgb(24 37 73 / 15%) 0 5px 20px 0,
+    rgb(24 37 73 / 5%) 0 10px 20px -5px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  font-weight: normal;
+  text-align: center;
+  overflow: hidden;
+
+  &:focus {
+    box-shadow:
+      hsl(206deg 22% 7% / 35%) 0 10px 38px -10px,
+      hsl(206deg 22% 7% / 20%) 0 10px 20px -15px,
+      0 0 0 3px rgb(82 162 175 / 20%);
+  }
+}
+
+.popover-arrow {
+  fill: white;
+}

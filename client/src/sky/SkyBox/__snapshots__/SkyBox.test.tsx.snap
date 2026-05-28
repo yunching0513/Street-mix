@@ -1,0 +1,73 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SkyBox > renders 1`] = `
+<DocumentFragment>
+  <section
+    class="street-section-sky"
+  >
+    <div
+      class="sky-background"
+    >
+      <div
+        class="sky-background-color"
+        style="opacity: 0; background: linear-gradient(#020b1a, #3e5879, #9ba5ae, #dcb697, #fc7001, #dd723c, #ad4a28, #040308);"
+      />
+    </div>
+    <div
+      class="rear-clouds"
+      style="background-position: 0px 0px; opacity: 0.85;"
+    />
+    <div
+      class="front-clouds"
+      style="background-position: 0px 0px; opacity: 0.85;"
+    />
+    <canvas
+      class="weather-canvas"
+    />
+    <div
+      class="sky-foreground"
+      style="opacity: 0;"
+    />
+  </section>
+</DocumentFragment>
+`;
+
+exports[`SkyBox > renders with objects 1`] = `
+<DocumentFragment>
+  <section
+    class="street-section-sky"
+  >
+    <div
+      class="sky-background"
+    >
+      <div
+        class="sky-background-color"
+        style="opacity: 0; background: linear-gradient(#020b1a, #3e5879, #9ba5ae 40%, #dcb697, #fc7001);"
+      />
+    </div>
+    <div
+      style="width: 100px; height: 100px; position: absolute; left: calc(50% - 50px); top: calc(50% - 50px);"
+    >
+      <img
+        src="bar.svg"
+        style="width: 100%; height: 100%;"
+      />
+    </div>
+    <div
+      class="rear-clouds"
+      style="background-position: 0px 0px; opacity: 0.85;"
+    />
+    <div
+      class="front-clouds"
+      style="background-position: 0px 0px; opacity: 0.85;"
+    />
+    <canvas
+      class="weather-canvas"
+    />
+    <div
+      class="sky-foreground"
+      style="opacity: 0;"
+    />
+  </section>
+</DocumentFragment>
+`;

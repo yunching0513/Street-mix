@@ -1,0 +1,438 @@
+/**
+ * keypress
+ *
+ * Handles registration, removal, and processing of keyboard inputs.
+ * Some inspiration:
+ *    - Mousetrap.js (https://craig.is/killing/mice)
+ *    - Keypress.js (http://dmauro.github.io/Keypress/)
+ *    - keymaster.js (https://github.com/madrobby/keymaster)
+ */
+import { isFocusOnBody } from '../util/focus.js'
+
+// Types
+export type KeypressCommands = string | string[]
+
+export interface KeypressOptions {
+  shiftKey?: boolean | 'optional'
+  metaKey?: boolean | 'optional'
+  altKey?: boolean | 'optional'
+  preventDefault?: boolean
+  stopPropagation?: boolean
+  requireFocusOnBody?: boolean
+  onKeypress?: KeypressCallback
+  condition?: () => unknown
+  fireOnce?: boolean
+}
+
+export type KeypressCallback = {
+  bivarianceHack(event?: unknown): unknown
+}['bivarianceHack']
+
+interface ProcessedCommand extends KeypressOptions {
+  key: string
+  originalCommands: KeypressCommands
+}
+
+interface CommandsByKey {
+  [key: string]: ProcessedCommand[]
+}
+
+// Keep track of all registered commands here
+const inputs: CommandsByKey = {}
+
+// Utility functions
+const noop = function () {}
+const returnTrue = function () {
+  return true
+}
+
+/**
+ * Initiates keypress manager. Sets a global event listener on the window.
+ * This should only have to be called once, when the application bootstraps.
+ */
+export function startListening(): void {
+  window.addEventListener('keydown', onGlobalKeyDown)
+}
+
+/**
+ * Registers a key command listener with the Keypress Manager
+ *
+ * @example
+ *    registerKeypress('esc', hide)
+ * @example
+ *    registerKeypress('shift d',
+ *      { preventDefault: true },
+ *      function () { console.log('Shift-D is pressed!') })
+ * @param {(string|string[])} commands
+ *    Human readable key or key combination to listen for, in the form of "a"
+ *    or "shift a" or "control alt a". If multiple keys should perform the
+ *    same action, pass in an array of strings, e.g. `['a', 'b', 'meta d']`
+ * @param {(object|function)} [options]
+ *    Options that fine tune the behavior of the keypress. If you are unhappy
+ *    with a default setting, they can be overridden here. Note that it is
+ *    possible for overrides to conflict with other parameters, for instance,
+ *    if you set `commands` to "shift p" but `options.shiftKey` to `false`.
+ *    Don't do this. This is confusing and I won't guarantee preserving how
+ *    this conflict is addressed.
+ *    If you don't need to set options, this argument can instead be the
+ *    callback function passed as the second argument.
+ * @param {(boolean|string)} [options.shiftKey=false]
+ *    If `true`, the `Shift` key should be pressed in a key combination. This
+ *    is automatically set to `true` if `shift` is specified in the `commands`
+ *    parameter. The boolean test is strict. The string 'optional' can be
+ *    passed so that the key will fire regardless of whether `Shift` is
+ *    pressed.
+ * @param {(boolean|string)} [options.metaKey=false]
+ *    If `true`, the "meta" key (`Command` or `Control`, depending on the OS)
+ *    should be pressed in a key combination. This is automatically set to
+ *    `true` if `meta`, `control`, or `command` is specified in the `commands`
+ *    parameter. The boolean test is strict. The string 'optional' can be
+ *    passed so that the key will fire regardless of whether `Command` or
+ *    `Control` is pressed.
+ * @param {(boolean|string)} [options.altKey=false]
+ *    If `true`, the `Alt` key should be pressed in a key combination. This
+ *    is automatically set to `true` if `alt` is specified in the `commands`
+ *    parameter. The boolean test is strict. The string 'optional' can be
+ *    passed so that the key will fire regardless of whether `Alt` is pressed.
+ * @param {(boolean)} [options.preventDefault=true]
+ *    If `true`, `event.preventDefault()` should be called to prevent the
+ *    key's default behavior.
+ * @param {(boolean)} [options.stopPropagation=false]
+ *    If `true`, `event.stopPropagation()` should be called to prevent other
+ *    key handlers from triggering. Defaults to `false`, but as a special
+ *    case, this is automatically set to `true` if the command is `esc`.
+ * @param {(boolean)} [options.requireFocusOnBody=true]
+ *    If `true`, the key handler is not triggered if the browser has focused
+ *    on a specific element, like an input field.  Defaults to `true`, but as
+ *    a special case, this is automatically set to `false` if the command is
+ *    `esc`.
+ * @param {(function)} [options.onKeyPress]
+ *    It is possible to set the callback function to execute on key press on
+ *    the `options` object instead of in the `callback` parameter.
+ * @param {(function)} [options.condition]
+ *    If additional conditions are required before executing a callback
+ *    function after a key is pressed, this function is evaluated. It must
+ *    return a `true` or truthy value for the callback to execute.
+ * @param {boolean} [options.fireOnce]
+ *    If `true`, the keypress is only activated one time and is immediately
+ *    deregistered when the callback is executed.
+ * @param {function} [callback]
+ *    Function to execute when key is pressed. Technically, this is optional
+ *    (and you might prefer to set it on `options` instead). If there is no
+ *    callback function the keypress simply does nothing.
+ */
+export function registerKeypress(
+  commands: KeypressCommands,
+  callback: KeypressCallback
+): void
+export function registerKeypress(
+  commands: KeypressCommands,
+  options: KeypressOptions,
+  callback?: KeypressCallback
+): void
+export function registerKeypress(
+  commands: KeypressCommands,
+  optionsOrCallback?: KeypressOptions | KeypressCallback,
+  callback?: KeypressCallback
+): void {
+  // Defaults
+  // For shiftKey, metaKey, and altKey, specifies what it should
+  // match on the event object reported by the browser. For instance,
+  // if event.metaKey is false, it means the command must be executed
+  // only if the meta key (ctrl or command depending on the OS) is not
+  // pressed. (Note that ctrlKey will be internally mapped to behave
+  // the same as metaKey here.) The distinction is strict, pass the
+  // value 'optional' to make the system ignore whether a key is pressed.
+  const defaults: Required<KeypressOptions> = {
+    shiftKey: false,
+    metaKey: false,
+    altKey: false,
+    onKeypress: noop,
+    condition: returnTrue,
+    preventDefault: true,
+    stopPropagation: false,
+    requireFocusOnBody: true,
+    fireOnce: false,
+  }
+
+  // Check if the second argument is the options object or the callback function
+  let resolvedOptions: KeypressOptions = {}
+  let resolvedCallback: KeypressCallback | undefined
+
+  if (typeof optionsOrCallback === 'object' && optionsOrCallback !== null) {
+    resolvedOptions = optionsOrCallback as KeypressOptions
+  } else if (typeof optionsOrCallback === 'function') {
+    // The second argument is the callback function
+    resolvedOptions = {}
+    resolvedCallback = optionsOrCallback as KeypressCallback
+  }
+
+  if (callback !== undefined) {
+    resolvedCallback = callback
+  }
+
+  const originalCommands = commands
+  const commandObj = processCommands(commands)
+
+  // Process each command input
+  for (const key in commandObj) {
+    const keyCommands = commandObj[key]
+
+    for (const command of keyCommands) {
+      const mergedCommand: ProcessedCommand = {
+        ...defaults,
+        ...command,
+        originalCommands,
+      }
+
+      // Special case for 'ESC' key; it defaults to global (window) focus
+      if (key === 'Esc' || key === 'Escape') {
+        mergedCommand.requireFocusOnBody = false
+        mergedCommand.stopPropagation = true
+      }
+
+      // Attach callback function to execute
+      if (typeof resolvedCallback === 'function') {
+        mergedCommand.onKeypress = resolvedCallback
+      }
+
+      // If options are specified, replace previous settings
+      const finalCommand: ProcessedCommand = {
+        ...mergedCommand,
+        ...resolvedOptions,
+      }
+
+      // Add processed commands to module's inputs holder
+      if (typeof inputs[key] === 'undefined') {
+        inputs[key] = []
+      }
+      inputs[key].push(finalCommand)
+    }
+  }
+}
+
+/**
+ * Deregisters a key command listener, given matching `commands` and
+ * `callback` parameters.
+ *
+ * @example Deregisters all triggers for `shift d`
+ *    deregisterKeypress('shift d')
+ * @example Deregisters triggers matching callback function `hide` and key `esc`
+ *    deregisterKeypress('esc', hide)
+ * @param {(string|string[])} commands
+ *    Human readable key or key combination to listen for, in the form of "a"
+ *    or "shift a" or "control alt a". If multiple keys should perform the
+ *    same action, pass in an array of strings, e.g. `['a', 'b', 'meta d']`
+ * @param {function} [callback]
+ *    Callback function to execute when key is pressed. This is if you want
+ *    to only remove key handlers that match the same callback. If you do not
+ *    provide a callback, all handlers that match `commands` are removed.
+ * @todo Because of how function equality works, not all functions passed
+ *    in this way result in a true test of equality.
+ */
+export function deregisterKeypress(
+  commands: KeypressCommands,
+  callback?: KeypressCallback
+): void {
+  const commandObj = processCommands(commands)
+
+  // Process each command input
+  for (const key in commandObj) {
+    const keyCommands = commandObj[key]
+
+    for (const command of keyCommands) {
+      const items = inputs[key]
+      let x = (items && items.length) || 0
+
+      // Break if the derigestered command is not found (may have not been registered,
+      // or already deregistered)
+      if (x === 0) break
+
+      // A reverse while loop quickly removes all duplicates that matches
+      while (x--) {
+        const item = items[x]
+        if (item.onKeypress === callback || typeof callback === 'undefined') {
+          // Check for equality for command + function
+          const isShiftOrOptional =
+            item.shiftKey === command.shiftKey || item.shiftKey === 'optional'
+          const isAltOrOptional =
+            item.altKey === command.altKey || item.altKey === 'optional'
+          const isMetaOrOptional =
+            item.metaKey === command.metaKey || item.metaKey === 'optional'
+          if (isShiftOrOptional && isAltOrOptional && isMetaOrOptional) {
+            // If matches, remove it from the command list.
+            inputs[key].splice(x, 1)
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Processes commands
+ *
+ * @param {(string|string[])} commands
+ *    Human readable key or key combination to listen for, in the form of "a"
+ *    or "shift a" or "control alt a". If multiple keys should perform the
+ *    same action, pass in an array of strings, e.g. `['a', 'b', 'meta d']`
+ * @returns object
+ */
+function processCommands(commands: KeypressCommands): CommandsByKey {
+  // If a string, force to one-element array, otherwise expect an array of strings
+  let commandsArray: string[]
+  if (typeof commands === 'string') {
+    commandsArray = [commands]
+  } else {
+    commandsArray = commands
+  }
+
+  const commandsObj: CommandsByKey = {}
+
+  // Process each command input
+  for (const command of commandsArray) {
+    // Normalize command
+    //  - adjust to lower case
+    //  - normalize 'esc' to 'escape'
+    //  - replace command/cmd/control/ctrl to meta (this does not remove dupes)
+    const commandParts = command
+      .toLowerCase()
+      .replace(/(command|cmd|control|ctrl)/g, 'meta')
+      .split(' ')
+
+    const settings: Partial<ProcessedCommand> = {
+      shiftKey: false,
+      altKey: false,
+      metaKey: false,
+    }
+
+    // Check for existence of modifier keys
+    // Modifier keys are removed from input array
+    const isShift = commandParts.indexOf('shift')
+    if (isShift > -1) {
+      settings.shiftKey = true
+      commandParts.splice(isShift, 1)
+    }
+
+    const isAlt = commandParts.indexOf('alt')
+    if (isAlt > -1) {
+      settings.altKey = true
+      commandParts.splice(isAlt, 1)
+    }
+
+    const isMeta = commandParts.indexOf('meta')
+    if (isMeta > -1) {
+      settings.metaKey = true
+      commandParts.splice(isMeta, 1)
+    }
+
+    // First remaining item in the input array is the key to test for.
+    // Does not support multi-keys, so rest of input (if provided) is ignored.
+    const key = commandParts[0]
+
+    // key might be a single string or an array
+    if (key) {
+      let keys: string[] = []
+      // If key is a string, convert to single-element array
+      // Can't do a shortcut version of these with string :-/
+      if (typeof key === 'string') {
+        keys.push(key)
+      } else if (Array.isArray(key)) {
+        keys = key
+      }
+
+      for (const k of keys) {
+        let processedKey: string
+        switch (k) {
+          case 'esc':
+            processedKey = 'escape'
+            break
+          case 'left':
+            processedKey = 'arrowleft'
+            break
+          case 'right':
+            processedKey = 'arrowright'
+            break
+          default:
+            processedKey = k
+            break
+        }
+
+        settings.key = processedKey
+
+        if (typeof commandsObj[processedKey] === 'undefined') {
+          commandsObj[processedKey] = []
+        }
+
+        commandsObj[processedKey].push(settings as ProcessedCommand)
+      }
+    }
+  }
+
+  return commandsObj
+}
+
+function onGlobalKeyDown(event: KeyboardEvent): void {
+  const toExecute: ProcessedCommand[] = []
+  const key = event.key
+
+  // There is a bug in Chrome where events can be fired with an
+  // undefined `key` property, which does not adhere to spec.
+  // This can be duplicated by autofilling an input with 1Password,
+  // and it may be caused by other tools as well.
+  if (typeof key === 'undefined') return
+
+  // Find the right command object
+  const commandsForKey = inputs[key.toLowerCase()]
+  if (!commandsForKey || commandsForKey.length === 0) return
+
+  // Check if the right meta keys are down
+  for (const item of commandsForKey) {
+    if (
+      (item.shiftKey === event.shiftKey || item.shiftKey === 'optional') &&
+      (item.altKey === event.altKey || item.altKey === 'optional') &&
+      (item.metaKey === event.metaKey ||
+        item.metaKey === event.ctrlKey ||
+        item.metaKey === 'optional')
+    ) {
+      toExecute.push(item)
+    }
+  }
+
+  // Execute input's callbacks, if found
+  for (const input of toExecute) {
+    execute(input, event)
+  }
+}
+
+/**
+ * Executes an input's callback function
+ *
+ * @param {object} input - The input object to execute
+ * @param {Event} [event] - The browser's `Event` object created when `keydown` is fired
+ */
+function execute(input: ProcessedCommand, event: KeyboardEvent): void {
+  // Check if condition is satisfied
+  if (input.condition?.() === false) return
+
+  // Check if focus is on the correct place
+  if (input.requireFocusOnBody === true && isFocusOnBody() === false) return
+
+  if (event && input.preventDefault) {
+    event.preventDefault()
+  }
+  if (event && input.stopPropagation) {
+    event.stopPropagation()
+  }
+
+  // Execute callback
+  // Pass event through to callback function
+  if (input.onKeypress) {
+    input.onKeypress(event)
+  }
+
+  // Deregisters the input immediately if it is only supposed to be executed once
+  if (input.fireOnce === true) {
+    deregisterKeypress(input.originalCommands, input.onKeypress)
+  }
+}

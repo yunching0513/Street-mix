@@ -1,0 +1,27 @@
+.toast-web-monetization {
+  img.wm-icon {
+    width: 36px;
+    height: 36px;
+    margin-inline-end: 0.75em;
+  }
+
+  a,
+  a:visited {
+    color: var(--color-emerald-800);
+  }
+
+  a:hover,
+  a:active {
+    color: var(--color-emerald-700);
+  }
+}
+
+.toast-icon-header {
+  display: flex;
+  align-items: center;
+
+  h3 {
+    margin: 0;
+    line-height: 1.2;
+  }
+}

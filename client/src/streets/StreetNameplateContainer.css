@@ -1,0 +1,25 @@
+.street-nameplate-container {
+  position: absolute;
+  left: 150px;
+  right: 150px;
+  top: 10px;
+  z-index: var(--z-03-street-name);
+  text-align: center;
+  pointer-events: none;
+
+  &.move-down-for-menu {
+    transform: translateY(20px);
+  }
+
+  &.no-movement {
+    transition: none !important;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+body.read-only .street-nameplate-container {
+  transform: translateY(0);
+}

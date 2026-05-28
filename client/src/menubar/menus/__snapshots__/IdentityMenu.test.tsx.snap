@@ -1,0 +1,95 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`IdentityMenu > renders 1`] = `
+<DocumentFragment>
+  <div
+    class="menu identity-menu"
+    role="menu"
+  >
+    <div
+      class="identity-section"
+    >
+      <div
+        class="identity-avatar-name"
+      >
+        <div
+          class="identity-avatar-name-left"
+        >
+          <span
+            class="avatar"
+          >
+            <object
+              aria-label="foo"
+              type="image/png"
+            >
+              <img
+                alt="foo"
+                src="test-file-stub"
+              />
+            </object>
+          </span>
+        </div>
+        <div
+          class="identity-avatar-name-right"
+        >
+          <div
+            class="identity-avatar-display-name"
+          >
+            bar
+          </div>
+          <div
+            class="menu-item-subtext"
+          >
+            foo
+          </div>
+        </div>
+      </div>
+      <div
+        class="identity-roles"
+      >
+        <ul />
+      </div>
+    </div>
+    <div
+      aria-orientation="horizontal"
+      class="menu-separator"
+      role="separator"
+    />
+    <button
+      class="menu-item"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="star"
+      />
+      My streets
+    </button>
+    <button
+      class="menu-item"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="settings"
+      />
+      Settings
+    </button>
+    <div
+      aria-orientation="horizontal"
+      class="menu-separator"
+      role="separator"
+    />
+    <button
+      class="menu-item menu-item menu-sign-out"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="sign-out"
+      />
+      Sign out
+    </button>
+  </div>
+</DocumentFragment>
+`;

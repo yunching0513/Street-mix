@@ -1,0 +1,20 @@
+{
+  "name": "@streetmix/parts",
+  "version": "0.0.1",
+  "description": "streetmix kit of parts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/streetmix/streetmix.git",
+    "directory": "packages/parts"
+  },
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "start": "echo Nothing to run!"
+  },
+  "devDependencies": {
+    "typescript-yaml-plugin": "1.0.11"
+  }
+}

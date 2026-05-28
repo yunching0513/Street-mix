@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+
+    /* Language and Environment */
+    "jsx": "react-jsx",
+
+    /* Modules */
+    "moduleResolution": "bundler",
+    "paths": {
+      "~*": ["./*"]
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "vitest/globals",
+      "@modyfi/vite-plugin-yaml/modules" /* Type definitions for YAML */
+    ],
+
+    /* Emit */
+    "noEmit": true, // Will be compiled by Parcel
+
+    /* JavaScript Support */
+    "allowJs": true,
+
+    /* Interop Constraints */
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+
+    /* Completeness */
+    "skipLibCheck": true
+  }
+}

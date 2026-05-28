@@ -1,0 +1,118 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PaletteContainer > renders 1`] = `
+<DocumentFragment>
+  <div
+    class="palette-container-outer"
+  >
+    <div
+      class="palette-container"
+    >
+      <div
+        class="palette-commands palette-commands-left"
+      >
+        <button
+          aria-label="Environment editor"
+          class="btn"
+          type="button"
+        >
+          <svg
+            data-icon="sun"
+            size="24"
+          />
+        </button>
+      </div>
+      <div
+        class="palette-items-scrollable-container"
+      >
+        <button
+          class="btn scrollable scroll-left"
+          hidden="true"
+          style="left: -15px; opacity: 0; pointer-events: none;"
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            data-icon="chevron-left"
+            size="24"
+          />
+        </button>
+        <div
+          class="palette-items"
+          style="overscroll-behavior-x: contain;"
+        >
+          <ul>
+            <li
+              class="palette-item"
+            >
+              <button>
+                <img
+                  class="palette-item-image"
+                  draggable="false"
+                />
+              </button>
+            </li>
+            <li
+              class="palette-item palette-item-disabled"
+            >
+              <button>
+                <img
+                  class="palette-item-image"
+                  draggable="false"
+                />
+              </button>
+              <svg
+                data-icon="lock"
+              />
+            </li>
+          </ul>
+        </div>
+        <button
+          class="btn scrollable scroll-right"
+          hidden="true"
+          style="right: -15px; opacity: 0; pointer-events: none;"
+          tabindex="-1"
+          type="button"
+        >
+          <svg
+            data-icon="chevron-right"
+            size="24"
+          />
+        </button>
+      </div>
+      <div
+        class="palette-commands palette-commands-right"
+      >
+        <button
+          aria-label="Undo"
+          class="btn"
+          disabled=""
+          type="button"
+        >
+          <svg
+            data-icon="undo"
+            size="24"
+          />
+        </button>
+        <button
+          aria-label="Redo"
+          class="btn"
+          disabled=""
+          type="button"
+        >
+          <svg
+            data-icon="redo"
+            size="24"
+          />
+        </button>
+      </div>
+      <div
+        class="palette-trashcan"
+        hidden=""
+      >
+        Drag here to remove
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

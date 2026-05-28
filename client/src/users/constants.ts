@@ -1,0 +1,2 @@
+export const SETTINGS_UNITS_METRIC = 0
+export const SETTINGS_UNITS_IMPERIAL = 1

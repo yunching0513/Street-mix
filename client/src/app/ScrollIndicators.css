@@ -1,0 +1,50 @@
+.street-scroll-indicators {
+  position: absolute;
+  bottom: calc(var(--street-section-baseline) - 20px);
+
+  body.read-only & {
+    bottom: calc(var(--street-section-baseline) - 100px);
+  }
+
+  button {
+    position: fixed;
+    border: 0;
+    border-radius: var(--border-radius-large);
+    background-color: transparent;
+    opacity: 0.25;
+    font-size: 80px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: -0.15em;
+    cursor: pointer;
+    user-select: none;
+    z-index: var(--z-07-street-scroll);
+
+    /* Ensure hitbox is targetable by pointer even when popup is active
+       (which applies pointer-events: none to body) */
+    pointer-events: initial;
+
+    &:hover {
+      opacity: 0.45;
+      background-color: white;
+    }
+
+    &:active {
+      opacity: 0.65;
+    }
+
+    [dir="rtl"] & {
+      direction: ltr;
+    }
+  }
+}
+
+.street-scroll-indicator-left {
+  left: 5px;
+  padding: 0 0.35em 0 0.15em; /* padding accounts for letter-spacing */
+}
+
+.street-scroll-indicator-right {
+  right: 5px;
+  padding: 0 0.3em 0 0.2em; /* padding accounts for letter-spacing */
+}

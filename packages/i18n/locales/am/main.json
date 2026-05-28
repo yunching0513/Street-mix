@@ -1,0 +1,588 @@
+{
+  "menu": {
+    "item": {
+      "help": "እርዳታ ይፈልጋሉ",
+      "about": "ስለ ስትሪትሚክስ",
+      "whatsnew": "",
+      "contact": "አድራሻ",
+      "community": "የማህበረሰብ ገጽ",
+      "sign-in": "ይግቡ",
+      "sign-out": "ይውጡ",
+      "new-street": "አዲስ ጎዳና",
+      "my-streets": "የእኔ ጎዳና",
+      "settings": "ቅንብሮች",
+      "share": "አጋሩ",
+      "store": "ማከማቻ",
+      "upgrade": "ማሻሻያ",
+      "streetmix-plus": ""
+    },
+    "help": {
+      "guidebook-link": "የመመሪያ መጽሃፍ",
+      "keyboard-label": "የኪቦርድ አቋራጮች",
+      "remove-instruction": "የሚያመለክቱበትን የመንገድ ክፍል ያስወግዱ",
+      "remove-shift-instruction": "(ተጫን{shiftKey}ሁሉንም ለማስወገድ)",
+      "move-instruction": "በመንገዱ ዙሪያ ይንቀሳቀሱ",
+      "move-shift-instruction": "(ተጫን{shiftKey}ወደ ጠርዝ ለመዝለል)",
+      "change-instruction": "የሚያመለክቱበትን ጎዳናዎች ክፍል ስፋት ይቀይሩ",
+      "change-shift-instruction": "(ለበለጠ ትክክለኛነት{shiftKey}ተጫን)"
+    },
+    "share": {
+      "sign-in-twitter-link": "ይግቡ",
+      "sign-in-link": "{signInLink}ወደ ጎዳናዎችዎ እና ለግል የመንገድ ንድፍዎ ማዕከለ-ስዕላት የተሻሉ አገናኞች",
+      "link": "ለማጋራት ይህንን ሊንክ ይቅዱ እና ይለጥፉ",
+      "copy-to-clipboard": "ወደ ቅንጥብ ሰሌዳ ቅዳ",
+      "copy-success": "",
+      "twitter": "ትዊተርን በመጠቀም አጋራ",
+      "facebook": "ፌስቡክን በመጠቀም አጋራ",
+      "mastodon": "",
+      "3dstreet": "",
+      "print": "አትም",
+      "save": "በምስልነት ሴቭ ያድርጉ ",
+      "save-byline": "በሪፖርት፣ ብሎግ፣ እና ወዘተ ለማካተት።",
+      "messages": {
+        "my-street": "በስትሪትሚክስ ላይ ፣{streetName}፣ ይመልከቱ ። ",
+        "my-street-unnamed": "በስትሪትሚክስ ላይ መንገዴን ይመልከቱ ፡፡",
+        "someone-elses-street": "በስትሪትሚክስ ላይ{streetName}በ {streetCreator}ይመልከቱ ፡፡",
+        "someone-elses-street-unnamed": "ይህንን መንገድ በ{streetCreator}ላይ- በስትሪትሚክስ ላይ ይመልከቱ ፡፡!",
+        "anonymous-creator-street": "ይመልከቱ{streetName}በስትሪትሚክስ ላይ ፡፡!",
+        "anonymous-creator-street-unnamed": "በስትሪትሚክስ ላይ ይህንን መንገድ ይመልከቱ ፡፡!"
+      }
+    },
+    "contact": {
+      "forums": "በመድረኮች ላይ ይወያዩ ፡፡",
+      "email": "ወደ ስትሪትሚክስ ቡድን ኢሜል ይላኩ።",
+      "github": "በ ጂትሆብ ላይ የኮዱን ምንጭ ይመልከቱ።",
+      "blog": "የስትሪትሚክስ ብሎግን ይጎብኙ",
+      "discord": "የዲስኮርድ ውይይትን ይቀላቀሉ።",
+      "slack": "ስላክ ውይይት ይቀላቀሉ።",
+      "newsletter": "በራሪ ጽሑፋችን ላይ ይመዝገቡ ፡፡"
+    },
+    "feedback": {
+      "prompt": "መልእክት ይላኩልን ፡፡",
+      "message-placeholder": "ስለ ስትሪትሚክስ ምን ያስባሉ?",
+      "email-placeholder": "የእርስዎ ኢሜይል (አማራጭ)።",
+      "send": "መልእክት ይላኩ።",
+      "confirm": "አግኝተነዋል፤ እናመሰግናለን!",
+      "error": "እናዝናለን ፣ በዚህ ጊዜ ግብረመልስ ለመላክ ችግር ገጥሞናል። እባክዎን በኋላ እንደገና ይሞክሩ ፡፡"
+    },
+    "sign-in": {
+      "twitter": "በትዊተር ይግቡ።"
+    },
+    "new-street": {
+      "default": "",
+      "empty": "",
+      "copy": "ኮፒ ያድርጉ",
+      "template": "",
+      "sign-in-link": ""
+    }
+  },
+  "settings": {
+    "heading": "ቅንብሮች",
+    "info-tooltip": "",
+    "general": {
+      "label": ""
+    },
+    "appearance": {
+      "label": ""
+    },
+    "language": {
+      "label": "ቋንቋ"
+    },
+    "profile": {
+      "label": "",
+      "username": "",
+      "username-description": "",
+      "display-name": "",
+      "display-name-description": "",
+      "display-name-not-set": "",
+      "display-name-error": "",
+      "display-name-characters-remaining": ""
+    },
+    "misc": {
+      "label": "",
+      "silly-clowns": "",
+      "silly-clowns-description": ""
+    },
+    "theme": {
+      "label": "",
+      "description": "",
+      "light": "",
+      "dark": "",
+      "system": ""
+    },
+    "units": {
+      "label": "ክፍሎች።",
+      "metric": "የሜትር አሃዶች (በሜትር)",
+      "imperial": "የኢምፔሪያል አሃዶች (በጫማ)"
+    }
+  },
+  "msg": {
+    "loading": "በመጫን ላይ...",
+    "remixing": "እንደገና ማስተካከል ...",
+    "having-trouble": "ችግር እያጋጠመዎት ነው ...",
+    "no-street": "መንገድ አልተመረጠም ፡፡.",
+    "trouble-loading": "  ስትሪትሚክስን ለመክፈት ችግር እያጋጠመን ነው። ",
+    "slow-connection-1": " ስትሪትሚክስ አሁን ከበይነመረቡ ጋር መገናኘት አልቻለም።.",
+    "slow-connection-2": "ገጹን እንደገና መጫን እና እንደገና መሞከር ይፈልጉ ይሆናል።. እባክዎን ወደ ጎዳናው ላይ የተደረገውን የቅርብ ጊዜው ለውጥ ሊያጡ እንደሚችሉ ልብ ይበሉ ፡፡. እናዝናለን! ገጹን እንደገና መጫን እና እንደገና መሞከር ይፈልጉ ይሆናል።. እባክዎን ወደ ጎዳናው ላይ የተደረገውን የቅርብ ጊዜው ለውጥ ሊያጡ እንደሚችሉ ልብ ይበሉ ፡፡. እናዝናለን!",
+    "no-connection": "ስትሪትሚክስ ከበይነመረቡ ጋር ለመገናኘት ችግር እያጋጠመው ነው።.",
+    "more-info": "ተጨማሪ መረጃ"
+  },
+  "error": {
+    "button": {
+      "home": "ወደ ሆምፔጅ ይለፉ ",
+      "sign-in": "በድጋሚ ይግቡ /ሳይን ኢን ያድርጉ/",
+      "reload": "ገጹን በድጋሚ ይጫኑ ",
+      "return": "",
+      "try-again": "በድጋሚ ይሞክሩ "
+    },
+    "page-not-found-title": "ገጹ አልተገኘም",
+    "page-not-found-description": "ይቅርታ፤ በዚህ አድራሻ ምንም ገጽ የለም !",
+    "street-not-found-title": "መንገዱ አልተገኘም ",
+    "street-not-found-description": "ይቅርታ በዚህ ሊንክ (ማገናኛ) መንገድ የለም ",
+    "street-not-found-but-user-description": "በዚህ ሊንክ (ማገናኛ) መንገድ የለም! ነገር ግን በ{user}ሌላ መንገዶች መፈለግ ይችላሉ  ",
+    "street-deleted-title": "ይህ መንገድ ተሰርዟል",
+    "street-deleted-description": "በዚህ ሊንክ (ማገናኛ) መንገድ የለም፤ ነገር ግን በ{user} ሌላ መንገዶች መፈለግ ይችላሉ",
+    "sign-out-title": "አሁን ከገፁ ወጥተዋል",
+    "reload-sign-out-title": "በሌላ መስኮት ከገፁ ወጥተዋል ",
+    "gallery-street-failure-description": "ይህንን መንገድ ለመጫን ችግር አጋጥሞናል::  ",
+    "reload-sign-in-title": "በሌላ መስኮት ገብተዋል (ሳይን ኢን አድርገዋል)",
+    "please-reload": "",
+    "survey-finished": "ፍለጋው ተጠናቋል፡፡ እንኳን ደስ ያለዎ ፣ እናመሰግናለን!",
+    "street-deleted-elsewhere-title": "ይህ መንገድ የሆነ ቦታ ላይ ተሰርዟል",
+    "street-deleted-elsewhere-description": "ይህ መንገድ በሌላ ብሮዘር ተሰርዟል",
+    "auth-expired": "ስራ ላይ ስላልሆኑ በአፋጣኝ እርስዎ እንዲወጡ አድርገናል ",
+    "sign-in-again": "እባክዎን በድጋሚ ይግቡ ",
+    "access-denied-title": "እርስዎ አልገቡም ",
+    "access-denied-description": "የመግቢያ ሂደቱን ሰርዘውታል",
+    "auth-api-problem-title": "እርስዎን ለማስገባት ችግር አጋጥሞ ነበር ",
+    "auth-api-problem-description": "ማረጋገጫን በተመለከተ ችግር አጋጥሞ ነበር ",
+    "please-try-again": "እባክዎን ጥቂት ቆይተው ይሞክሩ ወይም<email_link>በኢሜይል</email_link>ወይም<tweet_link>ትዊተር</tweet_link>አማካኝነት ያሳወቁን ",
+    "please-try-again-contact-us": "",
+    "unsupported-browser-title": "ስትሪትሚክስ በእርስዎ ብሮዘር ላይ አይሰራም ",
+    "unsupported-browser-description": "ስለዚህ ሁኔታ ይቅርታ እንጠይቃለን፡፡ <chrome_link>ክሮም፣</chrome_link><firefox_link>ፋየርፎክስ፣</firefox_link>ማይክሮሶፍት<edge_link>ኤይጅ</edge_link>ወይም ሳፋሪ መሞከር ሊያስፈልግዎ ይችላሉ\n",
+    "unsupported-browser-internet-explorer": "እርስዎ በኢንተርኔት ፈላጊ (ኤክስፕሎረር) ላይ ነዎትን?<a>የበለጠ ይወቁ </a>",
+    "unsupported-browser-contact-us": "",
+    "generic-error-title": "የሆነ ነገር ተሳስቷል ",
+    "generic-error-description": "ይቅርታ - የሆነ ነገር ተሳስቷል ",
+    "error-code": "(ስህተት {code}.)",
+    "need-help-link": "እርዳታ ይፈልጋሉን? "
+  },
+  "btn": {
+    "reload": "በድጋሚ ይጫኑ ",
+    "undo": "​​ወደ ነበሩበት ይመለሱ ",
+    "redo": "ወደ ይ",
+    "try-again": "በድጋሚ ይሞክሩ ",
+    "cancel": "ይሰርዙ ",
+    "create": "አዲስ መንገድ ይፍጠሩ ",
+    "copy": "ኮፒ ያድርጉ",
+    "remove": "ያስወግዱ ",
+    "close": "ይዝጉ ",
+    "dismiss": "ያስወጡ ",
+    "okay": "ትክክል ነው! ",
+    "not-now": "አሁን አይደለም ",
+    "save": "",
+    "edit": ""
+  },
+  "dialogs": {
+    "error": {
+      "heading": "ውይ!",
+      "text": "የሆነ ያልተጠበቀ ነገር ተፈጥሯል 😢፡፡ ስህተቱን መዝግበናል፤ እዚህ ላይ ምን እንደተፈጠረ የሚያስታውሱ ከሆነ<a>እባክዎን ስለዚህ ይንገሩን</a>፡፡ ይህ ጊዜያዊ ችግር ሊሆን ይችላል፤ እባክዎን ለአንድ ተጨማሪ ጊዜ ይሞክሩ::"
+    },
+    "welcome": {
+      "heading": "እንኳን ወደ ስትሪትሚክስ በደህና መጡ! ",
+      "new": {
+        "intro": "በአጎራባችዎ የሚገኝ መንገድን ዲዛይንና ሪሚክስ አድርገው ያጋሩ፡፡ ዛፎችን ወይም የብስክሌት መንገዶችን፣ ሰፋፊ የእግረኛ መንገዶችን ወይም የተሽከርካሪ መጓጓዣ መስመሮችን በመጨመር የእርስዎ ውሳኔ እንዴት ማሕበረሰብዎ ላይ ተጽእኖ እንደሚፈጥር ይረዱ፡፡   ",
+        "instruction": "በዙሪያ የሚገኙ የተወሰኑ አነስተኛ ክፍሎችን ወደ ሌላ ቦታ በማዘዋወር ይጀምሩ  ",
+        "instruct": "{pointer}ን በመጠቀም  የተወሰኑ የመንገድ ክፍሎችን ወደ ሌላ ቦታ በማዘዋወር ይጀምሩ",
+        "instruct-pointer-finger": "የእርስዎ ጣት ",
+        "instruct-pointer-mouse": "የእርስዎ ማውዝ "
+      },
+      "existing": {
+        "intro": "ይህ (የመንገድ ስም) በ{streetName}የተዘጋጀ ነው{creator}",
+        "intro-without-creator": "ይህ{streetName}ነው::",
+        "instruct": "የተወሰኑ የመንገድ ክፍሎችን ወደ ሌላ ቦታ በማዘዋወር ሪሚክስ ያድርጉ ወይም (የራስዎን መንገድ ይጀምሩ) {startYourOwnStreet}",
+        "instruct-start-own-street": "የራስዎን መንገድ ይጀምሩ "
+      }
+    },
+    "new-street": {
+      "heading": "ይህ የእርስዎ አዲስ መንገድ ነው ",
+      "default": "ለምሳሌነት በሚያገለግል መንገድ ይጀምሩ ",
+      "empty": "በባዶ መንገድ ይጀምሩ",
+      "last": "በመጨረሻው መንገድ ኮፒ ይጀምሩ ",
+      "dismiss": ""
+    },
+    "about": {
+      "heading": "ስትሪትሚክስን በተመለከተ",
+      "description": "የእርስዎን መንገድ ዲዛይንና ሪሚክስ በማድረግ ያጋሩ፡፡ የብስክሌት መንገዶችን፣ ሰፋፊ የእግረኛ መንገዶችን ወይም የተሽከርካሪ መጓጓዣ መስመሮችን በመጨመር  እነዚህ ሁሉ እንዴት ማሕበረሰብዎ ላይ ተጽእኖ እንደሚፈጥሩ ይረዱ፡፡ ",
+      "team-heading": "የፕሮጀክት ቡድን እና አከናዋኞች ",
+      "partners": "አጋሮች ",
+      "sponsors": "ስፖንሰሮች ",
+      "sponsored-by": "ስትሪትሚክስ በከፍተኛ ሁኔታ ስፖንሰር የተደረገው በ፡",
+      "donate-link": "በገንዘብ ረገድ ድጋፍ ያድርጉልን ",
+      "tos-link": "የአገልግሎት ደንቦች",
+      "privacy-link": "የግል ነፃነት ፖሊሲ ",
+      "acknowledgements": "ምስጋና ",
+      "font-designed-by": "{fontName}ፎንቱ ዲዛይን የተደረገው በ {fontAuthor}፡፡",
+      "emoji-by": "ኢሞጂ በ{author}፡፡",
+      "icons-by": "አይከንስ በ{author}፡፡",
+      "license-label": "(<a>ፈቃድ </a>)"
+    },
+    "analytics": {
+      "export-csv": "እንደ ሲኤስቪ ወደ ውጭ ይላኩ ",
+      "heading": "ትንተናዎች ",
+      "street-summary": "የእርስዎ መንገድ በግምት በሰዓት የ{averageTotal}ሰዎች ፍሰት (ትራፊክ) አለው፤ በሰዓት እስከ{potentialTotal}ለሚደርሱ ሰዎች አቅም አለው ",
+      "typical-lane-width": "የአቅም እሴቶች{laneWidth}በሰፊ መንገዶች ላይ የተመሰረቱ ናቸው::\n",
+      "segment-summary": "{average}—{potential}ሰዎች/በሰዓት",
+      "segment-summary-single": "{amount}ሰዎች/በሰዓት",
+      "source": "ምንጭ ",
+      "capacity-data-source": "የአቅም መረጃ ምንጭ ",
+      "toggle-visible": "የእያንዳንዱን የመንገድ ክፍል  የአቅም ሁኔታን ያሳዩ ",
+      "settings-notice": "የመንገድ ባለቤቶች ይህንን ሴቲንግ መቀየር ይችላሉ::"
+    },
+    "save": {
+      "heading": "በምስልነት ሴቭ ያድርጉ",
+      "option-labels": "የአነስተኛ ክፍልፋዮች ስሞች እና ስፋቶች  ",
+      "option-name": "የመንገድ ስም ",
+      "option-sky": "ግልጽ ሰማይ ",
+      "option-watermark": "ዋተርማርክ",
+      "option-custom-scale": "",
+      "option-custom-scale-description": "",
+      "loading": "በመጫን ላይ...",
+      "save-button": "ኮምፒዩተርዎ ላይ ሴቭ ያድርጉ…",
+      "license": "ይህ የስትሪትሚክስ የጎዳና-አምሳያ ምስል በየትኛውም ቦታ ፣ ለማንኛውም ዓላማ ፣ በ {licenseLink} ፈቃድ ስር ጥቅም ላይ ሊውል ይችላል።.",
+      "error-preview": "የቀድሞ ምልከታ ምስል ማሳየት ላይ ስህተት አለ ",
+      "error-unavailable": "ወደ ምስል ሴቭ ማድረጊያ በእርስዎ ብሮዘር ላይ የለም",
+      "error-too-large": "",
+      "preview-image-alt": "የቅድመ ምልከታ ",
+      "print-size": "",
+      "digital-size": "",
+      "weather-not-exported": ""
+    },
+    "geotag": {
+      "search": "ቦታን መፈለግ ",
+      "clear-search": "ፍለጋ አጥፋ",
+      "zoom-in": "ማጉላት ",
+      "zoom-out": "መቀነስ ",
+      "add-location": "ቦታ ይጨምሩ ",
+      "confirm-location": "ቦታ ያረጋግጡ ",
+      "clear-location": "ቦታ ያጥፉ",
+      "unknown-location": "ያልታወቀ ቦታ ",
+      "geotag-unavailable": "የጂኦኮዲንግ አገልግሎት በአሁኑ ወቅት አይገኝም፡፡ ካርታውን ለማየት ይችላሉ፤ ነገር ግን የዚህን መንገድ አቀማመጥ መቀየር አይችሉም፡"
+    },
+    "donate": {
+      "heading": "ስትሪትሚክስ የእርስዎን እርዳታ ይፈልጋል! ",
+      "lede": "ስትሪትሚክስ በማሕበረሰብ የሚደገፍ ፕሮጀክት ነው። ከሌሎቹ ኢንተርኔት ላይ የሚገኙ “ነፃ” አገልግሎቶች በተቃራኒ የእርስዎን የግል ነፃነት የሚጋፉ ማስታወቂያዎችን አናሳይም ወይም ያሉበትን ቦታ መከታተያ አንጠቀምም፡፡ ከዚህ ይልቅ ስትሪትሚክስ ከፍ እንዲል እና ስራውን እንዲቀጥል በእርስዎ ድጋፍ ላይ እንተማመናለን፡፡  ",
+      "text": "እባክዎን ለአንድ ጊዜ ወይም በተደጋጋሚ በሚደረግ መዋጮ እኛን ይደግፉ፡፡ የእርስዎ ልገሳ ለሰርቨሮቻችን እና ክላውድ መሰረተ ልማት ክፍያ ይውላሉ፣ መንገዶቻችንን ለማሻሻል እየሰሩ የሚገኙ ሌላ ለትርፍ ያልተቋቋሙ፣ ተሟጋች ቡድኖች እና ተማሪዎችን ይደግፋል፡፡ ተጨማሪ ገቢ በአሁኑ ወቅት ያሉትን ፊቸሮች የበለጠ ለማጎልበት ኢንቨስት ይደረጋል፡፡ ወጪያችን ሙሉ በሙሉ ግልጽ ነው፤ በመሆኑም የእርስዎ መዋጮ በስትሪትሚክስ ቡድን እንዴት ጥቅም ላይ እንደዋለ በትክክል መመልከት ይችላሉ፡፡   ",
+      "button": "ለስትሪትሚክስ ልገሳ ያድርጉ ",
+      "cancel": "የለም፤ አመሰግናለሁ  "
+    },
+    "sign-in": {
+      "heading": "ወደ ገፁ ይግቡ/ከገጹ ይውጡ",
+      "description": "የመጀመሪያ ዲዛይንዎን ሴቭ ያድርጉ ወይም ያለፉ ዲዛይንዎን ለማግኘት ወደ ገፁ ይግቡ",
+      "email-label": "ኢሜይል ",
+      "email-description": "ለመግባት እንዲችሉ ሊንክ (ማገናኛ) እንልክልዎታለን፡፡ ምንም አይነት ማለፊያ ቃል አይጠየቅም  ",
+      "email-invalid": "ውይ! ይህ ስራ ላይ ያለ የኢሜይል አድራሻ አይመስልም፡፡ እባክዎን በድጋሚ ይሞክሩ ",
+      "social-heading": "ወይም",
+      "button": {
+        "email": "በኢ-ሜይል ይቀጥሉ",
+        "twitter": "በትዊተር ይቀጥሉ",
+        "google": "በጉግል ይቀጥሉ ",
+        "facebook": "በፌስቡክ ይቀጥሉ "
+      },
+      "tos": "ከእነዚህ ቁልፎች መካከል አንዱን ክሊክ በማድረግ፤ በ {tosLink}እና{privacyLink}እስማማለሁ፡፡",
+      "tos-link-label": "የአገልግሎት ደንቦች ",
+      "privacy-link-label": "የግል ነፃነት ፖሊሲ ",
+      "loading-message": "እርስዎ እየገቡ ነው …",
+      "sent-message-with-email": "ኢሜይል ለ{email} ልከናል፡፡ እባክዎን መግባቱን ለመቀጠል መመሪያዎቹን ይከተሉ",
+      "email-unreceived": "አልደረስዎትምን? ",
+      "resend-email": "ኢሜይል በድጋሚ ይላኩ "
+    },
+    "whatsnew": {
+      "heading": "ስትሪትሚክስ ጋር ምን አዲስ ነገር አለ? ",
+      "english-only": ""
+    },
+    "newsletter": {
+      "heading": "በራሪ ጽሑፋችን ላይ ይመዝገቡ ፡፡",
+      "description": "በአመት ውስጥ ለበርካታ ጊዜያት በኒውስሌተራችን አማካኝነት በየጊዜው የኢሜይል ወቅታዊ ሁኔታዎችን እንልካለን፡፡ ምንም ነገር እንዳያመልጥዎ ለማረጋገጥ ይመዝገቡ    ",
+      "email-label": "ኢሜይልዎን ያስገቡ ",
+      "field-required-error": "ይህ መስክ አስፈላጊ ነው",
+      "subscribe": "ሰብስክራይብ ",
+      "subscribe-pending": "እባክዎን ይጠብቁ…",
+      "ok-message": "<strong>እናመሰግናለን! ሰብስክራይብ ተደርገዋል ለማለት ይቻላል፡፡ </strong>አድራሻዎን ለማረጋገጥ ኢሜይል ልከንልዎታል፡፡ ክሊክ ሲያደርጉ ይገባሉ!  ",
+      "error-message": "ውይ! ሰብስክራይብ በማድረግ ሒደት የሆነ ነገር ተሳስቷል፡፡ ይህ ጊዜያዊ የሲስተም ስህተት ሊሆን ይችላል፡፡ እባክዎን ጥቂት ቆይተው በድጋሚ ይሞክሩ  "
+    }
+  },
+  "tools": {
+    "tooltip": "ቶግል ቱልስ ",
+    "skybox": {
+      "tooltip": "የአካባቢ ማስተካከያ ",
+      "heading": "አካባቢ ",
+      "sky": {
+        "heading": ""
+      },
+      "weather": {
+        "heading": "",
+        "clear": "",
+        "rain": "",
+        "snow": ""
+      }
+    },
+    "flooding": {
+      "tooltip": "",
+      "heading": "",
+      "sea-level": {
+        "label": "",
+        "current": ""
+      },
+      "storm-surge": {
+        "label": ""
+      },
+      "messages": {
+        "start": "",
+        "need-waterfront": "",
+        "success": "",
+        "fail": ""
+      }
+    }
+  },
+  "prompt": {
+    "new-street": "አዲስ የመንገድ ስም፡",
+    "delete-street": "{streetName}የመንገድ ስም) በዘለቄታዊነት መሰረዝ እንደሚፈልጉ እርግጠኛ ነዎትን ? ይህን በድጋሚ ወደነበረበት ቦታ  መመለስ አይችሉም። ",
+    "new-width": "አዲስ የመንገድ ስፋት (ከ{minWidth}እስከ{maxWidth})፡፡ ",
+    "segment-label": "አአዲስ የመንገድ ክፍል መለያ፡  "
+  },
+  "toast": {
+    "segment-deleted": "የመንገድ ክፍሉ ተወግዷል ",
+    "all-segments-deleted": "ሁሉም የመንገድ ክፍሎች ተወግደዋል:: ",
+    "no-undo": "በድጋሚ ወደነበረበት ቦታ የሚመልስ ነገር የለም",
+    "no-redo": "በድጋሚ የሚደረግ የለም ",
+    "no-save": "በእጅ ሴቭ ማድረግ አያስፈልግም፡፡ ስትሪትሚክስ ወዲያውኑ የእርስዎን መንገድ ሴቭ ያደርጋል!",
+    "remixing": "አሁን አዲስ የተሰራውን የመጀመሪያውን መንገድ ቅጂ በማስተካከል ላይ ነው። ቅጂው እርስዎ ማዕከለ-ስዕላት ውስጥ ገብቷል፡፡   ",
+    "remixing-sign-in": "አሁን አዲስ የተሰራውን የመጀመሪያውን መንገድ ቅጂ በማስተካከል ላይ ነው።፡ የራስዎን የመንገዶች ማዕከለ-ስዕላትለመጀመር ይግቡ፡፡  ",
+    "reloaded": "በሌላ ቦታ ስለተሻሻለ መንገድዎ ከሰርቨሩ እንደገና ተጭኗል። "
+  },
+  "palette": {
+    "remove": "ለማስወገድ ወደዚህ ጎትት"
+  },
+  "width": {
+    "label": "{width}ስፋት",
+    "under": "({width}ክፍል)",
+    "over": "({width}በላይ)",
+    "occupied": "የተያዘ ስፋት",
+    "building": "ህንጻ - ለ - ህንጻ ስፋት",
+    "different": "የተለያዩ ስፋቶች ...",
+    "units": "ክፍሎች።",
+    "metric": "",
+    "imperial": ""
+  },
+  "capacity": {
+    "ppl-per-hour": "{capacity}ሰዎች / ሰ "
+  },
+  "datetime": {
+    "minutes-ago": "ከጥቂት ደቂቃዎች በፊት",
+    "seconds-ago": "ከጥቂት ሰከንዶች በፊት",
+    "yesterday": "ትናንት በ{time}",
+    "today": "ትናንት በ{time}"
+  },
+  "key": {
+    "backspace": "ወደኋላ መመለስ",
+    "shift": "ሺፍት",
+    "plus": "በተጨማሪም",
+    "minus": "መቀነስ",
+    "left-arrow": "የግራ ቀስት ",
+    "right-arrow": "የቀኝ ቀስት"
+  },
+  "tooltip": {
+    "remove-segment": "የመንገዱን ክፍል ያስወግዱ",
+    "delete-street": "መንገድ ሰርዝ",
+    "segment-width": "የመንገዱን ክፍልስፋት ይለውጡ",
+    "building-height": "የወለሎችን ብዛት ይለውጡ",
+    "street-width": "የመንገዱን ስፋት ይለውጡ",
+    "geotag": "",
+    "increase-width": "ስፋትን ይጨምሩ",
+    "decrease-width": "ስፋትን ይቀንሱ ",
+    "width-tooltip-sublabel": "(ለተጨማሪ ትክክለኛነት ሺፍትን ይያዙ)",
+    "add-floor": "ወለል ያክሉ",
+    "remove-floor": "ወለሉን ያስወግዱ",
+    "scroll-street-left": "መንገዱን ወደ ግራ ስክሮል አድርግ",
+    "scroll-street-right": "መንገዱን ወደ ቀኝ ስክሮል አድርግ",
+    "scroll-left": "ወደ ግራ ስክሮኮል",
+    "scroll-right": "ወደ ቀኝ ስክሮኮል",
+    "elevation-sidewalk": "የእግረኛ መንገድ",
+    "elevation-road": "የጎዳና ደረጃ",
+    "elevation-input": "",
+    "elevation-lower": "",
+    "elevation-raise": "",
+    "ground-height-input": "",
+    "ground-height-lower": "",
+    "ground-height-raise": "",
+    "sea-level-input": "",
+    "sea-level-lower": "",
+    "sea-level-raise": ""
+  },
+  "street": {
+    "default-name": "ያልተሰየመ መንገድ",
+    "rename": "እንደገና ለመሰየም ጠቅ ያድርጉ"
+  },
+  "building": {
+    "label": "",
+    "floors-count": "{count, plural, one {# ወለል} other {# ወለሎች}}"
+  },
+  "segments": {
+    "warnings": {
+      "does-not-fit": "ይህ የመንገድ ክፍል በጎዳና ላይ አይገጥምም",
+      "not-wide": "ይህ  የመንገድ ክፍል ሰፊ ላይሆን ይችላል",
+      "too-wide": "ይህ የመንገድ ክፍል በጣም ሰፊ ሊሆን ይችላል",
+      "dangerous": "",
+      "slope-exceeded": ""
+    },
+    "learn-more": "የበለጠ ይወቁ",
+    "unknown": {
+      "label": "ያልታወቀ"
+    },
+    "description": {
+      "photo-credit": "ፎቶ"
+    },
+    "resize": {
+      "min": "ዝቅተኛ",
+      "max": "ከፍተኛ"
+    },
+    "controls": {
+      "width": "",
+      "ground-height": "",
+      "sea-level": "",
+      "elevation": "",
+      "slope": {
+        "label": "",
+        "switch-tooltip": "",
+        "disabled-tooltip": ""
+      }
+    }
+  },
+  "section": {
+    "empty": "ባዶ ቦታ"
+  },
+  "gallery": {
+    "fail": "ስዕላቱን መጫን አልተሳካም",
+    "all": "ሁሉም ጎዳናዎች",
+    "twitter-link": "የትዊተር መገለጫ",
+    "delete-street-tooltip": "መንገድ ሰርዝ",
+    "street-count": "{count, plural, one {# ጎዳና} other {# ጎዳናዎች}}",
+    "no-streets": "እስካሁን ምንም ጎዳናዎች የሉም ",
+    "thumbnail-error": "ድንክዬ ምስል አይገኝም"
+  },
+  "users": {
+    "anonymous": "ስም-አልባ",
+    "byline": "በ {user}",
+    "roles": {
+      "admin": "አስተዳዳሪ",
+      "subscriber": ""
+    }
+  },
+  "export": {
+    "watermark": "በ{streetmixWordmark}የተሰራ"
+  },
+  "meta": {
+    "description": "የአካባቢውን መንገድ ይንደፉ ፣ ያስተካክሉ እና ያጋሩ - ሁሉም በአሳሽዎ ውስጥ! ዛፎችን ወይም የብስክሌት መንገዶችን ያክሉ ፣ የእግረኛ መሄጃ መንገዶችን ወይም የትራፊክ መስመሮችን ያስፋፉ ፣ ውሳኔዎችዎ ማህበረሰብዎን እንዴት ተጠቀሚ እንደሚያደርገው ይገምግሙ::",
+    "page-title": "{streetName}(በ{author})"
+  },
+  "credits": {
+    "core-team-heading": "የፕሮጀክት ቡድን",
+    "original-team-heading": "የመጀመሪያው የፕሮጀክት ቡድን",
+    "past-team-heading": " የቀድሞ ቡድን አባላት",
+    "core-contributors": "ዋና አስተዋጽኦ አበርካቾች",
+    "advisors": "አማካሪዎች",
+    "additional-illustrations": "ተጨማሪ ምሳሌዎች",
+    "additional-code": "ተጨማሪ ኮድ",
+    "additional-contributors": "ተጨማሪ አስተዋፅኦ አበርካቾች",
+    "special-thanks": "ልዩ ምስጋና ለ",
+    "translators": "ተርጓሚዎች"
+  },
+  "plus": {
+    "locked": {
+      "label": "",
+      "soon": "በቅርቡ ይመጣል",
+      "sub": "ለመጠቀም ወደ ስትሪትሚክስ + ያሻሽሉ!",
+      "sub-edit": "",
+      "user": "ለመጠቀም ይመዝገቡ!",
+      "action": ""
+    },
+    "prompt": {
+      "text": "ይህ ባህሪ ለስትሪትሚክስ + ተጠቃሚዎች ብቻ ይገኛል።.",
+      "action": "ለመክፈት ያሻሽሉ"
+    },
+    "web-monetization": {
+      "thanks": "",
+      "not-signed-in": "",
+      "signed-in": "",
+      "learn-more": "የበለጠ ይወቁ"
+    }
+  },
+  "sentiment": {
+    "prompt": {
+      "intro": "<strong>ማቋረጡን ይቅር ይበሉ።.</strong>በዚህ መንገድ ላይ የእርስዎን ግብረመልስ እንወዳለን።.",
+      "joyful": "ይህ መንገድ አስደሳች ነው<em>ትላለህ</em>?",
+      "choose-one": "(አንዱን ይምረጡ)"
+    },
+    "answer": {
+      "rating-1": "በፍፁም አይደለም",
+      "rating-2": "በጣም ብዙ አይደለም",
+      "rating-3": "እንደዛ ነው",
+      "rating-4": "ትንሽ",
+      "rating-5": "በጣም ብዙ"
+    },
+    "sign-in-prompt": "ድምጽዎን ለመስማት እባክዎን አሁን ይግቡ::",
+    "about-link": "ይህንን ለምን አየዋለሁ?",
+    "about-text": "ይህ የዳሰሳ ጥናት ሰዎች ስለ ጎዳናዎች ምን እንደሚሰማቸው ለመማር ይረዳናል ፡፡.",
+    "thank-you": "አመሰግናለሁ!",
+    "about-header": "ሰዎች ስለ ጎዳናዎች ምን እንደሚሰማቸው ለመረዳት እንፈልጋለን።",
+    "about-article": {
+      "paragraph-1": "በርካታ መንገዶች በሲቪል መሐንዲሶች ዲዛይን ተደርገዋል፤ ነገር ግን ዲዛይኑ የእያንዳንዱ ሰው ምልከታ ማካተት አለበት፡፡ <a>ከኒው ኧርባን ሞቢሊቲ አላይንስ</a>ኤንዩኤምኦ) ጋር በአጋርነት በመስራት ያንን ለማከናወን ይህንን የአንድ-ጥያቄ ጥናት እያደርግን ነው::\n",
+      "paragraph-2": " የትኛው የመንገድ መገለጫዎች የትኛዎቹን ስሜቶች እንደሚያካትቱ ለማዛመድ እንድንችል የእርስዎን ምላሾች እንተነትናለን፡፡ ለወደፊቱ እነዚህን ምልከታዎች ለስትሪትሚክስ ተጠቃሚዎች የዲዛይን አስተያየቶች ውስጥ የማካተት እቅድ አለን፡፡   ",
+      "paragraph-3": "በአንድ መንገድ ድምጽ ለመስጠት የሚችሉት አንድ ጊዜ ብቻ ነው፤ ነገር ግን የእርስዎን መንገድ ወይም ደግሞ በ<a>https://streetmix.net/survey/</a>የሚገኙ በነሲብ የተመረጡ መንገዶችን በመጋራት ድምጻቸውን እንዲሰጡ ያበረታቱ፡፡ "
+    },
+    "done": {
+      "response": "ምላሽ ሰጥተዋል{score}።",
+      "vote-another": "በሌላው ላይ ድምጽ ይስጡ!",
+      "really-done": "ሁሉም ተከናውኗል!"
+    },
+    "comment": {
+      "prompt": "ለምን እንደሆነ ይንገሩን",
+      "example": "(ለምሳሌ ፣ “ዛፎቹን ወድጃቸዋለሁ ።) ",
+      "submit": "ያስገቡ",
+      "thanks": "ገባኝ!"
+    }
+  },
+  "i18n": {
+    "lang": {
+      "am": "አማርኛ",
+      "ar": "አረብኛ",
+      "ca": "ካታላን",
+      "cs": "ቼክ",
+      "de": "ጀርመንኛ",
+      "en": "እንግሊዝኛ ",
+      "en-gb": "እንግሊዝኛ (ዩናይትድ ኪንግደም)",
+      "es": "ስፓኒሽ ",
+      "es-419": "ስፓኒሽ (ላቲን አሜሪካ)",
+      "es-es": "ስፓኒሽ (ስፔን)",
+      "es-mx": "ስፓኒሽ (ሜክሲኮ)",
+      "fi": "ፊንላንድ",
+      "fr": "ፈረንሳይኛ",
+      "id": "",
+      "it": "ጣልያንኛ",
+      "ja": "ጃፓንኛ",
+      "ko": "ኮሪያኛ",
+      "nb-no": "የኖርዌይ ቦክማሊ",
+      "nl-nl": "ደች (ኔዘርላንድስ)",
+      "pl": "ፖላንድኛ",
+      "pt-br": "ፖርቹጋልኛ (ብራዚል)",
+      "ro-ro": "ሮማኒያን ",
+      "ru": "ራሺያ",
+      "sv": "ስዊድሽ",
+      "tr": "ተርኪሽ",
+      "zh": "ቻይኒዝ",
+      "zh-hans": "ቀለል ያለ ቻይኒዝ",
+      "zh-hant": "ባህላዊ ቻይኒዝ"
+    }
+  }
+}

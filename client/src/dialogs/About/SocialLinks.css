@@ -1,0 +1,69 @@
+.social-links {
+  li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  a {
+    color: var(--color-midnight-600);
+
+    &:hover {
+      color: var(--color-midnight-700);
+    }
+  }
+
+  svg {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+.social-github {
+  color: var(--social-github);
+
+  &:hover {
+    color: var(--social-github-hover);
+  }
+}
+
+.social-discord {
+  color: var(--social-discord);
+
+  &:hover {
+    color: var(--social-discord-hover);
+  }
+}
+
+.social-bluesky {
+  color: var(--social-bluesky);
+
+  &:hover {
+    color: var(--social-bluesky-hover);
+  }
+}
+
+.social-mastodon {
+  color: var(--social-mastodon);
+
+  &:hover {
+    color: var(--social-mastodon-hover);
+  }
+}
+
+/* Deprecated */
+.social-twitter {
+  color: var(--social-twitter);
+
+  &:hover {
+    color: var(--social-twitter-hover);
+  }
+}
+
+/* Not used - deprecated */
+.social-instagram {
+  color: var(--social-instagram);
+
+  &:hover {
+    color: var(--social-instagram-hover);
+  }
+}

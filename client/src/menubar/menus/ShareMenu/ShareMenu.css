@@ -1,0 +1,44 @@
+.share-menu {
+  --share-menu-width: 350px;
+
+  width: var(--share-menu-width);
+}
+
+.share-via-link-container {
+  position: relative;
+  padding-block: 0.8em;
+  padding-inline: 2.5em 1em;
+
+  [data-icon="link"] {
+    top: 0.9em;
+  }
+}
+
+.share-via-link-form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5em;
+
+  input {
+    flex-grow: 1;
+  }
+
+  button {
+    padding: 4px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Override icon styles */
+  [data-icon="copy"] {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+}
+
+.share-via-link {
+  line-height: 18px;
+  margin-inline-end: 0.5em;
+}

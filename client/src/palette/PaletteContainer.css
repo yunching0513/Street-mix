@@ -1,0 +1,62 @@
+.palette-container-outer {
+  --palette-height: 64px;
+  --palette-background: var(--off-white);
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: var(--palette-height);
+  padding-inline: var(--left-right-inset);
+  display: flex;
+  justify-content: center;
+}
+
+.palette-container {
+  position: relative;
+  width: 100%;
+  min-width: var(--breakpoint-md);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: var(--palette-background);
+  z-index: var(--z-02-palette);
+  user-select: none;
+  touch-action: none;
+  border-top-left-radius: var(--border-radius-large);
+  border-top-right-radius: var(--border-radius-large);
+}
+
+@media only screen and (width <= 768px) {
+  .palette-container-outer {
+    padding-inline: 0;
+  }
+
+  .palette-container {
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    min-width: 100%;
+  }
+}
+
+.palette-commands {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em;
+  width: 120px;
+  gap: 0.25em;
+
+  button {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.palette-commands-right {
+  justify-content: flex-end;
+}

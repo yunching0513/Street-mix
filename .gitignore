@@ -1,0 +1,43 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+node_modules/
+npm-debug.log*
+
+# Ignore built assets
+build
+# TypeScript cache
+*.tsbuildinfo
+# Current parcel cache
+.parcel-cache
+# Legacy parcel-bundler cache
+.cache
+
+.env
+
+newrelic_agent.log
+.idea
+
+# Ignore editor settings
+.vscode
+
+# Ignore code coverage folder
+coverage
+
+# Ignore test artifacts
+# https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests#Asset-Files
+cypress/downloads
+cypress/screenshots
+cypress/videos
+
+# Sentry Auth Token
+.sentryclirc

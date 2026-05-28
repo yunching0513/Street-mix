@@ -1,0 +1,366 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ShareMenu > does not render external share links in offline mode 1`] = `
+<DocumentFragment>
+  <div
+    class="menu share-menu"
+    role="menu"
+  >
+    <button
+      class="menu-item"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="print"
+      />
+      Print…
+    </button>
+    <button
+      class="menu-item"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="download"
+      />
+      Save as image…
+      <span
+        class="menu-item-subtext"
+      >
+        For including in a report, blog, etc.
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ShareMenu > renders (user not signed in, anonymous user’s street, no street name) 1`] = `
+<DocumentFragment>
+  <div
+    class="menu share-menu"
+    role="menu"
+  >
+    <div
+      class="share-sign-in-promo sign-in-promo"
+    >
+      <a>
+        Sign in
+      </a>
+       for nicer links to your streets and your personal street gallery.
+    </div>
+    <div
+      class="share-via-link-container"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="link"
+      />
+      Copy and paste this link to share:
+      <div
+        class="share-via-link-form"
+      >
+        <input
+          class="share-via-link"
+          readonly=""
+          spellcheck="false"
+          type="text"
+          value="http://localhost:3000/"
+        />
+        <button
+          class="btn"
+          type="button"
+        >
+          <svg
+            data-icon="clipboard"
+            size="16"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      aria-orientation="horizontal"
+      class="menu-separator"
+      role="separator"
+    />
+    <button
+      class="menu-item"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="mastodon"
+      />
+      Share using Mastodon
+      <svg
+        data-icon="external-link"
+      />
+    </button>
+    <a
+      class="menu-item"
+      href="https://twitter.com/intent/tweet?text=Check%20out%20this%20street%20on%20Streetmix!&url=http%3A%2F%2Flocalhost%3A3000%2F"
+      rel="noopener noreferrer"
+      role="menuitem"
+      target="_blank"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="twitter"
+      />
+      Share using Twitter
+      <svg
+        data-icon="external-link"
+      />
+    </a>
+    <a
+      class="menu-item"
+      href="https://www.facebook.com/dialog/feed?app_id=&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F&link=http%3A%2F%2Flocalhost%3A3000%2F&name=Unnamed%20St%20%E2%80%93%20Streetmix&description=Check%20out%20this%20street%20on%20Streetmix!"
+      rel="noopener noreferrer"
+      role="menuitem"
+      target="_blank"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="facebook"
+      />
+      Share using Facebook
+      <svg
+        data-icon="external-link"
+      />
+    </a>
+    <div
+      aria-orientation="horizontal"
+      class="menu-separator"
+      role="separator"
+    />
+    <a
+      class="menu-item"
+      href="https://3dstreet.app/#http://localhost:3000/"
+      rel="noopener noreferrer"
+      role="menuitem"
+      target="_blank"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="cube"
+      />
+      Open in 3DStreet
+      <svg
+        data-icon="external-link"
+      />
+    </a>
+    <a
+      class="menu-item"
+      href="https://streetmeter.net/#http://localhost:3000/"
+      rel="noopener noreferrer"
+      role="menuitem"
+      target="_blank"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="chart"
+      />
+      Open in Streetmeter 
+      <span
+        class="beta-tag"
+      >
+        BETA
+      </span>
+      <svg
+        data-icon="external-link"
+      />
+    </a>
+    <div
+      aria-orientation="horizontal"
+      class="menu-separator"
+      role="separator"
+    />
+    <button
+      class="menu-item"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="print"
+      />
+      Print…
+    </button>
+    <button
+      class="menu-item"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="download"
+      />
+      Save as image…
+      <span
+        class="menu-item-subtext"
+      >
+        For including in a report, blog, etc.
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ShareMenu > renders (user signed in, own street, with name) 1`] = `
+<DocumentFragment>
+  <div
+    class="menu share-menu"
+    role="menu"
+  >
+    <div
+      class="share-via-link-container"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="link"
+      />
+      Copy and paste this link to share:
+      <div
+        class="share-via-link-form"
+      >
+        <input
+          class="share-via-link"
+          readonly=""
+          spellcheck="false"
+          type="text"
+          value="http://localhost:3000/"
+        />
+        <button
+          class="btn"
+          type="button"
+        >
+          <svg
+            data-icon="clipboard"
+            size="16"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      aria-orientation="horizontal"
+      class="menu-separator"
+      role="separator"
+    />
+    <button
+      class="menu-item"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="mastodon"
+      />
+      Share using Mastodon
+      <svg
+        data-icon="external-link"
+      />
+    </button>
+    <a
+      class="menu-item"
+      href="https://twitter.com/intent/tweet?text=Check%20out%20my%20street%2C%20bar%2C%20on%20Streetmix!&url=http%3A%2F%2Flocalhost%3A3000%2F"
+      rel="noopener noreferrer"
+      role="menuitem"
+      target="_blank"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="twitter"
+      />
+      Share using Twitter
+      <svg
+        data-icon="external-link"
+      />
+    </a>
+    <a
+      class="menu-item"
+      href="https://www.facebook.com/dialog/feed?app_id=&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F&link=http%3A%2F%2Flocalhost%3A3000%2F&name=bar%20%E2%80%93%20Streetmix&description=Check%20out%20my%20street%2C%20bar%2C%20on%20Streetmix!"
+      rel="noopener noreferrer"
+      role="menuitem"
+      target="_blank"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="facebook"
+      />
+      Share using Facebook
+      <svg
+        data-icon="external-link"
+      />
+    </a>
+    <div
+      aria-orientation="horizontal"
+      class="menu-separator"
+      role="separator"
+    />
+    <a
+      class="menu-item"
+      href="https://3dstreet.app/#http://localhost:3000/"
+      rel="noopener noreferrer"
+      role="menuitem"
+      target="_blank"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="cube"
+      />
+      Open in 3DStreet
+      <svg
+        data-icon="external-link"
+      />
+    </a>
+    <a
+      class="menu-item"
+      href="https://streetmeter.net/#http://localhost:3000/"
+      rel="noopener noreferrer"
+      role="menuitem"
+      target="_blank"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="chart"
+      />
+      Open in Streetmeter 
+      <span
+        class="beta-tag"
+      >
+        BETA
+      </span>
+      <svg
+        data-icon="external-link"
+      />
+    </a>
+    <div
+      aria-orientation="horizontal"
+      class="menu-separator"
+      role="separator"
+    />
+    <button
+      class="menu-item"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="print"
+      />
+      Print…
+    </button>
+    <button
+      class="menu-item"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="download"
+      />
+      Save as image…
+      <span
+        class="menu-item-subtext"
+      >
+        For including in a report, blog, etc.
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;

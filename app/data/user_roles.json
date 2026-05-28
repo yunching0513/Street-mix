@@ -1,0 +1,77 @@
+{
+  "USER": {
+    "key": "user",
+    "text": "User",
+    "value": "USER",
+    "flags": {
+      "VARIANT_TWOWAY_BIKES": true
+    }
+  },
+  "ADMIN": {
+    "key": "admin",
+    "text": "Administrator",
+    "value": "ADMIN",
+    "flags": {
+      "LOCALES_LEVEL_1": true,
+      "NEW_STREET_TEMPLATES": true,
+      "COLOR_MODE_TOGGLE": true,
+      "COASTMIX_MODE": true
+    }
+  },
+  "BETA_TESTER": {
+    "key": "beta_tester",
+    "text": "Beta tester",
+    "value": "BETA_TESTER",
+    "flags": {
+      "LOCALES_LEVEL_1": true,
+      "NEW_STREET_TEMPLATES": true,
+      "ELEVATION_CONTROLS_UNLOCKED": true,
+      "UNIVERSAL_ELEVATION_CONTROLS": true,
+      "SEGMENT_CROSSWALK": true,
+      "SEGMENT_DRAINAGE_CHANNEL_UNLOCKED": true,
+      "VARIANT_MIXED_DRIVE_LANES_1": true,
+      "VARIANT_MIXED_DRIVE_LANES_2": true,
+      "COLOR_MODE_TOGGLE": true,
+      "COASTMIX_MODE": true
+    }
+  },
+  "ITDP": {
+    "key": "itdp",
+    "text": "ITDP user",
+    "value": "ITDP",
+    "flags": {
+      "ELEVATION_CONTROLS_UNLOCKED": true,
+      "SEGMENT_DRAINAGE_CHANNEL_UNLOCKED": true,
+      "VARIANT_MIXED_DRIVE_LANES_1": true,
+      "VARIANT_MIXED_DRIVE_LANES_2": true
+    }
+  },
+  "TRANSLATOR": {
+    "key": "translator",
+    "text": "Translator",
+    "value": "TRANSLATOR",
+    "flags": {
+      "LOCALES_LEVEL_1": true
+    }
+  },
+  "SUBSCRIBER_1": {
+    "key": "subscriber_1",
+    "text": "Subscriber tier 1",
+    "value": "SUBSCRIBER_1",
+    "flags": {
+      "SAVE_AS_IMAGE_CUSTOM_DPI": true
+    }
+  },
+  "SUBSCRIBER_2": {
+    "key": "subscriber_2",
+    "text": "Subscriber tier 2",
+    "value": "SUBSCRIBER_2",
+    "flags": {}
+  },
+  "SUBSCRIBER_3": {
+    "key": "subscriber_3",
+    "text": "Subscriber tier 3",
+    "value": "SUBSCRIBER_3",
+    "flags": {}
+  }
+}

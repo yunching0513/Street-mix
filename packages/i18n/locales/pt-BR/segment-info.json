@@ -1,0 +1,239 @@
+{
+  "segments": {
+    "sidewalk": "Calçada",
+    "pedestrian": "",
+    "sidewalk-tree": "Árvore",
+    "bike-rack": "Suporte de bicicletas",
+    "bench": "Banco",
+    "outdoor-dining": "",
+    "cafe-seating": "",
+    "wayfinding-sign": "Sinal de orientação",
+    "sidewalk-lamp": "Poste",
+    "utility-pole": "",
+    "drainage-channel": "",
+    "parklet": "Parklet",
+    "street-vendor": "",
+    "divider": "Zona de amortecimento",
+    "planting-strip": "Faixa de plantio",
+    "planter-box": "Vaso de plantas",
+    "median": "Médio",
+    "bollard": "Balizador",
+    "dome": "Tachão",
+    "jersey-barrier": "",
+    "scooter": "Patinete elétrico",
+    "scooter-drop-zone": "Ponto de estacionamento para patinetes elétricos",
+    "bike-lane": "Ciclovia",
+    "twoway-bike-lane": "",
+    "parking-lane": "Área de estacionamento",
+    "perpendicular-parking": "Estacionamento a 90 graus",
+    "angled-parking": "Estacionamento a 45 graus",
+    "flex-zone": "Faixa flexível",
+    "taxi-pick-up": "Área de embarque/desembarque de taxi",
+    "rideshare-pick-up": "Área de embarque/desembarque de veículo compartilhado",
+    "bikeshare-station": "Estação de bicicleta compartilhada",
+    "foodtruck": "Food truck (carro de lanche)",
+    "flex-zone-curb": "Área de espera",
+    "drive-lane": "Faixa de direção",
+    "mixed-drive-lane": "",
+    "sharrow": "Ciclorrota",
+    "turn-lane": "Faixa de conversão",
+    "turn-lane-straight": "Sem faixa de conversão",
+    "turn-lane-center": "Faixa de conversão central",
+    "bus-lane": "Faixa de ônibus",
+    "bus-lane-shared": "Faixa compartilhada: ônibus e bicicleta",
+    "streetcar": "Bonde",
+    "light-rail": "VLT",
+    "transit-shelter": "Abrigo de transporte coletivo",
+    "brt-station": "",
+    "brt-lane": "",
+    "temporary-barrier": "",
+    "inception-train": "O trem do filme \"A Origem\"",
+    "magic-carpet": "",
+    "wall": ""
+  },
+  "descriptions": {
+    "wayfinding-sign": {
+      "prompt": "Saiba mais sobre sinais de orientação",
+      "content": "# Sinais de orientação ajudam os pedestres a navegar para seus destinos."
+    },
+    "parklet": {
+      "prompt": "Saiba mais sobre parklets",
+      "imageCaption": "",
+      "content": ""
+    },
+    "bike-lane": {
+      "prompt": "Saiba mais sobre ciclovias ",
+      "content": ""
+    },
+    "colored-bike-lane": {
+      "prompt": "Saiba mais sobre ciclovias coloridas",
+      "content": ""
+    },
+    "sharrow": {
+      "prompt": "Saiba mais sobre ciclorrotas",
+      "content": ""
+    },
+    "transit-shelter-elevated": {
+      "prompt": "Saiba mais sobre abrigos de transporte coletivo",
+      "content": ""
+    },
+    "inception-train": {
+      "content": "# É o trem do filme _A Origem_ de Christopher Nolan.\n\nO que mais você precisa saber?"
+    }
+  },
+  "buildings": {
+    "waterfront": {
+      "name": "Beira-mar"
+    },
+    "grass": {
+      "name": "Grama"
+    },
+    "fence": {
+      "name": "Lote vazio"
+    },
+    "parking-lot": {
+      "name": "Estacionamento"
+    },
+    "residential": {
+      "name": "Casa"
+    },
+    "narrow": {
+      "name": "Edifício"
+    },
+    "wide": {
+      "name": "Edifício"
+    },
+    "arcade": {
+      "name": ""
+    },
+    "compound-wall": {
+      "name": ""
+    }
+  },
+  "boundary": {
+    "group": {
+      "land": "",
+      "waterfront": "Beira-mar"
+    }
+  },
+  "variant-icons": {
+    "orientation|left": "Esquerda",
+    "orientation|right": "Direita",
+    "turn-lane-orientation|left": "Esquerda",
+    "turn-lane-orientation|left-straight": "Esquerda e em frente",
+    "turn-lane-orientation|straight": "Em frente",
+    "turn-lane-orientation|right-straight": "Direita e em frente",
+    "turn-lane-orientation|right": "Direita",
+    "turn-lane-orientation|both": "Ambos",
+    "turn-lane-orientation|left-right-straight": "",
+    "turn-lane-orientation|shared": "Compartilhar",
+    "bench-orientation|left": "Esquerda",
+    "bench-orientation|right": "Direita",
+    "bench-orientation|center": "Centro",
+    "parking-lane-orientation|left": "Esquerda",
+    "parking-lane-orientation|right": "Direita",
+    "parking-lane-direction|inbound": "Mão de ida",
+    "parking-lane-direction|outbound": "Mão de volta",
+    "parking-lane-direction|sideways": "Perpendicular",
+    "parking-lane-direction|angled-front-left": "Ângulado",
+    "parking-lane-direction|angled-front-right": "Ângulado",
+    "parking-lane-direction|angled-rear-left": "Ângulado",
+    "parking-lane-direction|angled-rear-right": "Ângulado",
+    "direction|inbound": "Mão de ida",
+    "direction|outbound": "Mão de volta",
+    "bike-direction|inbound": "Mão de ida",
+    "bike-direction|outbound": "Mão de volta",
+    "bike-direction|twoway-left": "",
+    "bike-direction|twoway-right": "",
+    "sidewalk-density|empty": "Vazio",
+    "sidewalk-density|sparse": "Esparso",
+    "sidewalk-density|normal": "Normal",
+    "sidewalk-density|dense": "Denso",
+    "lamp-orientation|left": "Esquerda",
+    "lamp-orientation|both": "Ambos",
+    "lamp-orientation|right": "Direita",
+    "lamp-type|traditional": "Tradicional",
+    "lamp-type|modern": "Moderno",
+    "lamp-type|pride": "Moderno com bandeira LGBT",
+    "drainage-sides|slanted": "",
+    "drainage-sides|vertical": "",
+    "car-type|car": "Carro",
+    "car-type|sharrow": "Ciclorrota",
+    "car-type|truck": "Caminhão",
+    "car-type|microvan": "",
+    "car-type|av": "",
+    "car-type|motorcycle": "",
+    "car-type|motorcycle-sidecar": "",
+    "car-type|pedestrian": "",
+    "public-transit-asphalt|regular": "Asfalto",
+    "public-transit-asphalt|colored": "Faixa vermelha",
+    "public-transit-asphalt|grass": "Grama",
+    "bus-asphalt|regular": "Asfalto",
+    "bus-asphalt|colored": "Faixa vermelha",
+    "bus-asphalt|shared": "Faixa compartilhada: ônibus e bicicleta",
+    "bus-type|typical": "",
+    "bus-type|double-decker": "",
+    "bus-type|av-shuttle": "",
+    "brt-station-orientation|left": "Esquerda",
+    "brt-station-orientation|right": "Direita",
+    "brt-station-orientation|center": "Centro",
+    "bike-asphalt|regular": "Asfalto",
+    "bike-asphalt|green": "Faixa verde",
+    "bike-asphalt|red": "Faixa vermelha",
+    "tree-type|big": "Árvore",
+    "tree-type|palm-tree": "Palmeira",
+    "divider-type|median": "Médio",
+    "divider-type|striped-buffer": "Zona de amortecimento listrada ",
+    "divider-type|planting-strip": "Faixa de plantio",
+    "divider-type|planter-box": "Vaso de plantas",
+    "divider-type|bush": "Faixa de plantio com arbusto",
+    "divider-type|flowers": "Faixa de plantio com flores",
+    "divider-type|big-tree": "Faixa de plantio com uma árvore",
+    "divider-type|palm-tree": "Faixa de plantio com uma palmeira",
+    "divider-type|bollard": "Balizador",
+    "divider-type|dome": "Tachão",
+    "divider-type|jersey-barrier-concrete": "",
+    "divider-type|jersey-barrier-plastic": "",
+    "transit-shelter-elevation|street-level": "Nível da rua",
+    "transit-shelter-elevation|light-rail": "Plataforma de VLT",
+    "bike-rack-elevation|sidewalk-parallel": "Estacionamento em paralelo, nível de calçada",
+    "bike-rack-elevation|sidewalk": "Estacionamento a 90 graus, nível de calçada",
+    "bike-rack-elevation|road": "Estacionamento a 90 graus, nível de rua",
+    "building|waterfront": "Beira-mar",
+    "building|grass": "Grama",
+    "building|fence": "Lote vazio",
+    "building|parking-lot": "Estacionamento",
+    "building|residential": "Casa",
+    "building|narrow": "Edifício estreito",
+    "building|wide": "Edifício largo",
+    "wayfinding-type|large": "Grande",
+    "wayfinding-type|medium": "Médio",
+    "wayfinding-type|small": "Pequeno",
+    "waiting-area|sparse": "Alguém",
+    "waiting-area|empty": "Ninguém",
+    "flex-type|rideshare": "Carro compartilhado",
+    "flex-type|taxi": "Táxi",
+    "occupants|empty": "Vazio",
+    "occupants|full": "",
+    "occupants|occupied": "",
+    "elevation|sidewalk": "",
+    "elevation|road": "Nível da rua",
+    "temporary-barrier-type|traffic-cone": "",
+    "temporary-barrier-type|barricade": "",
+    "vendor-type|handcart": "",
+    "vendor-type|table": "",
+    "vendor-type|tarp": "",
+    "vendor-type|platform": "",
+    "ground|concrete": "",
+    "ground|asphalt": "Asfalto"
+  },
+  "skybox": {
+    "day": "",
+    "twilight": "",
+    "dusk": "",
+    "dawn": "",
+    "night": "",
+    "karl": "",
+    "holodeck": ""
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "segments": {
+    "sidewalk": "보도",
+    "pedestrian": "보행자",
+    "sidewalk-tree": "가로수",
+    "bike-rack": "자전거 거치대",
+    "bench": "벤치",
+    "outdoor-dining": "야외 다이닝",
+    "cafe-seating": "카페 좌석",
+    "wayfinding-sign": "길찾기 표지판",
+    "sidewalk-lamp": "가로등",
+    "utility-pole": "전신주",
+    "drainage-channel": "배수 채널",
+    "parklet": "파클렛",
+    "street-vendor": "노점상",
+    "divider": "안전지대",
+    "planting-strip": "식수대",
+    "planter-box": "화분",
+    "median": "중앙 분리대",
+    "bollard": "차량 진입 방지용 말뚝/볼라드",
+    "dome": "차선규제장치",
+    "jersey-barrier": "저지 장벽",
+    "scooter": "전기 스쿠터",
+    "scooter-drop-zone": "스쿠터 하차 구역",
+    "bike-lane": "자전거 도로",
+    "twoway-bike-lane": "양방향 자전거 도로",
+    "parking-lane": "주차 도로",
+    "perpendicular-parking": "직각 주차",
+    "angled-parking": "비스듬한 주차",
+    "flex-zone": "다목적구역",
+    "taxi-pick-up": "택시 승하차 구역",
+    "rideshare-pick-up": "공유차량 승하차 구역",
+    "bikeshare-station": "공유자전거 정거장",
+    "foodtruck": "푸드트럭",
+    "flex-zone-curb": "대기 장소",
+    "drive-lane": "차로",
+    "mixed-drive-lane": "혼합 교통 차선",
+    "sharrow": "섀로우",
+    "turn-lane": "회전 가능 차로",
+    "turn-lane-straight": "회전 금지 차로",
+    "turn-lane-center": "중앙 회전 차로",
+    "bus-lane": "버스 전용 도로",
+    "bus-lane-shared": "버스/자전거 공유 차로",
+    "streetcar": "전차",
+    "light-rail": "경전철",
+    "transit-shelter": "승차대",
+    "brt-station": "버스전용차로 승강장",
+    "brt-lane": "버스전용차로",
+    "temporary-barrier": "임시 장벽",
+    "inception-train": "\"인셉션\" 기차",
+    "magic-carpet": "매직카페트",
+    "wall": ""
+  },
+  "descriptions": {
+    "wayfinding-sign": {
+      "prompt": "길찾기 표지판에 대해 자세히 알아보기",
+      "content": "# 길찾기 표지판은 보행자가 목적지에 도착할 수 있도록 도와줍니다.\n\n도시 계획가와 건축가는 사람들이 출발지에서 도착지까지 가는 경로를 찾을 때 두뇌에서 무슨 일이 일어나는지 파악하기 위해 수십 년 동안 노력해왔습니다. 이를테면, 사람들은 길을 찾기 위해 어디를 출발지로 삼아야하는지 어떻게 알고있는 걸까요? 1960년에 이미 도시계획가 케빈 린치는 자신의 저서 _[「도시의 이미지」](http://www.amazon.com/Image-Harvard-MIT-Center-Studies-Series/dp/0262620014)_에서 길찾기를 “외부 환경으로부터 오는 확실한 감각적 신호의 일관된 사용과 조직”이라고 묘사하며 도시의 “가독성”에 대해 서술했습니다. 길을 찾는 과정은 냄새, 촉각, 중력, 심지어 전기장이나 자기장 등을 이용하여 눈에 보이는 형태가 없을 수도 있고, 지도나 주소, 표지판 등 의도적으로 설계된 “길찾기 장치”를 이용한 물질적인 과정일 수도 있습니다.\n\n차량을 위한 표지판 설치는 끊임없이 이루어지는 것을 생각해보면, 보행자 표지판을 위한 투자가 거의 이루어지지 않는다는 사실이 얼마나 쉽게 용인되는 지 놀랍습니다. 어쩌면 가만히 서서 주위를 살펴도 교통정체를 일으킬 걱정이 없는 보행이, 자동차 주행에 비해 더 직관적인 교통수단이기 때문일 것입니다. 어쨌든, 도시 설계자들은 걷기 쉬운 상업 지역에 보행자 친화적인 길찾기 표지판을 요구해왔으며, 이러한 표지판들은 기능적일 뿐만 아니라 도시의 브랜딩의 기회가 되었습니다. 예를 들어, 뉴욕시는 [국제적으로 유명한 디자인 컨설턴트를 고용하여](https://www.pentagram.com/work/walknyc/story) 현재 범용되고 있는 WalkNYC 표지판을 만들었습니다 (스트리트믹스는 WalkNYC를 본떠 세그먼트를 모델링했습니다). 다른 자치단체들은 전통적인 구시가지나 시민 양식의 형태(위 사진 참조)를 채택했으며 일부 지역은 [게릴라식 길찾기 전략](http://walkyourcity.org/)을 사용하고 있습니다.\n\n결국, 길을 잃는 것보다 더 나쁜 것은 없습니다. 린치가 서술했듯이 “우리 언어에서 _길을 잃은_ 이라는 단어는 단순히 지리적 불확실성이라는 것보다 더한 것을 의미합니다. 엄청난 재앙을 수반하지요.” 아무도 길 위에서 그런 기분을 느끼고 싶지는 않겠죠."
+    },
+    "parklet": {
+      "prompt": "파클렛에 대해 자세히 알아보기",
+      "imageCaption": "4033 Judah Street Parklet, San Francisco Planning Department 제공.",
+      "content": "# 파클렛은 기존의 주차공간을 임시 공공공간으로 바꿔줍니다.\n\n2005년 샌프란시스코에 기반을 둔 디자인 스튜디오 [Rebar](http://rebargroup.org/)는 시내의 Mission Street에 있는 하나의 미터 주차 공간을 작은 임시 공공공원으로 전환했습니다. 그렇게 처음으로 탄생된 주차공간을 활용한 쉼터인 파클렛은 사각형 잔디밭에 벤치 하나와 나무 하나가 전부인 단순한 공간이었습니다. 하지만 간단한 사용 설명서와 함께 자신만의 공원을 직접 만들어보도록 한 것이 특징이었죠. 실제로 많은 공공 장소가 차를 보관하는 데 할애되고 있다는 사실을 깨닫게 된 사람들은 국제적인 운동이 시작되었으며, 현재 매해 열리는 [Park(ing) Day](https://www.facebook.com/PARKing-Day-71298180414) 이벤트는 전세계적으로 거의 천 개의 임시의 장소 전환을 주최합니다.\n\n샌프란시스코는 2010년 [Pavement to Parks 프로그램](http://sfpavementtoparks.sfplanning.org/)을 통해 파클렛을 공식화한 최초의 도시가 되었습니다. 오늘날 샌프란시스코는 50개 이상의 파클렛을 보유하고 있으며, 현재 그 중 상당수가 Rebar의 수수한 프로토타입을 뛰어넘어 건축적 설계에 따라 개선되었습니다. 샌프란시스코에서 가장 번화한 쇼핑 거리의 중심부에는 기업이 후원한 두 개 블록 길이의 어마어마한 파클렛이 있으며, [Yerba Buena Community Benefit District](http://www.ybcbd.org/)를 위해 디자인된 움직이는 빨간 “파크모빌” (스트리트믹스의 기본 모양) 컬렉션도 있습니다. 공식적인 파클렛 프로그램은 현재 필라델피아, 오클랜드, 캔자스 시티, 뉴욕, 시카고 및 밴쿠버와 같은 북미의 많은 도시에 존재하며, 더 많은 도시가 곧 뒤따를 것입니다."
+    },
+    "bike-lane": {
+      "prompt": "자전거 도로에 대해 자세히 알아보기",
+      "content": "# 자전거 도로는 차들과 분리된 차선을 이용하므로 자전거 운전자를 안전하게 해줍니다.\n\n말에서부터 세그웨이까지, 개인용 운송 차량의 연대표를 각 운송수단이 좀 더 많은 지분을 차지하기위한 전쟁으로 보자면, 자동차와 자전거는 거의 한 세기 동안 공공도로를 지배하고 있는 부족들이나 다름없었습니다. 자동차가 워낙 큰 공간을 차지하기 때문에 가장 흔한 운송수단이라고 착각하기 쉽지만, 세계에서 가장 흔한 운송수단은 자전거입니다. Worldometers 추산, 전체 자전거 수는 10억 대 이상이며, 포크송 가수 [Katie Melua](http://en.wikipedia.org/wiki/Nine_Million_Bicycles)가 부른 'Nine Million Bicycles' 의 영감이 된 베이징같은 도시에서는 자전거가 전체 운송수단의 32%를 차지합니다.\n\n대부분의 관할 지역에서는 자전거가 자동차와 도로를 공유할 수 있지만 (“자전거를 타는 사람은 ... 모든 권리를 가지며 차량 운전자에게 적용되는 모든 조항이 적용된다.”라고 [캘리포니아 자동차 법규에 명시](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=21200.)) 말할 것도 없이 대부분의 자전거 운전자는 전용도로를 선호합니다. 일단, 더 안전합니다. 더 안전하기 때문에 실제로 더 많은 사람들이 자전거를 탈 수 있도록 독려합니다. 더 많은 자전거 운전자는 더 건강한 시민, 탄소 배출량의 감소, 더 높은 교통 처리량 및 혼잡의 완화를 의미합니다. 자동차 인프라(교량, 도로 및 주차 등)에 소비되는 비용이 적어지고, 길에 더 많은 사람들을 수용할 수 있어 거리에 더 많은 비즈니스를 가져오는 [경제적 이익도 발생합니다](https://bikeleague.org/sites/default/files/Bicycling_and_the_Economy-Econ_Impact_Studies_web.pdf).\n\n자전거 도로 디자인은 매우 다양할 수 있습니다. 자전거와 자동차를 더 잘 보호하기 위해 중앙분리대, 화분, 볼라드 또는 심지어 주차 차선을 사용할 수 있습니다. 자전거 도로 차선을 녹색으로 칠해서 도시가 잘 연결된 자전거 도로를 위해 노력하고 있다는 것을 보여줄 수 있습니다. 또한 자전거가 멈추는 것을 제한하기 위해 신호등 타이밍을 동기화하는 “녹색 물결” 방법도 적용할 수 있습니다. 더 자세한 내용은 [NACTO Urban Bikeway Design Guide](http://nacto.org/cities-for-cycling/design-guide/)를 참조하십시오."
+    },
+    "colored-bike-lane": {
+      "prompt": "컬러 자전거 도로에 대해 자세히 알아보기",
+      "content": "# 컬러 자전거 도로는 자전거 운전자에게 더 눈에 잘 띄며 안전합니다.\n\n일상 교통수단으로 자전거가 더욱 확산됨에 따라, 도시계획가는 자전거 타는 사람들의 안전을 보장하고, 자전거와 자동차 사이의 충돌을 없애며, 자동차가 자전거 전용 공간을 불법으로 차지하지 못하도록 해야합니다. 문제점: 자동차 운전자는 자전거 운전자를 항상 인식하고 있는 것이 아닙니다. 해결책: 자전거 운전자를 최대한 눈에 띄게 하십시오. 이를 위한 한 가지 전략은 자전거 도로를 차도와 전혀 다른 색으로 만드는 것입니다.\n\n컬러 자전거 도로의 안전 이점이 [수많은 연구](https://nacto.org/publication/urban-bikeway-design-guide/bikeway-signing-marking/colored-bike-facilities)에서 입증되었더라도 _어떤_ 색을 사용할 지에 대한 의견은 다 다릅니다. 네덜란드는 적색 차선을 사용하고 덴마크는 파란색을, 프랑스는 녹색을 사용합니다. 영국에는 적색과 녹색이 혼합되어 있으며, 미국 대부분의 지자체에서는 (서로 따라하다보니 어쩌다가) 결국 녹색을 사용하게 되었으나, 미국에서 가장 자전거 친화적인 도시 중 하나인 포틀랜드에서는 [1990년대부터 파란색 차선](http://www.portlandoregon.gov/transportation/article/58842)을 사용하고 있습니다.\n\n가장 좋아하는 색이 무엇이든지 간에 일반적인 방법은 같은 지역 내 다른 차선 표시색과는 다른 색을 선택하는 것입니다. 사용하는 색을 떠나, 대다수 도시가 가진 더 중요한 예산 문제는 유지 보수입니다. 현재 새로 개선된 페인트의 내구성이 향상되고 있기는 하지만, 가장 일반적으로 사용되는 페인트는 색상이 바래지고 상당히 빨리 벗겨집니다. 그렇다고 안전상의 이점보다 반복 비용을 더 중대한 문제로 생각하지 마세요. 유지비용이 덜 드는[보호 장벽](http://peopleforbikes.org/green-lane-project/protected-bike-lanes-101)을 고려해볼 수도 있습니다."
+    },
+    "sharrow": {
+      "prompt": "섀로우에 대해 자세히 알아보기",
+      "content": "# 섀로우는 자동차와 자전거가 공유하는 주행 차선에 표시됩니다.\n\n교통 계획에서 공식적으로 “공유 도로 자전거 표시”라고 알려진 섀로우(“shared”와 “arrow”의 결합어)는 화살표 표시로 나타내지만, 실제로 다른 _유형_의 차선은 아닙니다. 많은 곳에서 자전거는 이미 자동차를 위한 모든 거리에서 허용되며 동일한 법에 구속됩니다.\n\n자동차와 자전거 운행 방식이 매우 다르다는 것은 검증하기 어려운 일이 아닙니다. 그러므로, 자전거 타는 사람들의 안전과 자동차 운전자의 분별을 위해 별도의 자전거 도로를 두는 것이 [훨씬 더 바람직합니다](http://dc.streetsblog.org/2013/06/13/in-california-cities-drivers-want-more-bike-lanes-heres-why/). 그러나 그러한 자전거 도로를 위한 공간이 충분하지 않은 경우, 많은 자전거 운전자들은 공유 도로 자전거 표시인 섀로우가 다른 어떤 방법보다 낫다고 주장합니다. 자동차 운전자는 도로 위에 다른 유형의 교통수단이 있다는 것을 잊곤하는데, 그렇기 때문에 자전거 운전자들은 자동차 운전자에게 도로 위에 자전거 운전자도 함께 평화롭게 지내야할 존재라는 점을 알릴 수 있는 방법을 필요로 합니다. 또한 자전거 운전자에게 도로폭 전체를 사용할 수 있게 해줌으로써 그들이 열리는 차문에 치이는 것과 같은 사고를 당하지 않게 보호할 수도 있습니다.\n\n섀로우 표시는 자전거 운전자에게 더 많은 가시성을 제공하는 간단한 방법입니다. 자전거 도로를 설치하는 것보다 페인트가 저렴하고 정치적으로 더 실현가능하기 때문입니다. 그러나 일부 안전 연구(예를 들어 밴쿠버 및 토론토의 자전거 부상에 대한 [2012 BMJ 연구](http://injuryprevention.bmj.com/content/early/2013/02/13/injuryprev-2012-040561.full.pdf))에 따르면 전용 자전거 도로에 비해 공유 도로에서 부상 가능성이 약간 높은 것으로 나타났습니다. 이 연구로부터 우리는 섀로우에 의존하는 것보다 자전거 도로를 설치하는 것이 자전거 운전자들을 더 고려하는 방법임을 알 수 있습니다."
+    },
+    "transit-shelter-elevated": {
+      "prompt": "고상 승차대에 대해 자세히 알아보기",
+      "content": "# 고상 승차대에는 경전철과 간선급행버스 정류장을 둘 수 있습니다.\n\n일부 경전철 시스템 및 서비스 속도가 최우선인 간선급행버스체계 (BRT) 시스템의 경우 고상 승차대가 묘책이 될 수 있습니다. 탑승객이 버스와 같은 높이에서 탑승할 수 있도록 해주기에 (특히 휠체어 및 기타 도움이 필요한 사람들의) 탑승 과정을 빠르게 하여 시간이 지남에 따라 운행 시간을 크게 단축시켜줍니다.\n\n이러한 효율성에 중점을 두기 때문에, 보통 고상 승차대를 사용하는 대중교통 차량은 전용차선도 함께 사용하고 있어 차량이 전용차선으로 쉽게 접근할 수 있도록 플랫폼을 도로의 중앙분리대가 있는 곳에 주로 배치합니다. 서로 반대 방향으로 진행하는 차선들 사이에 배치하게 되면, 플랫폼의 양쪽에서 승객들이 승하차 할 수 있습니다 (이 경우에는 두 개의 고상 승차대를 스트리트믹스에 배치해야 합니다).\n\n고상 승차대는 때때로 육중한 철도 역과 같이 설계되거나, 승객을 위험요소로부터 보호하기 위해 지붕을 두거나 밀폐되어 있으며, 번화가에서는 눈에 띄는 대중 교통 표지 역할을 합니다. 하지만 보도블록 높이에 있는 승차대와 비교할 때, 비용이 많이 드는 사회 기반 시설이며 휠체어 경사로로 인해 더 많은 공간을 차지합니다. 이로 인해 BRT 서비스는 일반 버스 서비스만큼의 유연성을 제공하기가 더 어려워집니다. 또한 저층 버스가 점점 보편화되면서 더 높은 플랫폼을 가질 필요성이 줄어들기 시작합니다."
+    },
+    "inception-train": {
+      "content": "# 크리스토퍼 놀란의 영화 _인셉션_에 나오는 기차입니다.\n\n무엇이 더 알고 싶으세요?"
+    }
+  },
+  "buildings": {
+    "waterfront": {
+      "name": "물가"
+    },
+    "grass": {
+      "name": "잔디/풀"
+    },
+    "fence": {
+      "name": "빈 부지"
+    },
+    "parking-lot": {
+      "name": "주차장"
+    },
+    "residential": {
+      "name": "집"
+    },
+    "narrow": {
+      "name": "건물"
+    },
+    "wide": {
+      "name": "건물"
+    },
+    "arcade": {
+      "name": "아케이드 건물"
+    },
+    "compound-wall": {
+      "name": "벽"
+    }
+  },
+  "boundary": {
+    "group": {
+      "land": "",
+      "waterfront": "물가"
+    }
+  },
+  "variant-icons": {
+    "orientation|left": "왼쪽 방향",
+    "orientation|right": "오른쪽 방향",
+    "turn-lane-orientation|left": "좌회전",
+    "turn-lane-orientation|left-straight": "직진 및 좌회전",
+    "turn-lane-orientation|straight": "직진",
+    "turn-lane-orientation|right-straight": "직진 및 우회전",
+    "turn-lane-orientation|right": "우회전",
+    "turn-lane-orientation|both": "양방향 교차로",
+    "turn-lane-orientation|left-right-straight": "좌, 우회전 및 직진",
+    "turn-lane-orientation|shared": "양방향 좌회전 차로",
+    "bench-orientation|left": "왼쪽 방향",
+    "bench-orientation|right": "오른쪽  방향",
+    "bench-orientation|center": "가운데",
+    "parking-lane-orientation|left": "왼쪽",
+    "parking-lane-orientation|right": "오른쪽",
+    "parking-lane-direction|inbound": "정면",
+    "parking-lane-direction|outbound": "후면",
+    "parking-lane-direction|sideways": "직각으로",
+    "parking-lane-direction|angled-front-left": "정면 좌측으로 비스듬하게",
+    "parking-lane-direction|angled-front-right": "정면 우측으로 비스듬하게",
+    "parking-lane-direction|angled-rear-left": "후면 좌측으로 비스듬하게 ",
+    "parking-lane-direction|angled-rear-right": "후면 우측으로 비스듬하게",
+    "direction|inbound": "정면",
+    "direction|outbound": "후면",
+    "bike-direction|inbound": "정면/역방향",
+    "bike-direction|outbound": "후면/정방향",
+    "bike-direction|twoway-left": "양방향(왼쪽)",
+    "bike-direction|twoway-right": "양방향(오른쪽)",
+    "sidewalk-density|empty": "비어있는 거리",
+    "sidewalk-density|sparse": "한산한 거리",
+    "sidewalk-density|normal": "보통의 거리",
+    "sidewalk-density|dense": "밀집한 거리",
+    "lamp-orientation|left": "왼쪽 방향",
+    "lamp-orientation|both": "양쪽",
+    "lamp-orientation|right": "오른쪽 방향",
+    "lamp-type|traditional": "전통적인",
+    "lamp-type|modern": "현대적인",
+    "lamp-type|pride": "현대적인, 무지개깃발",
+    "drainage-sides|slanted": "경사 측면",
+    "drainage-sides|vertical": "수직 측면",
+    "car-type|car": "자동차",
+    "car-type|sharrow": "섀로우",
+    "car-type|truck": "트럭",
+    "car-type|microvan": "마이크로밴",
+    "car-type|av": "자율주행차",
+    "car-type|motorcycle": "오토바이",
+    "car-type|motorcycle-sidecar": "사이드카",
+    "car-type|pedestrian": "보행자",
+    "public-transit-asphalt|regular": "아스팔트",
+    "public-transit-asphalt|colored": "적색 차선",
+    "public-transit-asphalt|grass": "풀",
+    "bus-asphalt|regular": "아스팔트",
+    "bus-asphalt|colored": "적색 차선",
+    "bus-asphalt|shared": "버스/자전거 공유 차로",
+    "bus-type|typical": "일반 버스",
+    "bus-type|double-decker": "이층 버스",
+    "bus-type|av-shuttle": "자율주행 셔틀",
+    "brt-station-orientation|left": "왼쪽",
+    "brt-station-orientation|right": "오른쪽",
+    "brt-station-orientation|center": "가운데",
+    "bike-asphalt|regular": "아스팔트",
+    "bike-asphalt|green": "녹색차선",
+    "bike-asphalt|red": "적색차선",
+    "tree-type|big": "나무",
+    "tree-type|palm-tree": "야자수",
+    "divider-type|median": "중앙 분리대",
+    "divider-type|striped-buffer": "줄무늬 안전지대",
+    "divider-type|planting-strip": "식수대",
+    "divider-type|planter-box": "화분 상자",
+    "divider-type|bush": "덤불이 있는 식수대",
+    "divider-type|flowers": "꽃이 있는 식수대",
+    "divider-type|big-tree": "나무가 있는 식수대",
+    "divider-type|palm-tree": "야자수가 있는 식수대",
+    "divider-type|bollard": "차량 진입 방지용 말뚝",
+    "divider-type|dome": "차선규제장치",
+    "divider-type|jersey-barrier-concrete": "저지 장벽 (콘크리트)",
+    "divider-type|jersey-barrier-plastic": "저지 장벽 (플라스틱)",
+    "transit-shelter-elevation|street-level": "도로 높이",
+    "transit-shelter-elevation|light-rail": "경전철 플랫폼",
+    "bike-rack-elevation|sidewalk-parallel": "평행 주차, 보도 높이",
+    "bike-rack-elevation|sidewalk": "직각 주차, 보도 높이",
+    "bike-rack-elevation|road": "직각 주차, 도로 높이",
+    "building|waterfront": "물가",
+    "building|grass": "잔디",
+    "building|fence": "빈 부지",
+    "building|parking-lot": "주차장",
+    "building|residential": "집",
+    "building|narrow": "좁은 건물",
+    "building|wide": "넓은 건물",
+    "wayfinding-type|large": "큰 사이즈",
+    "wayfinding-type|medium": "중간 사이즈",
+    "wayfinding-type|small": "작은 사이즈",
+    "waiting-area|sparse": "사람 있음",
+    "waiting-area|empty": "사람 없음",
+    "flex-type|rideshare": "공유차",
+    "flex-type|taxi": "택시",
+    "occupants|empty": "비어있는",
+    "occupants|full": "가득찬",
+    "occupants|occupied": "사용 중",
+    "elevation|sidewalk": "보도 높이",
+    "elevation|road": "도로 높이",
+    "temporary-barrier-type|traffic-cone": "안전 콘",
+    "temporary-barrier-type|barricade": "바리케이드",
+    "vendor-type|handcart": "손수레 상인",
+    "vendor-type|table": "노점 상인",
+    "vendor-type|tarp": "거리 상인",
+    "vendor-type|platform": "시장 상인",
+    "ground|concrete": "콘크리트",
+    "ground|asphalt": "아스팔트"
+  },
+  "skybox": {
+    "day": "낮",
+    "twilight": "어스름",
+    "dusk": "해질녘",
+    "dawn": "새벽",
+    "night": "밤",
+    "karl": "안개",
+    "holodeck": "홀로덱"
+  }
+}

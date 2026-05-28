@@ -1,0 +1,47 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`WidthControl > renders 1`] = `
+<DocumentFragment>
+  <div
+    class="popup-control-row"
+  >
+    <span
+      class="popup-control-icon"
+    >
+      <svg
+        data-icon="slice-width"
+        size="30"
+        stroke="1.5"
+      />
+    </span>
+    <div
+      class="up-down-input"
+    >
+      <button
+        class="btn up-down-input-decrement"
+        data-testid="down"
+        type="button"
+      >
+        <svg
+          data-icon="minus"
+        />
+      </button>
+      <input
+        class="up-down-input-element"
+        title="Change width of the segment"
+        type="text"
+        value="3 m"
+      />
+      <button
+        class="btn up-down-input-increment"
+        data-testid="up"
+        type="button"
+      >
+        <svg
+          data-icon="plus"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

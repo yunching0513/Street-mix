@@ -1,0 +1,239 @@
+{
+  "segments": {
+    "sidewalk": "trottoir",
+    "pedestrian": "Voetganger",
+    "sidewalk-tree": "",
+    "bike-rack": "Fietsenrek",
+    "bench": "",
+    "outdoor-dining": "",
+    "cafe-seating": "",
+    "wayfinding-sign": "",
+    "sidewalk-lamp": "",
+    "utility-pole": "",
+    "drainage-channel": "",
+    "parklet": "",
+    "street-vendor": "",
+    "divider": "",
+    "planting-strip": "",
+    "planter-box": "Plantenbak",
+    "median": "",
+    "bollard": "",
+    "dome": "",
+    "jersey-barrier": "",
+    "scooter": "",
+    "scooter-drop-zone": "",
+    "bike-lane": "Fietspad",
+    "twoway-bike-lane": "",
+    "parking-lane": "",
+    "perpendicular-parking": "",
+    "angled-parking": "",
+    "flex-zone": "",
+    "taxi-pick-up": "",
+    "rideshare-pick-up": "",
+    "bikeshare-station": "",
+    "foodtruck": "",
+    "flex-zone-curb": "",
+    "drive-lane": "",
+    "mixed-drive-lane": "",
+    "sharrow": "Gedeelde rijstrookmarkering",
+    "turn-lane": "",
+    "turn-lane-straight": "",
+    "turn-lane-center": "",
+    "bus-lane": "",
+    "bus-lane-shared": "Gedeeld bus/fietspad",
+    "streetcar": "",
+    "light-rail": "",
+    "transit-shelter": "",
+    "brt-station": "",
+    "brt-lane": "",
+    "temporary-barrier": "",
+    "inception-train": "",
+    "magic-carpet": "",
+    "wall": ""
+  },
+  "descriptions": {
+    "wayfinding-sign": {
+      "prompt": "",
+      "content": ""
+    },
+    "parklet": {
+      "prompt": "",
+      "imageCaption": "",
+      "content": ""
+    },
+    "bike-lane": {
+      "prompt": "Leer meer over fietspaden",
+      "content": ""
+    },
+    "colored-bike-lane": {
+      "prompt": "",
+      "content": ""
+    },
+    "sharrow": {
+      "prompt": "Leer meer over gedeelde rijstrookmarkeringen",
+      "content": ""
+    },
+    "transit-shelter-elevated": {
+      "prompt": "",
+      "content": ""
+    },
+    "inception-train": {
+      "content": ""
+    }
+  },
+  "buildings": {
+    "waterfront": {
+      "name": "Waterkant"
+    },
+    "grass": {
+      "name": "Gras"
+    },
+    "fence": {
+      "name": "Lege plek"
+    },
+    "parking-lot": {
+      "name": ""
+    },
+    "residential": {
+      "name": "Huis"
+    },
+    "narrow": {
+      "name": "Gebouw"
+    },
+    "wide": {
+      "name": "Gebouw"
+    },
+    "arcade": {
+      "name": ""
+    },
+    "compound-wall": {
+      "name": ""
+    }
+  },
+  "boundary": {
+    "group": {
+      "land": "",
+      "waterfront": "Waterkant"
+    }
+  },
+  "variant-icons": {
+    "orientation|left": "Links",
+    "orientation|right": "Rechts",
+    "turn-lane-orientation|left": "Links",
+    "turn-lane-orientation|left-straight": "Links en rechtdoor",
+    "turn-lane-orientation|straight": "Rechtdoor",
+    "turn-lane-orientation|right-straight": "Rechts en rechtdoor",
+    "turn-lane-orientation|right": "Rechts",
+    "turn-lane-orientation|both": "Beide",
+    "turn-lane-orientation|left-right-straight": "",
+    "turn-lane-orientation|shared": "Gedeeld",
+    "bench-orientation|left": "Links",
+    "bench-orientation|right": "Rechts",
+    "bench-orientation|center": "Centrum",
+    "parking-lane-orientation|left": "Links",
+    "parking-lane-orientation|right": "Rechts",
+    "parking-lane-direction|inbound": "",
+    "parking-lane-direction|outbound": "",
+    "parking-lane-direction|sideways": "Loodrecht",
+    "parking-lane-direction|angled-front-left": "Schuin",
+    "parking-lane-direction|angled-front-right": "Schuin",
+    "parking-lane-direction|angled-rear-left": "Schuin",
+    "parking-lane-direction|angled-rear-right": "Schuin",
+    "direction|inbound": "",
+    "direction|outbound": "",
+    "bike-direction|inbound": "",
+    "bike-direction|outbound": "",
+    "bike-direction|twoway-left": "",
+    "bike-direction|twoway-right": "",
+    "sidewalk-density|empty": "Leeg",
+    "sidewalk-density|sparse": "Schaars",
+    "sidewalk-density|normal": "Normaal",
+    "sidewalk-density|dense": "Dicht",
+    "lamp-orientation|left": "Links",
+    "lamp-orientation|both": "Beide",
+    "lamp-orientation|right": "Rechts",
+    "lamp-type|traditional": "Traditioneel",
+    "lamp-type|modern": "Modern",
+    "lamp-type|pride": "Modern met pride banner",
+    "drainage-sides|slanted": "",
+    "drainage-sides|vertical": "",
+    "car-type|car": "Auto",
+    "car-type|sharrow": "Gedeelde rijstrookmarkering",
+    "car-type|truck": "Vrachtwagen",
+    "car-type|microvan": "",
+    "car-type|av": "",
+    "car-type|motorcycle": "",
+    "car-type|motorcycle-sidecar": "",
+    "car-type|pedestrian": "Voetganger",
+    "public-transit-asphalt|regular": "Asfalt",
+    "public-transit-asphalt|colored": "Rode baan",
+    "public-transit-asphalt|grass": "Gras",
+    "bus-asphalt|regular": "Asfalt",
+    "bus-asphalt|colored": "Rode baan",
+    "bus-asphalt|shared": "Gedeeld bus/fietspad",
+    "bus-type|typical": "",
+    "bus-type|double-decker": "",
+    "bus-type|av-shuttle": "",
+    "brt-station-orientation|left": "Links",
+    "brt-station-orientation|right": "Rechts",
+    "brt-station-orientation|center": "Centrum",
+    "bike-asphalt|regular": "Asfalt",
+    "bike-asphalt|green": "Groene baan",
+    "bike-asphalt|red": "Rode baan",
+    "tree-type|big": "Boom",
+    "tree-type|palm-tree": "Palmboom",
+    "divider-type|median": "",
+    "divider-type|striped-buffer": "",
+    "divider-type|planting-strip": "",
+    "divider-type|planter-box": "Plantenbak",
+    "divider-type|bush": "",
+    "divider-type|flowers": "",
+    "divider-type|big-tree": "",
+    "divider-type|palm-tree": "",
+    "divider-type|bollard": "",
+    "divider-type|dome": "",
+    "divider-type|jersey-barrier-concrete": "",
+    "divider-type|jersey-barrier-plastic": "",
+    "transit-shelter-elevation|street-level": "Straatniveau",
+    "transit-shelter-elevation|light-rail": "",
+    "bike-rack-elevation|sidewalk-parallel": "",
+    "bike-rack-elevation|sidewalk": "",
+    "bike-rack-elevation|road": "",
+    "building|waterfront": "Waterkant",
+    "building|grass": "Gras",
+    "building|fence": "Lege plek",
+    "building|parking-lot": "",
+    "building|residential": "Huis",
+    "building|narrow": "Smal gebouw",
+    "building|wide": "Breed gebouw",
+    "wayfinding-type|large": "Groot",
+    "wayfinding-type|medium": "Middel",
+    "wayfinding-type|small": "Small",
+    "waiting-area|sparse": "",
+    "waiting-area|empty": "",
+    "flex-type|rideshare": "",
+    "flex-type|taxi": "",
+    "occupants|empty": "Leeg",
+    "occupants|full": "",
+    "occupants|occupied": "",
+    "elevation|sidewalk": "",
+    "elevation|road": "Straatniveau",
+    "temporary-barrier-type|traffic-cone": "",
+    "temporary-barrier-type|barricade": "",
+    "vendor-type|handcart": "",
+    "vendor-type|table": "",
+    "vendor-type|tarp": "",
+    "vendor-type|platform": "",
+    "ground|concrete": "",
+    "ground|asphalt": "Asfalt"
+  },
+  "skybox": {
+    "day": "",
+    "twilight": "",
+    "dusk": "",
+    "dawn": "",
+    "night": "",
+    "karl": "",
+    "holodeck": ""
+  }
+}

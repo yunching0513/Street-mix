@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ScrollIndicators > renders snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="street-scroll-indicators"
+  >
+    <button
+      aria-label="Scroll street left"
+      class="street-scroll-indicator-left"
+    >
+      ‹
+    </button>
+    <button
+      aria-label="Scroll street right"
+      class="street-scroll-indicator-right"
+    >
+      ›››
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ScrollIndicators > renders snapshot for zero indicators 1`] = `
+<DocumentFragment>
+  <div
+    class="street-scroll-indicators"
+  />
+</DocumentFragment>
+`;

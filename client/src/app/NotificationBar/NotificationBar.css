@@ -1,0 +1,39 @@
+.notification-bar {
+  position: relative;
+  z-index: var(--z-08-notification-bar);
+  padding: 0.75em calc(36px + 1.5em); /* Makes room for dismiss button */
+  text-align: center; /* Since the app is very center-view oriented, this helps message legibility */
+  background-color: var(--alert-background);
+  border-bottom: var(--alert-border);
+}
+
+.notification-bar .close {
+  /* Close button overrides */
+  --close-icon-color: var(--color-copper-800);
+  --close-icon-color-hover: var(--color-copper-700);
+
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  top: 7px;
+  right: 6px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center !important;
+
+  &:hover {
+    background-color: rgb(255 255 255 / 50%);
+  }
+
+  &:active {
+    background-color: rgb(255 255 255 / 75%);
+  }
+
+  svg {
+    color: var(--close-icon-color) !important;
+  }
+
+  &:hover svg {
+    color: var(--close-icon-color-hover) !important;
+  }
+}

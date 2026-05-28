@@ -1,0 +1,239 @@
+{
+  "segments": {
+    "sidewalk": "歩道",
+    "pedestrian": "",
+    "sidewalk-tree": "街路樹",
+    "bike-rack": "自転車置場",
+    "bench": "ベンチ",
+    "outdoor-dining": "",
+    "cafe-seating": "",
+    "wayfinding-sign": "道路名標識",
+    "sidewalk-lamp": "街灯",
+    "utility-pole": "",
+    "drainage-channel": "",
+    "parklet": "パークレット",
+    "street-vendor": "",
+    "divider": "バッファーゾーン",
+    "planting-strip": "緑地・花壇",
+    "planter-box": "プランター",
+    "median": "中央分離帯",
+    "bollard": "ボラード",
+    "dome": "車両除外ドーム",
+    "jersey-barrier": "",
+    "scooter": "",
+    "scooter-drop-zone": "",
+    "bike-lane": "自転車専用レーン",
+    "twoway-bike-lane": "",
+    "parking-lane": "路上駐車スペース",
+    "perpendicular-parking": "道路に対して直角",
+    "angled-parking": "斜めに駐車",
+    "flex-zone": "伸縮性のあるゾーン",
+    "taxi-pick-up": "タクシー停車場",
+    "rideshare-pick-up": "ライドシェア停車場",
+    "bikeshare-station": "バイクシェアステーション",
+    "foodtruck": "食品トラック",
+    "flex-zone-curb": "待機エリア",
+    "drive-lane": "車両用レーン",
+    "mixed-drive-lane": "",
+    "sharrow": "自転車共用",
+    "turn-lane": "方向転換レーン",
+    "turn-lane-straight": "方向転換なしレーン",
+    "turn-lane-center": "センター・ターンレーン",
+    "bus-lane": "バス専用レーン",
+    "bus-lane-shared": "バス/自転車共用レーン",
+    "streetcar": "路面電車",
+    "light-rail": "ライトレール",
+    "transit-shelter": "屋根付き停留所",
+    "brt-station": "",
+    "brt-lane": "",
+    "temporary-barrier": "",
+    "inception-train": "“インセプション” 電車",
+    "magic-carpet": "",
+    "wall": ""
+  },
+  "descriptions": {
+    "wayfinding-sign": {
+      "prompt": "道路名標識 (wayfinding signs)について",
+      "content": "# 道路名標識があることで、歩行者にとっても目的地までの道のりがわかりやすくなります。"
+    },
+    "parklet": {
+      "prompt": "パークレットについて",
+      "imageCaption": "4033 Judah Streetのパークレット, 写真提供 San Francisco Planning Department。",
+      "content": "# パークレットを設置することで、路面駐車場が一時的な公共空間に生まれ変わります。\n\n2005年には、サンフランシスコに拠点を置くデザインスタジオである[Rebar](http://rebargroup.org/)が、ミッションストリートのダウンタウンにある単一に測定された駐車スペースを一時的に小さな公共公園に切り替えました。最初の公園はシンプルでした：長方形の芝生の上にベンチと木があったが、それは簡単な指針と他の人が自分のことを得る料金を特徴とした。公共空間のかなりの部分が、実際に自動車を保管するために専念するという事実を認識した人として国際運動が誕生しました。そして今、毎年開催されている[公園（駐車）の日](https://www.facebook.com/PARKing-Day-71298180414)は、世界中で、一時的に転換された約1000個のスポットを開催します。\n\n良いアイデアを知ったとき、サンフランシスコは、2010年に[公園の舗装計画](http://sfpavementtoparks.sfplanning.org/)のために公園公務を作った最初の都市となりました。今日ベイによる都市には50以上の公園があり、そのうちの多くの部分が、現在レバーの適切なプロトタイプを越えてはるかに改善された建築学的に設計されたオブジェクトです。サンフランシスコで最も繁華なショッピング街の中心にある野心的な、企業が主催する2ブロックの長さの公園、そして[イェルバ・ブエナのコミュニティ・ベネフィット地区](http://www.ybcbd.org/)のために設計された移動式の明るい赤色の「パークモービル」（ストリートミックスのデフォルトデザイン）があります。公式パークレットプログラムは、現在、フィラデルフィア、オークランド、カンザスシティ、ニューヨーク、シカゴ、バンクーバーのような北米の多くの他の都市に存在し、今後より多くの都市はすぐに従うことです。"
+    },
+    "bike-lane": {
+      "prompt": "自転車専用レーンについて",
+      "content": "# 車両用とは別に自転車専用レーンを設置することで、自転車通行の安全性が増します。"
+    },
+    "colored-bike-lane": {
+      "prompt": "色付き自転車専用レーンについて",
+      "content": "# 自転車専用レーンを色分けすることで、自転車通行時に道路を見分けやすくなり、安全性が向上します。"
+    },
+    "sharrow": {
+      "prompt": "自転車共用レーンについて",
+      "content": "# 自転車共用レーンは、車両と自転車のどちらも通行可能です。"
+    },
+    "transit-shelter-elevated": {
+      "prompt": "屋根付き停留所の段差分けについて",
+      "content": "# 停留所に段差をつけることで、ライトレールやバスがスムーズに停車し、運行することができます。"
+    },
+    "inception-train": {
+      "content": "# クリストファー・ノーラン監督の映画 インセプション に登場する電車です。\n\n説明は不要でしょ？"
+    }
+  },
+  "buildings": {
+    "waterfront": {
+      "name": "河岸"
+    },
+    "grass": {
+      "name": "芝生"
+    },
+    "fence": {
+      "name": "空き地"
+    },
+    "parking-lot": {
+      "name": "駐車場"
+    },
+    "residential": {
+      "name": "家屋"
+    },
+    "narrow": {
+      "name": "建物"
+    },
+    "wide": {
+      "name": "建物"
+    },
+    "arcade": {
+      "name": ""
+    },
+    "compound-wall": {
+      "name": ""
+    }
+  },
+  "boundary": {
+    "group": {
+      "land": "",
+      "waterfront": "河岸"
+    }
+  },
+  "variant-icons": {
+    "orientation|left": "左",
+    "orientation|right": "右",
+    "turn-lane-orientation|left": "左",
+    "turn-lane-orientation|left-straight": "左折と直進",
+    "turn-lane-orientation|straight": "直進",
+    "turn-lane-orientation|right-straight": "右折と直進",
+    "turn-lane-orientation|right": "右折",
+    "turn-lane-orientation|both": "両方",
+    "turn-lane-orientation|left-right-straight": "",
+    "turn-lane-orientation|shared": "共用",
+    "bench-orientation|left": "左",
+    "bench-orientation|right": "右",
+    "bench-orientation|center": "中央",
+    "parking-lane-orientation|left": "左",
+    "parking-lane-orientation|right": "右",
+    "parking-lane-direction|inbound": "上り車線",
+    "parking-lane-direction|outbound": "下り車線",
+    "parking-lane-direction|sideways": "直角駐車",
+    "parking-lane-direction|angled-front-left": "斜め駐車",
+    "parking-lane-direction|angled-front-right": "斜め駐車",
+    "parking-lane-direction|angled-rear-left": "斜め駐車",
+    "parking-lane-direction|angled-rear-right": "斜め駐車",
+    "direction|inbound": "上り",
+    "direction|outbound": "下り",
+    "bike-direction|inbound": "上り",
+    "bike-direction|outbound": "下り",
+    "bike-direction|twoway-left": "",
+    "bike-direction|twoway-right": "",
+    "sidewalk-density|empty": "ごく少数",
+    "sidewalk-density|sparse": "少ない",
+    "sidewalk-density|normal": "普通",
+    "sidewalk-density|dense": "多い",
+    "lamp-orientation|left": "左",
+    "lamp-orientation|both": "両方",
+    "lamp-orientation|right": "右",
+    "lamp-type|traditional": "伝統的",
+    "lamp-type|modern": "現代風",
+    "lamp-type|pride": "虹色表記つきの現代風",
+    "drainage-sides|slanted": "",
+    "drainage-sides|vertical": "",
+    "car-type|car": "車両",
+    "car-type|sharrow": "共用",
+    "car-type|truck": "トラック",
+    "car-type|microvan": "",
+    "car-type|av": "",
+    "car-type|motorcycle": "",
+    "car-type|motorcycle-sidecar": "",
+    "car-type|pedestrian": "",
+    "public-transit-asphalt|regular": "アスファルト",
+    "public-transit-asphalt|colored": "赤レーン",
+    "public-transit-asphalt|grass": "芝生",
+    "bus-asphalt|regular": "アスファルト",
+    "bus-asphalt|colored": "赤レーン",
+    "bus-asphalt|shared": "バス/自転車共用レーン",
+    "bus-type|typical": "",
+    "bus-type|double-decker": "",
+    "bus-type|av-shuttle": "",
+    "brt-station-orientation|left": "左",
+    "brt-station-orientation|right": "右",
+    "brt-station-orientation|center": "中央",
+    "bike-asphalt|regular": "アスファルト",
+    "bike-asphalt|green": "緑レーン",
+    "bike-asphalt|red": "赤レーン",
+    "tree-type|big": "街路樹",
+    "tree-type|palm-tree": "ヤシの木",
+    "divider-type|median": "中央分離帯",
+    "divider-type|striped-buffer": "ストライプ表示",
+    "divider-type|planting-strip": "緑地・花壇",
+    "divider-type|planter-box": "プランター",
+    "divider-type|bush": "緑地",
+    "divider-type|flowers": "花壇",
+    "divider-type|big-tree": "街路樹と緑地",
+    "divider-type|palm-tree": "ヤシの木と緑地",
+    "divider-type|bollard": "ボラード",
+    "divider-type|dome": "車両除外ドーム",
+    "divider-type|jersey-barrier-concrete": "",
+    "divider-type|jersey-barrier-plastic": "",
+    "transit-shelter-elevation|street-level": "ストリートの段差",
+    "transit-shelter-elevation|light-rail": "ライトレール停留所",
+    "bike-rack-elevation|sidewalk-parallel": "並列駐車, 歩道と同じ高さ",
+    "bike-rack-elevation|sidewalk": "共用駐車, 歩道と同じ高さ",
+    "bike-rack-elevation|road": "共用駐車, 道路と同じ高さ",
+    "building|waterfront": "河岸",
+    "building|grass": "芝生",
+    "building|fence": "空き地",
+    "building|parking-lot": "駐車場",
+    "building|residential": "家屋",
+    "building|narrow": "小規模な建物",
+    "building|wide": "大規模な建物",
+    "wayfinding-type|large": "大",
+    "wayfinding-type|medium": "中",
+    "wayfinding-type|small": "小",
+    "waiting-area|sparse": "歩行者表示",
+    "waiting-area|empty": "無人",
+    "flex-type|rideshare": "ライドシェア",
+    "flex-type|taxi": "タクシー",
+    "occupants|empty": "ごく少数",
+    "occupants|full": "",
+    "occupants|occupied": "",
+    "elevation|sidewalk": "",
+    "elevation|road": "ストリートの段差",
+    "temporary-barrier-type|traffic-cone": "",
+    "temporary-barrier-type|barricade": "",
+    "vendor-type|handcart": "",
+    "vendor-type|table": "",
+    "vendor-type|tarp": "",
+    "vendor-type|platform": "",
+    "ground|concrete": "",
+    "ground|asphalt": "アスファルト"
+  },
+  "skybox": {
+    "day": "",
+    "twilight": "",
+    "dusk": "",
+    "dawn": "",
+    "night": "",
+    "karl": "",
+    "holodeck": ""
+  }
+}

@@ -1,0 +1,588 @@
+{
+  "menu": {
+    "item": {
+      "help": "Помощь",
+      "about": "Всё о Streetmix…",
+      "whatsnew": "",
+      "contact": "Контакты",
+      "community": "Сообщество",
+      "sign-in": "Войти",
+      "sign-out": "Выйти",
+      "new-street": "Новая улица",
+      "my-streets": "Мои улицы",
+      "settings": "Настройки",
+      "share": "Поделиться",
+      "store": "Магазин",
+      "upgrade": "Поддержка",
+      "streetmix-plus": ""
+    },
+    "help": {
+      "guidebook-link": "Руководство",
+      "keyboard-label": "Сочетания клавиш:",
+      "remove-instruction": "Удалить сегмент, на который вы указываете",
+      "remove-shift-instruction": "(зажмите {shiftKey} для удаления всех сегментов)",
+      "move-instruction": "Передвинуться по улице",
+      "move-shift-instruction": "(зажмите {shiftKey} для перехода на грани)",
+      "change-instruction": "Изменить ширину сегмента, на который вы указываете",
+      "change-shift-instruction": "(зажмите {shiftKey} для более точного изменения)"
+    },
+    "share": {
+      "sign-in-twitter-link": "Войти",
+      "sign-in-link": "{signInLink} для красивых ссылок на улицы и персональной галереи улиц.",
+      "link": "Скопируйте и вставьте эту ссылку, чтобы поделиться:",
+      "copy-to-clipboard": "Скопировать в буфер",
+      "copy-success": "",
+      "twitter": "Поделиться через Twitter",
+      "facebook": "Поделиться через Facebook",
+      "mastodon": "",
+      "3dstreet": "",
+      "print": "Распечатать…",
+      "save": "Сохранить как изображение…",
+      "save-byline": "Для включения в отчет, блог и т.д.",
+      "messages": {
+        "my-street": "Посмотрите на мою улицу, {streetName}, на Streetmix!",
+        "my-street-unnamed": "Посмотрите на мою улицу на Streetmix!",
+        "someone-elses-street": "Посмотрите на {streetName} от {streetCreator} на Streetmix!",
+        "someone-elses-street-unnamed": "Посмотрите на эту улицу от {streetCreator} на Streetmix!",
+        "anonymous-creator-street": "Посмотрите на {streetName} на Streetmix!",
+        "anonymous-creator-street-unnamed": "Посмотрите на эту улицу на Streetmix!"
+      }
+    },
+    "contact": {
+      "forums": "Обсудить на форумах",
+      "email": "Отправить письмо команде Streetmix",
+      "github": "Посмотреть исходники на GitHub",
+      "blog": "Посетить блог Streetmix",
+      "discord": "Присоединиться к серверу Discord",
+      "slack": "Присоединиться к чату Slack",
+      "newsletter": "Подписаться на рассылку"
+    },
+    "feedback": {
+      "prompt": "Послать нам сообщение:",
+      "message-placeholder": "Что вы думаете о Streetmix?",
+      "email-placeholder": "Ваш электронный адрес (опционально)",
+      "send": "Послать сообщение",
+      "confirm": "Мы получили ваш отзыв. Спасибо!",
+      "error": " К сожалению возникла проблема при отправке отзыва. Попробуйте повторить отправку позже."
+    },
+    "sign-in": {
+      "twitter": "Войти в Twitter"
+    },
+    "new-street": {
+      "default": "",
+      "empty": "",
+      "copy": "Сделать копию",
+      "template": "",
+      "sign-in-link": ""
+    }
+  },
+  "settings": {
+    "heading": "Настройки",
+    "info-tooltip": "",
+    "general": {
+      "label": ""
+    },
+    "appearance": {
+      "label": ""
+    },
+    "language": {
+      "label": "Язык"
+    },
+    "profile": {
+      "label": "",
+      "username": "",
+      "username-description": "",
+      "display-name": "",
+      "display-name-description": "",
+      "display-name-not-set": "",
+      "display-name-error": "",
+      "display-name-characters-remaining": ""
+    },
+    "misc": {
+      "label": "",
+      "silly-clowns": "",
+      "silly-clowns-description": ""
+    },
+    "theme": {
+      "label": "",
+      "description": "",
+      "light": "",
+      "dark": "",
+      "system": ""
+    },
+    "units": {
+      "label": "Единицы измерения",
+      "metric": "Метрическая система (метры)",
+      "imperial": "Английская система (футы)"
+    }
+  },
+  "msg": {
+    "loading": "Загрузка…",
+    "remixing": "Перемешивание…",
+    "having-trouble": "Возникли проблемы…",
+    "no-street": "Не выбрано улицы.",
+    "trouble-loading": "Проблемы при загрузке Streetmix.",
+    "slow-connection-1": "Streetmix не смог подключиться к Интернету на текущий момент.",
+    "slow-connection-2": "Может потребоваться перезагрузить страницу и повторить попытку. Обратите внимание, что вы можете потерять Последнее изменение на улице. Приносим извинения!",
+    "no-connection": "Streetmix не смог подключиться к Интернету.",
+    "more-info": "Более подробная информация"
+  },
+  "error": {
+    "button": {
+      "home": "Перейти на главную страницу",
+      "sign-in": "Войти снова",
+      "reload": "Перезагрузить страницу",
+      "return": "",
+      "try-again": "Попробовать снова"
+    },
+    "page-not-found-title": "Страница не найдена.",
+    "page-not-found-description": "О, боже. Нет страницы с этим адресом!",
+    "street-not-found-title": "Улица не найдена.",
+    "street-not-found-description": "О, боже. Нет улицы с такой ссылкой!",
+    "street-not-found-but-user-description": "Нет улицы с такой ссылкой! Но вы можете просмотреть другие улицы от {user}",
+    "street-deleted-title": "Улица была удалена.",
+    "street-deleted-description": "Улица с такой ссылко была удалена, но вы можете просмотреть другие улицы от {user}",
+    "sign-out-title": "Вы только что вышли.",
+    "reload-sign-out-title": "Вы вышли через другое окно.",
+    "gallery-street-failure-description": "У нас проблемы с загрузкой этой улицы.",
+    "reload-sign-in-title": "Вы вошли в другое окно.",
+    "please-reload": "",
+    "survey-finished": "",
+    "street-deleted-elsewhere-title": "Эта улица была удалена в другом месте.",
+    "street-deleted-elsewhere-description": "Эта улица была удалена в другом браузере.",
+    "auth-expired": "",
+    "sign-in-again": "",
+    "access-denied-title": "Вы не вошли.",
+    "access-denied-description": "Вы отменили процесс входа.",
+    "auth-api-problem-title": "Возникла проблема со входом в систему.",
+    "auth-api-problem-description": "Возникла проблема с аутентификацией.",
+    "please-try-again": "Пожалуйста, повторите попытку позже или сообщите нам через <email_link>почта</email_link> or <tweet_link>Twitter</tweet_link>.",
+    "please-try-again-contact-us": "",
+    "unsupported-browser-title": "Streetmix не поддерживает ваш браузер.",
+    "unsupported-browser-description": "Приносим извинения. Возможно, вы захотите попробовать <chrome_link>Chrome</chrome_link>, <firefox_link>Firefox</firefox_link>, <edge_link>Microsoft Edge</edge_link>, или Safari.",
+    "unsupported-browser-internet-explorer": "Вы используете Internet Explorer? <a>Узнайте больше.</a>",
+    "unsupported-browser-contact-us": "",
+    "generic-error-title": "Что-то пошло не так.",
+    "generic-error-description": "Приносим извинение – что-то пошло не так.",
+    "error-code": "(Ошибка {code}.)",
+    "need-help-link": ""
+  },
+  "btn": {
+    "reload": "Перезагрузить",
+    "undo": "Отменить",
+    "redo": "Восстановить",
+    "try-again": "Повторить",
+    "cancel": "Отменить",
+    "create": "Создать новую улицу",
+    "copy": "Сделать копию",
+    "remove": "Удалить",
+    "close": "Закрыть",
+    "dismiss": "Отклонить",
+    "okay": "Окей!",
+    "not-now": "",
+    "save": "",
+    "edit": ""
+  },
+  "dialogs": {
+    "error": {
+      "heading": "Уупс!",
+      "text": "Случилось нечто неожиданное 😢. Мы зарегистрировали ошибку, но если вы помните, что произошло по дороге сюда, <a>пожалуйста, сообщите нам об этом</a>. Это также может быть временной проблемой, поэтому попробуйте еще раз."
+    },
+    "welcome": {
+      "heading": "Добро пожаловать в Streetmix.",
+      "new": {
+        "intro": "Проектируйте, перемещайте, и делитесь вашими соседними улицами. Добавьте деревья или велосипедные дорожки, расширьте тротуары или полосы движения, узнайте, как ваши решения могут повлиять на ваше сообщество.",
+        "instruction": "Начните передвижением какого-нибудь элемента.",
+        "instruct": "Начните с перемещения некоторых сегментов с помощью {pointer}.",
+        "instruct-pointer-finger": "пальца",
+        "instruct-pointer-mouse": "мышки"
+      },
+      "existing": {
+        "intro": "Эта улица {streetName} создана {creator}.",
+        "intro-without-creator": "Это улица {streetName}.",
+        "instruct": "Смешивайте улицу, перемещая некоторые сегменты вокруг, или {startYourOwnStreet}.",
+        "instruct-start-own-street": "Начните создавать собственную улицу"
+      }
+    },
+    "new-street": {
+      "heading": "Вот ваша новая улица.",
+      "default": "Начните с примерной улицы",
+      "empty": "начните с пустой улицы",
+      "last": "Начните с копии предыдущей улицы",
+      "dismiss": ""
+    },
+    "about": {
+      "heading": "Всё о Streetmix.",
+      "description": "Проектируйте, перемещайте, и делитесь вашими соседними улицами. Добавьте деревья или велосипедные дорожки, расширьте тротуары или полосы движения, узнайте, как ваши решения могут повлиять на ваше сообщество.",
+      "team-heading": "Проектная группа и сопровождающие",
+      "partners": "Партнёры",
+      "sponsors": "Спонсоры",
+      "sponsored-by": "Streetmix щедро спонсируется:",
+      "donate-link": "Поддержите нас финансово",
+      "tos-link": "Политика использования",
+      "privacy-link": "Политика конфиденциальности",
+      "acknowledgements": "Благодарнсть",
+      "font-designed-by": "Шрифт {fontName} создан {fontAuthor}.",
+      "emoji-by": "Емодзи от {author}.",
+      "icons-by": "Иконки от {author}.",
+      "license-label": "(<a>Лицензия</a>)"
+    },
+    "analytics": {
+      "export-csv": "Экспортировать в CSV",
+      "heading": "Аналитика",
+      "street-summary": "Ваша улица имеет провозную способность {averageTotal} человек в час с потенциальным максимом {potentialTotal} человек в час.",
+      "typical-lane-width": "",
+      "segment-summary": "{average} — {potential} чел./ч",
+      "segment-summary-single": "{amount} чел./час",
+      "source": "Источник",
+      "capacity-data-source": "",
+      "toggle-visible": "",
+      "settings-notice": ""
+    },
+    "save": {
+      "heading": "Сохранить как избражение",
+      "option-labels": "Название и ширина сегментов",
+      "option-name": "Название улицы",
+      "option-sky": "Прозрачное небо",
+      "option-watermark": "Водяной знак",
+      "option-custom-scale": "",
+      "option-custom-scale-description": "",
+      "loading": "Загрузка…",
+      "save-button": "Сохранить на компьютер…",
+      "license": "Это изображение, созданное через Streetmix может быть переиспользовано везде для любых целей под лицензией {licenseLink}.",
+      "error-preview": "Ошибка отображения изображения предварительного просмотра.",
+      "error-unavailable": "Сохранение в изображение недоступно в этом браузере.",
+      "error-too-large": "",
+      "preview-image-alt": "Предварительный просмотр",
+      "print-size": "",
+      "digital-size": "",
+      "weather-not-exported": ""
+    },
+    "geotag": {
+      "search": "Поиск локации",
+      "clear-search": "Очистить поиск",
+      "zoom-in": "Приблизить",
+      "zoom-out": "Отдалить",
+      "add-location": "Добавить местоположение",
+      "confirm-location": "Подтвердить местоположение",
+      "clear-location": "Очистить местоположение",
+      "unknown-location": "неизвестное местоположение",
+      "geotag-unavailable": "Геокодирование сейчас недоступно. Вы можете просматривать карту, но не сможете изменить местоположение Вашей улицы."
+    },
+    "donate": {
+      "heading": "Streetmix нужна ваша помощь!",
+      "lede": "Streetmix это проект, поддерживаемый сообществом. В отличие от других “бесплатных” сервисов в Интернете, мы не показываем рекламу или не вводим трекеры, которые злоупотребляют вашей конфиденциальностью. Вместо этого мы полагаемся на вашу поддержку, чтобы поддерживать Streetmix в рабочем состоянии.",
+      "text": "Пожалуйста, поддержите нас единовременным или повторяющимся взносом. Ваше пожертвование будет платить за наши серверы и облачную инфраструктуру, поддержку других некоммерческих организаций, групп поддержки и студентов, работающих над улучшением наших улиц. Дополнительный доход будет инвестирован в дальнейшее развитие новых функций. Наши расходы полностью прозрачны, так что вы можете увидеть, как именно ваши взносы используются командой Streetmix.",
+      "button": "Пожертвовать Streetmix",
+      "cancel": "Нет, спасибо"
+    },
+    "sign-in": {
+      "heading": "Войти / Регистрация",
+      "description": "Сохраните Ваш первый концепт или войдите, чтобы перейти к предыдущим концептам.",
+      "email-label": "Email",
+      "email-description": "Мы пришлем Вам ссылку для входа. Без пароля.",
+      "email-invalid": "Упс! Это не выглядит как правильный адрес электронной почты. Пожалуйста, попробуйте снова.",
+      "social-heading": "или",
+      "button": {
+        "email": "Войти с почтой",
+        "twitter": "Войти через Twitter",
+        "google": "Войти через Google",
+        "facebook": "Войти через Facebook"
+      },
+      "tos": "Нажатием одной из кнопок я соглашаюсь с {tosLink} и {privacyLink}.",
+      "tos-link-label": "политикой использования",
+      "privacy-link-label": "политикой конфиденциальности",
+      "loading-message": "Выполняется вход...",
+      "sent-message-with-email": "Мы послали Вам письмо на {email}. Пожалуйста, следуйте инструкции в письме для продолжения регистрации!",
+      "email-unreceived": "Не получили?",
+      "resend-email": "Послать письмо снова"
+    },
+    "whatsnew": {
+      "heading": "Что нового в Streetmix?",
+      "english-only": ""
+    },
+    "newsletter": {
+      "heading": "Подписаться на рассылку",
+      "description": "",
+      "email-label": "",
+      "field-required-error": "",
+      "subscribe": "",
+      "subscribe-pending": "",
+      "ok-message": "",
+      "error-message": ""
+    }
+  },
+  "tools": {
+    "tooltip": "Переключить инструменты",
+    "skybox": {
+      "tooltip": "",
+      "heading": "Окружающая среда",
+      "sky": {
+        "heading": ""
+      },
+      "weather": {
+        "heading": "",
+        "clear": "",
+        "rain": "",
+        "snow": ""
+      }
+    },
+    "flooding": {
+      "tooltip": "",
+      "heading": "",
+      "sea-level": {
+        "label": "",
+        "current": ""
+      },
+      "storm-surge": {
+        "label": ""
+      },
+      "messages": {
+        "start": "",
+        "need-waterfront": "",
+        "success": "",
+        "fail": ""
+      }
+    }
+  },
+  "prompt": {
+    "new-street": "Новое название улицы:",
+    "delete-street": "Вы уверены, что хотите полностью удалить {streetName}? Это не может быть отменено.",
+    "new-width": "Новая ширина улицы (от {minWidth} к {maxWidth}):",
+    "segment-label": "Название нового сегмента:"
+  },
+  "toast": {
+    "segment-deleted": "Сегмент был удалён.",
+    "all-segments-deleted": "Все сегменты были удалены.",
+    "no-undo": "Нечего отменять.",
+    "no-redo": "Нечего восстанавливать",
+    "no-save": "Нет необходимости сохранять вручную; Streetmix автоматически сохранит вашу улицу!",
+    "remixing": "Теперь редактируем свежеприготовленный дубликат исходной улицы. Дубликат был помещен в галерею.",
+    "remixing-sign-in": "Теперь редактируем свежеприготовленный дубликат исходной улицы. Войдите, чтобы начать свою собственную галерею улиц.",
+    "reloaded": "Ваша улица была перезагружена с сервера, как она была изменена в другом месте."
+  },
+  "palette": {
+    "remove": "Перетащите сюда, чтобы удалить"
+  },
+  "width": {
+    "label": "{width} ширина",
+    "under": "({width} до)",
+    "over": "({width} после)",
+    "occupied": "Занятая ширина",
+    "building": "Ширина здания к зданию",
+    "different": "Разная ширина…",
+    "units": "Единицы измерения",
+    "metric": "",
+    "imperial": ""
+  },
+  "capacity": {
+    "ppl-per-hour": "{capacity} чел./час"
+  },
+  "datetime": {
+    "minutes-ago": "Несколько минут назад",
+    "seconds-ago": "Несколько секунд назад",
+    "yesterday": "Вчера в {time}",
+    "today": "Сегодня в {time}"
+  },
+  "key": {
+    "backspace": "Backspace",
+    "shift": "Shift",
+    "plus": "Плюс",
+    "minus": "Минус",
+    "left-arrow": "Стрелка влево",
+    "right-arrow": "Стрелка вправо"
+  },
+  "tooltip": {
+    "remove-segment": "Удалить сегмент",
+    "delete-street": "Удалить улицу",
+    "segment-width": "Изменить ширину сегмента",
+    "building-height": "Изменить количество этажей",
+    "street-width": "Изменить ширину улицы",
+    "geotag": "",
+    "increase-width": "Увеличить ширину",
+    "decrease-width": "Уменьшить ширину",
+    "width-tooltip-sublabel": "(зажмите Shift для большей точности)",
+    "add-floor": "Добавить уровень",
+    "remove-floor": "Удалить уровень",
+    "scroll-street-left": "Прокрутить улицу влево",
+    "scroll-street-right": "Прокрутить улицу вправо",
+    "scroll-left": "Прокрутить влево",
+    "scroll-right": "Прокрутить вправо",
+    "elevation-sidewalk": "Уровень тротуара",
+    "elevation-road": "Уровень улицы",
+    "elevation-input": "",
+    "elevation-lower": "",
+    "elevation-raise": "",
+    "ground-height-input": "",
+    "ground-height-lower": "",
+    "ground-height-raise": "",
+    "sea-level-input": "",
+    "sea-level-lower": "",
+    "sea-level-raise": ""
+  },
+  "street": {
+    "default-name": "Безымянная улица",
+    "rename": "Нажмите для переименования"
+  },
+  "building": {
+    "label": "",
+    "floors-count": "{count, plural, one {этаж} few {этажей} many {этажей} other {этажи}}"
+  },
+  "segments": {
+    "warnings": {
+      "does-not-fit": "Этот сегмент не вписывается в улицу.",
+      "not-wide": "Этот сегмент может быть недостаточно широким.",
+      "too-wide": "Этот сегмент может быть слишком широким.",
+      "dangerous": "",
+      "slope-exceeded": ""
+    },
+    "learn-more": "Узнать больше",
+    "unknown": {
+      "label": "Неизвестный"
+    },
+    "description": {
+      "photo-credit": "Фото:"
+    },
+    "resize": {
+      "min": "Мин",
+      "max": "Макс"
+    },
+    "controls": {
+      "width": "",
+      "ground-height": "",
+      "sea-level": "",
+      "elevation": "",
+      "slope": {
+        "label": "",
+        "switch-tooltip": "",
+        "disabled-tooltip": ""
+      }
+    }
+  },
+  "section": {
+    "empty": "Пустое место"
+  },
+  "gallery": {
+    "fail": "Ошибка при загрузке галереи.",
+    "all": "Все улицы",
+    "twitter-link": "Профиль Twitter",
+    "delete-street-tooltip": "Удалить улицу",
+    "street-count": "{count, plural, one {улица} few {улиц} many {улиц} other {улиц}}",
+    "no-streets": "Пока что нет улиц",
+    "thumbnail-error": "Эскиз недоступен"
+  },
+  "users": {
+    "anonymous": "Аноним",
+    "byline": "от {user}",
+    "roles": {
+      "admin": "",
+      "subscriber": ""
+    }
+  },
+  "export": {
+    "watermark": "Создано с {streetmixWordmark}"
+  },
+  "meta": {
+    "description": "Проектируйте, перемещайте, и делитесь вашими соседними улицами. Добавьте деревья или велосипедные дорожки, расширьте тротуары или полосы движения, узнайте, как ваши решения могут повлиять на ваше сообщество.",
+    "page-title": "{streetName} (от {author})"
+  },
+  "credits": {
+    "core-team-heading": "Команда",
+    "original-team-heading": "",
+    "past-team-heading": "Предыдущие участники",
+    "core-contributors": "",
+    "advisors": "Консультанты",
+    "additional-illustrations": "Дополнительные иллюстрации",
+    "additional-code": "Дополнительный код",
+    "additional-contributors": "Дополнительные участники",
+    "special-thanks": "Особая благодарность",
+    "translators": "Переводчики"
+  },
+  "plus": {
+    "locked": {
+      "label": "",
+      "soon": "",
+      "sub": "",
+      "sub-edit": "",
+      "user": "Войдите для использования!",
+      "action": ""
+    },
+    "prompt": {
+      "text": "",
+      "action": ""
+    },
+    "web-monetization": {
+      "thanks": "",
+      "not-signed-in": "",
+      "signed-in": "",
+      "learn-more": "Узнать больше"
+    }
+  },
+  "sentiment": {
+    "prompt": {
+      "intro": "",
+      "joyful": "",
+      "choose-one": ""
+    },
+    "answer": {
+      "rating-1": "Совсем нет",
+      "rating-2": "Не совсем",
+      "rating-3": "Средне",
+      "rating-4": "Немного",
+      "rating-5": "Очень"
+    },
+    "sign-in-prompt": "",
+    "about-link": "",
+    "about-text": "Этот опрос поможет узнать, как люди относятся к разным улицам",
+    "thank-you": "",
+    "about-header": "",
+    "about-article": {
+      "paragraph-1": "",
+      "paragraph-2": "",
+      "paragraph-3": ""
+    },
+    "done": {
+      "response": "",
+      "vote-another": "",
+      "really-done": ""
+    },
+    "comment": {
+      "prompt": "",
+      "example": "",
+      "submit": "",
+      "thanks": ""
+    }
+  },
+  "i18n": {
+    "lang": {
+      "am": "",
+      "ar": "Арабский",
+      "ca": "Каталанский",
+      "cs": "",
+      "de": "Немецкий",
+      "en": "Английский",
+      "en-gb": "",
+      "es": "Испанский",
+      "es-419": "Испанский (Латинская Америка)",
+      "es-es": "",
+      "es-mx": "Испанский (Мексика)",
+      "fi": "Финский",
+      "fr": "Французский",
+      "id": "",
+      "it": "итальянский",
+      "ja": "Японский",
+      "ko": "Корейский",
+      "nb-no": "",
+      "nl-nl": "",
+      "pl": "Польский",
+      "pt-br": "Португальский (Бразилия)",
+      "ro-ro": "",
+      "ru": "Русский",
+      "sv": "Шведский",
+      "tr": "",
+      "zh": "Китайский язык",
+      "zh-hans": "Упрощенный Китайский",
+      "zh-hant": "Традиционный Китайский"
+    }
+  }
+}

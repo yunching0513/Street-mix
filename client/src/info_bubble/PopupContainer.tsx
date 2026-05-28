@@ -1,0 +1,258 @@
+import { useRef, useState, cloneElement } from 'react'
+import {
+  useFloating,
+  autoUpdate,
+  shift,
+  arrow,
+  useDelayGroup,
+  useFloatingNodeId,
+  useHover,
+  useClick,
+  useFocus,
+  useDismiss,
+  useInteractions,
+  useTransitionStyles,
+  useMergeRefs,
+  safePolygon,
+  FloatingDelayGroup,
+  FloatingPortal,
+  FloatingArrow,
+  FloatingNode,
+} from '@floating-ui/react'
+import { useShepherd } from 'react-shepherd'
+
+import { useSelector } from '~/src/store/hooks.js'
+import { PopupContent } from './PopupContent.js'
+import './PopupContainer.css'
+
+import type { FloatingDelayGroupProps } from '@floating-ui/react'
+import type {
+  Optional,
+  Prettify,
+  SectionElementTypeAndPosition,
+} from '@streetmix/types'
+
+// Default settings
+const POPUP_DELAY = {
+  open: 0,
+  close: 150,
+}
+const POPUP_DELAY_TIMEOUT = 500
+const POPUP_TRANSITION_DURATION = 150
+const ARROW_WIDTH = 32
+const ARROW_HEIGHT = 16
+
+type PopupContainerProps = Prettify<
+  SectionElementTypeAndPosition & {
+    isDragging?: boolean
+    disabled?: boolean
+    children: React.JSX.Element
+  }
+>
+
+// `...props` is a discriminated union of `SectionElementTypeAndPosition`,
+// do not destructure it or it will lose type safety!
+export function PopupContainer({
+  isDragging,
+  disabled = false,
+  children,
+  ...props
+}: PopupContainerProps) {
+  const activeSegment = useSelector((state) => state.ui.activeSegment)
+  const element = useSelector((state) => {
+    if (props.type === 'boundary') {
+      return state.street.boundary[props.position]
+    } else {
+      return state.street.segments[props.position]
+    }
+  })
+  const [isOpen, setIsOpen] = useState(false)
+  const [isArrowHighlighted, setArrowHighlighted] = useState(false)
+  const arrowRef = useRef(null)
+  const nodeId = useFloatingNodeId()
+  const Shepherd = useShepherd()
+
+  const { refs, floatingStyles, context, middlewareData } = useFloating({
+    nodeId,
+    open: isOpen && !isDragging && !disabled,
+    onOpenChange(isOpen, _event, _reason) {
+      // If the popup will close because focus is being shifted to a
+      // Shepherd.js tour element, do not allow it to close.
+      if (Shepherd.activeTour && activeSegment === props.position) {
+        setIsOpen(true)
+        return
+      }
+
+      setIsOpen(isOpen)
+
+      // Use this to debug why the popup will open or close
+      // if (isOpen === false && reason) {
+      //   console.log(`PopupContainer is open: ${isOpen}\nreason: ${reason}`)
+      //   console.log(event)
+      // }
+    },
+    placement: 'top',
+    whileElementsMounted: autoUpdate,
+    middleware: [
+      shift({
+        crossAxis: true,
+        // Set boundary area for where the popup can appear.
+        // CSS controls the top position of this boundary.
+        boundary: document.querySelector('#street-section-popup-boundary'),
+        padding: {
+          right: 20,
+          left: 20,
+        },
+      }),
+      arrow({
+        element: arrowRef,
+        padding: 20,
+      }),
+    ],
+  })
+  const { delay, currentId, isInstantPhase } = useDelayGroup(context)
+  const hover = useHover(context, {
+    delay,
+    mouseOnly: true,
+    handleClose: safePolygon({
+      // This needs to be on or the `safePolygon` doesn't work
+      blockPointerEvents: true,
+      // This can be tweaked to a comfortable buffer. If it's too high, then
+      // moving the mouse to an adjacent reference element would block new
+      // popups from appearing, because `requireIntent` is false (below)
+      buffer: 25,
+      // Allows for some slower moving mouse cursors
+      requireIntent: false,
+    }),
+  })
+  const click = useClick(context)
+  const focus = useFocus(context)
+  const dismiss = useDismiss(context)
+  const { getReferenceProps, getFloatingProps } = useInteractions([
+    hover,
+    click,
+    focus,
+    dismiss,
+  ])
+
+  const arrowX = middlewareData.arrow?.x ?? 0
+  const arrowY = middlewareData.arrow?.y ?? 0
+  const transformX = arrowX + ARROW_WIDTH / 2
+  const transformY = arrowY + ARROW_HEIGHT
+
+  // Define animation
+  const { isMounted, styles } = useTransitionStyles(context, {
+    duration: isInstantPhase
+      ? {
+          open: 0,
+          close:
+            currentId === context.floatingId ? POPUP_TRANSITION_DURATION : 0,
+        }
+      : POPUP_TRANSITION_DURATION,
+    initial: ({ side }) => ({
+      opacity: 0,
+      transform: {
+        top: 'rotateX(-80deg)',
+        bottom: 'rotateX(80deg)',
+        left: 'rotateY(-80deg)',
+        right: 'rotateY(80deg)',
+      }[side],
+    }),
+    common: ({ side }) => ({
+      transformOrigin: {
+        top: `${transformX}px calc(100% + ${ARROW_HEIGHT}px)`,
+        bottom: `${transformX}px ${-ARROW_HEIGHT}px`,
+        left: `calc(100% + ${ARROW_HEIGHT}px) ${transformY}px`,
+        right: `${-ARROW_HEIGHT}px ${transformY}px`,
+      }[side],
+    }),
+  })
+
+  // We clone the child element so we can apply floating-ui's props
+  // to it on top of its existing props.
+  // Limitations to keep in mind:
+  // - Child element must be a single element or component and cannot
+  //   be a fragment
+  // - If child element is a React component, the component definition
+  //   must also spread its props to whichever element needs to take
+  //   floating-ui's props
+  // In general <PopupContainer> wraps a <Button> which does that (a normal HTML
+  // <button> also works just fine as is) but if this becomes too complex,
+  // a future workaround is to use floating-ui's `asChild` pattern so that
+  // some instances can be wrapped with its own element.
+  const tooltipTriggerElement = cloneElement(
+    children,
+    getReferenceProps({
+      // Refs are merged between useFloating and an existing child ref, if any.
+      ref: useMergeRefs([refs.setReference, children.ref]),
+      ...children.props,
+    })
+  )
+
+  const arrowClassNames = ['popup-arrow']
+  if (isArrowHighlighted) {
+    arrowClassNames.push('highlight')
+  }
+
+  return (
+    <>
+      {tooltipTriggerElement}
+      <FloatingNode id={nodeId}>
+        {isMounted && (
+          <FloatingPortal>
+            {/* Outer div is our main tooltip wrapper */}
+            <div
+              ref={refs.setFloating}
+              className="floating-ui-wrapper"
+              style={floatingStyles}
+              {...getFloatingProps()}
+            >
+              {/* Inner div is for styling and additional transforms */}
+              {/* Conditionally checks if element still exists. If a slice is
+                  deleted we don't want this to render. TODO: handle animate
+                  out (using a snapshot of deleted state) */}
+              {element && (
+                <div className="popup-container" style={styles}>
+                  <PopupContent
+                    setArrowHighlighted={setArrowHighlighted}
+                    {...props}
+                  />
+                  <FloatingArrow
+                    className={arrowClassNames.join(' ')}
+                    width={ARROW_WIDTH}
+                    height={ARROW_HEIGHT}
+                    ref={arrowRef}
+                    context={context}
+                  />
+                </div>
+              )}
+            </div>
+          </FloatingPortal>
+        )}
+      </FloatingNode>
+    </>
+  )
+}
+
+// PopupContainerGroupProps takes all of FloatingDelayGroupProps except that
+// `delay` is now optional because we provide our own default value
+type PopupContainerGroupProps = Prettify<
+  Optional<FloatingDelayGroupProps, 'delay'>
+>
+
+// Re-exports <FloatingDelayGroup> with our own default values. It can be
+// overridden by props.
+export function PopupContainerGroup({
+  children,
+  ...props
+}: PopupContainerGroupProps) {
+  return (
+    <FloatingDelayGroup
+      delay={POPUP_DELAY}
+      timeoutMs={POPUP_DELAY_TIMEOUT}
+      {...props}
+    >
+      {children}
+    </FloatingDelayGroup>
+  )
+}

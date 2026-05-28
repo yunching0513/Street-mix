@@ -1,0 +1,242 @@
+{
+  "team": [
+    {
+      "name": "Lou Huang",
+      "title": "project lead",
+      "mugshotFile": "lou.jpg",
+      "url": "https://louhuang.com",
+      "active": true,
+      "original": true
+    },
+    {
+      "name": "Katie Lewis",
+      "title": "art director, illustrator",
+      "mugshotFile": "katie.jpg",
+      "url": "https://twitter.com/klizlewis",
+      "active": true,
+      "original": true
+    },
+    {
+      "name": "Anselm Bradford",
+      "title": "media production",
+      "mugshotFile": "anselm.jpg",
+      "url": "https://twitter.com/anselmbradford",
+      "active": false,
+      "original": true
+    },
+    {
+      "name": "Drew Dara-Abrams",
+      "title": "fullstack engineer",
+      "mugshotFile": "drew.jpg",
+      "url": "https://drew.dara-abrams.com",
+      "active": false
+    },
+    {
+      "name": "Elizabeth Ferrao",
+      "title": "product manager",
+      "mugshotFile": "elizabeth.jpg",
+      "active": false
+    },
+    {
+      "name": "Ezra Spier",
+      "title": "engineer, marketing",
+      "mugshotFile": "ezra.jpg",
+      "url": "http://ahhrrr.com",
+      "active": false,
+      "original": true
+    },
+    {
+      "name": "Mandy Kong",
+      "mugshotFile": "mandy.jpg",
+      "title": "fullstack engineer",
+      "active": false
+    },
+    {
+      "name": "Marc Hébert",
+      "title": "design anthropologist",
+      "mugshotFile": "marc.jpg",
+      "url": "https://www.linkedin.com/pub/marc-hebert/1/2bb/66",
+      "active": false,
+      "original": true
+    },
+    {
+      "name": "Marcin Wichary",
+      "title": "designer, project manager",
+      "mugshotFile": "marcin.jpg",
+      "url": "https://aresluna.org",
+      "active": false,
+      "original": true
+    },
+    {
+      "name": "Oluwaseun Omoyajowo",
+      "mugshotFile": "oluwaseun.jpg",
+      "title": "fullstack engineer",
+      "url": "https://twitter.com/oluwaseunOmoya",
+      "active": false
+    },
+    {
+      "name": "Ryder Ross",
+      "mugshotFile": "ryder.jpg",
+      "title": "fullstack engineer",
+      "active": false
+    },
+    {
+      "name": "Shaunak Kashyap",
+      "title": "backend engineer",
+      "mugshotFile": "shaunak.jpg",
+      "url": "https://twitter.com/shaunak",
+      "active": false,
+      "original": true
+    },
+    {
+      "name": "Shemar Dacosta",
+      "mugshotFile": "shemar.jpg",
+      "title": "frontend engineer",
+      "active": false
+    },
+    {
+      "name": "Tomasz Magulski",
+      "mugshotFile": "tomasz.jpg",
+      "title": "engineer",
+      "active": false
+    },
+    {
+      "name": "Trey Hahn",
+      "mugshotFile": "trey.jpg",
+      "title": "localization project manager",
+      "url": "https://www.linkedin.com/in/treyhahn/",
+      "active": false
+    },
+    {
+      "name": "Whitman Schorn",
+      "mugshotFile": "whitman.jpg",
+      "title": "engineer",
+      "url": "https://whitmanschorn.com",
+      "active": false
+    }
+  ],
+  "contributors": {
+    "additional-illustrations": [
+      "Brian Wamsley",
+      "Claudio Olivares Medina",
+      "Doneliza Joaquin",
+      "Enrico Ferreguti",
+      "Jon Reese",
+      "Peter Welte"
+    ],
+    "additional-code": [
+      "Alex Ellis",
+      "Ali Idrees",
+      "André Lins",
+      "Annabel Church",
+      "Anton Panasenko",
+      "Andrew Gilbert",
+      "Ayush Rawal",
+      "Brendan Mortimer",
+      "Brewal Derouet",
+      "Cody Moss",
+      "Don McCurdy",
+      "Dwiki Arlan",
+      "Eric Sherman",
+      "Joe James-Rodriguez",
+      "Kieran Farr",
+      "Loris Sikora",
+      "Maciej Kus",
+      "Mila Frerichs",
+      "Paulius Kuzmickas",
+      "Radosław Miernik",
+      "Tanya Yakovleva",
+      "Tommi Vainikainen"
+    ],
+    "additional-contributors": [
+      ["Aline Reynolds", "writer and researcher"],
+      ["Amir Reavis-Bey", "database migration"],
+      ["Patrick McDonnell", "illustrations styleguide"],
+      ["Jeremy Lechtzin", "legal counsel"],
+      ["Justine Braisted", "branding"],
+      ["Lisa Ratner", "user experience"],
+      ["Mebrak Tareke", "communications"],
+      ["Nick Doiron", "right-to-left localization"],
+      ["Wendy Fok", "project manager"]
+    ],
+    "special-thanks": [
+      "Adrian Mak",
+      "Jeff Speck",
+      "Molly King",
+      ["Billy Riggs", "ReStreet"],
+      ["Michael Boswell", "ReStreet"],
+      ["Pia Mancini", "OpenCollective"],
+      "Matt Hampel",
+      "Brandon Liu",
+      ["Debs Schrimmer", "Lyft"],
+      ["Rob McPherson", "Skip"],
+      ["Carlos Pardo", "NUMO"],
+      {
+        "label": "Code for America",
+        "people": [
+          "Alex Tran",
+          "Andrew Hyder",
+          "Dave Guarino",
+          "Jen Pahlka",
+          "Mike Migurski",
+          "SaraT Mayer"
+        ]
+      },
+      {
+        "label": "NEW INC",
+        "people": [
+          "Alex Darby",
+          "Julia Kaganskiy",
+          "Kelsa Trom",
+          "Michelle Carollo",
+          "Rasu Jilani",
+          "Stephanie Pereira"
+        ]
+      },
+      {
+        "label": "Civic Hall",
+        "people": ["Ellen Mendlow", "Shaneka Ramdeen"]
+      }
+    ]
+  },
+  "translators": {
+    "am": ["Gashaw Aberra", "Carolyne Mimano"],
+    "ar": ["Diana M. Alhaj", "Zakaria Shekhreet"],
+    "ca": ["Max Eritja", "Ignasi Gustems"],
+    "cs": ["Jiří Podhorecký"],
+    "zh": [
+      "Crystal Xing",
+      "Maggie Dong",
+      "Ricky Tsui",
+      "Summer Pan",
+      "Wen Jing Jiang"
+    ],
+    "fi": ["Aleksi Kinnunen"],
+    "fr": ["Denis Devillé", "Jean-Louis Stanus", "Philippe Provost"],
+    "de": ["Julia Tahedl", "Martin Niegl", "Max Maaß"],
+    "id": ["Fuad Alghaffary"],
+    "it": ["Enrico Ferreguti", "Marco Scarselli"],
+    "ja": ["Hitomi Narakawa", "Satoshi Iida"],
+    "ko": ["Sunha Park", "Hanbyul Jo", "Jaeheon Kim"],
+    "nb-no": ["Anders Hartmann", "Børge A. Roum"],
+    "pl": [
+      "Honorata Grzesikowska",
+      "Tomasz Magulski",
+      "Weronika Grzejszczak",
+      "Wojciech Patelka"
+    ],
+    "pt-br": [
+      "Carlos Jimenez",
+      "Stephan Garcia",
+      ["Carolina Guido", "Urb-i"],
+      ["Paulo Franco", "Urb-i"],
+      ["Yuval Fogelson", "Urb-i"]
+    ],
+    "ru": ["Artem Savin", "Olya Arakhouskaya"],
+    "es-419": ["Lina Marcela Quiñones"],
+    "es-es": ["Pau Martí Talens"],
+    "es-mx": ["David Soto Padín", "Paco Marquez", "Patricio M. Ruiz Abrín"],
+    "sv": ["Jakob Fahlstedt", "Dennis Haagensen"],
+    "tr": ["Hayrettin Günç", "Hande Sığın"]
+  }
+}

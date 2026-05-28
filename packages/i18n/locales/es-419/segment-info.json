@@ -1,0 +1,239 @@
+{
+  "segments": {
+    "sidewalk": "Acera",
+    "pedestrian": "Caminante",
+    "sidewalk-tree": "Árbol en acera",
+    "bike-rack": "Estacionamiento para bicicletas",
+    "bench": "Banca",
+    "outdoor-dining": "Comedor al aire libre",
+    "cafe-seating": "Sillas de café",
+    "wayfinding-sign": "Señal de orientación",
+    "sidewalk-lamp": "Farol",
+    "utility-pole": "",
+    "drainage-channel": "",
+    "parklet": "Parklet",
+    "street-vendor": "",
+    "divider": "Espacio de separación",
+    "planting-strip": "Franja de vegetación",
+    "planter-box": "Maceta",
+    "median": "Separador",
+    "bollard": "Bolardo",
+    "dome": "Tache",
+    "jersey-barrier": "Barrera jersey",
+    "scooter": "Patineta eléctrica",
+    "scooter-drop-zone": "Zona de estacionamiento de patinetas",
+    "bike-lane": "Carril de bicicleta",
+    "twoway-bike-lane": "",
+    "parking-lane": "Carril de estacionamiento",
+    "perpendicular-parking": "Estacionamiento perpendicular",
+    "angled-parking": "Estacionamiento en ángulo",
+    "flex-zone": "Zona flexible",
+    "taxi-pick-up": "Zona de abordaje de taxis",
+    "rideshare-pick-up": "Zona de abordaje de vehículos compartidos",
+    "bikeshare-station": "Estación de bicicletas compartidas",
+    "foodtruck": "Camión de comida",
+    "flex-zone-curb": "Zona de espera",
+    "drive-lane": "Carril vehicular",
+    "mixed-drive-lane": "",
+    "sharrow": "Compartido con bicicletas",
+    "turn-lane": "Carril de giro",
+    "turn-lane-straight": "Carril sin giro",
+    "turn-lane-center": "Carril central de giro",
+    "bus-lane": "Carril de bus",
+    "bus-lane-shared": "Carril compartido bus-bicicleta",
+    "streetcar": "Tranvía",
+    "light-rail": "Tren ligero",
+    "transit-shelter": "Paradero de transporte público",
+    "brt-station": "Estación de BRT",
+    "brt-lane": "Carril de bus rápido",
+    "temporary-barrier": "Barrera temporal",
+    "inception-train": "Tren de \"El Origen\"",
+    "magic-carpet": "Alfombra mágica",
+    "wall": ""
+  },
+  "descriptions": {
+    "wayfinding-sign": {
+      "prompt": "Aprende más sobre las señales de orientación",
+      "content": "# Las señales de orientación ayudan a los peatones a llegar a destinos frecuentes.\n\nLos planificadores urbanos y arquitectos han dedicado algunas décadas a tratar de aprender qué sucede en los cerebros de las personas mientras descifran cómo llegar del punto A al punto B – o incluso cómo saben dónde está el \"punto A\", para empezar. Desde 1960, el planificador urbano Kevin Lynch escribió sobre la \"legibilidad\" de la ciudad en su libro_[La imagen de la ciudad](http://www.amazon.com/Image-Harvard-MIT-Center-Studies-Series/dp/0262620014)_, y describió la orientación como \"un uso y organización consistente de las señales sensoriales del ambiente externo.\" Esta podía ser intangible – olfato, tacto, la sensación de la gravedad o incluso campos eléctricos o magnéticos. O podía ser mucho más física, con \"dispositivos de orientación\" diseñados intencionalmente como mapas, números o señales de ruta."
+    },
+    "parklet": {
+      "prompt": "Aprende más sobre los parklets",
+      "imageCaption": "Parklet de 4033 Judah Street, cortesía del Departamento de Planeación de San Francisco.",
+      "content": "# Los parklets transforman los espacios de estacionamiento existentes en espacios públicos temporales."
+    },
+    "bike-lane": {
+      "prompt": "Aprende más sobre los carriles para bicicleta",
+      "content": "# Los carriles para bicicleta ayudan a mantener a los ciclistas seguros en un carril separado de los vehículos motorizados."
+    },
+    "colored-bike-lane": {
+      "prompt": "Aprende más sobre los carriles de colores para bicicletas",
+      "content": "# Los carriles de colores para bicicletas son más visibles y seguros para los ciclistas."
+    },
+    "sharrow": {
+      "prompt": "Aprende más sobre los carriles compartidos para bicicletas",
+      "content": "# Los carriles compartidos para bicicletas tienen marcas que indican que son utilizados por vehículos motorizados y bicicletas."
+    },
+    "transit-shelter-elevated": {
+      "prompt": "Aprende más sobre los paraderos de transporte público elevados",
+      "content": "# Los paraderos elevados funcionan con sistemas de trenes ligeros y BRT (bus rapid transit)."
+    },
+    "inception-train": {
+      "content": "# Es el tren de la película <em>El Origen</em> de Christopher Nolan.\",\n\n¿Qué más necesitarías saber?"
+    }
+  },
+  "buildings": {
+    "waterfront": {
+      "name": "Espejo de agua"
+    },
+    "grass": {
+      "name": "Césped"
+    },
+    "fence": {
+      "name": "Lote vacío"
+    },
+    "parking-lot": {
+      "name": "Estacionamiento"
+    },
+    "residential": {
+      "name": "Casa"
+    },
+    "narrow": {
+      "name": "Edificio"
+    },
+    "wide": {
+      "name": "Edificio"
+    },
+    "arcade": {
+      "name": ""
+    },
+    "compound-wall": {
+      "name": ""
+    }
+  },
+  "boundary": {
+    "group": {
+      "land": "",
+      "waterfront": "Espejo de agua"
+    }
+  },
+  "variant-icons": {
+    "orientation|left": "Izquierda",
+    "orientation|right": "Derecha",
+    "turn-lane-orientation|left": "Izquierda",
+    "turn-lane-orientation|left-straight": "Izquierda y hacia adelante",
+    "turn-lane-orientation|straight": "Hacia adelante",
+    "turn-lane-orientation|right-straight": "Derecha y hacia adelante",
+    "turn-lane-orientation|right": "Derecha",
+    "turn-lane-orientation|both": "Ambas",
+    "turn-lane-orientation|left-right-straight": "Izquierda, derecha y hacia adelante",
+    "turn-lane-orientation|shared": "Compartido",
+    "bench-orientation|left": "Izquierda",
+    "bench-orientation|right": "Derecha",
+    "bench-orientation|center": "Centro",
+    "parking-lane-orientation|left": "Izquierda",
+    "parking-lane-orientation|right": "Derecha",
+    "parking-lane-direction|inbound": "Entrante",
+    "parking-lane-direction|outbound": "Saliente",
+    "parking-lane-direction|sideways": "Perpendicular",
+    "parking-lane-direction|angled-front-left": "En ángulo",
+    "parking-lane-direction|angled-front-right": "En ángulo",
+    "parking-lane-direction|angled-rear-left": "En ángulo",
+    "parking-lane-direction|angled-rear-right": "En ángulo",
+    "direction|inbound": "Entrante",
+    "direction|outbound": "Saliente",
+    "bike-direction|inbound": "Entrante",
+    "bike-direction|outbound": "Saliente",
+    "bike-direction|twoway-left": "",
+    "bike-direction|twoway-right": "",
+    "sidewalk-density|empty": "Vacío",
+    "sidewalk-density|sparse": "Disperso",
+    "sidewalk-density|normal": "Normal",
+    "sidewalk-density|dense": "Denso",
+    "lamp-orientation|left": "Izquierda",
+    "lamp-orientation|both": "Ambas",
+    "lamp-orientation|right": "Derecha",
+    "lamp-type|traditional": "Tradicional",
+    "lamp-type|modern": "Moderno",
+    "lamp-type|pride": "Moderno con bandera del orgullo",
+    "drainage-sides|slanted": "",
+    "drainage-sides|vertical": "",
+    "car-type|car": "Automóvil",
+    "car-type|sharrow": "Compartido con bicicletas",
+    "car-type|truck": "Camión",
+    "car-type|microvan": "",
+    "car-type|av": "Vehículo autónomo",
+    "car-type|motorcycle": "Motocicleta",
+    "car-type|motorcycle-sidecar": "Motocicleta con carro auxiliar",
+    "car-type|pedestrian": "Caminante",
+    "public-transit-asphalt|regular": "Asfalto",
+    "public-transit-asphalt|colored": "Carril rojo",
+    "public-transit-asphalt|grass": "Césped",
+    "bus-asphalt|regular": "Asfalto",
+    "bus-asphalt|colored": "Carril rojo",
+    "bus-asphalt|shared": "Carril compartido bus-bicicleta",
+    "bus-type|typical": "",
+    "bus-type|double-decker": "",
+    "bus-type|av-shuttle": "",
+    "brt-station-orientation|left": "Izquierda",
+    "brt-station-orientation|right": "Derecha",
+    "brt-station-orientation|center": "Centro",
+    "bike-asphalt|regular": "Asfalto",
+    "bike-asphalt|green": "Carril verde",
+    "bike-asphalt|red": "Carril rojo",
+    "tree-type|big": "Árbol",
+    "tree-type|palm-tree": "Palmera",
+    "divider-type|median": "Separador",
+    "divider-type|striped-buffer": "Separador a rayas",
+    "divider-type|planting-strip": "Franja de vegetación",
+    "divider-type|planter-box": "Maceta",
+    "divider-type|bush": "Franja de vegetación con matorral",
+    "divider-type|flowers": "Franja de vegetación con flores",
+    "divider-type|big-tree": "Franja de vegetación con árbol",
+    "divider-type|palm-tree": "Franja de vegetación con palmera",
+    "divider-type|bollard": "Bolardo",
+    "divider-type|dome": "Tache",
+    "divider-type|jersey-barrier-concrete": "Barrera jersey (en concreto)",
+    "divider-type|jersey-barrier-plastic": "Barrera jersey (en plástico)",
+    "transit-shelter-elevation|street-level": "A nivel de calle",
+    "transit-shelter-elevation|light-rail": "Plataforma de tren ligero",
+    "bike-rack-elevation|sidewalk-parallel": "Estacionamiento en paralelo a nivel de acera",
+    "bike-rack-elevation|sidewalk": "Estacionamiento en perpendicular a nivel de acera",
+    "bike-rack-elevation|road": "Estacionamiento en perpendicular a nivel de calzada",
+    "building|waterfront": "Espejo de agua",
+    "building|grass": "Césped",
+    "building|fence": "Lote vacío",
+    "building|parking-lot": "Estacionamiento",
+    "building|residential": "Casa",
+    "building|narrow": "Edificio angosto",
+    "building|wide": "Edificio ancho",
+    "wayfinding-type|large": "Grande",
+    "wayfinding-type|medium": "Mediano",
+    "wayfinding-type|small": "Pequeño",
+    "waiting-area|sparse": "Alguien",
+    "waiting-area|empty": "Nadie",
+    "flex-type|rideshare": "Viajes compartidos",
+    "flex-type|taxi": "Taxi",
+    "occupants|empty": "Vacío",
+    "occupants|full": "Lleno",
+    "occupants|occupied": "Ocupado",
+    "elevation|sidewalk": "Nivel de acera",
+    "elevation|road": "Nivel de calle",
+    "temporary-barrier-type|traffic-cone": "Cono de tránsito",
+    "temporary-barrier-type|barricade": "Barricada",
+    "vendor-type|handcart": "",
+    "vendor-type|table": "",
+    "vendor-type|tarp": "",
+    "vendor-type|platform": "",
+    "ground|concrete": "",
+    "ground|asphalt": "Asfalto"
+  },
+  "skybox": {
+    "day": "",
+    "twilight": "",
+    "dusk": "",
+    "dawn": "",
+    "night": "",
+    "karl": "",
+    "holodeck": ""
+  }
+}

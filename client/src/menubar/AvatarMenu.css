@@ -1,0 +1,25 @@
+.menu-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  padding: 0;
+}
+
+.menu-avatar .avatar {
+  position: relative;
+  inset-inline-start: -2px; /* Position tweaking to center in highlight */
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+}
+
+.menu-avatar .menu-avatar-badge {
+  position: absolute;
+  inset-inline-start: calc(50% + 4px);
+  inset-block-start: 1px;
+}
+
+.menu-avatar-subscriber {
+  height: 1em;
+}

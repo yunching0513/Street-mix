@@ -1,0 +1,127 @@
+.street-width {
+  display: inline-flex;
+  align-items: center;
+}
+
+.street-width-over {
+  margin-inline-start: 0.25em;
+  color: var(--warning-color);
+}
+
+.street-width-under {
+  margin-inline-start: 0.25em;
+  color: rgb(96 96 96);
+  transition: color var(--skybox-transition);
+}
+
+/* Invert the UI text color when there is a dark background */
+body.dark-skybox-invert-ui {
+  .street-width-under {
+    color: #a0a0a0;
+  }
+}
+
+[data-radix-popper-content-wrapper] {
+  z-index: 900 !important;
+  perspective: 500px;
+  transform-style: preserve-3d;
+}
+
+.dropdown-menu-content {
+  --menu-border-radius: var(--border-radius);
+  --menu-box-shadow: var(--medium-box-shadow);
+
+  padding: 5px;
+  background-color: white;
+  transform-origin: var(--radix-popper-transform-origin);
+  border-radius: var(--menu-border-radius);
+  box-shadow: var(--menu-box-shadow);
+  line-height: 1.4;
+  animation-duration: 120ms;
+  will-change: transform, opacity;
+}
+
+.dropdown-menu-content[data-side="bottom"] {
+  animation-name: swing-down;
+}
+
+body.safari .dropdown-menu-content[data-side="bottom"] {
+  animation-name: shift-down;
+}
+
+.dropdown-menu-item,
+.dropdown-menu-checkbox-item,
+.dropdown-menu-radio-item {
+  user-select: none;
+  outline: none;
+  padding-block: 0.5em;
+  padding-inline: 1.5em 1em;
+  text-decoration: none;
+  color: black;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.dropdown-menu-item[data-disabled],
+.dropdown-menu-checkbox-item[data-disabled],
+.dropdown-menu-radio-item[data-disabled] {
+  color: #999; /* TODO: gray color */
+  pointer-events: none;
+}
+
+.dropdown-menu-item[data-highlighted],
+.dropdown-menu-checkbox-item[data-highlighted],
+.dropdown-menu-radio-item[data-highlighted] {
+  background-color: var(--interactive-element-hover-color);
+}
+
+.dropdown-menu-checkbox-item[data-state="checked"],
+.dropdown-menu-radio-item[data-state="checked"] {
+  font-weight: 500;
+}
+
+.dropdown-menu-label {
+  padding-block: 0.5em;
+  padding-inline: 1.5em 1em;
+  font-weight: 500;
+  color: var(--color-turquoise-700);
+}
+
+.dropdown-menu-item-indicator {
+  position: absolute;
+  inset-inline-start: 0.65em;
+  margin-block-start: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-turquoise-500);
+}
+
+.dropdown-menu-arrow {
+  fill: white;
+}
+
+@keyframes swing-down {
+  from {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+/* Use this instead of swing-down on Safari / iOS */
+@keyframes shift-down {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

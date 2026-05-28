@@ -1,0 +1,139 @@
+.menu-bar {
+  --menu-bar-text-color: var(--segment-text);
+  --menu-bar-text-color-active: var(--interactive-text-active-color);
+  --menu-bar-border-radius: var(--border-radius);
+  --menu-bar-background: var(--off-white);
+  --menu-bar-box-shadow: var(--light-box-shadow);
+
+  z-index: var(--z-02-menu-bar);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: absolute;
+  inset-inline: var(--menu-side-inset);
+  inset-block-start: 0;
+  border-end-start-radius: var(--menu-bar-border-radius);
+  border-end-end-radius: var(--menu-bar-border-radius);
+  background: var(--menu-bar-background);
+  background-clip: padding-box;
+  box-shadow: var(--menu-bar-box-shadow);
+  user-select: none;
+  touch-action: none;
+
+  /* Extra space above the menu bar which pans down when the gallery is open */
+  &::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    width: 100%;
+    height: 150px;
+    background-color: var(--menu-bar-background);
+  }
+
+  body.read-only & {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0.25em;
+    margin: 0;
+    line-height: 32px;
+    color: var(--menu-bar-text-color);
+  }
+
+  li {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    height: 32px;
+    padding: 0 10px;
+
+    &:active {
+      color: var(--menu-bar-text-color-active);
+    }
+
+    /* Button "hover" state is actually wider than the button */
+    &:hover::after {
+      content: "";
+      background-color: rgb(0 0 0 / 5%);
+      position: absolute;
+      top: 0;
+      left: -4px;
+      width: calc(100% + 8px);
+      height: 100%;
+      border-radius: 6px;
+      pointer-events: none;
+    }
+  }
+
+  button.menu-trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    appearance: none;
+    border: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    height: 32px;
+    padding: 0 10px;
+
+    &:active {
+      color: var(--menu-bar-text-color-active);
+    }
+
+    /* Button "hover" state is actually wider than the button */
+    &:hover::after {
+      content: "";
+      background-color: rgb(0 0 0 / 5%);
+      position: absolute;
+      top: 0;
+      left: -4px;
+      width: calc(100% + 8px);
+      height: 100%;
+      border-radius: 6px;
+      pointer-events: none;
+    }
+  }
+}
+
+.menu-bar-right {
+  /* Last button gets special hover treatment */
+  li:last-child button.menu-trigger:hover::after {
+    width: calc(100% + 4px);
+    inset-inline-end: 0;
+  }
+}
+
+.menu-bar-title {
+  margin-inline: 0.5em;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 100%;
+    display: none;
+  }
+
+  .menu-bar-logo {
+    height: 20px;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.menu-carat-down {
+  margin-inline: 0.25em -0.25em;
+}

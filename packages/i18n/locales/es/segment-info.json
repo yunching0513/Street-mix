@@ -1,0 +1,239 @@
+{
+  "segments": {
+    "sidewalk": "Acera",
+    "pedestrian": "",
+    "sidewalk-tree": "Árbol",
+    "bike-rack": "Estacionamiento de bici",
+    "bench": "Banco",
+    "outdoor-dining": "",
+    "cafe-seating": "",
+    "wayfinding-sign": "Señal de orientación",
+    "sidewalk-lamp": "Farola",
+    "utility-pole": "",
+    "drainage-channel": "",
+    "parklet": "Parklet (Parquecito en la calle)",
+    "street-vendor": "",
+    "divider": "Zona de amortiguación",
+    "planting-strip": "",
+    "planter-box": "",
+    "median": "",
+    "bollard": "",
+    "dome": "",
+    "jersey-barrier": "",
+    "scooter": "Scúter",
+    "scooter-drop-zone": "",
+    "bike-lane": "Carril bici",
+    "twoway-bike-lane": "",
+    "parking-lane": "Carril de Estacionamiento",
+    "perpendicular-parking": "Estacionamiento perpendicular",
+    "angled-parking": "Estacionamiento angulado",
+    "flex-zone": "Zona flexible",
+    "taxi-pick-up": "Zona de Taxi",
+    "rideshare-pick-up": "Zona de Viaje Compartido",
+    "bikeshare-station": "",
+    "foodtruck": "",
+    "flex-zone-curb": "",
+    "drive-lane": "Carril de Conducir",
+    "mixed-drive-lane": "",
+    "sharrow": "",
+    "turn-lane": "Carril de Virar",
+    "turn-lane-straight": "",
+    "turn-lane-center": "Carril de Virar en Centro",
+    "bus-lane": "Carril de bús",
+    "bus-lane-shared": "Carril compartido de bús/bici",
+    "streetcar": "",
+    "light-rail": "",
+    "transit-shelter": "",
+    "brt-station": "",
+    "brt-lane": "",
+    "temporary-barrier": "",
+    "inception-train": "",
+    "magic-carpet": "",
+    "wall": ""
+  },
+  "descriptions": {
+    "wayfinding-sign": {
+      "prompt": "Aprender más sobre señales de orientación",
+      "content": "#Señales de Orientación ayudan a los pedestres llegar a destinos comunes.\n\nPlanificadores urbanos y arquitectos han pasado unas décadas intentando de aprender lo que pasa en los cerebros de personas cuando realizan cómo llegar de punto A a punto B - o cómo saben dónde está el punto de comenzar (punto A). Tan temprano como 1960, el planificador urbano Kevin Lynch escribió sobre el \"legibilidad\" de la ciudad en su libro _[\"The Image of the City\" (La Imagen de la Ciudad\")](http://www.amazon.com/Image-Harvard-MIT-Center-Studies-Series/dp/0262620014)_, describiendo la señalización de orientación como \"un uso consistente y organización de señales sensoriales definidas del ambiente external.\" Podría ser intangible - olor, tacto, un sentido de gravedad o hasta campos eléctricos o magnéticos. O podría ser mucho más físico, con \"aparatos de orientación\" diseñados intencionalmente como mapas, números de la calle, o señales de rutas."
+    },
+    "parklet": {
+      "prompt": "Aprender más sobre parklets",
+      "imageCaption": "",
+      "content": ""
+    },
+    "bike-lane": {
+      "prompt": "Aprender más sobre carriles de bici",
+      "content": ""
+    },
+    "colored-bike-lane": {
+      "prompt": "Aprenda más sobre bicicarriles en color verde",
+      "content": ""
+    },
+    "sharrow": {
+      "prompt": "",
+      "content": ""
+    },
+    "transit-shelter-elevated": {
+      "prompt": "",
+      "content": ""
+    },
+    "inception-train": {
+      "content": ""
+    }
+  },
+  "buildings": {
+    "waterfront": {
+      "name": "Malecón"
+    },
+    "grass": {
+      "name": "Pasto"
+    },
+    "fence": {
+      "name": "Lote vacío"
+    },
+    "parking-lot": {
+      "name": "Estacionamiento"
+    },
+    "residential": {
+      "name": "Casa"
+    },
+    "narrow": {
+      "name": "Edificio"
+    },
+    "wide": {
+      "name": "Edificio"
+    },
+    "arcade": {
+      "name": ""
+    },
+    "compound-wall": {
+      "name": ""
+    }
+  },
+  "boundary": {
+    "group": {
+      "land": "",
+      "waterfront": "Malecón"
+    }
+  },
+  "variant-icons": {
+    "orientation|left": "Izquierda",
+    "orientation|right": "Derecha",
+    "turn-lane-orientation|left": "Izquierda",
+    "turn-lane-orientation|left-straight": "Izquierda y derecho",
+    "turn-lane-orientation|straight": "Derecho",
+    "turn-lane-orientation|right-straight": "Derecha y derecho",
+    "turn-lane-orientation|right": "Derecha",
+    "turn-lane-orientation|both": "Ambos",
+    "turn-lane-orientation|left-right-straight": "",
+    "turn-lane-orientation|shared": "",
+    "bench-orientation|left": "Izquierda",
+    "bench-orientation|right": "Derecha",
+    "bench-orientation|center": "Centro",
+    "parking-lane-orientation|left": "Izquierda",
+    "parking-lane-orientation|right": "Derecha",
+    "parking-lane-direction|inbound": "Entrando",
+    "parking-lane-direction|outbound": "Saliendo",
+    "parking-lane-direction|sideways": "Perpendicular",
+    "parking-lane-direction|angled-front-left": "Angulado",
+    "parking-lane-direction|angled-front-right": "Angulado",
+    "parking-lane-direction|angled-rear-left": "Angulado",
+    "parking-lane-direction|angled-rear-right": "Angulado",
+    "direction|inbound": "Entrando",
+    "direction|outbound": "Saliendo",
+    "bike-direction|inbound": "Entrando",
+    "bike-direction|outbound": "Saliendo",
+    "bike-direction|twoway-left": "",
+    "bike-direction|twoway-right": "",
+    "sidewalk-density|empty": "Vacío",
+    "sidewalk-density|sparse": "Escaso",
+    "sidewalk-density|normal": "Normal",
+    "sidewalk-density|dense": "Denso",
+    "lamp-orientation|left": "Izquierda",
+    "lamp-orientation|both": "Ambos",
+    "lamp-orientation|right": "Derecha",
+    "lamp-type|traditional": "Tradicional",
+    "lamp-type|modern": "Moderno",
+    "lamp-type|pride": "",
+    "drainage-sides|slanted": "",
+    "drainage-sides|vertical": "",
+    "car-type|car": "Carro",
+    "car-type|sharrow": "",
+    "car-type|truck": "Camión",
+    "car-type|microvan": "",
+    "car-type|av": "",
+    "car-type|motorcycle": "",
+    "car-type|motorcycle-sidecar": "",
+    "car-type|pedestrian": "",
+    "public-transit-asphalt|regular": "Asfalto",
+    "public-transit-asphalt|colored": "Carril rojo",
+    "public-transit-asphalt|grass": "Pasto",
+    "bus-asphalt|regular": "Asfalto",
+    "bus-asphalt|colored": "Carril rojo",
+    "bus-asphalt|shared": "Carril compartido de bús/bici",
+    "bus-type|typical": "",
+    "bus-type|double-decker": "",
+    "bus-type|av-shuttle": "",
+    "brt-station-orientation|left": "Izquierda",
+    "brt-station-orientation|right": "Derecha",
+    "brt-station-orientation|center": "Centro",
+    "bike-asphalt|regular": "Asfalto",
+    "bike-asphalt|green": "Carril verde",
+    "bike-asphalt|red": "Carril rojo",
+    "tree-type|big": "Árbol",
+    "tree-type|palm-tree": "",
+    "divider-type|median": "",
+    "divider-type|striped-buffer": "",
+    "divider-type|planting-strip": "",
+    "divider-type|planter-box": "",
+    "divider-type|bush": "",
+    "divider-type|flowers": "",
+    "divider-type|big-tree": "",
+    "divider-type|palm-tree": "",
+    "divider-type|bollard": "",
+    "divider-type|dome": "",
+    "divider-type|jersey-barrier-concrete": "",
+    "divider-type|jersey-barrier-plastic": "",
+    "transit-shelter-elevation|street-level": "Nivel de la calle",
+    "transit-shelter-elevation|light-rail": "",
+    "bike-rack-elevation|sidewalk-parallel": "",
+    "bike-rack-elevation|sidewalk": "Estacionamiento perpendicular, nivel de la acera",
+    "bike-rack-elevation|road": "Estacionamiento perpendicular, nivel de la calle",
+    "building|waterfront": "Malecón",
+    "building|grass": "Pasto",
+    "building|fence": "Lote vacío",
+    "building|parking-lot": "Estacionamiento de carro",
+    "building|residential": "Casa",
+    "building|narrow": "Edificio estrecho",
+    "building|wide": "Edificio ancho",
+    "wayfinding-type|large": "Grande",
+    "wayfinding-type|medium": "Mediano",
+    "wayfinding-type|small": "Pequeño",
+    "waiting-area|sparse": "",
+    "waiting-area|empty": "",
+    "flex-type|rideshare": "",
+    "flex-type|taxi": "",
+    "occupants|empty": "Vacío",
+    "occupants|full": "",
+    "occupants|occupied": "",
+    "elevation|sidewalk": "",
+    "elevation|road": "Nivel de la calle",
+    "temporary-barrier-type|traffic-cone": "",
+    "temporary-barrier-type|barricade": "",
+    "vendor-type|handcart": "",
+    "vendor-type|table": "",
+    "vendor-type|tarp": "",
+    "vendor-type|platform": "",
+    "ground|concrete": "",
+    "ground|asphalt": "Asfalto"
+  },
+  "skybox": {
+    "day": "",
+    "twilight": "",
+    "dusk": "",
+    "dawn": "",
+    "night": "",
+    "karl": "",
+    "holodeck": ""
+  }
+}

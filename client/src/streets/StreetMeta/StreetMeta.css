@@ -1,0 +1,20 @@
+.street-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 0.5em;
+  color: black;
+  user-select: none;
+  pointer-events: auto;
+  transition: color var(--skybox-transition);
+  font-size: 0.925rem;
+
+  > div:not(:first-child) {
+    margin-left: 0.25em;
+  }
+
+  /* Invert the UI text color when there is a dark background */
+  body.dark-skybox-invert-ui & {
+    color: #fff;
+  }
+}

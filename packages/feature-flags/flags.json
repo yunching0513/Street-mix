@@ -1,0 +1,136 @@
+{
+  "COLOR_MODE_TOGGLE": {
+    "label": "UI — Color mode (e.g. dark mode) themes",
+    "defaultValue": false
+  },
+  "GEOTAG": {
+    "label": "UI — Geotagging",
+    "defaultValue": true
+  },
+  "ANALYTICS": {
+    "label": "UI — Street analytics",
+    "defaultValue": true
+  },
+  "EDIT_STREET_WIDTH": {
+    "label": "UI — Edit street width",
+    "defaultValue": true
+  },
+  "EDIT_STREET_NAME": {
+    "label": "UI — Edit street name",
+    "defaultValue": true
+  },
+  "EDIT_BOUNDARY_LEFT": {
+    "label": "UI — Edit left-side boundary",
+    "defaultValue": true
+  },
+  "EDIT_BOUNDARY_RIGHT": {
+    "label": "UI — Edit right-side boundary",
+    "defaultValue": true
+  },
+  "NEW_STREET_TEMPLATES": {
+    "label": "UI — Additional street templates",
+    "defaultValue": true
+  },
+  "SENTIMENT_SURVEY": {
+    "label": "Sentiment surveys",
+    "defaultValue": false
+  },
+  "SKY_ANIMATED_CLOUDS": {
+    "label": "Sky — animated clouds",
+    "defaultValue": false
+  },
+  "ENVIRONMENTS_UNLOCKED": {
+    "label": "Environment — unlocked",
+    "defaultValue": false
+  },
+  "WEATHER_EFFECTS": {
+    "label": "Environment — weather effects",
+    "defaultValue": false
+  },
+  "SAVE_UNDO": {
+    "label": "Save undo data to server",
+    "defaultValue": false,
+    "enabled": false
+  },
+  "ELEVATION_CONTROLS_UNLOCKED": {
+    "label": "Info bubble — elevation property controls (unlocked)",
+    "defaultValue": false
+  },
+  "UNIVERSAL_ELEVATION_CONTROLS": {
+    "label": "Info bubble — universal elevation controls",
+    "defaultValue": false
+  },
+  "TOAST_LIFE_BAR": {
+    "label": "Toasts — [debug] show life bar",
+    "defaultValue": false
+  },
+  "LOCALES_LEVEL_1": {
+    "label": "Locales — level 1+ (in progress)",
+    "defaultValue": false
+  },
+  "LOCALES_LEVEL_2": {
+    "label": "Locales — level 2+ (complete, in testing)",
+    "defaultValue": false
+  },
+  "LOCALES_LEVEL_3": {
+    "label": "Locales — level 3 (complete, final)",
+    "defaultValue": true
+  },
+  "SEGMENT_3D_PARKING": {
+    "label": "Component — 3d angled parking",
+    "defaultValue": false,
+    "enabled": false
+  },
+  "SEGMENT_CROSSWALK": {
+    "label": "Component — crosswalk",
+    "defaultValue": false
+  },
+  "SEGMENT_DRAINAGE_CHANNEL_UNLOCKED": {
+    "label": "Component — drainage channel (unlocked)",
+    "defaultValue": false
+  },
+  "SEGMENT_INCEPTION_TRAIN": {
+    "label": "Component — the train from “Inception”",
+    "defaultValue": false
+  },
+  "VARIANT_MIXED_DRIVE_LANES_1": {
+    "label": "Variant — mixed-traffic drive lane (with bus) (unlocked)",
+    "defaultValue": false
+  },
+  "VARIANT_MIXED_DRIVE_LANES_2": {
+    "label": "Variant — mixed-traffic drive lane (with bike) (unlocked)",
+    "defaultValue": false
+  },
+  "DEBUG_SEGMENT_CANVAS_RECTANGLES": {
+    "label": "Slice — [debug] canvas rectangles",
+    "defaultValue": false
+  },
+  "DEBUG_SLICE_SLOPE": {
+    "label": "Slice — [debug] slope measurements",
+    "defaultValue": false
+  },
+  "SAVE_AS_IMAGE_CUSTOM_DPI": {
+    "label": "Export images at custom scale",
+    "defaultValue": false
+  },
+  "SAVE_AS_IMAGE_NEW_EXPORT_PIPELINE": {
+    "label": "Export images using new experimental pipeline",
+    "defaultValue": false
+  },
+  "ALWAYS_DISPLAY_WHATS_NEW": {
+    "label": "Always display the What’s New dialog",
+    "defaultValue": false
+  },
+  "MEMBER_UPGRADE": {
+    "label": "Integrated membership billing",
+    "defaultValue": false
+  },
+  "COASTMIX_MODE": {
+    "label": "Coastmix features",
+    "defaultValue": false
+  },
+  "SILLY_CLOWNS": {
+    "label": "Silly clowns",
+    "defaultValue": false
+  }
+}

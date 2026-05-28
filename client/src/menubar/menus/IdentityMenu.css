@@ -1,0 +1,98 @@
+.identity-menu {
+  white-space: nowrap;
+}
+
+.identity-section {
+  padding: 0.5em 0.25em;
+  min-width: 150px;
+  max-width: 300px;
+}
+
+.identity-avatar-name {
+  display: flex;
+  flex-direction: row;
+}
+
+.identity-avatar-name-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-inline-end: 0.5em;
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+  }
+}
+
+.identity-avatar-name-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.identity-avatar-display-name {
+  font-weight: 550;
+  color: var(--color-turquoise-900);
+}
+
+.identity-roles {
+  margin-top: 0.5em;
+  margin-bottom: -0.5em;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  ul li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius-medium);
+    padding: 0.3em 0.6em;
+    margin-inline-end: 0.35em;
+    margin-block-end: 0.35em;
+    font-size: 0.9em;
+    font-weight: 550;
+  }
+
+  .role-badge-generic {
+    background-color: var(--color-midnight-100);
+    color: var(--color-midnight-800);
+  }
+
+  .role-badge-subscriber {
+    background-color: var(--color-turquoise-200);
+    color: var(--color-turquoise-900);
+
+    img {
+      height: 1em;
+      margin-inline-end: 0.35em;
+    }
+  }
+
+  .role-badge-admin {
+    background-color: var(--color-citrine-300);
+    color: var(--color-copper-900);
+  }
+}
+
+.menu-sign-out {
+  color: var(--warning-color) !important;
+
+  &:hover {
+    background-color: var(--color-gray-100) !important;
+  }
+
+  svg {
+    color: var(--warning-color) !important;
+  }
+}

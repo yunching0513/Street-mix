@@ -1,0 +1,588 @@
+{
+  "menu": {
+    "item": {
+      "help": "Ayuda",
+      "about": "Sobre Streetmix…",
+      "whatsnew": "",
+      "contact": "Contacto",
+      "community": "Comunidad",
+      "sign-in": "Acceder",
+      "sign-out": "Desconectarse",
+      "new-street": "Nueva calle",
+      "my-streets": "Mis calles",
+      "settings": "Ajustes",
+      "share": "Compartir",
+      "store": "Tienda",
+      "upgrade": "Actualizar",
+      "streetmix-plus": ""
+    },
+    "help": {
+      "guidebook-link": "",
+      "keyboard-label": "Teclas de acceso rápido:",
+      "remove-instruction": "Remover un segmento al que esté apuntando",
+      "remove-shift-instruction": "(mantén presionada la tecla {shiftKey} para remover todo)",
+      "move-instruction": "Moverse alrededor de la calle",
+      "move-shift-instruction": "(manten presionada la tecla {shiftKey} para saltar a los bordes)",
+      "change-instruction": "Cambiar lo ancho de un segmento al que estés apuntando",
+      "change-shift-instruction": "(mantén presionada la tecla {shiftKey} para más precision)"
+    },
+    "share": {
+      "sign-in-twitter-link": "Acceder",
+      "sign-in-link": "{signInLink} para mejores enlaces a tus calles y a tu galería de calles personal.",
+      "link": "Copiar y pegar este enlace para compartir:",
+      "copy-to-clipboard": "Copiar al portapapeles",
+      "copy-success": "",
+      "twitter": "Compartir utilizando Twitter",
+      "facebook": "Compartir utilizando Facebook",
+      "mastodon": "",
+      "3dstreet": "",
+      "print": "Imprimir…",
+      "save": "Guardar como imagen…",
+      "save-byline": "Para incluir en un reporte, blog, etc",
+      "messages": {
+        "my-street": "Dale un vistazo a mi calle, {streetName}, en Streetmix!",
+        "my-street-unnamed": "Dale un vistazo a mi calle en Streetmix!",
+        "someone-elses-street": "Dale un vistazo a {streetName}, de {streetCreator}en Streetmix!",
+        "someone-elses-street-unnamed": "Dale un vistazo a esta calle de {streetCreator} en Streetmix!",
+        "anonymous-creator-street": "Dale un vistazo a {streetName} en Streetmix!",
+        "anonymous-creator-street-unnamed": "Dale un vistazo a esta calle en Streetmix!"
+      }
+    },
+    "contact": {
+      "forums": "Discutir en los foros",
+      "email": "Envía un correo electrónico al equipo de Streetmix",
+      "github": "Ver código fuente en GitHub",
+      "blog": "Visita el blog de Streetmix",
+      "discord": "Unirse al Discord Chat",
+      "slack": "Participa en Slack chat",
+      "newsletter": "Suscríbete a nuestra newsletter"
+    },
+    "feedback": {
+      "prompt": "Envianos un mensaje:",
+      "message-placeholder": "¿Que piensas de Streetmix?",
+      "email-placeholder": "Tu correo electronico (opcional)",
+      "send": "Enviar mensaje",
+      "confirm": "Lo hemos recibido, gracias!",
+      "error": "Disculpas, hubo un problema al enviar su retroalimentacion. Por favor intente despues"
+    },
+    "sign-in": {
+      "twitter": "Registrar con Twitter"
+    },
+    "new-street": {
+      "default": "",
+      "empty": "",
+      "copy": "Hacer una copia",
+      "template": "",
+      "sign-in-link": ""
+    }
+  },
+  "settings": {
+    "heading": "Ajustes",
+    "info-tooltip": "",
+    "general": {
+      "label": ""
+    },
+    "appearance": {
+      "label": ""
+    },
+    "language": {
+      "label": "Idioma"
+    },
+    "profile": {
+      "label": "",
+      "username": "",
+      "username-description": "",
+      "display-name": "",
+      "display-name-description": "",
+      "display-name-not-set": "",
+      "display-name-error": "",
+      "display-name-characters-remaining": ""
+    },
+    "misc": {
+      "label": "",
+      "silly-clowns": "",
+      "silly-clowns-description": ""
+    },
+    "theme": {
+      "label": "",
+      "description": "",
+      "light": "",
+      "dark": "",
+      "system": ""
+    },
+    "units": {
+      "label": "Unidades",
+      "metric": "Unidades Métricas (metros)",
+      "imperial": "Unidades inglesas (pies)"
+    }
+  },
+  "msg": {
+    "loading": "Cargando…",
+    "remixing": "Remezclando...",
+    "having-trouble": "Teniendo problemas…",
+    "no-street": "Ninguna calle seleccionada.",
+    "trouble-loading": "Tenemos problemas cargando Streetmix.",
+    "slow-connection-1": "Streetmix ya ha estado tratando de conectarse a internet por un rato",
+    "slow-connection-2": "Probablemente necesites recargar la pagina e intentar de nuevo. Toma en cuenta que puede perder los ultimos cambios que le hiciste a la calle. ¡Disculpas!",
+    "no-connection": "Streetmix esta experimentando dificultades para conectarse a internet",
+    "more-info": "Más información"
+  },
+  "error": {
+    "button": {
+      "home": "Ir a la página de inicio",
+      "sign-in": "Iniciar sesión de nuevo",
+      "reload": "",
+      "return": "",
+      "try-again": "Intenta de nuevo"
+    },
+    "page-not-found-title": "",
+    "page-not-found-description": "",
+    "street-not-found-title": "",
+    "street-not-found-description": "",
+    "street-not-found-but-user-description": "",
+    "street-deleted-title": "",
+    "street-deleted-description": "",
+    "sign-out-title": "",
+    "reload-sign-out-title": "",
+    "gallery-street-failure-description": "",
+    "reload-sign-in-title": "",
+    "please-reload": "",
+    "survey-finished": "",
+    "street-deleted-elsewhere-title": "",
+    "street-deleted-elsewhere-description": "",
+    "auth-expired": "",
+    "sign-in-again": "",
+    "access-denied-title": "",
+    "access-denied-description": "",
+    "auth-api-problem-title": "",
+    "auth-api-problem-description": "",
+    "please-try-again": "",
+    "please-try-again-contact-us": "",
+    "unsupported-browser-title": "",
+    "unsupported-browser-description": "",
+    "unsupported-browser-internet-explorer": "",
+    "unsupported-browser-contact-us": "",
+    "generic-error-title": "",
+    "generic-error-description": "",
+    "error-code": "",
+    "need-help-link": ""
+  },
+  "btn": {
+    "reload": "Recargar",
+    "undo": "Deshacer",
+    "redo": "Rehacer",
+    "try-again": "Intenta de nuevo",
+    "cancel": "Cancelar",
+    "create": "Crear una nueva calle",
+    "copy": "Hacer una copia",
+    "remove": "",
+    "close": "",
+    "dismiss": "",
+    "okay": "",
+    "not-now": "",
+    "save": "",
+    "edit": ""
+  },
+  "dialogs": {
+    "error": {
+      "heading": "",
+      "text": ""
+    },
+    "welcome": {
+      "heading": "Bienvenido a Streetmix.",
+      "new": {
+        "intro": "Diseña, mezcla y comparte la calle de tu vecindad. Agregar arboles o vías para bicicletas, aceras más anchas o carriles de circulación, aprende cómo impactan a tu comunidad tus decisiones.",
+        "instruction": "",
+        "instruct": "Comienza moviendo algunos segmentos con {pointer}.",
+        "instruct-pointer-finger": "tu dedo",
+        "instruct-pointer-mouse": "tu mouse"
+      },
+      "existing": {
+        "intro": "Esto es {streetName} hecho por {creator}.",
+        "intro-without-creator": "Esto es {streetName}.",
+        "instruct": "Mezcla moviendo segmentos, o {startYourOwnStreet}.",
+        "instruct-start-own-street": "Empieza tu propia calle"
+      }
+    },
+    "new-street": {
+      "heading": "Aquí esta tu nueva calle",
+      "default": "Comienza con una calle de ejemplo",
+      "empty": "Comienza con una calle vacia",
+      "last": "Empezar con una copia de tu ultima calle",
+      "dismiss": ""
+    },
+    "about": {
+      "heading": "Sobre Streetmix",
+      "description": "Diseña, mezcla y comparte tu calle. Agrega vias para bicicletas, ensancha aceras o carriles de circulacion, analiza como impactan todo esto a tu comunidad",
+      "team-heading": "",
+      "partners": "",
+      "sponsors": "",
+      "sponsored-by": "",
+      "donate-link": "",
+      "tos-link": "",
+      "privacy-link": "",
+      "acknowledgements": "",
+      "font-designed-by": "",
+      "emoji-by": "",
+      "icons-by": "",
+      "license-label": ""
+    },
+    "analytics": {
+      "export-csv": "",
+      "heading": "",
+      "street-summary": "",
+      "typical-lane-width": "",
+      "segment-summary": "",
+      "segment-summary-single": "",
+      "source": "",
+      "capacity-data-source": "",
+      "toggle-visible": "",
+      "settings-notice": ""
+    },
+    "save": {
+      "heading": "Guardar como imagen",
+      "option-labels": "Anchos y nombres de segmentos",
+      "option-name": "Nombre de la calle",
+      "option-sky": "Cielo Transparente",
+      "option-watermark": "",
+      "option-custom-scale": "",
+      "option-custom-scale-description": "",
+      "loading": "Cargando…",
+      "save-button": "Grabar en tu computador…",
+      "license": "Esta imagen creada con Streetmix puede ser reusada en cualquier sitio, para cualquier propósito, bajo la licencia {licenseLink}.",
+      "error-preview": "",
+      "error-unavailable": "",
+      "error-too-large": "",
+      "preview-image-alt": "",
+      "print-size": "",
+      "digital-size": "",
+      "weather-not-exported": ""
+    },
+    "geotag": {
+      "search": "",
+      "clear-search": "",
+      "zoom-in": "",
+      "zoom-out": "",
+      "add-location": "",
+      "confirm-location": "",
+      "clear-location": "",
+      "unknown-location": "",
+      "geotag-unavailable": ""
+    },
+    "donate": {
+      "heading": "",
+      "lede": "",
+      "text": "",
+      "button": "",
+      "cancel": ""
+    },
+    "sign-in": {
+      "heading": "",
+      "description": "",
+      "email-label": "",
+      "email-description": "",
+      "email-invalid": "",
+      "social-heading": "",
+      "button": {
+        "email": "",
+        "twitter": "",
+        "google": "",
+        "facebook": ""
+      },
+      "tos": "",
+      "tos-link-label": "",
+      "privacy-link-label": "",
+      "loading-message": "",
+      "sent-message-with-email": "",
+      "email-unreceived": "",
+      "resend-email": ""
+    },
+    "whatsnew": {
+      "heading": "",
+      "english-only": ""
+    },
+    "newsletter": {
+      "heading": "Suscríbete a nuestra newsletter",
+      "description": "",
+      "email-label": "",
+      "field-required-error": "",
+      "subscribe": "",
+      "subscribe-pending": "",
+      "ok-message": "",
+      "error-message": ""
+    }
+  },
+  "tools": {
+    "tooltip": "",
+    "skybox": {
+      "tooltip": "",
+      "heading": "",
+      "sky": {
+        "heading": ""
+      },
+      "weather": {
+        "heading": "",
+        "clear": "",
+        "rain": "",
+        "snow": ""
+      }
+    },
+    "flooding": {
+      "tooltip": "",
+      "heading": "",
+      "sea-level": {
+        "label": "",
+        "current": ""
+      },
+      "storm-surge": {
+        "label": ""
+      },
+      "messages": {
+        "start": "",
+        "need-waterfront": "",
+        "success": "",
+        "fail": ""
+      }
+    }
+  },
+  "prompt": {
+    "new-street": "",
+    "delete-street": "",
+    "new-width": "",
+    "segment-label": ""
+  },
+  "toast": {
+    "segment-deleted": "",
+    "all-segments-deleted": "",
+    "no-undo": "",
+    "no-redo": "",
+    "no-save": "",
+    "remixing": "",
+    "remixing-sign-in": "",
+    "reloaded": ""
+  },
+  "palette": {
+    "remove": "Arrasta aqui para remover"
+  },
+  "width": {
+    "label": "",
+    "under": "",
+    "over": "",
+    "occupied": "Ancho ocupado",
+    "building": "Ancho entre edificaciones",
+    "different": "Ancho diferente…",
+    "units": "Unidades",
+    "metric": "",
+    "imperial": ""
+  },
+  "capacity": {
+    "ppl-per-hour": ""
+  },
+  "datetime": {
+    "minutes-ago": "",
+    "seconds-ago": "",
+    "yesterday": "",
+    "today": ""
+  },
+  "key": {
+    "backspace": "Retrocerder",
+    "shift": "Mayús",
+    "plus": "",
+    "minus": "",
+    "left-arrow": "",
+    "right-arrow": ""
+  },
+  "tooltip": {
+    "remove-segment": "Retire el segmento",
+    "delete-street": "Eliminar la calle",
+    "segment-width": "Cambiar la anchura del segmento",
+    "building-height": "Cambiar el número de pisos",
+    "street-width": "Cambiar la anchura de la calle",
+    "geotag": "",
+    "increase-width": "Incrementar la anchura",
+    "decrease-width": "Reducir la anchura",
+    "width-tooltip-sublabel": "(presione la tecla Shift para tener más precisión)",
+    "add-floor": "Adherir un piso",
+    "remove-floor": "Eliminar piso",
+    "scroll-street-left": "",
+    "scroll-street-right": "",
+    "scroll-left": "",
+    "scroll-right": "",
+    "elevation-sidewalk": "",
+    "elevation-road": "Nivel de la calle",
+    "elevation-input": "",
+    "elevation-lower": "",
+    "elevation-raise": "",
+    "ground-height-input": "",
+    "ground-height-lower": "",
+    "ground-height-raise": "",
+    "sea-level-input": "",
+    "sea-level-lower": "",
+    "sea-level-raise": ""
+  },
+  "street": {
+    "default-name": "",
+    "rename": ""
+  },
+  "building": {
+    "label": "",
+    "floors-count": "{count, plural, one {# piso} many {# pisos} other {# pisos}}"
+  },
+  "segments": {
+    "warnings": {
+      "does-not-fit": "",
+      "not-wide": "",
+      "too-wide": "",
+      "dangerous": "",
+      "slope-exceeded": ""
+    },
+    "learn-more": "",
+    "unknown": {
+      "label": ""
+    },
+    "description": {
+      "photo-credit": ""
+    },
+    "resize": {
+      "min": "",
+      "max": ""
+    },
+    "controls": {
+      "width": "",
+      "ground-height": "",
+      "sea-level": "",
+      "elevation": "",
+      "slope": {
+        "label": "",
+        "switch-tooltip": "",
+        "disabled-tooltip": ""
+      }
+    }
+  },
+  "section": {
+    "empty": "Espacio vacío"
+  },
+  "gallery": {
+    "fail": "Fallo al cargar la galeria",
+    "all": "Todas las calles",
+    "twitter-link": "",
+    "delete-street-tooltip": "Eliminar la calle",
+    "street-count": "{count, plural, one {# calle} many {# calles} other {# calles}}",
+    "no-streets": "",
+    "thumbnail-error": ""
+  },
+  "users": {
+    "anonymous": "Anonimo",
+    "byline": "",
+    "roles": {
+      "admin": "",
+      "subscriber": ""
+    }
+  },
+  "export": {
+    "watermark": ""
+  },
+  "meta": {
+    "description": "Diseña, mezcla y comparte la calle de tu barrio - ¡en todos los navegadores!. Agrega arboles o carriles para bicicletas, veredas mas amplias o carriles de circulacion. Analiza el impacto de tus decisiones en tu comunidad",
+    "page-title": ""
+  },
+  "credits": {
+    "core-team-heading": "",
+    "original-team-heading": "",
+    "past-team-heading": "",
+    "core-contributors": "",
+    "advisors": "",
+    "additional-illustrations": "",
+    "additional-code": "",
+    "additional-contributors": "",
+    "special-thanks": "",
+    "translators": ""
+  },
+  "plus": {
+    "locked": {
+      "label": "",
+      "soon": "",
+      "sub": "",
+      "sub-edit": "",
+      "user": "",
+      "action": ""
+    },
+    "prompt": {
+      "text": "",
+      "action": ""
+    },
+    "web-monetization": {
+      "thanks": "",
+      "not-signed-in": "",
+      "signed-in": "",
+      "learn-more": ""
+    }
+  },
+  "sentiment": {
+    "prompt": {
+      "intro": "",
+      "joyful": "",
+      "choose-one": ""
+    },
+    "answer": {
+      "rating-1": "",
+      "rating-2": "",
+      "rating-3": "",
+      "rating-4": "",
+      "rating-5": ""
+    },
+    "sign-in-prompt": "",
+    "about-link": "",
+    "about-text": "",
+    "thank-you": "",
+    "about-header": "",
+    "about-article": {
+      "paragraph-1": "",
+      "paragraph-2": "",
+      "paragraph-3": ""
+    },
+    "done": {
+      "response": "",
+      "vote-another": "",
+      "really-done": ""
+    },
+    "comment": {
+      "prompt": "",
+      "example": "",
+      "submit": "",
+      "thanks": ""
+    }
+  },
+  "i18n": {
+    "lang": {
+      "am": "",
+      "ar": "",
+      "ca": "",
+      "cs": "",
+      "de": "Alemán",
+      "en": "Inglés",
+      "en-gb": "",
+      "es": "Español",
+      "es-419": "",
+      "es-es": "",
+      "es-mx": "Español (México)",
+      "fi": "Finlandés",
+      "fr": "",
+      "id": "",
+      "it": "Italiano",
+      "ja": "",
+      "ko": "",
+      "nb-no": "",
+      "nl-nl": "",
+      "pl": "Polaco",
+      "pt-br": "Portugués (Brasil)",
+      "ro-ro": "",
+      "ru": "",
+      "sv": "",
+      "tr": "",
+      "zh": "",
+      "zh-hans": "",
+      "zh-hant": ""
+    }
+  }
+}

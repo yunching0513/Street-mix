@@ -1,0 +1,11 @@
+.segment-empty {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+
+  .segment-label,
+  .segment-width {
+    color: var(--segment-text);
+    opacity: 0.5;
+  }
+}

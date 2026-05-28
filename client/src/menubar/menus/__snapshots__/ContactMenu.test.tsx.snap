@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ContactMenu > renders 1`] = `
+<DocumentFragment>
+  <div
+    class="menu"
+    role="menu"
+  >
+    <a
+      class="menu-item"
+      href="https://strt.mx/discord"
+      rel="noopener noreferrer"
+      role="menuitem"
+      target="_blank"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="discord"
+      />
+      Join Discord chat
+      <svg
+        data-icon="external-link"
+      />
+    </a>
+    <a
+      class="menu-item"
+      href="https://github.com/streetmix/streetmix/"
+      rel="noopener noreferrer"
+      role="menuitem"
+      target="_blank"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="github"
+      />
+      View source code on GitHub
+      <svg
+        data-icon="external-link"
+      />
+    </a>
+    <button
+      class="menu-item"
+      role="menuitem"
+    >
+      <svg
+        class="menu-item-icon"
+        data-icon="mail"
+      />
+      Subscribe to our newsletter
+    </button>
+  </div>
+</DocumentFragment>
+`;

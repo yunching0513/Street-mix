@@ -1,0 +1,19 @@
+.segment-drag-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--z-04-drag-layer);
+}
+
+.segment.floating {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.75;
+  pointer-events: none;
+  transition: none !important;
+}
+
+.segment.floating.first-drag-move {
+  transition: top 150ms;
+}

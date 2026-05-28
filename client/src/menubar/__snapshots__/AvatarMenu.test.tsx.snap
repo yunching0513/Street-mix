@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AvatarMenu > renders user avatar 1`] = `
+<DocumentFragment>
+  <button
+    class="menu-trigger menu-avatar"
+    id="menubar-identity"
+    role="menuitem"
+  >
+    <span
+      class="avatar"
+    >
+      <object
+        aria-label="foo"
+        type="image/png"
+      >
+        <img
+          alt="foo"
+          src="test-file-stub"
+        />
+      </object>
+    </span>
+  </button>
+</DocumentFragment>
+`;

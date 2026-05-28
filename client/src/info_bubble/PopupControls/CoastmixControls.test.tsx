@@ -1,0 +1,148 @@
+import { vi, type Mock } from 'vitest'
+import { userEvent } from '@testing-library/user-event'
+import { getSegmentVariantInfo } from '@streetmix/parts'
+
+import { render } from '~/test/helpers/render.js'
+import { toggleSliceSlope } from '~/src/store/slices/street.js'
+import { CoastmixControls } from './CoastmixControls.js'
+
+vi.mock('@streetmix/parts', () => ({
+  getSegmentVariantInfo: vi.fn((_type) => ({})),
+}))
+vi.mock('~/src/store/slices/street.js', async (importOriginal) => {
+  const actual = await importOriginal<Record<string, () => unknown>>()
+  return {
+    ...actual,
+    toggleSliceSlope: vi.fn(() => ({ type: 'MOCK_ACTION' })),
+  }
+})
+
+const initialState = {
+  street: {
+    width: 10,
+    segments: [
+      // Slice `0` is not sloped
+      {
+        width: 5,
+        type: 'foo',
+        slope: {
+          on: false,
+        },
+      },
+      // Slice `1` is sloped
+      {
+        width: 5,
+        type: 'bar',
+        slope: {
+          on: true,
+          values: [0, 1],
+        },
+      },
+    ],
+  },
+}
+
+describe('SlopeControl', () => {
+  it('enables control when rule is `path`', () => {
+    ;(getSegmentVariantInfo as Mock).mockReturnValueOnce({
+      slope: 'path',
+    })
+
+    const { getByRole } = render(<CoastmixControls position={0} />, {
+      initialState,
+    })
+
+    const control = getByRole('switch')
+    expect(control).toBeEnabled()
+    expect(control).not.toBeChecked()
+  })
+
+  it('enables control when rule is `berm`', () => {
+    ;(getSegmentVariantInfo as Mock).mockReturnValueOnce({
+      slope: 'berm',
+    })
+
+    const { getByRole } = render(<CoastmixControls position={0} />, {
+      initialState,
+    })
+
+    const control = getByRole('switch')
+    expect(control).toBeEnabled()
+    expect(control).not.toBeChecked()
+  })
+
+  it('shows toggled control when rule is `path`', () => {
+    ;(getSegmentVariantInfo as Mock).mockReturnValueOnce({
+      slope: 'path',
+    })
+
+    const { getByRole } = render(<CoastmixControls position={1} />, {
+      initialState,
+    })
+
+    const control = getByRole('switch')
+    expect(control).toBeEnabled()
+    expect(control).toBeChecked()
+  })
+
+  it('shows toggled control when rule is `berm`', () => {
+    ;(getSegmentVariantInfo as Mock).mockReturnValueOnce({
+      slope: 'berm',
+    })
+
+    const { getByRole } = render(<CoastmixControls position={1} />, {
+      initialState,
+    })
+
+    const control = getByRole('switch')
+    expect(control).toBeEnabled()
+    expect(control).toBeChecked()
+  })
+
+  it('dispatches an action on control interaction', async () => {
+    ;(getSegmentVariantInfo as Mock).mockReturnValueOnce({
+      slope: 'path',
+    })
+
+    const { getByRole } = render(<CoastmixControls position={0} />, {
+      initialState,
+    })
+
+    const control = getByRole('switch')
+
+    await userEvent.click(control)
+    expect(toggleSliceSlope).toHaveBeenCalled()
+  })
+
+  // Currently control is not rendered in this case
+  it.skip('disables control when rule is `off`', () => {
+    ;(getSegmentVariantInfo as Mock).mockReturnValueOnce({
+      slope: 'off',
+    })
+
+    const { getByRole } = render(<CoastmixControls position={1} />, {
+      initialState,
+    })
+
+    const control = getByRole('switch')
+    expect(control).toBeDisabled()
+
+    // Control should not be toggled on in this scenario, even if the slice
+    // data says it's on
+    expect(control).not.toBeChecked()
+  })
+
+  // Currently control is not rendered in this case
+  it.skip('disables control when rule is not defined', () => {
+    const { getByRole } = render(<CoastmixControls position={1} />, {
+      initialState,
+    })
+
+    const control = getByRole('switch')
+    expect(control).toBeDisabled()
+
+    // Control should not be toggled on in this scenario, even if the slice
+    // data says it's on
+    expect(control).not.toBeChecked()
+  })
+})

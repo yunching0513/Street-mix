@@ -1,0 +1,104 @@
+import SwatchGroup from '@site/src/components/SwatchGroup'
+
+# Colors
+
+The palette includes the primary brand colors as well as two complimentary tones in a range of tints and shades for use on the website, packaging, and additional brand materials. When using with text, all color pairings should have adequate contrast in accordance with [WCAG 2.0 guidelines on contrast ratio](https://contrast-ratio.com).
+
+## Palette
+
+export const Swatch = function ({ color, name }) {
+  const rgb = color.match(/([1-9])\w+/g)
+  const hex = rgb.reduce((str, val) => {
+    str += parseInt(val).toString(16)
+    return str
+  }, '#')
+  return (
+    <div className={`stmx-color-swatch stmx-brand-color-${name}`}>
+      <div className="line-block">
+        <div className="line">
+          <strong>{name.split('-')[1]}</strong>
+        </div>
+        <div className="line">
+          <strong>R</strong> {rgb[0]}
+        </div>
+        <div className="line">
+          <strong>G</strong> {rgb[1]}
+        </div>
+        <div className="line">
+          <strong>B</strong> {rgb[2]}
+        </div>
+      </div>
+      <p>{hex}</p>
+    </div>
+  )
+}
+
+### Emerald
+
+<SwatchGroup>
+  <Swatch color="rgb(219 248 220)" name="emerald-100" />
+  <Swatch color="rgb(203 246 213)" name="emerald-200" />
+  <Swatch color="rgb(158 244 182)" name="emerald-300" />
+  <Swatch color="rgb(117 228 153)" name="emerald-400" />
+  <Swatch color="rgb(91 193 125)" name="emerald-500" />
+  <Swatch color="rgb(81 173 112)" name="emerald-600" />
+  <Swatch color="rgb(65 141 90)" name="emerald-700" />
+  <Swatch color="rgb(47 105 66)" name="emerald-800" />
+  <Swatch color="rgb(28 68 41)" name="emerald-900" />
+</SwatchGroup>
+
+### Turquoise
+
+<SwatchGroup>
+  <Swatch color="rgb(222 243 249)" name="turquoise-100" />
+  <Swatch color="rgb(210 240 248)" name="turquoise-200" />
+  <Swatch color="rgb(193 235 247)" name="turquoise-300" />
+  <Swatch color="rgb(116 217 244)" name="turquoise-400" />
+  <Swatch color="rgb(71 195 225)" name="turquoise-500" />
+  <Swatch color="rgb(59 166 192)" name="turquoise-600" />
+  <Swatch color="rgb(46 135 156)" name="turquoise-700" />
+  <Swatch color="rgb(33 100 117)" name="turquoise-800" />
+  <Swatch color="rgb(18 65 76)" name="turquoise-900" />
+</SwatchGroup>
+
+### Copper
+
+<SwatchGroup>
+  <Swatch color="rgb(250 235 226)" name="copper-100" />
+  <Swatch color="rgb(250 229 217)" name="copper-200" />
+  <Swatch color="rgb(249 212 190)" name="copper-300" />
+  <Swatch color="rgb(248 184 144)" name="copper-400" />
+  <Swatch color="rgb(249 148 77)" name="copper-500" />
+  <Swatch color="rgb(223 119 36)" name="copper-600" />
+  <Swatch color="rgb(182 96 28)" name="copper-700" />
+  <Swatch color="rgb(137 70 17)" name="copper-800" />
+  <Swatch color="rgb(90 44 9)" name="copper-900" />
+</SwatchGroup>
+
+### Midnight
+
+<SwatchGroup>
+  <Swatch color="rgb(237 238 242)" name="midnight-100" />
+  <Swatch color="rgb(231 233 238)" name="midnight-200" />
+  <Swatch color="rgb(216 220 229)" name="midnight-300" />
+  <Swatch color="rgb(194 201 216)" name="midnight-400" />
+  <Swatch color="rgb(167 177 199)" name="midnight-500" />
+  <Swatch color="rgb(123 139 173)" name="midnight-600" />
+  <Swatch color="rgb(104 122 162)" name="midnight-700" />
+  <Swatch color="rgb(67 89 139)" name="midnight-800" />
+  <Swatch color="rgb(41 57 94)" name="midnight-900" />
+</SwatchGroup>
+
+### Citrine
+
+<SwatchGroup>
+  <Swatch color="rgb(253 243 209)" name="citrine-100" />
+  <Swatch color="rgb(250 234 164)" name="citrine-200" />
+  <Swatch color="rgb(255 215 85)" name="citrine-300" />
+  <Swatch color="rgb(255 184 67)" name="citrine-400" />
+  <Swatch color="rgb(255 131 0)" name="citrine-500" />
+</SwatchGroup>
+
+## Other resources
+
+- [Building Your Color Palette](https://refactoringui.com/previews/building-your-color-palette/) [Refactoring UI]

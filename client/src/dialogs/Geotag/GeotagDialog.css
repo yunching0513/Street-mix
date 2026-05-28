@@ -1,0 +1,105 @@
+.geotag-dialog {
+  --geotag-error-banner-margin: 100px;
+
+  width: 90vw;
+  height: 80vh;
+  max-height: 960px; /* Prevent outside of map being shown when default view on large monitors */
+  max-width: 1400px;
+}
+
+.geotag-dialog .close {
+  z-index: var(--z-index-10);
+  text-shadow: 0 1px white;
+}
+
+/* Leaflet overrides */
+
+.leaflet-container {
+  background-color: var(--off-white);
+  height: 100%;
+  font-family: var(--font-family);
+  font-size: inherit;
+}
+
+.leaflet-container .leaflet-control-attribution {
+  background: transparent;
+  margin: 0.25em;
+  text-shadow: 0 1px white;
+  pointer-events: none;
+  user-select: none;
+}
+
+.leaflet-container .leaflet-control-attribution a {
+  pointer-events: auto;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--border-radius);
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 15%);
+}
+
+.leaflet-popup-tip-container {
+  bottom: -24px;
+  height: 24px;
+}
+
+.leaflet-popup-tip {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 50%;
+  bottom: 12px;
+  margin-left: -12px;
+  transform: rotateZ(45deg);
+  background: var(--popup-background);
+  box-shadow: none;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+}
+
+.leaflet-control-zoom {
+  padding: 2px;
+  background-color: white;
+}
+
+.leaflet-left .leaflet-control {
+  margin-top: 12px;
+}
+
+.leaflet-top .leaflet-control {
+  margin-top: 12px;
+}
+
+.leaflet-touch .leaflet-bar,
+.leaflet-bar {
+  box-shadow: var(--medium-box-shadow);
+  border: 0;
+}
+
+.leaflet-touch .leaflet-control-zoom-in,
+.leaflet-touch .leaflet-control-zoom-out {
+  font-size: inherit;
+}
+
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  border: 0;
+  font-size: inherit;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  user-select: none;
+}
+
+.leaflet-bar a:first-child,
+.leaflet-touch .leaflet-bar a:first-child {
+  border-bottom: 1px solid #e7e7e7;
+}

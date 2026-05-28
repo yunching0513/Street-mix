@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MenuBarItem > renders 1`] = `
+<DocumentFragment>
+  <li>
+    <button
+      class="menu-trigger"
+      role="menuitem"
+    >
+      foo
+      <svg
+        class="menu-carat-down"
+        data-icon="chevron-down"
+        size="14"
+      />
+    </button>
+  </li>
+</DocumentFragment>
+`;

@@ -1,0 +1,239 @@
+{
+  "segments": {
+    "sidewalk": "Chodník",
+    "pedestrian": "Chodec",
+    "sidewalk-tree": "Strom na chodníku",
+    "bike-rack": "Stojan na bicykle",
+    "bench": "Lavička",
+    "outdoor-dining": "Vonkajšie stolovanie",
+    "cafe-seating": "",
+    "wayfinding-sign": "Orientačná tabuľa",
+    "sidewalk-lamp": "Lampa",
+    "utility-pole": "Stĺp s vedením",
+    "drainage-channel": "Odtokový žľab",
+    "parklet": "Parklet",
+    "street-vendor": "",
+    "divider": "",
+    "planting-strip": "Pás na výsadbu",
+    "planter-box": "",
+    "median": "",
+    "bollard": "",
+    "dome": "",
+    "jersey-barrier": "",
+    "scooter": "",
+    "scooter-drop-zone": "",
+    "bike-lane": "",
+    "twoway-bike-lane": "",
+    "parking-lane": "",
+    "perpendicular-parking": "",
+    "angled-parking": "",
+    "flex-zone": "",
+    "taxi-pick-up": "",
+    "rideshare-pick-up": "",
+    "bikeshare-station": "",
+    "foodtruck": "",
+    "flex-zone-curb": "",
+    "drive-lane": "",
+    "mixed-drive-lane": "",
+    "sharrow": "",
+    "turn-lane": "",
+    "turn-lane-straight": "",
+    "turn-lane-center": "",
+    "bus-lane": "",
+    "bus-lane-shared": "",
+    "streetcar": "",
+    "light-rail": "",
+    "transit-shelter": "",
+    "brt-station": "",
+    "brt-lane": "",
+    "temporary-barrier": "",
+    "inception-train": "",
+    "magic-carpet": "",
+    "wall": ""
+  },
+  "descriptions": {
+    "wayfinding-sign": {
+      "prompt": "Zistite viac o orientačných značkách",
+      "content": ""
+    },
+    "parklet": {
+      "prompt": "Zistite viac o parkletoch",
+      "imageCaption": "",
+      "content": ""
+    },
+    "bike-lane": {
+      "prompt": "Zistite viac o cyklistických pruhoch",
+      "content": ""
+    },
+    "colored-bike-lane": {
+      "prompt": "Zistite viac o farebných cyklo pruhoch",
+      "content": ""
+    },
+    "sharrow": {
+      "prompt": "Ďalšie informácie o zdieľaných pruhoch",
+      "content": ""
+    },
+    "transit-shelter-elevated": {
+      "prompt": "Ďalšie informácie o vyvýšených zastávkach ",
+      "content": ""
+    },
+    "inception-train": {
+      "content": ""
+    }
+  },
+  "buildings": {
+    "waterfront": {
+      "name": "Nábrežie"
+    },
+    "grass": {
+      "name": "Tráva"
+    },
+    "fence": {
+      "name": "Prázdne miesto"
+    },
+    "parking-lot": {
+      "name": "Parkovisko"
+    },
+    "residential": {
+      "name": "Domov"
+    },
+    "narrow": {
+      "name": "Budova"
+    },
+    "wide": {
+      "name": "Budova"
+    },
+    "arcade": {
+      "name": "Budova s pasážou"
+    },
+    "compound-wall": {
+      "name": "Prefabrikovaná stena"
+    }
+  },
+  "boundary": {
+    "group": {
+      "land": "",
+      "waterfront": "Nábrežie"
+    }
+  },
+  "variant-icons": {
+    "orientation|left": "Vľavo",
+    "orientation|right": "Vpravo",
+    "turn-lane-orientation|left": "Vľavo",
+    "turn-lane-orientation|left-straight": "Vľavo a priamo",
+    "turn-lane-orientation|straight": "Priamy",
+    "turn-lane-orientation|right-straight": "Vpravo a priamo",
+    "turn-lane-orientation|right": "Vpravo",
+    "turn-lane-orientation|both": "Obe strany",
+    "turn-lane-orientation|left-right-straight": "Vľavo, vpravo a priamo",
+    "turn-lane-orientation|shared": "Zdieľané",
+    "bench-orientation|left": "Vľavo",
+    "bench-orientation|right": "Vpravo",
+    "bench-orientation|center": "",
+    "parking-lane-orientation|left": "Vľavo",
+    "parking-lane-orientation|right": "Vpravo",
+    "parking-lane-direction|inbound": "",
+    "parking-lane-direction|outbound": "",
+    "parking-lane-direction|sideways": "",
+    "parking-lane-direction|angled-front-left": "",
+    "parking-lane-direction|angled-front-right": "",
+    "parking-lane-direction|angled-rear-left": "",
+    "parking-lane-direction|angled-rear-right": "",
+    "direction|inbound": "",
+    "direction|outbound": "",
+    "bike-direction|inbound": "",
+    "bike-direction|outbound": "",
+    "bike-direction|twoway-left": "",
+    "bike-direction|twoway-right": "",
+    "sidewalk-density|empty": "",
+    "sidewalk-density|sparse": "",
+    "sidewalk-density|normal": "",
+    "sidewalk-density|dense": "",
+    "lamp-orientation|left": "Vľavo",
+    "lamp-orientation|both": "Obe strany",
+    "lamp-orientation|right": "Vpravo",
+    "lamp-type|traditional": "",
+    "lamp-type|modern": "",
+    "lamp-type|pride": "",
+    "drainage-sides|slanted": "",
+    "drainage-sides|vertical": "",
+    "car-type|car": "",
+    "car-type|sharrow": "",
+    "car-type|truck": "",
+    "car-type|microvan": "",
+    "car-type|av": "",
+    "car-type|motorcycle": "",
+    "car-type|motorcycle-sidecar": "",
+    "car-type|pedestrian": "Chodec",
+    "public-transit-asphalt|regular": "",
+    "public-transit-asphalt|colored": "",
+    "public-transit-asphalt|grass": "Tráva",
+    "bus-asphalt|regular": "",
+    "bus-asphalt|colored": "",
+    "bus-asphalt|shared": "",
+    "bus-type|typical": "",
+    "bus-type|double-decker": "",
+    "bus-type|av-shuttle": "",
+    "brt-station-orientation|left": "Vľavo",
+    "brt-station-orientation|right": "Vpravo",
+    "brt-station-orientation|center": "",
+    "bike-asphalt|regular": "",
+    "bike-asphalt|green": "",
+    "bike-asphalt|red": "",
+    "tree-type|big": "",
+    "tree-type|palm-tree": "",
+    "divider-type|median": "",
+    "divider-type|striped-buffer": "",
+    "divider-type|planting-strip": "Pás na výsadbu",
+    "divider-type|planter-box": "",
+    "divider-type|bush": "",
+    "divider-type|flowers": "",
+    "divider-type|big-tree": "",
+    "divider-type|palm-tree": "",
+    "divider-type|bollard": "",
+    "divider-type|dome": "",
+    "divider-type|jersey-barrier-concrete": "",
+    "divider-type|jersey-barrier-plastic": "",
+    "transit-shelter-elevation|street-level": "",
+    "transit-shelter-elevation|light-rail": "",
+    "bike-rack-elevation|sidewalk-parallel": "",
+    "bike-rack-elevation|sidewalk": "",
+    "bike-rack-elevation|road": "",
+    "building|waterfront": "Nábrežie",
+    "building|grass": "Tráva",
+    "building|fence": "Prázdne miesto",
+    "building|parking-lot": "Parkovisko",
+    "building|residential": "Domov",
+    "building|narrow": "",
+    "building|wide": "",
+    "wayfinding-type|large": "",
+    "wayfinding-type|medium": "",
+    "wayfinding-type|small": "",
+    "waiting-area|sparse": "",
+    "waiting-area|empty": "",
+    "flex-type|rideshare": "",
+    "flex-type|taxi": "",
+    "occupants|empty": "",
+    "occupants|full": "",
+    "occupants|occupied": "",
+    "elevation|sidewalk": "",
+    "elevation|road": "",
+    "temporary-barrier-type|traffic-cone": "",
+    "temporary-barrier-type|barricade": "",
+    "vendor-type|handcart": "",
+    "vendor-type|table": "",
+    "vendor-type|tarp": "",
+    "vendor-type|platform": "",
+    "ground|concrete": "",
+    "ground|asphalt": ""
+  },
+  "skybox": {
+    "day": "Deň",
+    "twilight": "Súmrak",
+    "dusk": "",
+    "dawn": "",
+    "night": "Noc",
+    "karl": "Hmla",
+    "holodeck": ""
+  }
+}

@@ -1,0 +1,10 @@
+.menu-bar .menu-upgrade {
+  display: flex;
+  align-items: center;
+  margin-inline: 0.75em 0;
+  padding: 0.5em 1em;
+
+  img {
+    margin-inline: 0 0.5em;
+  }
+}

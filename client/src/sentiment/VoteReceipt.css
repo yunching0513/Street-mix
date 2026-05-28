@@ -1,0 +1,83 @@
+.sentiment-survey-done-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  background: white;
+  transition: opacity 200ms ease-in;
+  opacity: 0;
+  pointer-events: none;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.sentiment-survey-done-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: opacity 200ms ease-in;
+  opacity: 0;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  h2 {
+    margin: 0 !important;
+  }
+}
+
+.sentiment-survey-done-text {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 0;
+
+  strong:first-of-type {
+    color: var(--color-turquoise-800);
+  }
+
+  .sentiment-icon {
+    margin-right: 0.5em;
+  }
+
+  div:last-child {
+    flex-grow: 1;
+  }
+}
+
+.sentiment-survey-done-comment {
+  display: flex;
+  flex-direction: row;
+  place-content: center space-between;
+  align-items: center;
+  margin: 0;
+
+  input {
+    flex-grow: 1;
+    margin-inline-end: 0.5em;
+    border-radius: var(--border-radius-medium);
+    border: 1px solid var(--color-turquoise-600);
+    height: 2.25em;
+  }
+
+  button {
+    padding: 0 1em;
+    height: 2.25em;
+  }
+}
+
+.sentiment-survey-done-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}

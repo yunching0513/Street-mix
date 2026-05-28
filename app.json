@@ -1,0 +1,43 @@
+{
+  "name": "Streetmix",
+  "scripts": {},
+  "repository": "https://github.com/streetmix/streetmix/",
+  "website": "https://streetmix.net/",
+  "stack": "heroku-22",
+  "env": {
+    "COOKIE_SESSION_SECRET": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "AUTH0_DOMAIN": {
+      "required": true
+    },
+    "AUTH0_CLIENT_ID": {
+      "required": true
+    },
+    "AUTH0_CLIENT_SECRET": {
+      "required": true
+    },
+    "CYPRESS_INSTALL_BINARY": {
+      "description": "Skip installing Cypress in deployment environments. See https://docs.cypress.io/guides/getting-started/installing-cypress.html#Skipping-installation",
+      "value": "0"
+    },
+    "HUSKY": {
+      "description": "Skip installing Husky (v8+).",
+      "value": "0"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:mini",
+      "as": "DATABASE"
+    },
+    "papertrail:choklad",
+    "newrelic:wayne"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

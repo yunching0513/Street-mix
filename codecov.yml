@@ -1,0 +1,12 @@
+coverage:
+  status:
+    project:
+      default:
+        # Allow project coverage to decrease a little
+        # We don't want to fail projects where minor changes
+        # cause coverage to decrease slightly
+        threshold: 1%
+    # Patches are not required to hit target coverage
+    patch:
+      default:
+        informational: true

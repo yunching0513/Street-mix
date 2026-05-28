@@ -1,0 +1,80 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NewsletterDialog > renders snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="dialog-box-container"
+  >
+    <div
+      class="dialog-box-backdrop"
+    />
+    <div
+      class="dialog-box-display-area"
+    >
+      <div
+        class="dialog-box"
+        role="dialog"
+      >
+        <button
+          class="close"
+          title="Dismiss"
+        >
+          <svg
+            data-icon="close"
+          />
+        </button>
+        <div
+          class="newsletter-dialog"
+        >
+          <header>
+            <h1>
+              Subscribe to our newsletter
+            </h1>
+          </header>
+          <div
+            class="dialog-content"
+          >
+            <p>
+              We send occasional email updates through our newsletter, just several times a year. Sign up to ensure you don’t miss a thing!
+            </p>
+            <form>
+              <label
+                for="_r_0_"
+              >
+                Enter your email
+              </label>
+              <input
+                id="_r_0_"
+                name="email"
+                placeholder="test@example.com"
+                required=""
+                type="email"
+              />
+              <input
+                name="tag"
+                type="hidden"
+                value="via app"
+              />
+              <input
+                name="embed"
+                type="hidden"
+                value="1"
+              />
+              <div
+                class="subscribe-buttons"
+              >
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,145 @@
+.menu {
+  --menu-border-radius: var(--border-radius);
+  --menu-box-shadow: var(--medium-box-shadow);
+
+  position: absolute;
+  margin-block-start: 7px;
+  padding: 5px;
+  touch-action: none;
+  opacity: 0;
+  background-color: white;
+  transform-origin: 50% 0;
+  transform: rotateX(-90deg);
+  transition:
+    transform 120ms,
+    opacity 120ms;
+  pointer-events: none;
+  border-radius: var(--menu-border-radius);
+  box-shadow: var(--menu-box-shadow);
+  line-height: 1.4;
+
+  /* Allows scrolling if the menu length is longer than height of viewport */
+  max-height: calc(100% - 100px);
+  overflow: hidden auto;
+
+  &.menu-visible-enter-done {
+    transform: rotateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &.menu-visible-exit {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+
+  input {
+    appearance: none;
+    background: var(--form-element-background);
+    border: 1px solid var(--form-element-border);
+    resize: none;
+  }
+
+  [data-icon="external-link"] {
+    margin-inline-start: 0.25em;
+    vertical-align: sub;
+    color: var(--color-midnight-800);
+    width: 14px;
+    height: 14px;
+    stroke-width: 1.25;
+  }
+}
+
+body.safari .menu {
+  transform: translateY(20px) translateZ(100px);
+
+  &.menu-visible-enter-done {
+    /* Y-position of 0 puts it too close to menubar, so give it a bit of space */
+    transform: translateY(3px) rotateX(0) translateZ(100px);
+  }
+}
+
+.menu-item {
+  display: block;
+  position: relative;
+  padding-block: 0.5em;
+  padding-inline: 2.5em 1em;
+  color: black;
+  border-radius: var(--border-radius);
+
+  /* Specifically for anchors */
+  text-decoration: none;
+
+  /* Specifically for button */
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--interactive-element-hover-color);
+  }
+
+  &:active {
+    color: var(--interactive-text-active-color);
+  }
+
+  /* Used in locale menu */
+  .loading-spinner {
+    position: absolute;
+    inset-block-start: 0.65em;
+    inset-inline-start: 1em;
+    color: var(--color-turquoise-500);
+  }
+
+  &[disabled] {
+    color: var(--color-gray-400);
+
+    &:hover {
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+}
+
+.menu-item-icon {
+  position: absolute;
+  inset-block-start: 6px;
+  inset-inline-start: 0.5em;
+  width: 18px;
+  height: 18px;
+  color: var(--color-midnight-800);
+
+  &[data-icon="check"] {
+    inset-block-start: 0.55em;
+    color: var(--color-turquoise-500);
+  }
+
+  &[data-icon="discord"] {
+    color: var(--social-discord);
+  }
+
+  &[data-icon="facebook"] {
+    color: var(--social-facebook);
+  }
+
+  &[data-icon="github"] {
+    color: var(--social-github);
+  }
+
+  &[data-icon="mastodon"] {
+    color: var(--social-mastodon);
+  }
+
+  &[data-icon="twitter"] {
+    color: var(--social-twitter);
+  }
+}
+
+.menu-item-subtext {
+  display: block;
+  color: rgb(128 128 128);
+  font-size: 0.8em;
+}
+
+.menu .dropdown-menu-label {
+  padding-inline-start: 1em;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@streetmix/types",
+  "version": "0.1.0",
+  "description": "TypeScript definitions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/streetmix/streetmix.git",
+    "directory": "packages/types"
+  },
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "start": "echo Nothing to run!"
+  }
+}

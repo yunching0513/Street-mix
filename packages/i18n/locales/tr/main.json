@@ -1,0 +1,588 @@
+{
+  "menu": {
+    "item": {
+      "help": "Destek",
+      "about": "Streetmix Hakkında...",
+      "whatsnew": "",
+      "contact": "İletişim",
+      "community": "Topluluk",
+      "sign-in": "Giriş yap",
+      "sign-out": "Oturumu kapat",
+      "new-street": "Yeni sokak",
+      "my-streets": "Kayıtlı sokaklar",
+      "settings": "Ayarlar",
+      "share": "Paylaş",
+      "store": "Dükkan",
+      "upgrade": "Yükseltme",
+      "streetmix-plus": ""
+    },
+    "help": {
+      "guidebook-link": "Rehber",
+      "keyboard-label": "Klavye kısayolları:",
+      "remove-instruction": "İşaret etiğiniz kısımı kaldırın",
+      "remove-shift-instruction": "(Hepsini kaldırmak için {shiftKey}basılı tutun)",
+      "move-instruction": "Sokağın etrafında hareket ettirin",
+      "move-shift-instruction": "(kenarlara atlamak için {shiftKey} tuşuna basın)",
+      "change-instruction": "İşaret ettiğiniz kısımın genişliğini değiştirin",
+      "change-shift-instruction": "(daha hassas ayar için{shiftKey} tuşuna basın)"
+    },
+    "share": {
+      "sign-in-twitter-link": "Giriş yap",
+      "sign-in-link": "Sokaklarınıza daha güzel bağlantılar ve kişisel sokak galerinize erişmek için {signInLink}.",
+      "link": "Paylaşmak için bu bağlantıyı kopyalayın:",
+      "copy-to-clipboard": "Kopyala",
+      "copy-success": "",
+      "twitter": "Twitter aracılığıyla paylaş",
+      "facebook": "Facebook aracılığıyla paylaş",
+      "mastodon": "",
+      "3dstreet": "",
+      "print": "Yazdır...",
+      "save": "Görseli farklı kaydet...",
+      "save-byline": "Rapor, blog vs. de referans vermek için",
+      "messages": {
+        "my-street": "Streetmix'de {streetName}ismindeki sokağıma bak! ",
+        "my-street-unnamed": "Streetmix'deki sokağıma bak!",
+        "someone-elses-street": "Streetmix'de{streetCreator} tarafından yapılmış {streetName}adlı sokağa bak!   ",
+        "someone-elses-street-unnamed": "Streetmix'de {streetCreator} tarafından yapılmış sokağa bak!  ",
+        "anonymous-creator-street": "Streetmix'deki {streetName}adlı sokağa bak! ",
+        "anonymous-creator-street-unnamed": "Streetmix'teki bu sokağa bakın!"
+      }
+    },
+    "contact": {
+      "forums": "Forumlarda tartış",
+      "email": "Streetmix ekibine email gönder",
+      "github": "Kaynak kodunu GitHub üzerinde gör",
+      "blog": "Streetmix blogunu ziyaret et",
+      "discord": "Discord grubuna katıl",
+      "slack": "Slack grubuna katıl",
+      "newsletter": "Haber bültenimize kayıt ol"
+    },
+    "feedback": {
+      "prompt": "Bize bir mesaj gönder:",
+      "message-placeholder": "Streetmix hakkında ne düşünüyorsun?",
+      "email-placeholder": "E-postanız (isteğe bağlı)",
+      "send": "Mesaj gönder",
+      "confirm": "Anladık. Teşekkürler!",
+      "error": "Üzgünüz, geri bildirim gönderirken bir sorun oluştu. Lütfen daha sonra tekrar deneyiniz."
+    },
+    "sign-in": {
+      "twitter": "Twitter ile oturum aç"
+    },
+    "new-street": {
+      "default": "",
+      "empty": "",
+      "copy": "Kopya oluştur",
+      "template": "",
+      "sign-in-link": ""
+    }
+  },
+  "settings": {
+    "heading": "Ayarlar",
+    "info-tooltip": "",
+    "general": {
+      "label": ""
+    },
+    "appearance": {
+      "label": ""
+    },
+    "language": {
+      "label": "Dil"
+    },
+    "profile": {
+      "label": "",
+      "username": "",
+      "username-description": "",
+      "display-name": "",
+      "display-name-description": "",
+      "display-name-not-set": "",
+      "display-name-error": "",
+      "display-name-characters-remaining": ""
+    },
+    "misc": {
+      "label": "",
+      "silly-clowns": "",
+      "silly-clowns-description": ""
+    },
+    "theme": {
+      "label": "",
+      "description": "",
+      "light": "",
+      "dark": "",
+      "system": ""
+    },
+    "units": {
+      "label": "Birimler",
+      "metric": "Metrik birimler (metreler)",
+      "imperial": "İngilizce ölçü birimi (fit)"
+    }
+  },
+  "msg": {
+    "loading": "Yükleniyor...",
+    "remixing": "Remixliyor...",
+    "having-trouble": "Bir sorun oluştu...",
+    "no-street": "Herhangi bir sokak seçilmedi.",
+    "trouble-loading": "Streetmix'i yüklemekte zorluk çekiyoruz.",
+    "slow-connection-1": "Streetmix İnternet'e bağlanmakta bir süredir sorun yaşıyor.",
+    "slow-connection-2": "Sayfayı yeniden yüklemek ve tekrar denemek isteyebilirsiniz. Lütfen sokaktaki en son değişikliği kaybedebileceğinizi unutmayın. Üzgünüz!",
+    "no-connection": "Streetmix İnternet'e bağlanmada sorun yaşıyor.",
+    "more-info": "Daha fazla bilgi"
+  },
+  "error": {
+    "button": {
+      "home": "Ana sayfaya git",
+      "sign-in": "Tekrar oturum aç",
+      "reload": "Sayfayı yenile",
+      "return": "",
+      "try-again": "Tekrar dene"
+    },
+    "page-not-found-title": "Sayfa bulunamadı.",
+    "page-not-found-description": "Hay aksi. Bu adrese sahip bir sayfa yok!",
+    "street-not-found-title": "Sokak bulunamadı.",
+    "street-not-found-description": "Hay aksi. Bu bağlantıya sahip bir sokak yok!",
+    "street-not-found-but-user-description": "Bu bağlantıya bağlı bir sokak bulunamadı! Ancak diğer sokaklara göz atabilirsiniz{user}",
+    "street-deleted-title": "Bu sokak silinmiş.",
+    "street-deleted-description": "Bu bağlantıya bağlı bir sokak bulunamadı! Ancak {user} tarafından yapılmış diğer sokaklara göz atabilirsiniz",
+    "sign-out-title": "Oturumu kapattınız.",
+    "reload-sign-out-title": "Başka bir pencerede çıkış yaptınız",
+    "gallery-street-failure-description": "Bu sokağı yüklemede sorun yaşıyoruz.",
+    "reload-sign-in-title": "Başka bir pencerede oturum açtınız.",
+    "please-reload": "",
+    "survey-finished": "Form tamamlandı. Tebrikler ve teşekkürler!",
+    "street-deleted-elsewhere-title": "Bu sokak başka bir yerde silinmiş.",
+    "street-deleted-elsewhere-description": "Bu sokak başka bir tarayıcı üzerinde silinmiş.",
+    "auth-expired": "Bir süredir aktif olmadığınız için oturumunuzu sonlandırdık.",
+    "sign-in-again": "Lütfen tekrar oturum açın.",
+    "access-denied-title": "Oturum açmadınız.",
+    "access-denied-description": "Oturum açmayı iptal ettiniz.",
+    "auth-api-problem-title": "Oturum açarken bir sorun oluştu.",
+    "auth-api-problem-description": "Doğrulamada bir problem oluştu.",
+    "please-try-again": "Lütfen daha sonra tekrar deneyin veya <email_link>e-posta</email_link> veya <tweet_link>Twitter</tweet_link> üzerinden bizimle iletişime geçin.",
+    "please-try-again-contact-us": "",
+    "unsupported-browser-title": "Streetmix kullandığınız tarayıcı da çalışmıyor.",
+    "unsupported-browser-description": "Üzgünüz.<chrome_link>Chrome</chrome_link>,<firefox_link>Firefox</firefox_link>,<edge_link>Microsoft Edge</edge_link> veya Safari kullanmayı deneyin.",
+    "unsupported-browser-internet-explorer": "Internet Explorer'da mısınız? <a>Daha fazla keşfet.</a>",
+    "unsupported-browser-contact-us": "",
+    "generic-error-title": "Yolunda gitmeyen bir şeyler var.",
+    "generic-error-description": "Üzgünüz - yolunda gitmeyen bir şeyler var.",
+    "error-code": "(Hata {code}.)",
+    "need-help-link": "Yardıma ihtiyacınız mı var?"
+  },
+  "btn": {
+    "reload": "Yeniden yükle",
+    "undo": "Geri al",
+    "redo": "Tekrar yap",
+    "try-again": "Tekrar dene",
+    "cancel": "İptal",
+    "create": "Yeni bir sokak yarat",
+    "copy": "Kopya oluştur",
+    "remove": "Kaldır",
+    "close": "Kapa",
+    "dismiss": "Son ver",
+    "okay": "Tamam!",
+    "not-now": "Şimdi değil",
+    "save": "",
+    "edit": ""
+  },
+  "dialogs": {
+    "error": {
+      "heading": "Aman!",
+      "text": "Beklenmeyen bir şey oldu😢. Bu hatayı kayıt aldına aldık ancak ne olduğunu hatırlıyorsanız <a>lütfen bize iletin</a>. Geçici bir problem olma ihtimaline karşı lütfen bir kez daha deneyin."
+    },
+    "welcome": {
+      "heading": "Streetmix'e hoşgeldiniz.",
+      "new": {
+        "intro": "Mahallenizdeki sokağı ekranınızda tasarlayın, remixleyin ve paylaşın! Ağaçlar ve bisikletler eklyin, kaldırımları veya şeritleri genişletin ve aldığınız kararların mahallede nasıl bir etki yarattığını öğrenin.",
+        "instruction": "Bazı kısımların yerini değiştirerek başlayın.",
+        "instruct": "Bazı kısımların yerini {pointer} ile değiştirerek başlayın.",
+        "instruct-pointer-finger": "parmağın",
+        "instruct-pointer-mouse": "faren"
+      },
+      "existing": {
+        "intro": "Bu {streetName}{creator}tarafından yapılmıştır.",
+        "intro-without-creator": "Bu {streetName}.",
+        "instruct": "Sokağın bazı kısımların yerini değiştirerek remixleyin veya {startYourOwnStreet}",
+        "instruct-start-own-street": "Kendi sokağına başla."
+      }
+    },
+    "new-street": {
+      "heading": "İşte yeni sokağın.",
+      "default": "Örnek bir sokakla başla",
+      "empty": "Boş bir sokakla başla",
+      "last": "Bir önceki sokağın kopyasıyla başla",
+      "dismiss": ""
+    },
+    "about": {
+      "heading": "Streetmix hakkında",
+      "description": "Sokağınızı tasarlayın, yeniden düzenleyin ve paylaşın. Bisiklet yolları ekleyin, kaldırımları ya da trafik şeritlerini genişletin, tüm bunların topluluğunuzu nasıl etkileyebileceğini öğrenin.",
+      "team-heading": "Proje ekibi ve bakıcılar",
+      "partners": "Ortaklar",
+      "sponsors": "Sponsorlar",
+      "sponsored-by": "Streetmix'i destekleyenler:",
+      "donate-link": "Finansal olarak bizi destekle",
+      "tos-link": "Kullanım şartları",
+      "privacy-link": "Gizlilik politikası",
+      "acknowledgements": "Teşekkürler",
+      "font-designed-by": "{fontName} adlı font {fontAuthor} tarafından tasarlanmıştır.",
+      "emoji-by": "Emoji {author} tarafından üretilmiştir.",
+      "icons-by": "İkonlar {author} tarafından üretilmiştir.",
+      "license-label": "(<a>Lisans</a>)"
+    },
+    "analytics": {
+      "export-csv": "CSV olarak aktar",
+      "heading": "Veriler",
+      "street-summary": "Sokağınızın tahmini hacmi saat başına {averageTotal} kişidir ve saat başına {potentialTotal} kişiye kadar potansiyeli vardır.",
+      "typical-lane-width": "Kapasite değerleri {laneWidth} genişliğindeki şeritleri temel almıştır.",
+      "segment-summary": "{average}—{potential} kişi/saat",
+      "segment-summary-single": "{amount}kişi/saat",
+      "source": "Kaynak",
+      "capacity-data-source": "Kapasite veri kaynağı",
+      "toggle-visible": "",
+      "settings-notice": "Sokak sahipleri bu ayarları değiştirebilir"
+    },
+    "save": {
+      "heading": "Görsel olarak kaydet",
+      "option-labels": "Sokak kısımlarının isimleri ve genişlikleri",
+      "option-name": "Sokak ismi",
+      "option-sky": "Saydam gökyüzü",
+      "option-watermark": "Su yükseklik çizgisi",
+      "option-custom-scale": "",
+      "option-custom-scale-description": "",
+      "loading": "Yükleniyor...",
+      "save-button": "Bilgisayarınıza kaydedin...",
+      "license": "Streetmix tarafından üretilmiş bu imaj {licenseLink} lisansı altında her yerde ver her amaçla tekrar kullanılabilir.",
+      "error-preview": "Önizleme görseli gösterilirken bir hata oluştu.",
+      "error-unavailable": "Resim olarak kaydetmek bu tarayıcıda mümkün değildir.",
+      "error-too-large": "",
+      "preview-image-alt": "Önizleme",
+      "print-size": "",
+      "digital-size": "",
+      "weather-not-exported": ""
+    },
+    "geotag": {
+      "search": "Konum ara",
+      "clear-search": "Aramayı temizle",
+      "zoom-in": "Yakınlaş",
+      "zoom-out": "Uzaklaş",
+      "add-location": "Konum ekle",
+      "confirm-location": "Konumu onayla",
+      "clear-location": "Konumu temizle",
+      "unknown-location": "Bilinmeyen konum",
+      "geotag-unavailable": "Geokodlama servisleri şu an kullanılamamaktadır. Haritayı görebilirsiniz ancak sokağınızın konumunu değiştiremezsiniz."
+    },
+    "donate": {
+      "heading": "Streetmix'in yardımına ihtiyacı var!",
+      "lede": "Streetmix bir topluluk projesidir. İnternet'teki diğer bedava servislerin aksine reklam veya dijital gizliliğinize saygı göstermeyen takip ediciler içermemektedir. Bunun yerine Streetmix'i canlı tutmak için sizin desteğinize ihtiyacımız var.",
+      "text": "Lütfen bize bir defaya mahsus veya tekrarlayan bir şekilde bağış yaparak destekleyin. Sizin bağışlarınızla server ve bulut altyapısı masraflarımızı karşılamakla birlikte sokakları iyileştirmek için çalışan diğer kurumlarada destek oluyoruz. Arta kalan gelirleri siteye yeni işlevler eklemeye ayıracağız. Bütün giderlerimiz şeffaftır ve desteğinizin Streetmix ekibi tarafından nasıl kullanıldığını inceleyebilirsiniz.",
+      "button": "Streetmix'e bağışta bulun",
+      "cancel": "Hayır, teşekkürler"
+    },
+    "sign-in": {
+      "heading": "Giriş yap / Kaydol",
+      "description": "İlk tasarımınızı kaydedin veya geçmiş tasarımlarınıza erişin.",
+      "email-label": "Email",
+      "email-description": "Giriş yapmanız için size bir bağlantı yollayacağız. Parola gerekli değildir.",
+      "email-invalid": "Hmm! Girdiğiniz email adresi geçerli gözükmüyor. Lütfen tekrar deneyin.",
+      "social-heading": "ya da",
+      "button": {
+        "email": "Email ile devam et",
+        "twitter": "Twitter ile devam et",
+        "google": "Google ile devam et",
+        "facebook": "Facebook ile devam et"
+      },
+      "tos": "Bu tuşlara tıklayarak, {tosLink} ve {privacyLink}'yi kabul ediyorum.",
+      "tos-link-label": "kullanım şartları",
+      "privacy-link-label": "gizlilik politikası",
+      "loading-message": "Oturumunuz açılıyor...",
+      "sent-message-with-email": "{email}adresine bir e-posta yolladık.  Oradaki talimatları izleyerek kaydınıza devam edin!",
+      "email-unreceived": "Size ulaşmadı mı?",
+      "resend-email": "E-postayı yeniden gönder"
+    },
+    "whatsnew": {
+      "heading": "Streetmix'te yeni neler var?",
+      "english-only": ""
+    },
+    "newsletter": {
+      "heading": "Haber bültenimize kayıt ol",
+      "description": "",
+      "email-label": "",
+      "field-required-error": "",
+      "subscribe": "",
+      "subscribe-pending": "",
+      "ok-message": "",
+      "error-message": ""
+    }
+  },
+  "tools": {
+    "tooltip": "Araçları karıştır",
+    "skybox": {
+      "tooltip": "",
+      "heading": "Çevre",
+      "sky": {
+        "heading": ""
+      },
+      "weather": {
+        "heading": "",
+        "clear": "",
+        "rain": "",
+        "snow": ""
+      }
+    },
+    "flooding": {
+      "tooltip": "",
+      "heading": "",
+      "sea-level": {
+        "label": "",
+        "current": ""
+      },
+      "storm-surge": {
+        "label": ""
+      },
+      "messages": {
+        "start": "",
+        "need-waterfront": "",
+        "success": "",
+        "fail": ""
+      }
+    }
+  },
+  "prompt": {
+    "new-street": "Yeni sokak ismi:",
+    "delete-street": "{streetName}adlı sokağı kalıcı olarak silmek istediğinize emin misiniz? Bu hareket geri alınamaz.",
+    "new-width": "Yeni sokak genişliği ({minWidth}'den {maxWidth}'):",
+    "segment-label": "Yeni kısım etiketi:"
+  },
+  "toast": {
+    "segment-deleted": "Bu kısım kaldırıldı.",
+    "all-segments-deleted": "Bütün kısımlar kaldırıldı.",
+    "no-undo": "Geri alınacak bir şey yok.",
+    "no-redo": "Tekrar yapılacak bir şey yok.",
+    "no-save": "Sizin kaydetmenize gerek yok; Streetmix otomatik olarak sokağınızı kaydetmektedir!",
+    "remixing": "Şu anda orjinal sokağınızın kopyası üzerinde çalışmaktasınız. Bu kopya galerinize eklenmiştir.",
+    "remixing-sign-in": "Şu anda orjinal sokağınızın kopyası üzerinde çalışmaktasınız. Kendi galerinizi oluşturmak için oturum açın.",
+    "reloaded": "Sokağınız başka bir yerde değiştirildiği için server üzerinden yeniden yüklenmiştir."
+  },
+  "palette": {
+    "remove": "Kaldırmak için buraya sürükleyin"
+  },
+  "width": {
+    "label": "{width} genişlik",
+    "under": "({width} daha yer var)",
+    "over": "({width} fazla)",
+    "occupied": "Kullanılan genişlik",
+    "building": "Binadan binaya genişlik",
+    "different": "Farklı genişlik...",
+    "units": "Birimler",
+    "metric": "",
+    "imperial": ""
+  },
+  "capacity": {
+    "ppl-per-hour": "{capacity} kişi/saat"
+  },
+  "datetime": {
+    "minutes-ago": "Birkaç dakika önce",
+    "seconds-ago": "Birkaç saniye önce",
+    "yesterday": "Dün {time}",
+    "today": "Bugün {time}"
+  },
+  "key": {
+    "backspace": "Geri tuşu",
+    "shift": "Shift",
+    "plus": "Artı",
+    "minus": "Eksi",
+    "left-arrow": "Sol ok",
+    "right-arrow": "Sağ ok"
+  },
+  "tooltip": {
+    "remove-segment": "Kısmı kaldırın",
+    "delete-street": "Sokağı sil",
+    "segment-width": "Bölümün genişliğini değiştir",
+    "building-height": "Kat adedini değiştir",
+    "street-width": "Sokağın genişliğini değiştir",
+    "geotag": "",
+    "increase-width": "Genişliği arttır",
+    "decrease-width": "Genişliği azalt",
+    "width-tooltip-sublabel": "(daha hassas ayar için Shift tuşuna basılı tutun)",
+    "add-floor": "Kat ekle",
+    "remove-floor": "Kat eksilt",
+    "scroll-street-left": "Sokağı sola kaydır",
+    "scroll-street-right": "Sokağı sağa kaydır",
+    "scroll-left": "Sola kaydır",
+    "scroll-right": "Sağa kaydır",
+    "elevation-sidewalk": "Kaldırım seviyesi",
+    "elevation-road": "Yol seviyesi",
+    "elevation-input": "",
+    "elevation-lower": "",
+    "elevation-raise": "",
+    "ground-height-input": "",
+    "ground-height-lower": "",
+    "ground-height-raise": "",
+    "sea-level-input": "",
+    "sea-level-lower": "",
+    "sea-level-raise": ""
+  },
+  "street": {
+    "default-name": "İsimsiz Sk.",
+    "rename": "Yeniden adlandırmak için tıklayın"
+  },
+  "building": {
+    "label": "",
+    "floors-count": "{count, plural, one {kat} other {# kat}}"
+  },
+  "segments": {
+    "warnings": {
+      "does-not-fit": "Bu kısım sokağa sığmıyor.",
+      "not-wide": "Bu kısmın genişliği yeterli olmayabilir.",
+      "too-wide": "Bu kısım fazla geniş olabilir.",
+      "dangerous": "",
+      "slope-exceeded": ""
+    },
+    "learn-more": "Daha fazla öğren",
+    "unknown": {
+      "label": "Bilinmeyen"
+    },
+    "description": {
+      "photo-credit": "Foto:"
+    },
+    "resize": {
+      "min": "En az",
+      "max": "En çok"
+    },
+    "controls": {
+      "width": "",
+      "ground-height": "",
+      "sea-level": "",
+      "elevation": "",
+      "slope": {
+        "label": "",
+        "switch-tooltip": "",
+        "disabled-tooltip": ""
+      }
+    }
+  },
+  "section": {
+    "empty": "Boş alan"
+  },
+  "gallery": {
+    "fail": "Galeriyi yüklerken sorun yaşandı.",
+    "all": "Bütün sokaklar",
+    "twitter-link": "Twitter profili",
+    "delete-street-tooltip": "Sokağı sil",
+    "street-count": "{count, plural, one {sokak} other {sokak}}",
+    "no-streets": "Henüz sokak yok",
+    "thumbnail-error": "Önizleme resmi yüklenemiyor."
+  },
+  "users": {
+    "anonymous": "Anonim",
+    "byline": "{user}tarafından",
+    "roles": {
+      "admin": "",
+      "subscriber": ""
+    }
+  },
+  "export": {
+    "watermark": "{streetmixWordmark}ile yapılmıştır."
+  },
+  "meta": {
+    "description": "Mahallenizdeki sokağı ekranınızda tasarlayın, remixleyin ve paylaşın! Ağaçlar ve bisikletler eklyin, kaldırımları veya şeritleri genişletin ve aldığınız kararların mahallede nasıl bir etki yarattığını öğrenin.",
+    "page-title": "{streetName}({author} tarafından) "
+  },
+  "credits": {
+    "core-team-heading": "Proje ekibi",
+    "original-team-heading": "",
+    "past-team-heading": "Eski ekip üyeleri",
+    "core-contributors": "",
+    "advisors": "Danışmanlar",
+    "additional-illustrations": "Ek ilüstrasyonlar",
+    "additional-code": "Ek kod",
+    "additional-contributors": "Ek katkıda bulunanlar",
+    "special-thanks": "Teşekkürler",
+    "translators": "Tercüme edenler"
+  },
+  "plus": {
+    "locked": {
+      "label": "",
+      "soon": "",
+      "sub": "",
+      "sub-edit": "",
+      "user": "Kullanmak için oturum açın!",
+      "action": ""
+    },
+    "prompt": {
+      "text": "",
+      "action": ""
+    },
+    "web-monetization": {
+      "thanks": "",
+      "not-signed-in": "",
+      "signed-in": "",
+      "learn-more": "Daha fazla öğren"
+    }
+  },
+  "sentiment": {
+    "prompt": {
+      "intro": "<strong>Araya girdiğimiz için kusura bakmayın.</strong> Bu sokakla ilgili ne düşündüğünüzü duymak isteriz.",
+      "joyful": "Bu sokak sizce <em>keyifli</em>mi?",
+      "choose-one": "(birini seçin)"
+    },
+    "answer": {
+      "rating-1": "Kesinlikle hayır",
+      "rating-2": "Çok öyle değil",
+      "rating-3": "Şöyle böyle",
+      "rating-4": "Birazcık",
+      "rating-5": "Çok fazla"
+    },
+    "sign-in-prompt": "Sesinizi duyurmak için şimdi oturum açın.",
+    "about-link": "Neden bunu görüyorum?",
+    "about-text": "Bu anket insanların sokaklar hakkında ne hissetiğini anlamamıza yardımcı oluyor.",
+    "thank-you": "Teşekkürler!",
+    "about-header": "İnsanların sokaklar hakkında ne hissettiğini anlamak istiyoruz",
+    "about-article": {
+      "paragraph-1": "Bir çok sokak mühendisler tarafından tasarlanmaktadır ancak biz tasarımda herkesin görüşünün alınması gerektiğine inanıyoruz.<a>New Urban Mobility Alliance</a>(NUMO), olarak tek sorulu bir anketle bunu yapmaya çalışıyoruz.",
+      "paragraph-2": "Cevaplarınızı inceleyerek hangi sokak özelliklerinin hangi hisleri tetiklediğini anlamaya çalışacağız. İleride, bu fikirleri tasarım tavsiyesi olarak Streetmix kullanıcıları ile paylaşmayı planlıyoruz.",
+      "paragraph-3": "Bir sokak için sadece bir kere oy verebilirsiniz ancak başkalarının oy vermesi için kendi veya herhangi bir sokağı <a>https://streetmix.net/survey/</a> bağlantısı aracılığıyla paylaşabilirsiniz."
+    },
+    "done": {
+      "response": "{score}olarak cevap verdiniz.",
+      "vote-another": "Başka bir tane oylayın!",
+      "really-done": "Her şey tamam!"
+    },
+    "comment": {
+      "prompt": "Neden olduğunu söyleyin:",
+      "example": "(mesela, “Ağaçları sevdim.”)",
+      "submit": "Yolla",
+      "thanks": "Anladım!"
+    }
+  },
+  "i18n": {
+    "lang": {
+      "am": "",
+      "ar": "Arapça",
+      "ca": "Katalanca",
+      "cs": "Çekçe",
+      "de": "Almanca",
+      "en": "İngilizce",
+      "en-gb": "",
+      "es": "İspanyolca",
+      "es-419": "İspanyolca (Latin Amerika)",
+      "es-es": "",
+      "es-mx": "İspanyolca (Meksika) ",
+      "fi": "Fince",
+      "fr": "Fransızca",
+      "id": "",
+      "it": "İtalyanca",
+      "ja": "Japonca",
+      "ko": "Korece",
+      "nb-no": "",
+      "nl-nl": "Hollandaca (Hollanda)",
+      "pl": "Lehçe",
+      "pt-br": "Portekizce (Brezilya)",
+      "ro-ro": "Romence",
+      "ru": "Rusça",
+      "sv": "İsveççe",
+      "tr": "Türkçe",
+      "zh": "Çince",
+      "zh-hans": "Basitleştirilmiş Çince",
+      "zh-hant": "Geleneksel Çince"
+    }
+  }
+}

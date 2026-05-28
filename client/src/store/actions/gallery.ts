@@ -1,0 +1,72 @@
+import { createAsyncThunk } from '@reduxjs/toolkit'
+
+import { ERRORS, showError } from '../../app/errors'
+import { onWindowFocus } from '../../app/event_handlers/focus'
+import { MODES, getMode, setMode } from '../../app/mode'
+import { updatePageUrl } from '../../app/page_url'
+import { fetchGalleryData } from '../../gallery/index'
+
+import type { RootState } from '../index'
+
+export const openGallery = createAsyncThunk(
+  'gallery/openGallery',
+  async ({ userId }: { userId: string | null }, { rejectWithValue }) => {
+    updatePageUrl(true, userId)
+
+    // TODO: Handle modes better.
+    if (
+      getMode() === MODES.USER_GALLERY ||
+      getMode() === MODES.GLOBAL_GALLERY
+    ) {
+      // Prevents showing old street before the proper street loads
+      showError(ERRORS.NO_STREET, false)
+    }
+
+    // Fetch data and catch errors if fetch goes wrong
+    try {
+      const streets = await fetchGalleryData(userId ?? '')
+      return { streets }
+    } catch (error: unknown) {
+      // If the server error is 404, special rejection value
+      // to display a "not-found" screen without the gallery
+      if (error.response?.status === 404) {
+        return rejectWithValue({
+          killGallery: true,
+        })
+      }
+
+      // Re-throw original error for normal rejection
+      throw error
+    }
+  }
+)
+
+export const closeGallery = createAsyncThunk<
+  { instant: boolean },
+  { instant?: boolean } | undefined,
+  { state: RootState }
+>(
+  'gallery/closeGallery',
+  async ({ instant = false } = {}, { getState }) => {
+    const state = getState()
+
+    if (!state.errors.abortEverything) {
+      updatePageUrl()
+    }
+
+    onWindowFocus()
+    setMode(MODES.CONTINUE)
+
+    return { instant }
+  },
+  {
+    condition: (arg, { getState }) => {
+      const { visible } = getState().gallery
+
+      // If gallery isn't visible, don't dispatch again
+      if (!visible) {
+        return false
+      }
+    },
+  }
+)

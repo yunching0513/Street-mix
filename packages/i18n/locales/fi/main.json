@@ -1,0 +1,588 @@
+{
+  "menu": {
+    "item": {
+      "help": "Ohje",
+      "about": "Tietoja Streetmixistä…",
+      "whatsnew": "Uudet ominaisuudet",
+      "contact": "Ota yhteyttä",
+      "community": "Yhteisö",
+      "sign-in": "Kirjaudu sisään",
+      "sign-out": "Kirjaudu ulos",
+      "new-street": "Uusi katu",
+      "my-streets": "Omat kadut",
+      "settings": "Asetukset",
+      "share": "Jaa",
+      "store": "Kauppa",
+      "upgrade": "Päivitä",
+      "streetmix-plus": "Hanki Streetmix+"
+    },
+    "help": {
+      "guidebook-link": "Käyttöopas",
+      "keyboard-label": "Pikanäppäimet:",
+      "remove-instruction": "Poista osoittimen alla oleva elementti",
+      "remove-shift-instruction": "(poista kaikki pitämällä {shiftKey} pohjassa)",
+      "move-instruction": "Siirry kadulla",
+      "move-shift-instruction": "(hyppää reunaan pitämällä {shiftKey} pohjassa)",
+      "change-instruction": "Muuta osoittimen alla olevan elementin leveyttä",
+      "change-shift-instruction": "(lisää tarkkuutta pitämällä {shiftKey} pohjassa)"
+    },
+    "share": {
+      "sign-in-twitter-link": "Kirjaudu sisään",
+      "sign-in-link": "{signInLink} saat käyttöön kätevämmät jakolinkit ja omien katujen kirjaston.",
+      "link": "Jaa kopioimalla ja liittämällä tämä linkki:",
+      "copy-to-clipboard": "Kopioi leikepöydälle",
+      "copy-success": "",
+      "twitter": "Jaa Twitterissä",
+      "facebook": "Jaa Facebookissa",
+      "mastodon": "Jaa Mastodonissa",
+      "3dstreet": "Avaa 3DStreetissä",
+      "print": "Tulosta…",
+      "save": "Tallenna kuvana…",
+      "save-byline": "Blogiin, liitteeksi raporttiin...",
+      "messages": {
+        "my-street": "Tutustu tekemääni katuun {streetName} Streetmix-palvelussa!",
+        "my-street-unnamed": "Tutustu tekemääni katuun Streetmix-palvelussa!",
+        "someone-elses-street": "Tutustu käyttäjän {streetCreator} tekemään katuun {streetName} Streetmix-palvelussa!",
+        "someone-elses-street-unnamed": "Tutustu tähän käyttäjän {streetCreator} tekemään katuun Streetmix-palvelussa!",
+        "anonymous-creator-street": "Tutustu katuun {streetName} Streetmix-palvelussa!",
+        "anonymous-creator-street-unnamed": "Tutustu tähän katuun Streetmixissä!"
+      }
+    },
+    "contact": {
+      "forums": "Osallistu keskusteluun",
+      "email": "Lähetä sähköpostia Streetmix-kehittäjille",
+      "github": "Näytä lähdekoodi GitHub-palvelussa",
+      "blog": "Vieraile Streetmix-blogissa",
+      "discord": "Liity Discord-keskusteluun",
+      "slack": "Liity Slack-keskusteluun",
+      "newsletter": "Tilaa uutiskirje"
+    },
+    "feedback": {
+      "prompt": "Lähetä meille palautetta:",
+      "message-placeholder": "Mitä mieltä olet Streetmixistä?",
+      "email-placeholder": "Sähköpostiosoite (vapaaehtoinen)",
+      "send": "Lähetä viesti",
+      "confirm": "Perille tuli. Kiitos!",
+      "error": "Pahoittelut, viestin lähetys ei nyt onnistunut. Yritäthän myöhemmin uudelleen."
+    },
+    "sign-in": {
+      "twitter": "Kirjaudu Twitter-tunnuksella"
+    },
+    "new-street": {
+      "default": "Uusi esimerkkikatu",
+      "empty": "Uusi tyhjä katu",
+      "copy": "Kopioi katupohja",
+      "template": "Uusi mallikatu...",
+      "sign-in-link": "{signInLink} voit hyödyntää esimerkkikatuja."
+    }
+  },
+  "settings": {
+    "heading": "Asetukset",
+    "info-tooltip": "Kuvaus",
+    "general": {
+      "label": "Yleiset"
+    },
+    "appearance": {
+      "label": "Ulkoasu"
+    },
+    "language": {
+      "label": "Kieli"
+    },
+    "profile": {
+      "label": "Profiili",
+      "username": "Käyttäjänimi",
+      "username-description": "Käyttäjänimi on yksilöllinen ja käyttäjätunnuskohtainen.",
+      "display-name": "Näytettävä nimi",
+      "display-name-description": "Näytettävä nimi näkyy muille Streetmixin käyttäjille.",
+      "display-name-not-set": "Näytettävää nimeä ei ole vielä määritetty.",
+      "display-name-error": "Näytettävän nimen määrittäminen epäonnistui.",
+      "display-name-characters-remaining": "{currentNum}/{maxNum} merkkiä jäljellä"
+    },
+    "misc": {
+      "label": "Sekalaiset",
+      "silly-clowns": "Typerät pellet",
+      "silly-clowns-description": "Pääsiäismunat käyttöön."
+    },
+    "theme": {
+      "label": "Teema",
+      "description": "Käyttöliittymän värimaailma",
+      "light": "Vaalea teema",
+      "dark": "Tumma Teema",
+      "system": "Käyttöjärjestelmäasetus"
+    },
+    "units": {
+      "label": "Mittayksikkö",
+      "metric": "Metrinen (metrit)",
+      "imperial": "Yhdysvaltalainen/brittiläinen (jalat ja tuumat)"
+    }
+  },
+  "msg": {
+    "loading": "Ladataan…",
+    "remixing": "Muokataan…",
+    "having-trouble": "Pulassa ollaan…",
+    "no-street": "Katua ei ole valittu.",
+    "trouble-loading": "Streetmixin lataaminen ei nyt onnistu.",
+    "slow-connection-1": "Internet-yhteyden muodostaminen epäonnistui.",
+    "slow-connection-2": "Ongelma voi korjautua sivu päivittämällä, mutta huomaa, että viimeisimmät katuun tehdyt muutokset saatetaan menettää. Pahoittelut!",
+    "no-connection": "Streetmix ei pystynyt muodostamaan Internet-yhteyttä.",
+    "more-info": "Lisätietoja"
+  },
+  "error": {
+    "button": {
+      "home": "Siirry aloitussivulle",
+      "sign-in": "Kirjaudu sisään uudelleen",
+      "reload": "Lataa sivu uudelleen",
+      "return": "Takaisin Streetmixiin",
+      "try-again": "Yritä uudelleen"
+    },
+    "page-not-found-title": "Sivua ei löydy.",
+    "page-not-found-description": "Voi pojat, tässä osoitteessa ei ole mitään sisältöä!",
+    "street-not-found-title": "Katua ei löydy.",
+    "street-not-found-description": "Voi pojat, tämä linkki ei johtanut mihinkään!",
+    "street-not-found-but-user-description": "Tämä linkin takaa ei löydy mitään katua, mutta voit selailla muita käyttäjän {user} katuja",
+    "street-deleted-title": "Tämä katu on poistettu.",
+    "street-deleted-description": "Tämä linkin takaa ei enää löydy katua, mutta voit selailla muita käyttäjän {user} katuja",
+    "sign-out-title": "Olet nyt kirjautunut ulos.",
+    "reload-sign-out-title": "Kirjauduit ulos toisessa ikkunassa.",
+    "gallery-street-failure-description": "Kadun lataaminen ei onnistu.",
+    "reload-sign-in-title": "Kirjauduit sisään toisessa ikkunassa.",
+    "please-reload": "Palaa takaisin Streetmixiin päivittämällä sivu.",
+    "survey-finished": "Kysely on päättynyt. Kiitos avustasi!",
+    "street-deleted-elsewhere-title": "Katu on poistettu muualla.",
+    "street-deleted-elsewhere-description": "Katu on poistettu toisessa selaimessa.",
+    "auth-expired": "Sinut kirjattu automaattisesti ulos toimettomuuden vuoksi.",
+    "sign-in-again": "Kirjaudu sisään uudelleen.",
+    "access-denied-title": "Et ole kirjautunut sisään.",
+    "access-denied-description": "Sisäänkirjautuminen keskeytyi.",
+    "auth-api-problem-title": "Sisäänkirjautuminen epäonnistui.",
+    "auth-api-problem-description": "Tunnistautuminen epäonnistui.",
+    "please-try-again": "Yritä myöhemmin uudelleen ja tarvittaessa tee vikailmoitus <email_link>sähköpostitse</email_link> tai <tweet_link>Twitterissä</tweet_link>.",
+    "please-try-again-contact-us": "Yritä myöhemmin uudelleen. <a>Ota tarvittaessa yhteyttä</a>.",
+    "unsupported-browser-title": "Streetmix ei toimi tässä selaimessa.",
+    "unsupported-browser-description": "Pahoittelut! Suosittelemme kokeilemaan <chrome_link>Chromea</chrome_link>, <firefox_link>Firefoxia</firefox_link>, <edge_link>Microsoft Edgeä</edge_link> tai Safaria.",
+    "unsupported-browser-internet-explorer": "Käytätkö Internet Exploreria? <a>Lue lisätietoja.</a>",
+    "unsupported-browser-contact-us": "Jos selaimen pitäisi täyttää vähimmäisvaatimukset, <a>ota yhteyttä</a>.",
+    "generic-error-title": "Jokin meni vikaan.",
+    "generic-error-description": "Pahoittelut – jokin meni vikaan.",
+    "error-code": "(Virhe {code}.)",
+    "need-help-link": "Tarvitsetko apua?"
+  },
+  "btn": {
+    "reload": "Päivitä",
+    "undo": "Kumoa",
+    "redo": "Tee uudelleen",
+    "try-again": "Yritä uudelleen",
+    "cancel": "Peruuta",
+    "create": "Luo uusi katu",
+    "copy": "Kopioi katupohja",
+    "remove": "Poista",
+    "close": "Sulje",
+    "dismiss": "Ohita",
+    "okay": "Selvä!",
+    "not-now": "Ei nyt",
+    "save": "Tallenna",
+    "edit": "Muokkaa"
+  },
+  "dialogs": {
+    "error": {
+      "heading": "Oho!",
+      "text": "Jotakin odottamatonta tapahtui 😢. Virheilmoitus on tallennettu automaattisesti, mutta <a>voit myös kertoa siitä meille</a>. Kokeile hetken kuluttua uudelleen."
+    },
+    "welcome": {
+      "heading": "Tervetuloa, tämä on Streetmix.",
+      "new": {
+        "intro": "Suunnittele, muokkaa ja jaa kotikatusi. Lisää kadullesi kaikkea puista pyöräteihin tai levennä katusi jalkakäytäviä ja ajoratoja. Samalla näet, miten muutokset vaikuttavat liikenteeseen.",
+        "instruction": "Aloita muokkaaminen siirtelemällä elementtejä.",
+        "instruct": "Aloita siirtelemällä elementtejä {pointer}.",
+        "instruct-pointer-finger": "sormella",
+        "instruct-pointer-mouse": "hiirellä"
+      },
+      "existing": {
+        "intro": "Tämä on käyttäjän {creator} suunnittelema katu {streetName}.",
+        "intro-without-creator": "Tämä on {streetName}.",
+        "instruct": "Suunnittele se uudelleen siirtelemällä elementtejä tai {startYourOwnStreet}.",
+        "instruct-start-own-street": "Luo oma katusi"
+      }
+    },
+    "new-street": {
+      "heading": "Tämä on uusi katusi.",
+      "default": "Aloita valmiilla esimerkkikadulla",
+      "empty": "Aloita tyhjästä",
+      "last": "Aloita viimeisimmän kadun pohjalta",
+      "dismiss": "Aloitetaan!"
+    },
+    "about": {
+      "heading": "Tietoja Streetmixistä.",
+      "description": "Suunnittele, muokkaa ja jaa kotikatusi. Lisää kadullesi kaikkea puista pyöräteihin tai levennä katusi jalkakäytäviä ja ajoratoja. Samalla näet, miten muutokset vaikuttavat liikenteeseen.",
+      "team-heading": "Kehitysryhmä ja ylläpitäjät",
+      "partners": "Yhteistyössä",
+      "sponsors": "Sponsorit",
+      "sponsored-by": "Streetmixin avokätiset sponsorit:",
+      "donate-link": "Tue meitä taloudellisesti",
+      "tos-link": "Käyttöehdot",
+      "privacy-link": "Tietosuojakäytäntö",
+      "acknowledgements": "Kiitokset",
+      "font-designed-by": "{fontName}-kirjasimen suunnittelijalle {fontAuthor}.",
+      "emoji-by": "Hymiöiden suunnittelijalle {author}.",
+      "icons-by": "Kuvakkeiden suunnittelijalle {author}.",
+      "license-label": "(<a>Lisenssi</a>)"
+    },
+    "analytics": {
+      "export-csv": "Vie CSV-tiedostoon",
+      "heading": "Analyysi",
+      "street-summary": "Kadun arvioitu liikenne on {averageTotal} kulkijaa tunnissa ja käyttäjäpotentiaali {potentialTotal} kulkijaa tunnissa.",
+      "typical-lane-width": "Kapasiteettiarvio perustuu {laneWidth} levyisiin kaistoihin.",
+      "segment-summary": "{average} — {potential} ihmistä tunnissa",
+      "segment-summary-single": "{amount} ihmistä tunnissa",
+      "source": "Lähde",
+      "capacity-data-source": "Kapasiteettiarvion lähde",
+      "toggle-visible": "Näytä kapasiteetti elementtien yhteydessä",
+      "settings-notice": "Tienpitäjä voi muuttaa asetuksia."
+    },
+    "save": {
+      "heading": "Tallenna kuvana",
+      "option-labels": "Elementtien nimet ja leveydet",
+      "option-name": "Kadunnimi",
+      "option-sky": "Läpinäkyvä taivas",
+      "option-watermark": "Streetmix-logo",
+      "option-custom-scale": "Mittakaava",
+      "option-custom-scale-description": "Lataa kuvia jopa viisi kertaa suurempina.",
+      "loading": "Ladataan…",
+      "save-button": "Tallenna tietokoneelle…",
+      "license": "Tätä Streetmixillä luotua kuvaa saa käyttää missä tahansa mihin tahansa tarkoitukseen {licenseLink} -lisenssin ehtojen mukaisesti.",
+      "error-preview": "Esikatselukuvan näyttäminen epäonnistui.",
+      "error-unavailable": "Tallentaminen kuvana ei ole mahdollista tässä selaimessa.",
+      "error-too-large": "Kuva on liian suuri, yritä uudelleen pienemmällä kuvalla.",
+      "preview-image-alt": "Esikatselu",
+      "print-size": "Koko tulostettuna",
+      "digital-size": "Koko näytöllä",
+      "weather-not-exported": "Säätehosteet eivät sisälly vietävään versioon."
+    },
+    "geotag": {
+      "search": "Etsi sijaintia",
+      "clear-search": "Tyhjennä haku",
+      "zoom-in": "Lähennä",
+      "zoom-out": "Loitonna",
+      "add-location": "Lisää sijainti",
+      "confirm-location": "Vahvista sijainti",
+      "clear-location": "Poista sijainti",
+      "unknown-location": "Tuntematon sijainti",
+      "geotag-unavailable": "Sijaintipalvelut eivät ole käytettävissä. Voit tarkastella karttaa, mutta et vaihtaa kadun sijaintia."
+    },
+    "donate": {
+      "heading": "Tarvitsemme apuasi!",
+      "lede": "Streetmix perustuu vapaaehtoisten yhteisön tekemään työhön. Muista \"ilmaisista\" verkkosivustoista poiketen emme näytä mainoksia tai tallenna yksityisyyttäsi rikkovia evästeitä tietokoneellesi. Sen sijaan olemme riippuvaisia käyttäjiemme tuesta Streetmixin kehittämiseen.",
+      "text": "Halutessasi voit tukea meitä kertaluontoisella tai kestolahjoituksella, joita käytetään palvelinkapasiteetin ylläpitämiseen, jotta voittoa tavoittelemattomat tahot voisivat osallistua liikenteen kehittämiseen. Tästä ylijäävän osuuden käytämme uusien ominaisuuksien kehittämiseen. Tilikirjamme ovat täysin julkisia, joten voit tarkistaa, miten Streetmix-kehitysryhmä on käyttänyt juuri sinun lahjoituksesi.",
+      "button": "Lahjoita Streetmixille",
+      "cancel": "Ei kiitos"
+    },
+    "sign-in": {
+      "heading": "Kirjaudu/rekisteröidy",
+      "description": "Tallenna ensimmäinen työsi tai näytä aiemmat suunnittelutyöt kirjautumalla sisään",
+      "email-label": "Sähköpostiosoite",
+      "email-description": "Saat sähköpostitse sisäänkirjautumislinkin, salasanaa ei tarvita.",
+      "email-invalid": "Hups! Tuo ei kyllä ollut sähköpostiosoite, yritä uudelleen.",
+      "social-heading": "tai",
+      "button": {
+        "email": "Jatka sähköpostiosoitteella",
+        "twitter": "Jatka Twitter-tunnuksella",
+        "google": "Jatka Google-tunnuksella",
+        "facebook": "Jatka Facebook-tunnuksella"
+      },
+      "tos": "Jatkamalla hyväksyn {tosLink} ja {privacyLink}.",
+      "tos-link-label": "käyttöehdot",
+      "privacy-link-label": "tietosuojakäytännön",
+      "loading-message": "Kirjaudutaan sisään...",
+      "sent-message-with-email": "Olet saanut sähköpostia osoitteeseen {email}. Jatka kirjautumista seuraamalla viestin ohjeita.",
+      "email-unreceived": "Eikö viesti tullut perille?",
+      "resend-email": "Lähetä uudelleen"
+    },
+    "whatsnew": {
+      "heading": "Streetmixin uudet ominaisuudet",
+      "english-only": "Sisältö on saatavilla vain englanniksi."
+    },
+    "newsletter": {
+      "heading": "Tilaa uutiskirje",
+      "description": "Sähköpostitse joitakin kertoja vuodessa lähetettävällä uutiskirjeellä kerromme ajankohtaisista asioista. Uutiskirje on englanniksi. Tilaamalla uutiskirjeen pysyt ajan tasalla!",
+      "email-label": "Kirjoita sähköpostiosoite",
+      "field-required-error": "Kentän täyttäminen vaaditaan",
+      "subscribe": "Tilaa",
+      "subscribe-pending": "Pieni hetki...",
+      "ok-message": "<strong>Kiitos tilauksesta, vielä yksi vaihe!</strong>Napsauta sähköpostiisi lähetetyn viestin vahvistuslinkkiä.",
+      "error-message": "Oho! Uutiskirjeen tilaaminen epäonnistui väliaikaisen järjestelmävirheen takia. Yritäthän myöhemmin uudelleen."
+    }
+  },
+  "tools": {
+    "tooltip": "Muuta asetuksia",
+    "skybox": {
+      "tooltip": "Ympäristömuokkain",
+      "heading": "Ympäristö",
+      "sky": {
+        "heading": ""
+      },
+      "weather": {
+        "heading": "Sää",
+        "clear": "Selkeä",
+        "rain": "Sade",
+        "snow": "Lumisade"
+      }
+    },
+    "flooding": {
+      "tooltip": "",
+      "heading": "",
+      "sea-level": {
+        "label": "",
+        "current": ""
+      },
+      "storm-surge": {
+        "label": ""
+      },
+      "messages": {
+        "start": "",
+        "need-waterfront": "",
+        "success": "",
+        "fail": ""
+      }
+    }
+  },
+  "prompt": {
+    "new-street": "Kadun uusi nimi:",
+    "delete-street": "Poistetaanko {streetName} pysyvästi?",
+    "new-width": "Uusi kadunleveys ({minWidth}-{maxWidth}):",
+    "segment-label": "Uuden elementin nimi:"
+  },
+  "toast": {
+    "segment-deleted": "Elementti poistettiin.",
+    "all-segments-deleted": "Kaikki elementit poistettiin.",
+    "no-undo": "Ei toimintohistoriaa.",
+    "no-redo": "Ei toimintohistoriaa.",
+    "no-save": "Ei Tallenna-painiketta: Streetmix tallentaa muutokset automaattisesti!",
+    "remixing": "Tämä on uunituore kopio alkuperäisestä kadusta, joka löytyy nyt galleriasta.",
+    "remixing-sign-in": "Tämä on uunituore kopio alkuperäisestä kadusta. Kirjaudu sisään, jotta voit tallentaa katuja galleriaan.",
+    "reloaded": "Katu ladattiin uudelleen, sillä sitä muokattiin samanaikaisesti jossain muualla."
+  },
+  "palette": {
+    "remove": "Poista vetämällä tähän"
+  },
+  "width": {
+    "label": "{width} leveä",
+    "under": "({width} käytettävissä)",
+    "over": "({width} ylitetty)",
+    "occupied": "Nykyinen leveys",
+    "building": "Rakennusten välinen leveys",
+    "different": "Muu leveys…",
+    "units": "Mittayksikkö",
+    "metric": "Metrinen",
+    "imperial": "Yhdysvaltalainen/brittiläinen"
+  },
+  "capacity": {
+    "ppl-per-hour": "{capacity} kulkijaa/t"
+  },
+  "datetime": {
+    "minutes-ago": "Muutama minuutti sitten",
+    "seconds-ago": "Muutama sekunti sitten",
+    "yesterday": "Eilen kello {time}",
+    "today": "Tänään kello {time}"
+  },
+  "key": {
+    "backspace": "Askelpalautin",
+    "shift": "Shift",
+    "plus": "Plus",
+    "minus": "Miinus",
+    "left-arrow": "Nuoli vasemmalle",
+    "right-arrow": "Nuoli oikealle"
+  },
+  "tooltip": {
+    "remove-segment": "Poista elementti",
+    "delete-street": "Poista katu",
+    "segment-width": "Muuta elementin leveyttä",
+    "building-height": "Muuta kerroslukua",
+    "street-width": "Muuta kadun leveyttä",
+    "geotag": "Vaihda sijainti",
+    "increase-width": "Levennä",
+    "decrease-width": "Kavenna",
+    "width-tooltip-sublabel": "(tarkempi ote pitämällä Shiftiä pohjassa)",
+    "add-floor": "Lisää kerros",
+    "remove-floor": "Poista kerros",
+    "scroll-street-left": "Vieritä katua vasemmalle",
+    "scroll-street-right": "Vieritä katua oikealle",
+    "scroll-left": "Vieritä vasemmalle",
+    "scroll-right": "Vieritä oikealle",
+    "elevation-sidewalk": "Jalkakäytävän taso",
+    "elevation-road": "Katutaso",
+    "elevation-input": "Muuta korkeusasemaa",
+    "elevation-lower": "Matala",
+    "elevation-raise": "Korkea",
+    "ground-height-input": "",
+    "ground-height-lower": "",
+    "ground-height-raise": "",
+    "sea-level-input": "",
+    "sea-level-lower": "",
+    "sea-level-raise": ""
+  },
+  "street": {
+    "default-name": "Nimetön katu",
+    "rename": "Nimeä uudelleen napsauttamalla"
+  },
+  "building": {
+    "label": "Rakennuksen korkeus",
+    "floors-count": "{count, plural, one {# kerros} other {# kerrosta}}"
+  },
+  "segments": {
+    "warnings": {
+      "does-not-fit": "Elementti ei mahdu kadulle.",
+      "not-wide": "Toiminnallisesti liian kapea",
+      "too-wide": "Toiminnallisesti liian leveä",
+      "dangerous": "Vaarallinen ratkaisu",
+      "slope-exceeded": "Liian jyrkkä"
+    },
+    "learn-more": "Lue lisää",
+    "unknown": {
+      "label": "Ei tiedossa"
+    },
+    "description": {
+      "photo-credit": "Kuva: "
+    },
+    "resize": {
+      "min": "Min",
+      "max": "Max"
+    },
+    "controls": {
+      "width": "Leveys",
+      "ground-height": "",
+      "sea-level": "",
+      "elevation": "Korkeus",
+      "slope": {
+        "label": "Kaltevuus",
+        "switch-tooltip": "Vaihda kaltevuutta",
+        "disabled-tooltip": "Elementin kaltevuutta ei voi muuttaa."
+      }
+    }
+  },
+  "section": {
+    "empty": "Käyttämätöntä tilaa"
+  },
+  "gallery": {
+    "fail": "Gallerian lataaminen epäonnistui.",
+    "all": "Kaikki kadut",
+    "twitter-link": "Twitter-profiili",
+    "delete-street-tooltip": "Poista katu",
+    "street-count": "{count, plural, one {# katu} other {# katua}}",
+    "no-streets": "Ei luotuja katuja",
+    "thumbnail-error": "Pienoiskuva ei ole saatavilla."
+  },
+  "users": {
+    "anonymous": "Tuntematon",
+    "byline": "käyttäjältä {user}",
+    "roles": {
+      "admin": "Ylläpitäjä",
+      "subscriber": "Streetmix+-jäsen"
+    }
+  },
+  "export": {
+    "watermark": "{streetmixWordmark}-suunnitelma"
+  },
+  "meta": {
+    "description": "Suunnittele, muokkaa ja jaa kotikatusi verkkoselaimella! Lisää kadullesi kaikkea puista pyöräteihin tai levennä katusi jalkakäytäviä ja ajoratoja. Samalla näet, miten muutokset vaikuttavat liikenteeseen.",
+    "page-title": "{streetName} (suunnitellut {author})"
+  },
+  "credits": {
+    "core-team-heading": "Kehitysryhmä",
+    "original-team-heading": "Alkuvaiheen kehitystiimi",
+    "past-team-heading": "Entiset kehittäjät",
+    "core-contributors": "Pääkehittäjät",
+    "advisors": "Konsultit",
+    "additional-illustrations": "Graafikot",
+    "additional-code": "Ohjelmoijat",
+    "additional-contributors": "Avustajat",
+    "special-thanks": "Erityiskiitokset",
+    "translators": "Kääntäjät"
+  },
+  "plus": {
+    "locked": {
+      "label": "Lukittu",
+      "soon": "Tulossa pian",
+      "sub": "Toiminto sisältyy Streetmix+-tilaukseen",
+      "sub-edit": "Muokkaa päivittämällä Streetmix+-jäsenyyteen",
+      "user": "Vaatii sisäänkirjautumisen",
+      "action": "Hanki Streetmix+"
+    },
+    "prompt": {
+      "text": "Toiminto on vain Streetmix+-käyttäjille.",
+      "action": "Ota käyttöön tilaamalla"
+    },
+    "web-monetization": {
+      "thanks": "Kiitos tuesta!",
+      "not-signed-in": "Selain suorittaa Web Monetization -maksua. Ota Streetmix+ käyttöön nyt kirjautumalla sisään.",
+      "signed-in": "Web Monetization -tilaus sisältää kaikki Streetmix+-ominaisuudet.",
+      "learn-more": "Lue lisää"
+    }
+  },
+  "sentiment": {
+    "prompt": {
+      "intro": "<strong>Pahoittelut keskeytyksestä!</strong> Haluaisimme kuulla mielipiteesi tästä kadusta.",
+      "joyful": "Kuvailisitko tätä katua adjektiivilla <em>leikkisä</em>?",
+      "choose-one": "(Valitse vaihtoehto)"
+    },
+    "answer": {
+      "rating-1": "Ei lainkaan",
+      "rating-2": "Eipä oikeastaan",
+      "rating-3": "Niin ja näin",
+      "rating-4": "Hieman",
+      "rating-5": "Paljon"
+    },
+    "sign-in-prompt": "Anna palautetta kirjautumalla sisään.",
+    "about-link": "Miksi näen tämän?",
+    "about-text": "Selvitämme tällä kyselyllä ihmisten mielipiteitä kaduista.",
+    "thank-you": "Kiitos!",
+    "about-header": "Haluamme ymmärtää ihmisten mielipiteitä kaduista",
+    "about-article": {
+      "paragraph-1": "Katuja suunnittelee lähinnä insinöörit, mutta meidän mielestämme suunnittelussa tulisi ottaa huomioon kaikkien ihmisten tarpeet. Selvitämme ihmisten mielipiteitä pikakyselyllä yhteistyössä <a>Uudenlaisen urbaanin liikkuvuuden allianssin</a> (New Urban Mobility Alliance) kanssa.",
+      "paragraph-2": "Keräämme tietoa siitä millaisia tuntemuksia erilaiset kadun ominaisuudet herättävät. Piakkoin suunnittelemme tarjoavan vastausten pohjalta kehitettyjä suunnittelusuosituksia Streetmixin käyttäjille.",
+      "paragraph-3": "Yhtä katua kohden voi antaa yhden äänen, mutta voit pyytää muita vastaamaan kyselyyn minkä tahansa kadun kohdalla jakamalla linkin <a>https://streetmix.net/survey/</a>."
+    },
+    "done": {
+      "response": "Vastasit kohteeseen {score}",
+      "vote-another": "Äänestä muitakin katuja!",
+      "really-done": "Kaikki valmista!"
+    },
+    "comment": {
+      "prompt": "Kerro miksi:",
+      "example": "(esim. \"Pidin runsaasta puiden käytöstä\")",
+      "submit": "Lähetä",
+      "thanks": "Kiitos!"
+    }
+  },
+  "i18n": {
+    "lang": {
+      "am": "Amhara",
+      "ar": "Arabia",
+      "ca": "Katalaani",
+      "cs": "Tšekki",
+      "de": "Saksa",
+      "en": "Englanti",
+      "en-gb": "Englanti (Yhdistynyt kuningaskunta)",
+      "es": "Espanja",
+      "es-419": "Espanja (Latinalainen Amerikka)",
+      "es-es": "Espanja (Espanja)",
+      "es-mx": "Espanja (Meksiko)",
+      "fi": "Suomi",
+      "fr": "Ranska",
+      "id": "Indonesia",
+      "it": "Italia",
+      "ja": "Japani",
+      "ko": "Korea",
+      "nb-no": "Norja (kirjanorja)",
+      "nl-nl": "Hollanti (Alankomaat)",
+      "pl": "Puola",
+      "pt-br": "Portugali (Brasilia)",
+      "ro-ro": "Romania",
+      "ru": "Venäjä",
+      "sv": "Ruotsi",
+      "tr": "Turkki",
+      "zh": "Kiina",
+      "zh-hans": "Kiina (yksinkertaistettu)",
+      "zh-hant": "Kiina (perinteinen)"
+    }
+  }
+}

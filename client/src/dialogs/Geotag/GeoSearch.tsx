@@ -1,0 +1,148 @@
+import { useRef } from 'react'
+import { useIntl } from 'react-intl'
+import DownshiftPelias from 'downshift-pelias' // TODO: type definitions
+import Pelias from 'pelias-js' // TODO: type definitions
+
+import { PELIAS_HOST_NAME, PELIAS_API_KEY } from '../../app/config.js'
+import './GeoSearch.css'
+
+import type {
+  Feature,
+  FeatureCollection,
+  GeoJsonProperties,
+  Point,
+  Position,
+} from 'geojson'
+import type { Map } from 'leaflet'
+
+interface GeoSearchProps {
+  map: Map | undefined
+  handleResults: (geo: Position, properties: GeoJsonProperties) => void
+}
+
+type DownshiftPeliasGetter = (opts: unknown) => Record<string, unknown>
+interface DownshiftPeliasProps {
+  getInputProps: DownshiftPeliasGetter
+  getMenuProps: DownshiftPeliasGetter
+  getItemProps: DownshiftPeliasGetter
+  clearSelection: () => void
+  inputValue: string
+  isOpen: boolean
+  results: FeatureCollection<Point>
+}
+
+export function GeoSearch({ map, handleResults }: GeoSearchProps) {
+  const inputEl = useRef<HTMLInputElement>(null)
+  const intl = useIntl()
+
+  function handleClickClearSearch(clearSelection: () => void) {
+    clearSelection()
+    inputEl.current?.focus()
+  }
+
+  function handleChange(selection?: Feature<Point>) {
+    if (!selection) return
+
+    handleResults(
+      selection.geometry.coordinates.toReversed(),
+      selection.properties
+    )
+    inputEl.current?.focus()
+  }
+
+  function renderSuggestion(
+    item: Feature,
+    index: number,
+    inputValue: string,
+    getItemProps: DownshiftPeliasGetter
+  ) {
+    const label = item.properties?.label
+
+    // Highlight the input query
+    const regex = new RegExp(`(${inputValue})`, 'gi')
+    const parts = label.split(regex)
+    const highlighted = parts.map((part: string, index: number) => {
+      if (part.toLowerCase() === inputValue.toLowerCase()) {
+        return <strong key={index}>{part}</strong>
+      }
+      return part
+    })
+
+    const { key, ...props } = getItemProps({
+      className: 'geotag-suggestion',
+      key: item.properties?.gid,
+      index,
+      item,
+    })
+
+    return (
+      <li key={key} {...props}>
+        {highlighted}
+      </li>
+    )
+  }
+
+  const pelias = new Pelias({
+    peliasUrl: `https://${PELIAS_HOST_NAME}`,
+    apiKey: PELIAS_API_KEY,
+  })
+  const focus = map?.getCenter() ?? { lat: 0, lng: 0 }
+
+  pelias.search.setBoundaryCircle({
+    lat: focus.lat,
+    lon: focus.lng,
+    radius: 10,
+  })
+  pelias.autocomplete.setFocusPoint({ lat: focus.lat, lon: focus.lng })
+
+  return (
+    <DownshiftPelias pelias={pelias} onChange={handleChange}>
+      {({
+        getInputProps,
+        getMenuProps,
+        getItemProps,
+        clearSelection,
+        inputValue,
+        isOpen,
+        results,
+      }: DownshiftPeliasProps) => (
+        <div className="geotag-input-form">
+          <input
+            {...getInputProps({
+              className: 'geotag-input',
+              autoFocus: true,
+              ref: inputEl,
+              placeholder: intl.formatMessage({
+                id: 'dialogs.geotag.search',
+                defaultMessage: 'Search for a location',
+              }),
+            })}
+          />
+          {inputValue && (
+            <span
+              title={intl.formatMessage({
+                id: 'dialogs.geotag.clear-search',
+                defaultMessage: 'Clear search',
+              })}
+              className="geotag-input-clear"
+              onClick={() => {
+                handleClickClearSearch(clearSelection)
+              }}
+            >
+              ×
+            </span>
+          )}
+          {isOpen && results?.features.length > 0 && (
+            <div className="geotag-suggestions-container">
+              <ul {...getMenuProps({ className: 'geotag-suggestions-list' })}>
+                {results.features.map((item, index) =>
+                  renderSuggestion(item, index, inputValue, getItemProps)
+                )}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+    </DownshiftPelias>
+  )
+}

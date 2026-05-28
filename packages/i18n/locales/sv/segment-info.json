@@ -1,0 +1,239 @@
+{
+  "segments": {
+    "sidewalk": "Trottoar",
+    "pedestrian": "Fotgängare",
+    "sidewalk-tree": "Träd",
+    "bike-rack": "Cykelställ",
+    "bench": "Bänk",
+    "outdoor-dining": "Uteservering",
+    "cafe-seating": "Uteservering",
+    "wayfinding-sign": "Vägvisningsskylt",
+    "sidewalk-lamp": "Belysning",
+    "utility-pole": "Elstolpe",
+    "drainage-channel": "",
+    "parklet": "Mikropark",
+    "street-vendor": "",
+    "divider": "Buffert",
+    "planting-strip": "Planteringsremsa",
+    "planter-box": "Planteringslåda",
+    "median": "Refug",
+    "bollard": "Pollare",
+    "dome": "Trafikfrånskiljare",
+    "jersey-barrier": "Barriär",
+    "scooter": "Elsparkcykel",
+    "scooter-drop-zone": "Avlämning elscooter",
+    "bike-lane": "Cykelbana",
+    "twoway-bike-lane": "",
+    "parking-lane": "Parkeringsficka",
+    "perpendicular-parking": "Vinkelrät parkering",
+    "angled-parking": "Snedställd parkering",
+    "flex-zone": "Flexibel zon",
+    "taxi-pick-up": "Taxificka",
+    "rideshare-pick-up": "Samåkningsficka",
+    "bikeshare-station": "Lånecykelstation",
+    "foodtruck": "Snabbmatsbil",
+    "flex-zone-curb": "Väntyta",
+    "drive-lane": "Körbana",
+    "mixed-drive-lane": "",
+    "sharrow": "Delat körfält",
+    "turn-lane": "Svängkörfält",
+    "turn-lane-straight": "Ej svängkörfält",
+    "turn-lane-center": "Dubbelriktat svängkörfält",
+    "bus-lane": "Busskörfält",
+    "bus-lane-shared": "Delad buss-/cykelfil",
+    "streetcar": "Spårvagn",
+    "light-rail": "Lättbana",
+    "transit-shelter": "Hållplatskur",
+    "brt-station": "BRT-station",
+    "brt-lane": "BRT-körfält",
+    "temporary-barrier": "Tillfällig avstängning",
+    "inception-train": "\"Inception\"-tåg",
+    "magic-carpet": "Flygande matta",
+    "wall": ""
+  },
+  "descriptions": {
+    "wayfinding-sign": {
+      "prompt": "Läs mer om vägvisningsskyltar",
+      "content": "# Vägvisningsskyltar hjälper fotgängare att hitta till vanliga målpunkter.\n\nStadsplanerare och arkitekter har tillbringat årtionden med att försöka lära sig vad som händer i människors hjärnor när de försöker komma på hur man tar sig från punkt A till punkt B - eller hur de ens vet var punkt A är till att börja med. Redan 1960 skrev stadsplaneraren Kevin Lynch om \"legibility\" i sin bok _[The Image of the City](http://www.amazon.com/Image-Harvard-MIT-Center-Studies-Series/dp/0262620014)_ genom \"ett konstant användande och organiserande av sinnenas ledtrådar från den omkringliggande miljön.\" Det kan vara immateriella - lukt, känsel, känsla av gravitation eller till och med elektriska eller magnetiska fält. Eller så kan det vara mycket mer fysiskt, med tillverkade redskap såsom kartor, gatunummer eller vägvisningsskyltar."
+    },
+    "parklet": {
+      "prompt": "Läs mer om mikroparker",
+      "imageCaption": "",
+      "content": ""
+    },
+    "bike-lane": {
+      "prompt": "Läs mer om cykelbanor",
+      "content": ""
+    },
+    "colored-bike-lane": {
+      "prompt": "Läs mer om färgade cykelbanor",
+      "content": ""
+    },
+    "sharrow": {
+      "prompt": "",
+      "content": ""
+    },
+    "transit-shelter-elevated": {
+      "prompt": "",
+      "content": ""
+    },
+    "inception-train": {
+      "content": ""
+    }
+  },
+  "buildings": {
+    "waterfront": {
+      "name": "Kustnära"
+    },
+    "grass": {
+      "name": "Gräs"
+    },
+    "fence": {
+      "name": "Tom tomt"
+    },
+    "parking-lot": {
+      "name": "Parkeringsplats"
+    },
+    "residential": {
+      "name": "Hem"
+    },
+    "narrow": {
+      "name": "Byggnad"
+    },
+    "wide": {
+      "name": "Byggnad"
+    },
+    "arcade": {
+      "name": "Arkad"
+    },
+    "compound-wall": {
+      "name": ""
+    }
+  },
+  "boundary": {
+    "group": {
+      "land": "",
+      "waterfront": "Kustnära"
+    }
+  },
+  "variant-icons": {
+    "orientation|left": "Vänster",
+    "orientation|right": "Höger",
+    "turn-lane-orientation|left": "Vänster",
+    "turn-lane-orientation|left-straight": "Vänster och rakt",
+    "turn-lane-orientation|straight": "Rakt",
+    "turn-lane-orientation|right-straight": "Höger och rakt",
+    "turn-lane-orientation|right": "Höger",
+    "turn-lane-orientation|both": "Båda",
+    "turn-lane-orientation|left-right-straight": "Vänster, höger och rakt",
+    "turn-lane-orientation|shared": "Delad",
+    "bench-orientation|left": "Vänster",
+    "bench-orientation|right": "Höger",
+    "bench-orientation|center": "Centrerad",
+    "parking-lane-orientation|left": "Vänster",
+    "parking-lane-orientation|right": "Höger",
+    "parking-lane-direction|inbound": "Ankommande",
+    "parking-lane-direction|outbound": "Avgående",
+    "parking-lane-direction|sideways": "Vinkelrät",
+    "parking-lane-direction|angled-front-left": "Snedställd",
+    "parking-lane-direction|angled-front-right": "Vinklad",
+    "parking-lane-direction|angled-rear-left": "Vinklad",
+    "parking-lane-direction|angled-rear-right": "Vinklad",
+    "direction|inbound": "Ankommande",
+    "direction|outbound": "Avgående",
+    "bike-direction|inbound": "Ankommande",
+    "bike-direction|outbound": "Avgående",
+    "bike-direction|twoway-left": "",
+    "bike-direction|twoway-right": "",
+    "sidewalk-density|empty": "Tom",
+    "sidewalk-density|sparse": "Gles",
+    "sidewalk-density|normal": "Normal",
+    "sidewalk-density|dense": "Tätt",
+    "lamp-orientation|left": "Vänster",
+    "lamp-orientation|both": "Båda",
+    "lamp-orientation|right": "Höger",
+    "lamp-type|traditional": "Traditionell",
+    "lamp-type|modern": "Modern",
+    "lamp-type|pride": "Modern med prideflagga",
+    "drainage-sides|slanted": "",
+    "drainage-sides|vertical": "",
+    "car-type|car": "Bil",
+    "car-type|sharrow": "Delat körfält",
+    "car-type|truck": "Lastbil",
+    "car-type|microvan": "Minibuss",
+    "car-type|av": "Självkörande fordon",
+    "car-type|motorcycle": "Motorcykel",
+    "car-type|motorcycle-sidecar": "Motorcykel med sidovagn",
+    "car-type|pedestrian": "Fotgängare",
+    "public-transit-asphalt|regular": "Asfalt",
+    "public-transit-asphalt|colored": "Röd bana",
+    "public-transit-asphalt|grass": "Gräs",
+    "bus-asphalt|regular": "Asfalt",
+    "bus-asphalt|colored": "Röd bana",
+    "bus-asphalt|shared": "Delad buss-/cykelfil",
+    "bus-type|typical": "Buss",
+    "bus-type|double-decker": "Dubbeldäckarbuss",
+    "bus-type|av-shuttle": "Självkörande fordon",
+    "brt-station-orientation|left": "Vänster",
+    "brt-station-orientation|right": "Höger",
+    "brt-station-orientation|center": "Centrerad",
+    "bike-asphalt|regular": "Asfalt",
+    "bike-asphalt|green": "Grön bana",
+    "bike-asphalt|red": "Röd bana",
+    "tree-type|big": "Träd",
+    "tree-type|palm-tree": "Palm",
+    "divider-type|median": "Refug",
+    "divider-type|striped-buffer": "Spärrområde",
+    "divider-type|planting-strip": "Planteringsremsa",
+    "divider-type|planter-box": "Planteringslåda",
+    "divider-type|bush": "Planteringsremsa med en buske",
+    "divider-type|flowers": "Planteringsremsa med blommor",
+    "divider-type|big-tree": "Planteringsremsa med ett träd",
+    "divider-type|palm-tree": "Planteringsremsa med en palm",
+    "divider-type|bollard": "Pollare",
+    "divider-type|dome": "Trafikfrånskiljare",
+    "divider-type|jersey-barrier-concrete": "Barriär (betong)",
+    "divider-type|jersey-barrier-plastic": "Barriär (plast)",
+    "transit-shelter-elevation|street-level": "Gatunivå",
+    "transit-shelter-elevation|light-rail": "Lättbanehållplats",
+    "bike-rack-elevation|sidewalk-parallel": "Parallell parkering, upphöjd",
+    "bike-rack-elevation|sidewalk": "Vinkelrät parkering, upphöjd",
+    "bike-rack-elevation|road": "Vinkelrät parkering, gatunivå",
+    "building|waterfront": "Kustnära",
+    "building|grass": "Gräs",
+    "building|fence": "Tom tomt",
+    "building|parking-lot": "Parkeringsplats",
+    "building|residential": "Hem",
+    "building|narrow": "Smal byggnad",
+    "building|wide": "Bred byggnad",
+    "wayfinding-type|large": "Stor",
+    "wayfinding-type|medium": "Mellan",
+    "wayfinding-type|small": "Liten",
+    "waiting-area|sparse": "Någon",
+    "waiting-area|empty": "Ingen",
+    "flex-type|rideshare": "Samåkning",
+    "flex-type|taxi": "Taxi",
+    "occupants|empty": "Tom",
+    "occupants|full": "Full",
+    "occupants|occupied": "Upptagen",
+    "elevation|sidewalk": "Upphöjd",
+    "elevation|road": "Gatunivå",
+    "temporary-barrier-type|traffic-cone": "Trafikkon",
+    "temporary-barrier-type|barricade": "Avspärrning",
+    "vendor-type|handcart": "",
+    "vendor-type|table": "",
+    "vendor-type|tarp": "",
+    "vendor-type|platform": "",
+    "ground|concrete": "",
+    "ground|asphalt": "Asfalt"
+  },
+  "skybox": {
+    "day": "Dag",
+    "twilight": "Halvdager",
+    "dusk": "Skymning",
+    "dawn": "Gryning",
+    "night": "Natt",
+    "karl": "Dimma",
+    "holodeck": "Holodäck"
+  }
+}
