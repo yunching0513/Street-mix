@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Streetmix+ Innovation Mockup</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============ TOP TOOLBAR ============ -->
+<header class="toolbar">
+  <div class="toolbar-left">
+    <div class="logo">
+      <span class="logo-mark">▮▮</span>
+      <span class="logo-text">Streetmix<sup class="plus-badge">+ AI</sup></span>
+    </div>
+    <div class="street-meta">
+      <input class="street-name" value="忠孝東路四段 (示意)" />
+      <div class="street-sub">由 <b>jtl0513</b> 編輯 · 已自動儲存</div>
+    </div>
+  </div>
+  <div class="toolbar-right">
+    <button class="btn ghost">取消</button>
+    <button class="btn ghost">↶ 復原</button>
+    <button class="btn ghost">↷ 重做</button>
+    <button class="btn primary">分享連結</button>
+    <div class="avatar">JT</div>
+  </div>
+</header>
+
+<!-- ============ SECTION 1: EDITOR + SCORE PANEL ============ -->
+<section class="editor-section">
+  <div class="editor-canvas">
+    <!-- Sky -->
+    <div class="sky">
+      <div class="sun"></div>
+      <div class="cloud cloud-1"></div>
+      <div class="cloud cloud-2"></div>
+    </div>
+
+    <!-- Buildings -->
+    <div class="building building-left">
+      <div class="window"></div><div class="window"></div><div class="window"></div>
+      <div class="window"></div><div class="window"></div><div class="window"></div>
+      <div class="building-sign">咖啡店</div>
+    </div>
+    <div class="building building-right">
+      <div class="window"></div><div class="window"></div><div class="window"></div>
+      <div class="window"></div><div class="window"></div><div class="window"></div>
+      <div class="building-sign">書店</div>
+    </div>
+
+    <!-- Street segments -->
+    <div class="street">
+      <div class="segment sidewalk" style="width: 90px;">
+        <div class="seg-icon">🌳</div>
+        <div class="seg-icon" style="left:50%">🚶</div>
+        <div class="seg-label">人行道 · 3m</div>
+      </div>
+      <div class="segment bike-lane" style="width: 60px;">
+        <div class="seg-icon">🚲</div>
+        <div class="seg-label">自行車道 · 2m</div>
+        <div class="seg-warning" title="低於建議寬度">⚠</div>
+      </div>
+      <div class="segment parking" style="width: 80px;">
+        <div class="seg-icon">🚗</div>
+        <div class="seg-label">路邊停車 · 2.5m</div>
+      </div>
+      <div class="segment drive-lane" style="width: 110px;">
+        <div class="seg-icon">🚙</div>
+        <div class="seg-label">車道 · 3.5m</div>
+      </div>
+      <div class="segment drive-lane" style="width: 110px;">
+        <div class="seg-icon">🚐</div>
+        <div class="seg-label">車道 · 3.5m</div>
+      </div>
+      <div class="segment bus-lane" style="width: 110px;">
+        <div class="seg-icon">🚌</div>
+        <div class="seg-label">公車專用 · 3.5m</div>
+      </div>
+      <div class="segment parking" style="width: 80px;">
+        <div class="seg-icon">🚗</div>
+        <div class="seg-label">路邊停車 · 2.5m</div>
+      </div>
+      <div class="segment sidewalk" style="width: 90px;">
+        <div class="seg-icon">🌳</div>
+        <div class="seg-icon" style="left:50%">🪑</div>
+        <div class="seg-label">人行道 · 3m</div>
+      </div>
+    </div>
+
+    <!-- Ruler -->
+    <div class="ruler">
+      <span>0m</span>
+      <span class="ruler-mid">總寬 23m</span>
+      <span>23m</span>
+    </div>
+
+    <!-- Palette -->
+    <div class="palette">
+      <div class="palette-title">🧱 拖放元件</div>
+      <div class="palette-items">
+        <div class="palette-item">🚶 人行</div>
+        <div class="palette-item">🚲 自行車</div>
+        <div class="palette-item">🚌 公車</div>
+        <div class="palette-item">🚗 停車</div>
+        <div class="palette-item">🌳 行道樹</div>
+        <div class="palette-item">🛴 滑板車</div>
+        <div class="palette-item">🚊 輕軌</div>
+        <div class="palette-item">🪑 街道家具</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCORE PANEL (Feature #1) ===== -->
+  <aside class="score-panel">
+    <div class="score-header">
+      <div>
+        <div class="score-eyebrow">設計評分</div>
+        <div class="score-title">Street Quality Score</div>
+      </div>
+      <button class="score-refresh" title="重新評分">⟳</button>
+    </div>
+
+    <!-- Overall gauge -->
+    <div class="overall-score">
+      <svg viewBox="0 0 120 120" class="gauge">
+        <circle cx="60" cy="60" r="50" class="gauge-bg" />
+        <circle cx="60" cy="60" r="50" class="gauge-fg" stroke-dasharray="314" stroke-dashoffset="94" transform="rotate(-90 60 60)"/>
+      </svg>
+      <div class="overall-number">
+        <div class="overall-value">70</div>
+        <div class="overall-grade">B+</div>
+      </div>
+    </div>
+    <div class="overall-caption">比 NACTO 建議的平均街道好 <b>+12%</b></div>
+
+    <!-- Subscores -->
+    <div class="subscore">
+      <div class="subscore-row">
+        <span class="subscore-label">🚶 步行友善</span>
+        <span class="subscore-value good">82</span>
+      </div>
+      <div class="bar"><div class="bar-fill good" style="width:82%"></div></div>
+      <div class="subscore-hint">人行道 3m 達 NACTO 建議</div>
+    </div>
+
+    <div class="subscore">
+      <div class="subscore-row">
+        <span class="subscore-label">🚲 自行車安全</span>
+        <span class="subscore-value warn">58</span>
+      </div>
+      <div class="bar"><div class="bar-fill warn" style="width:58%"></div></div>
+      <div class="subscore-hint">⚠ 與車道相鄰、缺少緩衝</div>
+    </div>
+
+    <div class="subscore">
+      <div class="subscore-row">
+        <span class="subscore-label">🌳 樹蔭 / 綠覆</span>
+        <span class="subscore-value good">75</span>
+      </div>
+      <div class="bar"><div class="bar-fill good" style="width:75%"></div></div>
+      <div class="subscore-hint">遮蔭率 38%</div>
+    </div>
+
+    <div class="subscore">
+      <div class="subscore-row">
+        <span class="subscore-label">♿ 無障礙</span>
+        <span class="subscore-value good">88</span>
+      </div>
+      <div class="bar"><div class="bar-fill good" style="width:88%"></div></div>
+      <div class="subscore-hint">通行寬度 ≥ 1.5m</div>
+    </div>
+
+    <div class="subscore">
+      <div class="subscore-row">
+        <span class="subscore-label">🛡 Vision Zero</span>
+        <span class="subscore-value bad">45</span>
+      </div>
+      <div class="bar"><div class="bar-fill bad" style="width:45%"></div></div>
+      <div class="subscore-hint">⚠ 兩線快車道、無實體分隔</div>
+    </div>
+
+    <div class="subscore">
+      <div class="subscore-row">
+        <span class="subscore-label">💰 估算成本</span>
+        <span class="subscore-value neutral">NT$ 8.2M</span>
+      </div>
+      <div class="subscore-hint">每 100m，含維護首年</div>
+    </div>
+
+    <div class="subscore">
+      <div class="subscore-row">
+        <span class="subscore-label">🌱 碳排（建造）</span>
+        <span class="subscore-value neutral">42 tCO₂e</span>
+      </div>
+      <div class="subscore-hint">瀝青佔 67%</div>
+    </div>
+
+    <!-- AI suggestions -->
+    <div class="ai-suggest">
+      <div class="ai-suggest-title">✨ AI 改善建議</div>
+      <ul>
+        <li>在自行車道旁加 <b>0.5m 緩衝</b>，安全分數 +14</li>
+        <li>將一條車道改為 <b>共享單車道</b>，Vision Zero +22</li>
+        <li>把停車格替換為 <b>parklet</b>，步行 +6、綠覆 +8</li>
+      </ul>
+      <button class="btn primary block">套用建議方案</button>
+    </div>
+  </aside>
+</section>
+
+<!-- ============ SECTION 2: 2.5D STREET TIMELINE ============ -->
+<section class="timeline-section">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">沿街變化</div>
+      <h2>2.5D Sliced View · 一條街可有多個剖面</h2>
+    </div>
+    <div class="section-actions">
+      <button class="btn ghost">🗺 從地圖匯入</button>
+      <button class="btn primary">+ 新增剖面</button>
+    </div>
+  </div>
+
+  <!-- 3D street perspective -->
+  <div class="street-3d">
+    <div class="lane-3d lane-sidewalk"></div>
+    <div class="lane-3d lane-bike"></div>
+    <div class="lane-3d lane-drive"></div>
+    <div class="lane-3d lane-drive"></div>
+    <div class="lane-3d lane-sidewalk"></div>
+
+    <!-- Slice markers along the street -->
+    <div class="slice slice-a" style="top:10%; left:8%">
+      <div class="slice-pin">A</div>
+      <div class="slice-label">入口段<br>0–80m</div>
+    </div>
+    <div class="slice slice-b" style="top:38%; left:30%">
+      <div class="slice-pin active">B</div>
+      <div class="slice-label">商店段<br>80–180m</div>
+    </div>
+    <div class="slice slice-c" style="top:60%; left:55%">
+      <div class="slice-pin">C</div>
+      <div class="slice-label">學校段<br>180–260m</div>
+    </div>
+    <div class="slice slice-d" style="top:80%; left:80%">
+      <div class="slice-pin">D</div>
+      <div class="slice-label">路口段<br>260–320m</div>
+    </div>
+
+    <div class="compass">↑ 北</div>
+  </div>
+
+  <!-- Slice thumbnails -->
+  <div class="slice-rail">
+    <div class="slice-card">
+      <div class="slice-card-head">
+        <span class="slice-card-pin">A</span>
+        <span class="slice-card-name">入口段</span>
+        <span class="slice-card-len">80m</span>
+      </div>
+      <div class="mini-section">
+        <div class="mini-seg mini-sidewalk" style="flex:2"></div>
+        <div class="mini-seg mini-bike" style="flex:1"></div>
+        <div class="mini-seg mini-drive" style="flex:2"></div>
+        <div class="mini-seg mini-drive" style="flex:2"></div>
+        <div class="mini-seg mini-sidewalk" style="flex:2"></div>
+      </div>
+      <div class="slice-card-score">B · 72</div>
+    </div>
+
+    <div class="slice-card active">
+      <div class="slice-card-head">
+        <span class="slice-card-pin active">B</span>
+        <span class="slice-card-name">商店段（編輯中）</span>
+        <span class="slice-card-len">100m</span>
+      </div>
+      <div class="mini-section">
+        <div class="mini-seg mini-sidewalk" style="flex:2"></div>
+        <div class="mini-seg mini-bike" style="flex:1"></div>
+        <div class="mini-seg mini-park" style="flex:1"></div>
+        <div class="mini-seg mini-drive" style="flex:2"></div>
+        <div class="mini-seg mini-drive" style="flex:2"></div>
+        <div class="mini-seg mini-bus" style="flex:2"></div>
+        <div class="mini-seg mini-park" style="flex:1"></div>
+        <div class="mini-seg mini-sidewalk" style="flex:2"></div>
+      </div>
+      <div class="slice-card-score">B+ · 70</div>
+    </div>
+
+    <div class="slice-card">
+      <div class="slice-card-head">
+        <span class="slice-card-pin">C</span>
+        <span class="slice-card-name">學校段</span>
+        <span class="slice-card-len">80m</span>
+      </div>
+      <div class="mini-section">
+        <div class="mini-seg mini-sidewalk" style="flex:3"></div>
+        <div class="mini-seg mini-bike" style="flex:1"></div>
+        <div class="mini-seg mini-drive" style="flex:2"></div>
+        <div class="mini-seg mini-bike" style="flex:1"></div>
+        <div class="mini-seg mini-sidewalk" style="flex:3"></div>
+      </div>
+      <div class="slice-card-score">A- · 84</div>
+    </div>
+
+    <div class="slice-card">
+      <div class="slice-card-head">
+        <span class="slice-card-pin">D</span>
+        <span class="slice-card-name">路口段</span>
+        <span class="slice-card-len">60m</span>
+      </div>
+      <div class="mini-section">
+        <div class="mini-seg mini-sidewalk" style="flex:2"></div>
+        <div class="mini-seg mini-drive" style="flex:2"></div>
+        <div class="mini-seg mini-drive" style="flex:2"></div>
+        <div class="mini-seg mini-drive" style="flex:2"></div>
+        <div class="mini-seg mini-drive" style="flex:2"></div>
+        <div class="mini-seg mini-sidewalk" style="flex:2"></div>
+      </div>
+      <div class="slice-card-score">C · 58</div>
+    </div>
+
+    <div class="slice-card add-card">
+      <div class="add-plus">+</div>
+      <div>新增剖面</div>
+    </div>
+  </div>
+
+  <div class="timeline-hint">
+    <span>💡</span>
+    <span>拖動地圖上的圖釘可調整剖面範圍；每段可有不同設計，系統會自動處理銜接（例如停車格在路口前 20m 轉為車道）</span>
+  </div>
+</section>
+
+<!-- ============ SECTION 3: AI STREETSCAPE RENDER ============ -->
+<section class="render-section">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">AI 街景渲染</div>
+      <h2>把剖面變成真實街景 · 一鍵說服居民</h2>
+    </div>
+    <div class="section-actions">
+      <select class="dropdown">
+        <option>☀ 白天 · 晴</option>
+        <option>🌧 雨天</option>
+        <option>🌙 夜晚</option>
+      </select>
+      <select class="dropdown">
+        <option>📷 行人視角</option>
+        <option>🚲 自行車視角</option>
+        <option>🚗 駕駛視角</option>
+        <option>🦅 鳥瞰</option>
+      </select>
+      <button class="btn primary">✨ 重新生成</button>
+    </div>
+  </div>
+
+  <div class="render-grid">
+    <!-- Before -->
+    <div class="render-card">
+      <div class="render-badge before">改造前</div>
+      <div class="render-img render-before">
+        <div class="render-fake-photo">
+          <div class="rp-sky"></div>
+          <div class="rp-road"></div>
+          <div class="rp-car" style="left:30%"></div>
+          <div class="rp-car" style="left:55%"></div>
+          <div class="rp-building rp-building-left"></div>
+          <div class="rp-building rp-building-right"></div>
+          <div class="rp-overlay">📷 街景照片（Google Street View）</div>
+        </div>
+      </div>
+      <div class="render-meta">
+        <div><b>現況：</b>四線快車道，無自行車道</div>
+        <div class="render-tags">
+          <span class="tag bad">步行 42</span>
+          <span class="tag bad">安全 38</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- After -->
+    <div class="render-card">
+      <div class="render-badge after">AI 生成 · 改造後</div>
+      <div class="render-img render-after">
+        <div class="render-fake-photo render-fake-photo-after">
+          <div class="rp-sky"></div>
+          <div class="rp-sidewalk-wide"></div>
+          <div class="rp-bike-lane"></div>
+          <div class="rp-road-narrow"></div>
+          <div class="rp-tree" style="left:12%"></div>
+          <div class="rp-tree" style="left:22%"></div>
+          <div class="rp-tree" style="left:82%"></div>
+          <div class="rp-person" style="left:6%"></div>
+          <div class="rp-person" style="left:18%"></div>
+          <div class="rp-bike" style="left:35%"></div>
+          <div class="rp-car" style="left:55%"></div>
+          <div class="rp-building rp-building-left"></div>
+          <div class="rp-building rp-building-right"></div>
+          <div class="rp-overlay ai">🤖 由 Claude + diffusion 模型生成</div>
+        </div>
+      </div>
+      <div class="render-meta">
+        <div><b>提案：</b>加寬人行道、加自行車道、行道樹</div>
+        <div class="render-tags">
+          <span class="tag good">步行 82</span>
+          <span class="tag good">安全 76</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Side-by-side annotation -->
+  <div class="render-annotations">
+    <div class="annot">
+      <div class="annot-num">①</div>
+      <div>
+        <b>人行道從 1.5m → 3m</b>
+        <div class="annot-sub">行人通行更舒適，可容納雙向輪椅交會</div>
+      </div>
+    </div>
+    <div class="annot">
+      <div class="annot-num">②</div>
+      <div>
+        <b>新增 2m 自行車道 + 緩衝</b>
+        <div class="annot-sub">與車道實體分隔，事故率預估 -38%</div>
+      </div>
+    </div>
+    <div class="annot">
+      <div class="annot-num">③</div>
+      <div>
+        <b>每 8m 一棵行道樹</b>
+        <div class="annot-sub">夏季表面溫度可降 4–7°C，遮蔭率 38%</div>
+      </div>
+    </div>
+    <div class="annot">
+      <div class="annot-num">④</div>
+      <div>
+        <b>車道由 4 → 2 線</b>
+        <div class="annot-sub">減車速、降低噪音；公車專用道補上通行量</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="render-actions">
+    <button class="btn ghost">📥 下載渲染圖（4K）</button>
+    <button class="btn ghost">📄 產生 PDF 簡報</button>
+    <button class="btn primary">🗳 發起社區投票</button>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div>Streetmix+ Innovation Mockup · 紙上原型 v0.1</div>
+  <div>本頁面為靜態 mockup，所有數據為示意</div>
+</footer>
+
+</body>
+</html>
