@@ -4,6 +4,7 @@ import { ErrorBoundary } from '../util/ErrorBoundary.js'
 // Import all dialogs here
 import { AboutDialog } from './About'
 import { AnalyticsDialog } from './Analytics'
+import { QualityScoreDialog } from './QualityScore'
 import { FeatureFlagDialog } from './FeatureFlag'
 import { GeotagDialog } from './Geotag'
 import { SaveAsImageDialog } from './SaveAsImage'
@@ -19,6 +20,7 @@ import { CoastmixTutorialComplete } from './CoastmixTutorial.js'
 const DIALOG_COMPONENTS = {
   ABOUT: AboutDialog,
   ANALYTICS: AnalyticsDialog,
+  QUALITY_SCORE: QualityScoreDialog,
   FEATURE_FLAGS: FeatureFlagDialog,
   GEOTAG: GeotagDialog,
   SAVE_AS_IMAGE: SaveAsImageDialog,

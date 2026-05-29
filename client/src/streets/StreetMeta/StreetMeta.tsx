@@ -4,6 +4,7 @@ import { StreetMetaAuthor } from './StreetMetaAuthor.js'
 import { StreetMetaDate } from './StreetMetaDate.js'
 import { StreetMetaGeotag } from './StreetMetaGeotag.js'
 import { StreetMetaAnalytics } from './StreetMetaAnalytics.js'
+import { StreetMetaQualityScore } from './StreetMetaQualityScore.js'
 import './StreetMeta.css'
 
 export function StreetMeta() {
@@ -14,6 +15,7 @@ export function StreetMeta() {
   return (
     <div className="street-meta">
       <StreetMetaWidth />
+      <StreetMetaQualityScore />
       {enableAnalytics && <StreetMetaAnalytics />}
       <StreetMetaGeotag />
       <StreetMetaAuthor />
