@@ -23,6 +23,7 @@ import { BlockingShield } from './BlockingShield.js'
 import { BlockingError } from './BlockingError.js'
 import { StreetView } from './StreetView.js'
 import { SliceRail } from '../sliced/SliceRail.js'
+import { StreetscapeRenderButton } from '../streetscape/StreetscapeRenderButton.js'
 import { PrintContainer } from './PrintContainer.js'
 import { WelcomePanel } from './WelcomePanel'
 import { NotificationBar } from './NotificationBar'
@@ -95,6 +96,7 @@ export function App() {
                     <SegmentDragLayer />
                     <StreetView />
                     <SliceRail />
+                    <StreetscapeRenderButton />
                     <ToastContainer />
                     <SentimentSurveyContainer />
                     <CoastmixUI />

@@ -1,0 +1,29 @@
+.streetscape-render-button {
+  position: fixed;
+  bottom: 12px;
+  right: 168px;
+  z-index: 100;
+  background: white;
+  color: #333;
+  border: 1px solid #e4e1da;
+  padding: 10px 14px;
+  border-radius: 22px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+}
+
+.streetscape-render-button:hover {
+  background: #fff7ee;
+  border-color: #ff7043;
+  transform: translateY(-1px);
+}
+
+.srb-icon {
+  font-size: 14px;
+}

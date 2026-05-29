@@ -5,6 +5,7 @@ import { ErrorBoundary } from '../util/ErrorBoundary.js'
 import { AboutDialog } from './About'
 import { AnalyticsDialog } from './Analytics'
 import { QualityScoreDialog } from './QualityScore'
+import { StreetscapeRenderDialog } from './StreetscapeRender'
 import { FeatureFlagDialog } from './FeatureFlag'
 import { GeotagDialog } from './Geotag'
 import { SaveAsImageDialog } from './SaveAsImage'
@@ -21,6 +22,7 @@ const DIALOG_COMPONENTS = {
   ABOUT: AboutDialog,
   ANALYTICS: AnalyticsDialog,
   QUALITY_SCORE: QualityScoreDialog,
+  STREETSCAPE_RENDER: StreetscapeRenderDialog,
   FEATURE_FLAGS: FeatureFlagDialog,
   GEOTAG: GeotagDialog,
   SAVE_AS_IMAGE: SaveAsImageDialog,
