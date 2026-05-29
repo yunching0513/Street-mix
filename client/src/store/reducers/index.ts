@@ -10,6 +10,7 @@ import locale from '../slices/locale'
 import map from '../slices/map'
 import menus from '../slices/menus'
 import settings from '../slices/settings'
+import slicedView from '../slices/slicedView'
 import street from '../slices/street'
 import system from '../slices/system'
 import toasts from '../slices/toasts'
@@ -31,11 +32,12 @@ const reducers = {
   map,
   menus,
   settings,
+  slicedView,
   street,
   system,
   toasts,
   ui,
-  user
+  user,
 }
 
 export default reducers

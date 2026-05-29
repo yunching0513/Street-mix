@@ -22,6 +22,7 @@ import { DebugInfo } from './DebugInfo.js'
 import { BlockingShield } from './BlockingShield.js'
 import { BlockingError } from './BlockingError.js'
 import { StreetView } from './StreetView.js'
+import { SliceRail } from '../sliced/SliceRail.js'
 import { PrintContainer } from './PrintContainer.js'
 import { WelcomePanel } from './WelcomePanel'
 import { NotificationBar } from './NotificationBar'
@@ -93,6 +94,7 @@ export function App() {
                     <SkyPicker />
                     <SegmentDragLayer />
                     <StreetView />
+                    <SliceRail />
                     <ToastContainer />
                     <SentimentSurveyContainer />
                     <CoastmixUI />
