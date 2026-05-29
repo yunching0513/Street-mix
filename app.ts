@@ -69,6 +69,12 @@ const helmetConfig = {
   frameguard: false, // Allow Streetmix to be iframed in 3rd party sites
   contentSecurityPolicy: false, // These are set explicitly later
   crossOriginEmbedderPolicy: false, // Load external assets
+  // Allow embedding inside Claude Code on the web / other dev previews.
+  // The default ('same-origin') breaks iframe previewing of the dev server.
+  crossOriginOpenerPolicy:
+    process.env.OFFLINE_MODE === 'true' ? false : undefined,
+  crossOriginResourcePolicy:
+    process.env.OFFLINE_MODE === 'true' ? false : undefined,
   hsts: {
     maxAge: 5184000, // 60 days
     includeSubDomains: false, // we don't have a wildcard ssl cert
@@ -111,7 +117,10 @@ const csp = {
       'static.userback.io',
     ],
     workerSrc: ["'self'"],
-    frameAncestors: ["'self'", 'https:'],
+    frameAncestors:
+      process.env.OFFLINE_MODE === 'true'
+        ? ["'self'", 'https:', 'http:', '*']
+        : ["'self'", 'https:'],
     frameSrc: ["'self'", 'streetmix.github.io', 'checkout.stripe.com'],
     imgSrc: [
       "'self'",
