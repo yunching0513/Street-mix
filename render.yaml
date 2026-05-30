@@ -1,0 +1,46 @@
+# Render Blueprint — Streetmix Innovation Branch
+#
+# https://render.com/docs/blueprint-spec
+#
+# How to deploy:
+#   1. Sign in at https://dashboard.render.com (free GitHub auth works)
+#   2. New → Blueprint
+#   3. Connect your `yunching0513/Street-mix` fork
+#   4. Select branch `claude/streetmix-analysis-innovation-Be1Q6`
+#   5. Render reads this file and provisions the service
+#   6. First build takes ~5-8 min (workspace builds + Parcel client bundle)
+#   7. Once live you'll get a URL like
+#      https://streetmix-innovation.onrender.com
+#
+# Free plan notes:
+#   - The service sleeps after 15 min of inactivity. First request after
+#     sleep cold-starts in ~30s.
+#   - 512 MB memory, 750 hours/month. Plenty for review/testing.
+
+services:
+  - type: web
+    name: streetmix-innovation
+    runtime: node
+    plan: free
+    region: oregon
+    branch: claude/streetmix-analysis-innovation-Be1Q6
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 22.22.0
+      - key: NODE_ENV
+        value: production
+      # Skip Auth0 / Postgres / Cloudinary / Sentry / etc.
+      - key: OFFLINE_MODE
+        value: "true"
+      # Skip the Cypress binary download (blocked anyway on most CI).
+      - key: CYPRESS_INSTALL_BINARY
+        value: "0"
+      # Skip newrelic in production — we don't have a key. The Procfile
+      # is bypassed because we use buildCommand/startCommand below.
+      - key: COOKIE_SESSION_SECRET
+        generateValue: true
+    buildCommand: |
+      CYPRESS_INSTALL_BINARY=0 npm ci --no-audit --no-fund &&
+      npm run build:prod
+    startCommand: npm run start:prod
