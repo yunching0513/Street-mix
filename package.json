@@ -27,7 +27,7 @@
     "start": "concurrently --names \"SERVER,CLIENT,TSC\" -c \"bgBlueBright.bold,bgMagentaBright.bold,black.bgYellowBright.bold\" \"npm:dev-server\" \"npm:dev-client\" \"npm:dev-tsc\"",
     "serve": "nodemon -r newrelic --exec node index.ts",
     "build": "npm run build --workspaces --if-present",
-    "build:prod": "npm run build -w @streetmix/types -w @streetmix/utils -w @streetmix/parts -w @streetmix/i18n -w @streetmix/export-image && npm exec --workspace=@streetmix/client -- parcel build src/main.tsx --dist-dir ../build --public-url /assets",
+    "build:prod": "npm run build -w @streetmix/types && npm run build -w @streetmix/utils && npm run build -w @streetmix/parts && npm run build -w @streetmix/i18n && npm run build -w @streetmix/export-image && npm exec --workspace=@streetmix/client -- parcel build src/main.tsx --dist-dir ../build --public-url /assets",
     "start:prod": "node index.ts",
     "dev-client": "npm run -w @streetmix/client dev",
     "dev-server": "nodemon -r dotenv/config --watch app --watch lib --watch index.ts --watch app.ts --watch packages --exec node index.ts",
