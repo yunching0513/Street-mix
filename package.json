@@ -29,6 +29,9 @@
     "build": "npm run build --workspaces --if-present",
     "build:prod": "npm run build -w @streetmix/types && npm run build -w @streetmix/utils && npm run build -w @streetmix/parts && npm run build -w @streetmix/i18n && npm run build -w @streetmix/export-image && npm exec --workspace=@streetmix/client -- parcel build src/main.tsx --dist-dir ../build --public-url /assets",
     "start:prod": "node index.ts",
+    "electron:dev": "OFFLINE_MODE=true electron electron/main.cjs",
+    "electron:prebuild": "npm run build:prod && OFFLINE_MODE=true PORT=18099 node --experimental-strip-types -e \"import('./app.ts').then(()=>process.exit(0))\"",
+    "dist:mac": "npm run electron:prebuild && electron-builder --mac",
     "dev-client": "npm run -w @streetmix/client dev",
     "dev-server": "nodemon -r dotenv/config --watch app --watch lib --watch index.ts --watch app.ts --watch packages --exec node index.ts",
     "dev-tsc": "tsc -b --watch --preserveWatchOutput",
@@ -65,6 +68,53 @@
   "alias": {
     "process": {
       "global": "process"
+    }
+  },
+  "build": {
+    "appId": "net.streetmix.innovation",
+    "productName": "Streetmix+ Innovation",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "electron/**/*",
+      "index.ts",
+      "app.ts",
+      "app/**/*",
+      "build/**/*",
+      "public/**/*",
+      "packages/*/build/**/*",
+      "packages/*/package.json",
+      "packages/parts/build/components.json",
+      "packages/illustrations/images/**/*",
+      "packages/variant-icons/icons/**/*",
+      "client/images/illustrations/**/*",
+      "node_modules/**/*",
+      "package.json",
+      "!node_modules/**/{*.md,*.markdown,LICENSE,CHANGELOG*,*.map,test,tests,__tests__,docs,example,examples}",
+      "!node_modules/{electron,electron-builder,@electron,@types}/**/*",
+      "!node_modules/cypress/**/*",
+      "!**/*.tsbuildinfo"
+    ],
+    "asarUnpack": [
+      "node_modules/@napi-rs/canvas/**/*"
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ],
+      "category": "public.app-category.developer-tools",
+      "darkModeSupport": true,
+      "icon": "public/android-chrome-512x512.png"
+    },
+    "extraMetadata": {
+      "main": "electron/main.cjs"
     }
   },
   "@parcel/resolver-default": {
@@ -149,6 +199,8 @@
     "tsx": "4.22.3",
     "typescript": "6.0.3",
     "typescript-eslint": "8.60.0",
-    "vitest": "4.1.7"
+    "vitest": "4.1.7",
+    "electron": "35.0.0",
+    "electron-builder": "26.0.0"
   }
 }

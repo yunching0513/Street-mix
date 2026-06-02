@@ -1,4 +1,5 @@
 import './app/globals.ts'
+import { existsSync } from 'node:fs'
 import path from 'node:path'
 import { styleText } from 'node:util'
 import compression from 'compression'
@@ -22,12 +23,23 @@ import { jwtCheck } from './app/authentication.ts'
 
 initCloudinary()
 
-// Build SVG sprites before starting Express server
-await Promise.all([
-  compileSVGSprites('packages/variant-icons/icons/', 'icons', 'icon'),
-  compileSVGSprites('client/images/illustrations', 'illustrations', 'image'),
-  compileSVGSprites('packages/illustrations/images/', 'images', 'image'),
-])
+// Build SVG sprites before starting Express server.
+// Skip if the outputs already exist — that happens in packaged
+// Electron builds where `build/` is read-only inside the asar
+// archive and the sprites were generated at packaging time.
+const buildDir = path.join(import.meta.dirname, 'build')
+const spritesExist =
+  existsSync(path.join(buildDir, 'icons.svg')) &&
+  existsSync(path.join(buildDir, 'illustrations.svg')) &&
+  existsSync(path.join(buildDir, 'images.svg'))
+
+if (!spritesExist) {
+  await Promise.all([
+    compileSVGSprites('packages/variant-icons/icons/', 'icons', 'icon'),
+    compileSVGSprites('client/images/illustrations', 'illustrations', 'image'),
+    compileSVGSprites('packages/illustrations/images/', 'images', 'image'),
+  ])
+}
 
 const app = express()
 export default app
