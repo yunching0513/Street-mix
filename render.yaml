@@ -40,7 +40,5 @@ services:
       # is bypassed because we use buildCommand/startCommand below.
       - key: COOKIE_SESSION_SECRET
         generateValue: true
-    buildCommand: |
-      CYPRESS_INSTALL_BINARY=0 npm ci --include=dev --no-audit --no-fund &&
-      npm run build:prod
+    buildCommand: CYPRESS_INSTALL_BINARY=0 npm ci --include=dev --no-audit --no-fund && npm run build:prod
     startCommand: npm run start:prod
