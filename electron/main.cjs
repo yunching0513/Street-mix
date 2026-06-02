@@ -12,12 +12,41 @@
 
 const { app, BrowserWindow, dialog, shell, Menu } = require('electron')
 const { spawn } = require('node:child_process')
+const fs = require('node:fs')
 const net = require('node:net')
 const path = require('node:path')
 
 let serverProcess = null
 let mainWindow = null
 let serverPort = null
+let logStream = null
+
+/**
+ * Open a log file at ~/Library/Logs/Streetmix+ Innovation/server.log
+ * (or app.getPath('logs') on other platforms). This is the only way
+ * to surface child-process output in a packaged app — without it
+ * the child's stderr is invisible and a crash looks like a hang.
+ */
+function openLogFile() {
+  try {
+    const dir = app.getPath('logs')
+    fs.mkdirSync(dir, { recursive: true })
+    const file = path.join(dir, 'server.log')
+    logStream = fs.createWriteStream(file, { flags: 'a' })
+    logStream.write(`\n\n===== launch ${new Date().toISOString()} =====\n`)
+    return file
+  } catch (e) {
+    return null
+  }
+}
+
+function log(...args) {
+  const line = args
+    .map((a) => (typeof a === 'string' ? a : JSON.stringify(a)))
+    .join(' ')
+  if (logStream) logStream.write(line + '\n')
+  console.log(line)
+}
 
 /**
  * Find a free port on 127.0.0.1 by binding to port 0 and letting
@@ -66,6 +95,16 @@ async function startServer() {
     COOKIE_SESSION_SECRET: 'streetmix-electron-local-only',
   }
 
+  log('[main] spawn server')
+  log('[main]   execPath:', process.execPath)
+  log('[main]   cwd:', root)
+  log('[main]   port:', serverPort)
+  log('[main]   indexExists:', fs.existsSync(path.join(root, 'index.ts')))
+  log(
+    '[main]   nodeModulesExists:',
+    fs.existsSync(path.join(root, 'node_modules'))
+  )
+
   serverProcess = spawn(
     process.execPath,
     ['--experimental-strip-types', 'index.ts'],
@@ -77,14 +116,21 @@ async function startServer() {
   )
 
   serverProcess.stdout.on('data', (d) => {
-    process.stdout.write(`[server] ${d}`)
+    const text = d.toString()
+    if (logStream) logStream.write('[server] ' + text)
+    process.stdout.write(`[server] ${text}`)
   })
   serverProcess.stderr.on('data', (d) => {
-    process.stderr.write(`[server-err] ${d}`)
+    const text = d.toString()
+    if (logStream) logStream.write('[server-err] ' + text)
+    process.stderr.write(`[server-err] ${text}`)
   })
-  serverProcess.on('exit', (code) => {
-    console.log(`[server] exited with code ${code}`)
+  serverProcess.on('exit', (code, signal) => {
+    log(`[server] exited code=${code} signal=${signal}`)
     if (mainWindow !== null) app.quit()
+  })
+  serverProcess.on('error', (err) => {
+    log('[server] spawn error:', err.message)
   })
 
   await waitForReady(serverPort, 30_000)
@@ -142,6 +188,7 @@ async function createWindow() {
 }
 
 app.whenReady().then(async () => {
+  const logFile = openLogFile()
   try {
     await startServer()
     await createWindow()
@@ -151,10 +198,12 @@ app.whenReady().then(async () => {
       if (BrowserWindow.getAllWindows().length === 0) createWindow()
     })
   } catch (err) {
-    dialog.showErrorBox(
-      'Streetmix+ failed to start',
-      err && err.stack ? err.stack : String(err)
-    )
+    const stack = err && err.stack ? err.stack : String(err)
+    log('[main] failed to start:', stack)
+    const hint = logFile
+      ? `\n\nFull log: ${logFile}\n\nView with:\n  cat "${logFile}"`
+      : ''
+    dialog.showErrorBox('Streetmix+ failed to start', stack + hint)
     app.quit()
   }
 })
@@ -167,4 +216,5 @@ app.on('quit', () => {
   if (serverProcess !== null && !serverProcess.killed) {
     serverProcess.kill('SIGTERM')
   }
+  if (logStream) logStream.end()
 })
