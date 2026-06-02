@@ -37,16 +37,15 @@ function findFreePort() {
 
 /**
  * Project root differs in dev vs packaged. In dev it's the repo
- * root. In a packaged .dmg the app code is inside
- * `Resources/app.asar` (or `app.asar.unpacked` for files we need
- * to access on the filesystem).
+ * root. In a packaged .dmg with asar disabled the app code is laid
+ * out as a normal directory tree under `Resources/app/`. We need
+ * a real directory here because the spawned child Node process is
+ * a separate OS process and cannot read files from inside an asar
+ * archive.
  */
 function projectRoot() {
   if (app.isPackaged) {
-    // electron-builder places resources under process.resourcesPath
-    // and our package.json `directories.app` setting puts the app
-    // contents one level down.
-    return path.join(process.resourcesPath, 'app.asar')
+    return path.join(process.resourcesPath, 'app')
   }
   return path.join(__dirname, '..')
 }
