@@ -28,17 +28,19 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 22.22.0
-      - key: NODE_ENV
-        value: production
+      # NODE_ENV is intentionally NOT set here. Render automatically
+      # propagates NODE_ENV=production into npm's environment as
+      # NPM_CONFIG_PRODUCTION=true, which makes `npm install` skip
+      # devDependencies and breaks the build (tsc/parcel are dev deps).
+      # We set NODE_ENV=production inline in startCommand instead so
+      # the runtime still behaves as production.
       # Skip Auth0 / Postgres / Cloudinary / Sentry / etc.
       - key: OFFLINE_MODE
         value: "true"
       # Skip the Cypress binary download (blocked anyway on most CI).
       - key: CYPRESS_INSTALL_BINARY
         value: "0"
-      # Skip newrelic in production — we don't have a key. The Procfile
-      # is bypassed because we use buildCommand/startCommand below.
       - key: COOKIE_SESSION_SECRET
         generateValue: true
-    buildCommand: NODE_ENV=development NPM_CONFIG_PRODUCTION=false CYPRESS_INSTALL_BINARY=0 npm ci --include=dev --no-audit --no-fund && npm run build:prod
-    startCommand: npm run start:prod
+    buildCommand: CYPRESS_INSTALL_BINARY=0 npm ci --include=dev --no-audit --no-fund && npm run build:prod
+    startCommand: NODE_ENV=production npm run start:prod
