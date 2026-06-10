@@ -7,8 +7,17 @@
 //
 // Fix: just before electron-builder runs, replace each workspace
 // symlink with a real directory containing the workspace's
-// `package.json` and `build/`. The runtime `node_modules/@streetmix/*`
-// then looks identical to a normally-installed package.
+// `package.json` plus every path the package needs at runtime. The
+// runtime `node_modules/@streetmix/*` then looks identical to a
+// normally-installed package.
+//
+// Note that `build/` alone is not enough for every package:
+//   - parts: export-image's build output imports
+//     `@streetmix/parts/src/segment-lookup.json` directly
+//   - i18n: the `/api/v1/translate` endpoint reads `locales/*.json`
+//   - illustrations: export-image resolves
+//     `@streetmix/illustrations/images/**.svg` via import.meta.resolve
+//     (no build step at all — it's an artwork-only package)
 //
 // Tradeoff: this leaves the source repo's node_modules with real
 // dirs instead of symlinks. A fresh `npm install` restores the
@@ -20,10 +29,20 @@ const fs = require('node:fs')
 const path = require('node:path')
 
 const repoRoot = path.join(__dirname, '..')
-const WORKSPACES = ['types', 'utils', 'parts', 'i18n', 'export-image']
+
+// For each workspace, the paths (relative to the package root) that
+// must exist in the staged copy. Every listed path is required.
+const WORKSPACES = {
+  types: ['build'],
+  utils: ['build'],
+  parts: ['build', 'src/segment-lookup.json'],
+  i18n: ['build', 'locales'],
+  'export-image': ['build'],
+  illustrations: ['images'],
+}
 
 let replaced = 0
-for (const name of WORKSPACES) {
+for (const [name, paths] of Object.entries(WORKSPACES)) {
   const target = path.join(repoRoot, 'node_modules', '@streetmix', name)
   const source = path.join(repoRoot, 'packages', name)
 
@@ -31,9 +50,11 @@ for (const name of WORKSPACES) {
     console.error(`[stage-workspaces] missing source: ${source}`)
     process.exit(1)
   }
-  if (!fs.existsSync(path.join(source, 'build'))) {
-    console.error(`[stage-workspaces] missing build/: ${source}`)
-    process.exit(1)
+  for (const p of paths) {
+    if (!fs.existsSync(path.join(source, p))) {
+      console.error(`[stage-workspaces] missing ${p} in: ${source}`)
+      process.exit(1)
+    }
   }
 
   // Detect a symlink and replace it. If it's already a real directory
@@ -48,9 +69,11 @@ for (const name of WORKSPACES) {
     path.join(source, 'package.json'),
     path.join(target, 'package.json')
   )
-  fs.cpSync(path.join(source, 'build'), path.join(target, 'build'), {
-    recursive: true,
-  })
+  for (const p of paths) {
+    fs.cpSync(path.join(source, p), path.join(target, p), {
+      recursive: true,
+    })
+  }
   console.log(`[stage-workspaces] staged @streetmix/${name}`)
   replaced++
 }

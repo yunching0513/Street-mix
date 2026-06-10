@@ -15,7 +15,13 @@
     "start": "echo Nothing to run!"
   },
   "dependencies": {
+    "@fontsource-variable/overpass": "5.2.8",
+    "@fontsource-variable/rubik": "5.2.8",
     "@fontsource/geist-sans": "5.2.5",
-    "@napi-rs/canvas": "1.0.0"
+    "@napi-rs/canvas": "1.0.0",
+    "@streetmix/i18n": "*",
+    "@streetmix/illustrations": "*",
+    "@streetmix/parts": "*",
+    "@streetmix/utils": "*"
   }
 }

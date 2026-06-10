@@ -14,6 +14,9 @@
     "build": "tsc --project tsconfig.json",
     "start": "echo Nothing to run!"
   },
+  "dependencies": {
+    "@streetmix/utils": "*"
+  },
   "devDependencies": {
     "typescript-yaml-plugin": "1.0.11"
   }
