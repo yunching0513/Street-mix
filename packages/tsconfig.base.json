@@ -7,11 +7,10 @@
     "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "rootDir": "${configDir}/src",
-    "types": [
-      "node",
-      /* Recognize test globals in test suites */
-      "vitest/globals"
-    ],
+    /* Test files are excluded below, so the production package builds
+       must not require test-runner types — vitest is a devDependency
+       and is absent on deploy hosts that prune dev installs. */
+    "types": ["node"],
 
     /* Emit */
     "declaration": true,

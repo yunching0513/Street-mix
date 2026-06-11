@@ -41,3 +41,6 @@ cypress/videos
 
 # Sentry Auth Token
 .sentryclirc
+
+# Electron build output
+dist-electron

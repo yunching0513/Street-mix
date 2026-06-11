@@ -86,6 +86,8 @@
       "packages/*/build/**/*",
       "packages/*/package.json",
       "packages/parts/build/components.json",
+      "packages/parts/src/segment-lookup.json",
+      "packages/i18n/locales/**/*",
       "packages/illustrations/images/**/*",
       "packages/variant-icons/icons/**/*",
       "client/images/illustrations/**/*",

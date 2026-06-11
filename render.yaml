@@ -6,7 +6,9 @@
 #   1. Sign in at https://dashboard.render.com (free GitHub auth works)
 #   2. New → Blueprint
 #   3. Connect your `yunching0513/Street-mix` fork
-#   4. Select branch `claude/streetmix-analysis-innovation-Be1Q6`
+#   4. Select branch `claude/beautiful-rubin-jl3pif`
+#      (or `main` after PR #1 is merged — keep this in sync with the
+#      `branch:` field below)
 #   5. Render reads this file and provisions the service
 #   6. First build takes ~5-8 min (workspace builds + Parcel client bundle)
 #   7. Once live you'll get a URL like
@@ -23,7 +25,7 @@ services:
     runtime: node
     plan: free
     region: oregon
-    branch: claude/streetmix-analysis-innovation-Be1Q6
+    branch: claude/beautiful-rubin-jl3pif
     healthCheckPath: /
     envVars:
       - key: NODE_VERSION
@@ -42,5 +44,7 @@ services:
         value: "0"
       - key: COOKIE_SESSION_SECRET
         generateValue: true
-    buildCommand: CYPRESS_INSTALL_BINARY=0 npm ci --include=dev --no-audit --no-fund && npm run build:prod
+    # NPM_CONFIG_PRODUCTION=false + --include=dev: defeat every way a
+    # PaaS can make npm skip devDependencies (tsc/parcel live there).
+    buildCommand: CYPRESS_INSTALL_BINARY=0 NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm ci --include=dev --no-audit --no-fund && npm run build:prod
     startCommand: NODE_ENV=production npm run start:prod
