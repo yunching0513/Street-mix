@@ -44,5 +44,7 @@ services:
         value: "0"
       - key: COOKIE_SESSION_SECRET
         generateValue: true
-    buildCommand: CYPRESS_INSTALL_BINARY=0 npm ci --include=dev --no-audit --no-fund && npm run build:prod
+    # NPM_CONFIG_PRODUCTION=false + --include=dev: defeat every way a
+    # PaaS can make npm skip devDependencies (tsc/parcel live there).
+    buildCommand: CYPRESS_INSTALL_BINARY=0 NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm ci --include=dev --no-audit --no-fund && npm run build:prod
     startCommand: NODE_ENV=production npm run start:prod
