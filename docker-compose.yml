@@ -1,0 +1,9 @@
+# One-command local web app:
+#   docker compose up --build
+# then open http://localhost:8000
+services:
+  streetmix:
+    build: .
+    ports:
+      - '8000:8000'
+    restart: unless-stopped

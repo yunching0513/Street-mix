@@ -1,0 +1,18 @@
+# Keep the build context small and force a clean install inside the image
+.git
+node_modules
+**/node_modules
+dist-electron
+build
+packages/*/build
+**/*.tsbuildinfo
+.parcel-cache
+.cache
+.env
+cypress/downloads
+cypress/screenshots
+cypress/videos
+docs/build
+docs/.docusaurus
+coverage
+mockup
