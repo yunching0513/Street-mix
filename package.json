@@ -86,6 +86,8 @@
       "packages/*/build/**/*",
       "packages/*/package.json",
       "packages/parts/build/components.json",
+      "packages/i18n/locales/**/*",
+      "docs/docs/user-guide/changelog.md",
       "packages/illustrations/images/**/*",
       "packages/variant-icons/icons/**/*",
       "client/images/illustrations/**/*",

@@ -1,44 +1,52 @@
 // Streetmix+ Innovation — Workspace staging
 //
 // npm workspaces create symlinks at `node_modules/@streetmix/<name>`
-// pointing to `packages/<name>/`. electron-builder copies the symlink
-// without (or while breaking) its target, so the packaged app has a
-// dangling `node_modules/@streetmix/parts/` that Node cannot resolve.
+// pointing to `packages/<name>/` (or `client/`). electron-builder
+// copies the symlink without (or while breaking) its target, so the
+// packaged app has dangling `node_modules/@streetmix/*` entries that
+// Node cannot resolve.
 //
 // Fix: just before electron-builder runs, replace each workspace
 // symlink with a real directory containing the workspace's
-// `package.json` and `build/`. The runtime `node_modules/@streetmix/*`
-// then looks identical to a normally-installed package.
+// `package.json`, `build/`, and `src/`. `src/` is required because
+// some build outputs import source files at runtime, e.g.
+// `@streetmix/parts/src/segment-lookup.json` (from
+// export-image/build/labels.js) and
+// `@streetmix/client/src/users/constants.js` (from
+// types/build/index.js).
 //
 // Tradeoff: this leaves the source repo's node_modules with real
 // dirs instead of symlinks. A fresh `npm install` restores the
-// symlinks; until then, edits inside `packages/<name>/build/` won't
-// be picked up by `npm start`. That's fine for the one-shot
-// Mac-app build flow.
+// symlinks; until then, edits inside workspaces won't be picked up
+// by `npm start`. That's fine for the one-shot Mac-app build flow.
 
 const fs = require('node:fs')
 const path = require('node:path')
 
 const repoRoot = path.join(__dirname, '..')
-const WORKSPACES = ['types', 'utils', 'parts', 'i18n', 'export-image']
+
+// name → source directory relative to repo root
+const WORKSPACES = {
+  types: 'packages/types',
+  utils: 'packages/utils',
+  parts: 'packages/parts',
+  i18n: 'packages/i18n',
+  'export-image': 'packages/export-image',
+  client: 'client',
+}
 
 let replaced = 0
-for (const name of WORKSPACES) {
+for (const [name, rel] of Object.entries(WORKSPACES)) {
   const target = path.join(repoRoot, 'node_modules', '@streetmix', name)
-  const source = path.join(repoRoot, 'packages', name)
+  const source = path.join(repoRoot, rel)
 
   if (!fs.existsSync(source)) {
     console.error(`[stage-workspaces] missing source: ${source}`)
     process.exit(1)
   }
-  if (!fs.existsSync(path.join(source, 'build'))) {
-    console.error(`[stage-workspaces] missing build/: ${source}`)
-    process.exit(1)
-  }
 
-  // Detect a symlink and replace it. If it's already a real directory
-  // (e.g. previous run already staged it), refresh contents anyway so
-  // a stale build doesn't ship.
+  // Replace symlink (or stale real dir from a previous run) with a
+  // fresh real-directory copy so a stale build never ships.
   if (fs.existsSync(target)) {
     fs.rmSync(target, { recursive: true, force: true })
   }
@@ -48,9 +56,12 @@ for (const name of WORKSPACES) {
     path.join(source, 'package.json'),
     path.join(target, 'package.json')
   )
-  fs.cpSync(path.join(source, 'build'), path.join(target, 'build'), {
-    recursive: true,
-  })
+  for (const dir of ['build', 'src']) {
+    const from = path.join(source, dir)
+    if (fs.existsSync(from)) {
+      fs.cpSync(from, path.join(target, dir), { recursive: true })
+    }
+  }
   console.log(`[stage-workspaces] staged @streetmix/${name}`)
   replaced++
 }
