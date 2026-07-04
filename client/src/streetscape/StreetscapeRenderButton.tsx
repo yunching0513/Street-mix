@@ -16,7 +16,7 @@ export function StreetscapeRenderButton() {
       onClick={() => dispatch(showDialog('STREETSCAPE_RENDER'))}
       title="AI Streetscape Render — generate a perspective view of this design"
     >
-      <span className="srb-icon">✨</span>
+      <span className="srb-seal" aria-hidden="true" />
       AI 街景
     </button>
   )

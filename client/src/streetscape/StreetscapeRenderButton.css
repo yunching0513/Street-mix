@@ -1,29 +1,45 @@
+/* AI Streetscape Render trigger — しなやか (Shinayaka) design language.
+   A quiet panel button with a green seal-mark; identity through a
+   single stroke of colour, not through gradients. */
+
 .streetscape-render-button {
+  --sk-panel: #fff;
+  --sk-ink: #333;
+  --sk-line: #dcdcdc;
+  --sk-midori: rgb(46 107 78 / 90%);
+  --sk-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
   position: fixed;
-  bottom: 12px;
-  right: 168px;
+  bottom: 16px;
+  right: 176px;
   z-index: 100;
-  background: white;
-  color: #333;
-  border: 1px solid #e4e1da;
-  padding: 10px 14px;
-  border-radius: 22px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--sk-panel);
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-line);
+  border-radius: 2px;
   font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 6%);
+  transition:
+    border-color 0.45s var(--sk-ease),
+    color 0.45s var(--sk-ease);
 }
 
 .streetscape-render-button:hover {
-  background: #fff7ee;
-  border-color: #ff7043;
-  transform: translateY(-1px);
+  border-color: var(--sk-midori);
+  color: var(--sk-midori);
 }
 
-.srb-icon {
-  font-size: 14px;
+.srb-seal {
+  width: 7px;
+  height: 7px;
+  background: var(--sk-midori);
+  flex-shrink: 0;
 }

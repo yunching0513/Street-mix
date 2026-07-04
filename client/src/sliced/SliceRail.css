@@ -1,246 +1,272 @@
+/* 2.5D Sliced View — しなやか (Shinayaka) design language.
+   Quiet panels on warm grey, hairline borders, softened (not rounded)
+   corners. The vermilion seal-mark carries identity; everything else
+   stays nearly colourless. Motion is slow and settles gently. */
+
+.slice-rail-toggle,
+.slice-rail {
+  --sk-ground: #f2f2f2;
+  --sk-panel: #fff;
+  --sk-panel-soft: #f1f1f1;
+  --sk-ink: #333;
+  --sk-strong: #000;
+  --sk-faint: #9a9a9a;
+  --sk-line: #dcdcdc;
+  --sk-shu: rgb(166 57 44 / 90%);
+  --sk-midori: rgb(46 107 78 / 90%);
+  --sk-gold: #b8a98c;
+  --sk-tint-2: #e4e1da;
+  --sk-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --sk-ls: 0.08em;
+  --sk-ls-wide: 0.16em;
+}
+
 .slice-rail-toggle {
   position: fixed;
-  bottom: 12px;
-  right: 12px;
+  bottom: 16px;
+  right: 16px;
   z-index: 100;
-  background: linear-gradient(135deg, #ff7043, #ff9472);
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 22px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(255, 112, 67, 0.4);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--sk-panel);
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-line);
+  border-radius: 2px;
   font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: var(--sk-ls);
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgb(0 0 0 / 6%);
+  transition:
+    border-color 0.45s var(--sk-ease),
+    color 0.45s var(--sk-ease);
 }
 
 .slice-rail-toggle:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(255, 112, 67, 0.5);
+  border-color: var(--sk-shu);
+  color: var(--sk-shu);
 }
 
-.slice-rail-toggle-icon {
-  font-size: 16px;
-  letter-spacing: -2px;
+.slice-rail-toggle-seal {
+  width: 7px;
+  height: 7px;
+  background: var(--sk-shu);
+  flex-shrink: 0;
 }
 
 .slice-rail {
   position: fixed;
-  bottom: 12px;
+  bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 14px;
-  box-shadow:
-    0 14px 40px rgba(0, 0, 0, 0.14),
-    0 0 0 1px rgba(0, 0, 0, 0.02);
-  padding: 12px 14px 14px;
-  max-width: calc(100vw - 40px);
+  background: var(--sk-panel);
+  border: 1px solid var(--sk-line);
+  border-radius: 2px;
+  box-shadow: 0 16px 48px rgb(0 0 0 / 8%);
+  padding: 16px 24px 24px;
+  max-width: calc(100vw - 48px);
 }
 
 .slice-rail-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 10px;
-  gap: 16px;
+  margin-bottom: 16px;
+  gap: 24px;
 }
 
 .slice-rail-eyebrow {
   display: block;
   font-size: 10px;
-  letter-spacing: 0.5px;
+  font-weight: 400;
+  letter-spacing: var(--sk-ls-wide);
   text-transform: uppercase;
-  color: #ff7043;
-  font-weight: 700;
-  line-height: 1.2;
+  color: var(--sk-gold);
+  line-height: 1.6;
 }
 
 .slice-rail-title {
   font-size: 13px;
-  font-weight: 600;
-  color: #333;
+  font-weight: 400;
+  letter-spacing: var(--sk-ls);
+  color: var(--sk-strong);
 }
 
 .slice-rail-close {
-  background: #f0ede5;
+  background: transparent;
   border: none;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
-  font-size: 14px;
-  color: #777;
-  flex-shrink: 0;
   font-family: inherit;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--sk-faint);
+  flex-shrink: 0;
+  transition: color 0.45s var(--sk-ease);
 }
 
 .slice-rail-close:hover {
-  background: #fbe7e7;
-  color: #c44a36;
+  color: var(--sk-shu);
 }
 
 .slice-rail-cards {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   overflow-x: auto;
-  padding: 2px;
+  padding: 1px;
 }
 
 .slice-card {
   flex-shrink: 0;
-  width: 180px;
-  background: white;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-  border: 2px solid transparent;
+  width: 184px;
+  background: var(--sk-panel);
+  border: 1px solid var(--sk-line);
+  border-radius: 2px;
+  padding: 16px;
   cursor: pointer;
-  transition:
-    border-color 0.15s,
-    box-shadow 0.15s;
   font-family: inherit;
   text-align: left;
+  transition: border-color 0.45s var(--sk-ease);
 }
 
 .slice-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-color: var(--sk-faint);
 }
 
 .slice-card-active {
-  border-color: #ff7043;
-  box-shadow:
-    0 0 0 3px rgba(255, 112, 67, 0.15),
-    0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--sk-shu);
 }
 
 .slice-card-head {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin-bottom: 8px;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .slice-card-pin {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: #f0ede5;
-  display: grid;
-  place-items: center;
-  font-size: 11px;
-  font-weight: 800;
-  color: #555;
+  font-family: Cormorant, "Noto Serif TC", Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--sk-gold);
+  min-width: 16px;
   flex-shrink: 0;
+  transition: color 0.45s var(--sk-ease);
 }
 
 .slice-card-pin-active {
-  background: #ff7043;
-  color: white;
+  color: var(--sk-shu);
 }
 
 .slice-card-name {
   flex: 1;
-  font-size: 12px;
-  font-weight: 600;
-  border: 1px solid transparent;
-  background: transparent;
-  padding: 2px 4px;
-  border-radius: 4px;
-  color: #333;
-  min-width: 0;
   font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: var(--sk-ls);
+  border: none;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  padding: 2px 0;
+  color: var(--sk-ink);
+  min-width: 0;
+  transition: border-color 0.45s var(--sk-ease);
 }
 
 .slice-card-name:hover {
-  border-color: #e4e1da;
+  border-bottom-color: var(--sk-line);
 }
 
 .slice-card-name:focus {
-  background: #fafaf8;
-  border-color: #ff7043;
+  border-bottom-color: var(--sk-shu);
   outline: none;
 }
 
 .slice-card-remove {
   background: transparent;
   border: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-  font-size: 14px;
-  color: #aaa;
-  flex-shrink: 0;
   font-family: inherit;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--sk-faint);
+  flex-shrink: 0;
+  transition: color 0.45s var(--sk-ease);
 }
 
 .slice-card-remove:hover {
-  background: #fbe7e7;
-  color: #c44a36;
+  color: var(--sk-shu);
 }
 
 .mini-section {
   display: flex;
-  height: 24px;
-  border-radius: 4px;
+  height: 20px;
   overflow: hidden;
-  margin-bottom: 8px;
-  background: #f5f3ee;
+  margin-bottom: 12px;
+  background: var(--sk-panel-soft);
 }
 
 .mini-section-seg {
   height: 100%;
-  transition: width 0.2s;
+  transition: width 0.45s var(--sk-ease);
 }
 
 .slice-card-meta {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   font-size: 11px;
 }
 
 .slice-card-length {
   display: inline-flex;
-  align-items: center;
-  gap: 2px;
-  color: #888;
+  align-items: baseline;
+  gap: 4px;
+  font-weight: 300;
+  color: var(--sk-faint);
+  letter-spacing: 0.04em;
 }
 
 .slice-card-length input {
-  width: 36px;
-  border: 1px solid #e4e1da;
-  border-radius: 3px;
-  padding: 1px 3px;
+  width: 40px;
+  border: none;
+  border-bottom: 1px solid var(--sk-line);
+  padding: 1px 2px;
+  font-family: inherit;
   font-size: 11px;
   text-align: right;
-  background: white;
-  font-family: inherit;
+  background: transparent;
+  color: var(--sk-ink);
+}
+
+.slice-card-length input:focus {
+  border-bottom-color: var(--sk-shu);
+  outline: none;
 }
 
 .slice-card-score {
-  font-size: 11px;
-  font-weight: 700;
+  font-family: Cormorant, "Noto Serif TC", Georgia, serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .slice-card-score.qs-rating-good {
-  color: #2bb673;
+  color: var(--sk-midori);
 }
 
 .slice-card-score.qs-rating-warn {
-  color: #f5a623;
+  color: var(--sk-gold);
 }
 
 .slice-card-score.qs-rating-bad {
-  color: #e64a4a;
+  color: var(--sk-shu);
 }
 
 .slice-card-add {
@@ -248,21 +274,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   background: transparent;
-  border: 2px dashed #d9d4c5;
-  color: #888;
-  width: 120px;
-  min-height: 100px;
+  border: 1px dashed var(--sk-line);
+  color: var(--sk-faint);
+  width: 112px;
+  min-height: 104px;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: var(--sk-ls);
+  transition:
+    border-color 0.45s var(--sk-ease),
+    color 0.45s var(--sk-ease);
 }
 
 .slice-card-add:hover {
-  border-color: #ff7043;
-  color: #ff7043;
+  border-color: var(--sk-shu);
+  color: var(--sk-shu);
 }
 
 .slice-card-add-plus {
-  font-size: 28px;
+  font-size: 20px;
+  font-weight: 200;
   line-height: 1;
-  font-weight: 300;
-  margin-bottom: 4px;
 }

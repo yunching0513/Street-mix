@@ -126,8 +126,8 @@ function scoreWalkability(segs: Segment[]): Subscore {
   )
 
   let hint: string
-  if (!hasTwoSidewalks) hint = '⚠ 街道未配置雙側人行道'
-  else if (widestSidewalk < 1.5) hint = '⚠ 人行道寬度低於 1.5m'
+  if (!hasTwoSidewalks) hint = '※ 街道未配置雙側人行道'
+  else if (widestSidewalk < 1.5) hint = '※ 人行道寬度低於 1.5m'
   else if (widestSidewalk < 3)
     hint = `人行道 ${widestSidewalk.toFixed(1)}m，可加寬至 3m`
   else hint = `人行道 ${widestSidewalk.toFixed(1)}m 達 NACTO 建議`
@@ -153,7 +153,7 @@ function scoreBikeSafety(segs: Segment[]): Subscore {
       category: 'bikeSafety',
       value: 25,
       rating: 'bad',
-      hint: '⚠ 無自行車道',
+      hint: '※ 無自行車道',
     }
   }
 
@@ -188,7 +188,7 @@ function scoreBikeSafety(segs: Segment[]): Subscore {
   const value = CLAMP(widthScore + bufferScore + twoWayBonus + symmetryBonus)
 
   let hint: string
-  if (bufferedCount < bikeSegs.length) hint = '⚠ 自行車道與車道相鄰、缺少緩衝'
+  if (bufferedCount < bikeSegs.length) hint = '※ 自行車道與車道相鄰、缺少緩衝'
   else if (bikeWidth < 2)
     hint = `自行車道 ${bikeWidth.toFixed(1)}m，建議至少 2m`
   else hint = `自行車道 ${bikeWidth.toFixed(1)}m，已設緩衝`
@@ -247,7 +247,7 @@ function scoreAccessibility(segs: Segment[]): Subscore {
       category: 'accessibility',
       value: 20,
       rating: 'bad',
-      hint: '⚠ 無人行道',
+      hint: '※ 無人行道',
     }
   }
 
@@ -265,7 +265,7 @@ function scoreAccessibility(segs: Segment[]): Subscore {
   const hint =
     minWidth >= 1.5
       ? `最窄通行 ${minWidth.toFixed(1)}m ≥ 1.5m`
-      : `⚠ 最窄通行寬 ${minWidth.toFixed(1)}m 低於建議`
+      : `※ 最窄通行寬 ${minWidth.toFixed(1)}m 低於建議`
 
   return {
     category: 'accessibility',
@@ -316,8 +316,8 @@ function scoreVisionZero(segs: Segment[]): Subscore {
   value = CLAMP(value)
 
   let hint: string
-  if (wideLanes > 1) hint = `⚠ ${wideLanes} 條車道寬度 > 3.3m，易誘發超速`
-  else if (!hasPhysicalDivider) hint = '⚠ 無實體分隔，與車道高速相鄰'
+  if (wideLanes > 1) hint = `※ ${wideLanes} 條車道寬度 > 3.3m，易誘發超速`
+  else if (!hasPhysicalDivider) hint = '※ 無實體分隔，與車道高速相鄰'
   else hint = `${driveLanes.length} 條車道，有分隔緩衝`
 
   return {

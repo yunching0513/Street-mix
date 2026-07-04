@@ -9,28 +9,32 @@ import type {
 import { Dialog } from '../Dialog.js'
 import './QualityScoreDialog.css'
 
+// Shinayaka: gold-brown roman numerals as category marks, in place of
+// pictorial icons — support numerals, quiet hierarchy.
 const CATEGORY_LABELS: Record<
   Subscore['category'],
-  { emoji: string; name: string }
+  { numeral: string; name: string }
 > = {
-  walkability: { emoji: '🚶', name: '步行友善 Walkability' },
-  bikeSafety: { emoji: '🚲', name: '自行車安全 Bike Safety' },
-  greenCover: { emoji: '🌳', name: '樹蔭 / 綠覆 Green Cover' },
-  accessibility: { emoji: '♿', name: '無障礙 Accessibility' },
-  visionZero: { emoji: '🛡', name: 'Vision Zero 安全' },
+  walkability: { numeral: 'i', name: '步行友善 Walkability' },
+  bikeSafety: { numeral: 'ii', name: '自行車安全 Bike Safety' },
+  greenCover: { numeral: 'iii', name: '樹蔭綠覆 Green Cover' },
+  accessibility: { numeral: 'iv', name: '無障礙 Accessibility' },
+  visionZero: { numeral: 'v', name: '交通安全 Vision Zero' },
 }
 
+// Almost colourless: deep green for good grades, gold-brown for the
+// middle, antique vermilion when attention is needed.
 const GRADE_COLORS: Record<string, string> = {
-  'A+': '#1ea65f',
-  A: '#1ea65f',
-  'A-': '#2bb673',
-  'B+': '#2bb673',
-  B: '#5db360',
-  'B-': '#a5b03b',
-  'C+': '#f5a623',
-  C: '#f5a623',
-  'C-': '#ef7a3a',
-  D: '#e64a4a',
+  'A+': 'rgb(46 107 78 / 90%)',
+  A: 'rgb(46 107 78 / 90%)',
+  'A-': 'rgb(46 107 78 / 90%)',
+  'B+': 'rgb(46 107 78 / 75%)',
+  B: 'rgb(46 107 78 / 75%)',
+  'B-': '#b8a98c',
+  'C+': '#b8a98c',
+  C: '#b8a98c',
+  'C-': 'rgb(166 57 44 / 75%)',
+  D: 'rgb(166 57 44 / 90%)',
 }
 
 function formatTWD(n: number): string {
@@ -42,7 +46,7 @@ function formatTWD(n: number): string {
 function GaugeRing({ value, grade }: { value: number; grade: string }) {
   const circumference = 2 * Math.PI * 50
   const offset = circumference * (1 - value / 100)
-  const color = GRADE_COLORS[grade] ?? '#2bb673'
+  const color = GRADE_COLORS[grade] ?? '#b8a98c'
 
   return (
     <div className="qs-gauge-wrap">
@@ -70,12 +74,12 @@ function GaugeRing({ value, grade }: { value: number; grade: string }) {
 }
 
 function SubscoreRow({ subscore }: { subscore: Subscore }) {
-  const { emoji, name } = CATEGORY_LABELS[subscore.category]
+  const { numeral, name } = CATEGORY_LABELS[subscore.category]
   return (
     <div className="qs-subscore">
       <div className="qs-subscore-row">
         <span className="qs-subscore-label">
-          <span className="qs-subscore-emoji">{emoji}</span>
+          <span className="qs-subscore-numeral">{numeral}</span>
           {name}
         </span>
         <span className={`qs-subscore-value qs-rating-${subscore.rating}`}>
@@ -106,7 +110,7 @@ export function QualityScoreDialog() {
         <div className="quality-score-dialog">
           <header>
             <h1>
-              <span className="qs-header-eyebrow">設計評分</span>
+              <span className="qs-header-eyebrow">設計評分 · Score</span>
               Street Quality Score
             </h1>
           </header>
@@ -116,7 +120,7 @@ export function QualityScoreDialog() {
               <div className="qs-overview-text">
                 <div className="qs-overview-label">整體分數</div>
                 <div className="qs-overview-caption">
-                  五項指標加權平均：步行、自行車、樹蔭、無障礙、Vision Zero
+                  五項指標加權平均——步行、自行車、樹蔭、無障礙、交通安全。層次靠空間，分數靠設計。
                 </div>
               </div>
             </div>
@@ -129,14 +133,14 @@ export function QualityScoreDialog() {
 
             <div className="qs-metrics">
               <div className="qs-metric">
-                <div className="qs-metric-label">💰 估算建造成本</div>
+                <div className="qs-metric-label">估算建造成本</div>
                 <div className="qs-metric-value">
                   {formatTWD(data.cost.per100mTWD)}
                 </div>
                 <div className="qs-metric-sub">每 100m，含一年維護</div>
               </div>
               <div className="qs-metric">
-                <div className="qs-metric-label">🌱 建造期碳排</div>
+                <div className="qs-metric-label">建造期碳排</div>
                 <div className="qs-metric-value">
                   {data.carbon.constructionTonsPer100m} tCO₂e
                 </div>
@@ -146,7 +150,7 @@ export function QualityScoreDialog() {
 
             {data.suggestions.length > 0 && (
               <div className="qs-suggestions">
-                <div className="qs-suggestions-title">✨ AI 改善建議</div>
+                <div className="qs-suggestions-title">改善建議</div>
                 <ul>
                   {data.suggestions.map((sug, i) => (
                     <li key={i}>{sug}</li>

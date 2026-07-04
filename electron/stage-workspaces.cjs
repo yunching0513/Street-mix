@@ -35,7 +35,13 @@ const WORKSPACES = {
   client: 'client',
 }
 
-let replaced = 0
+// --restore puts the npm-workspace symlinks back so Parcel and the
+// dev server resolve workspaces from source again. Run it before any
+// client build; staging real dirs from a previous dist:mac run breaks
+// Parcel's resolution of the packages' internal .js → .ts imports.
+const restore = process.argv.includes('--restore')
+
+let count = 0
 for (const [name, rel] of Object.entries(WORKSPACES)) {
   const target = path.join(repoRoot, 'node_modules', '@streetmix', name)
   const source = path.join(repoRoot, rel)
@@ -43,6 +49,21 @@ for (const [name, rel] of Object.entries(WORKSPACES)) {
   if (!fs.existsSync(source)) {
     console.error(`[stage-workspaces] missing source: ${source}`)
     process.exit(1)
+  }
+
+  if (restore) {
+    const isSymlink =
+      fs.existsSync(target) && fs.lstatSync(target).isSymbolicLink()
+    if (isSymlink) continue
+    if (fs.existsSync(target)) {
+      fs.rmSync(target, { recursive: true, force: true })
+    }
+    // Mirror npm's relative workspace symlink, e.g.
+    // node_modules/@streetmix/parts -> ../../packages/parts
+    fs.symlinkSync(path.join('..', '..', rel), target, 'dir')
+    console.log(`[stage-workspaces] restored symlink @streetmix/${name}`)
+    count++
+    continue
   }
 
   // Replace symlink (or stale real dir from a previous run) with a
@@ -63,7 +84,9 @@ for (const [name, rel] of Object.entries(WORKSPACES)) {
     }
   }
   console.log(`[stage-workspaces] staged @streetmix/${name}`)
-  replaced++
+  count++
 }
 
-console.log(`[stage-workspaces] done (${replaced} packages)`)
+console.log(
+  `[stage-workspaces] ${restore ? 'restore' : 'stage'} done (${count} packages)`
+)

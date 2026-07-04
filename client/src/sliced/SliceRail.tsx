@@ -110,7 +110,7 @@ export function SliceRail() {
         onClick={() => dispatch(enableSlicedViewAction())}
         title="2.5D Sliced View — give one street multiple cross-sections"
       >
-        <span className="slice-rail-toggle-icon">▦</span>
+        <span className="slice-rail-toggle-seal" aria-hidden="true" />
         2.5D 沿街變化
       </button>
     )

@@ -1,59 +1,97 @@
+/* Streetscape Render — しなやか (Shinayaka) design language.
+   Nearly colourless chrome so the rendered image carries the scene.
+   Hairline borders, softened corners, slow fading motion. */
+
 .streetscape-render-dialog {
+  --sk-ground: #f2f2f2;
+  --sk-panel: #fff;
+  --sk-panel-soft: #f1f1f1;
+  --sk-ink: #333;
+  --sk-strong: #000;
+  --sk-faint: #9a9a9a;
+  --sk-line: #dcdcdc;
+  --sk-shu: rgb(166 57 44 / 90%);
+  --sk-midori: rgb(46 107 78 / 90%);
+  --sk-gold: #b8a98c;
+  --sk-tint: #d6dce0;
+  --sk-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --sk-ls: 0.08em;
+  --sk-ls-wide: 0.16em;
+
   width: 640px;
   max-width: 95vw;
+  color: var(--sk-ink);
 }
 
 .streetscape-render-dialog header h1 {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 8px;
+  padding-top: 8px;
+  font-weight: 400;
+  letter-spacing: var(--sk-ls);
+  color: var(--sk-strong);
 }
 
 .ssr-eyebrow {
-  font-size: 11px;
-  letter-spacing: 0.5px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: var(--sk-ls-wide);
   text-transform: uppercase;
-  color: #ff7043;
-  font-weight: 700;
+  color: var(--sk-gold);
 }
 
 .ssr-controls {
   display: flex;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 16px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
 }
 
 .ssr-dropdown {
-  border: 1px solid #e4e1da;
-  background: white;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 13px;
-  color: #444;
-  font-family: inherit;
   flex: 1;
-  min-width: 130px;
+  min-width: 136px;
+  padding: 10px 12px;
+  background: var(--sk-panel);
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-line);
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: var(--sk-ls);
+  transition: border-color 0.45s var(--sk-ease);
+}
+
+.ssr-dropdown:hover,
+.ssr-dropdown:focus {
+  border-color: var(--sk-faint);
+  outline: none;
 }
 
 .ssr-generate {
-  background: linear-gradient(90deg, #ff7043, #ff9472);
-  color: white;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
+  padding: 10px 24px;
+  background: transparent;
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-ink);
+  border-radius: 2px;
   font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: var(--sk-ls);
+  cursor: pointer;
+  transition:
+    background 0.45s var(--sk-ease),
+    color 0.45s var(--sk-ease);
 }
 
 .ssr-generate:hover:not(:disabled) {
-  filter: brightness(1.05);
+  background: var(--sk-ink);
+  color: var(--sk-ground);
 }
 
 .ssr-generate:disabled {
-  opacity: 0.6;
+  opacity: 0.4;
   cursor: wait;
 }
 
@@ -61,10 +99,10 @@
   position: relative;
   width: 100%;
   aspect-ratio: 800 / 480;
-  background: #f0ede5;
-  border-radius: 10px;
+  background: var(--sk-tint);
+  border-radius: 2px;
   overflow: hidden;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   display: grid;
   place-items: center;
 }
@@ -74,24 +112,37 @@
   height: 100%;
   display: block;
   object-fit: cover;
+  animation: ssr-fade 0.9s var(--sk-ease);
+}
+
+@keyframes ssr-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .ssr-loading {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   align-items: center;
-  color: #888;
-  font-size: 13px;
+  color: var(--sk-faint);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: var(--sk-ls);
 }
 
 .ssr-spinner {
-  width: 36px;
-  height: 36px;
-  border: 3px solid #f0ede5;
-  border-top-color: #ff7043;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--sk-line);
+  border-top-color: var(--sk-ink);
   border-radius: 50%;
-  animation: ssr-spin 1s linear infinite;
+  animation: ssr-spin 1.6s linear infinite;
 }
 
 @keyframes ssr-spin {
@@ -101,124 +152,148 @@
 }
 
 .ssr-error {
-  color: #c44a36;
-  font-size: 13px;
-  padding: 12px;
-  background: #fbe7e7;
-  border-radius: 6px;
+  color: var(--sk-shu);
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  padding: 16px;
   text-align: center;
 }
 
 .ssr-notes-row {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  margin-bottom: 12px;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 .ssr-notes-row label {
-  font-size: 11px;
-  color: #888;
-  font-weight: 600;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--sk-gold);
+  letter-spacing: var(--sk-ls-wide);
+  text-transform: uppercase;
 }
 
 .ssr-notes {
   width: 100%;
-  border: 1px solid #e4e1da;
-  border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 13px;
-  background: white;
+  padding: 10px 12px;
+  background: var(--sk-panel);
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-line);
+  border-radius: 2px;
   font-family: inherit;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  transition: border-color 0.45s var(--sk-ease);
+}
+
+.ssr-notes:focus {
+  border-color: var(--sk-faint);
+  outline: none;
 }
 
 .ssr-prompt-details {
-  background: #f7f5f0;
-  border-radius: 8px;
-  padding: 10px 12px;
-  margin-bottom: 12px;
-  font-size: 12px;
-  color: #666;
+  background: var(--sk-panel-soft);
+  border-radius: 2px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--sk-faint);
+  letter-spacing: 0.04em;
 }
 
 .ssr-prompt-details summary {
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
+  color: var(--sk-ink);
 }
 
 .ssr-provider {
-  background: #ff7043;
-  color: white;
-  padding: 1px 6px;
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: 700;
+  color: var(--sk-midori);
+  letter-spacing: var(--sk-ls);
 }
 
 .ssr-prompt-text {
-  margin-top: 8px;
-  line-height: 1.6;
-  color: #555;
+  margin-top: 12px;
+  line-height: 1.9;
+  color: var(--sk-ink);
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
-  font-size: 11px;
-  background: white;
-  padding: 8px;
-  border-radius: 4px;
+  font-size: 10px;
+  background: var(--sk-panel);
+  padding: 12px;
+  border-radius: 2px;
   white-space: pre-wrap;
 }
 
 .ssr-disclaimer {
-  font-size: 11px;
-  color: #aaa;
+  font-size: 10px;
+  font-weight: 300;
+  color: var(--sk-faint);
   text-align: center;
-  padding: 4px 0 8px;
+  padding: 8px 0 16px;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
 }
 
 .ssr-disclaimer code {
-  background: #f0ede5;
+  background: var(--sk-panel-soft);
   padding: 1px 4px;
-  border-radius: 3px;
-  font-size: 10px;
+  border-radius: 2px;
+  font-size: 9px;
 }
 
 .ssr-actions {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   justify-content: flex-end;
 }
 
 .ssr-btn-ghost {
-  background: white;
-  border: 1px solid #e4e1da;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 13px;
-  cursor: pointer;
-  color: #555;
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--sk-faint);
+  border: 1px solid var(--sk-line);
+  border-radius: 2px;
   font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: var(--sk-ls);
+  cursor: pointer;
+  transition:
+    border-color 0.45s var(--sk-ease),
+    color 0.45s var(--sk-ease);
 }
 
 .ssr-btn-ghost:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
 .ssr-btn-ghost:hover:not(:disabled) {
-  background: #f5f3ee;
+  border-color: var(--sk-ink);
+  color: var(--sk-ink);
 }
 
 .ssr-btn-primary {
-  background: #ff7043;
-  color: white;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
+  padding: 10px 24px;
+  background: transparent;
+  color: var(--sk-ink);
+  border: 1px solid var(--sk-ink);
+  border-radius: 2px;
   font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: var(--sk-ls);
+  cursor: pointer;
+  transition:
+    background 0.45s var(--sk-ease),
+    color 0.45s var(--sk-ease);
 }
 
 .ssr-btn-primary:hover {
-  background: #e65a2b;
+  background: var(--sk-ink);
+  color: var(--sk-ground);
 }

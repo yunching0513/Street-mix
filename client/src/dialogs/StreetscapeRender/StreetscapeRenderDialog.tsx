@@ -11,17 +11,17 @@ import { Dialog } from '../Dialog.js'
 import './StreetscapeRenderDialog.css'
 
 const TIME_OPTIONS: Array<{ value: TimeOfDay; label: string }> = [
-  { value: 'day', label: '☀ 白天 · 晴' },
-  { value: 'sunset', label: '🌇 黃昏' },
-  { value: 'night', label: '🌙 夜晚' },
-  { value: 'rain', label: '🌧 雨天' },
+  { value: 'day', label: '白天 · 晴' },
+  { value: 'sunset', label: '黃昏' },
+  { value: 'night', label: '夜晚' },
+  { value: 'rain', label: '雨天' },
 ]
 
 const CAMERA_OPTIONS: Array<{ value: CameraAngle; label: string }> = [
-  { value: 'pedestrian', label: '📷 行人視角' },
-  { value: 'cyclist', label: '🚲 自行車視角' },
-  { value: 'driver', label: '🚗 駕駛視角' },
-  { value: 'aerial', label: '🦅 鳥瞰' },
+  { value: 'pedestrian', label: '行人視角' },
+  { value: 'cyclist', label: '自行車視角' },
+  { value: 'driver', label: '駕駛視角' },
+  { value: 'aerial', label: '鳥瞰' },
 ]
 
 export function StreetscapeRenderDialog() {
@@ -74,7 +74,7 @@ export function StreetscapeRenderDialog() {
         <div className="streetscape-render-dialog">
           <header>
             <h1>
-              <span className="ssr-eyebrow">AI 街景渲染</span>
+              <span className="ssr-eyebrow">AI 街景渲染 · Render</span>
               Streetscape Render
             </h1>
           </header>
@@ -107,7 +107,7 @@ export function StreetscapeRenderDialog() {
                 onClick={render}
                 disabled={loading}
               >
-                {loading ? '生成中…' : '✨ 重新生成'}
+                {loading ? '生成中…' : '重新生成'}
               </button>
             </div>
 
@@ -165,7 +165,7 @@ export function StreetscapeRenderDialog() {
                 onClick={downloadImage}
                 disabled={result === null}
               >
-                📥 下載渲染圖
+                下載渲染圖
               </button>
               <button className="ssr-btn-primary" onClick={closeDialog}>
                 關閉
