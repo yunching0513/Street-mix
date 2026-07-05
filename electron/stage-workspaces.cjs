@@ -87,6 +87,17 @@ for (const [name, rel] of Object.entries(WORKSPACES)) {
   count++
 }
 
+// Parcel caches module-resolution results. If we just swapped what
+// node_modules/@streetmix/* points at (in either direction), a stale
+// cache would keep reproducing old resolution failures — so drop it.
+if (count > 0) {
+  const parcelCache = path.join(repoRoot, '.parcel-cache')
+  if (fs.existsSync(parcelCache)) {
+    fs.rmSync(parcelCache, { recursive: true, force: true })
+    console.log('[stage-workspaces] cleared stale .parcel-cache')
+  }
+}
+
 console.log(
   `[stage-workspaces] ${restore ? 'restore' : 'stage'} done (${count} packages)`
 )
